@@ -1,0 +1,13 @@
+addEmptyValue:1,
+customProperties:"lazyLoading:false",
+dataProviderID1:"accesorio_id",
+dataProviderID2:"accesorio_nombre",
+dataSource:"db:/gpp/herr_accesorios",
+displayValueType:12,
+name:"herr_accesorios",
+realValueType:4,
+returnDataProviders:1,
+showDataProviders:2,
+typeid:34,
+uuid:"0C266BD2-376D-4CDA-95C3-8FC390EEADFC",
+valueListType:1

@@ -1,0 +1,8 @@
+addEmptyValue:1,
+customValues:"Abierto|1\r\
+Cerrado|2",
+displayValueType:12,
+name:"core_abierto_cerrado",
+realValueType:4,
+typeid:34,
+uuid:"1CF161AF-F37F-4D83-9F03-81BC5DC3A72A"

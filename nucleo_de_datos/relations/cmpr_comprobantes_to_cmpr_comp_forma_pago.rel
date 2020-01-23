@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/cmpr_comp_forma_pago",
+items:[
+{foreignColumnName:"cmpr_comp_id",primaryDataProviderID:"cmpr_comp_id",typeid:23,uuid:"D347D06B-3FDC-48DF-8C3A-7D57955BDA64"}
+],
+joinType:1,
+name:"cmpr_comprobantes_to_cmpr_comp_forma_pago",
+primaryDataSource:"db:/gpp/cmpr_comprobantes",
+typeid:22,
+uuid:"D0FC88D6-399C-441C-88AD-FE7B32DDDE6E"

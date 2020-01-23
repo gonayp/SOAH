@@ -1,0 +1,266 @@
+:root {
+  --main-color: #5DB78C; 
+  --second-color: #FFF9EE;
+}
+
+
+.main_logo{
+	height: 100px;
+	width: 100px;
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.main_empresa_nombre{
+	margin-top: 30px;
+	font-size: 25px;
+}
+
+.main_right{
+	float: right;
+}
+
+.rojo {
+	background-color: #D67658  !important;
+}
+
+
+.svy-label.banner_fino
+{
+
+	background-color: var(--main-color);
+}
+
+.svy-label.banner
+{
+
+	background-color: var(--main-color);
+	 color: #fff;
+	 font-size: 25px;
+	 padding-left: 5px;
+}
+
+.svy-label.banner-darck
+{
+
+	
+	 color: #fff;
+	 font-size: 25px;
+	 padding-left: 5px;
+	 border-top: 5px solid;
+	 //border-style: solid;
+	 border-color: var(--main-color);
+}
+
+.btn-success{
+	background-color: var(--main-color) !important;
+	border-color: var(--main-color) !important;
+}
+
+.btn-success:hover {
+	background-color: #51A07B !important;
+	border-color: var(--main-color) !important;
+}
+
+
+
+
+
+
+
+.cell_center{
+	text-align: center;
+}
+
+.cell_center_header{
+	text-align: center;
+	color: black;
+	background-color: #fff;
+	height: 35px;
+}
+
+.cell_right{
+	padding-right: 2px;
+	text-align: right;
+}
+
+.cell_right_header{
+	text-align: right;
+	color: black;
+	background-color: #fff;
+	height: 35px;
+}
+
+.cell_left{
+	text-align: left;
+	overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+}
+
+.cell_left_header{
+	text-align: left;
+	color: black;
+	background-color: #fff;
+	height: 35px;
+}
+
+
+.cell-fontawesone{
+	display: table-cell;
+}
+
+.tabla-filtro{
+
+	margin-top: 130px;
+}
+
+.table-servoyextra-selected{
+	background-color: var(--second-color)  !important;
+}
+
+
+/*********************************CALENDARIO DE DEVOLUCIONES***************/
+.calendar {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    font-size: 10px;
+    overflow-y: hidden !important;
+
+}
+.fc-toolbar {
+    font-size: .9em;
+}
+.fc-toolbar h2 {
+    font-size: 19px;
+    white-space: normal !important;
+}
+
+
+.fc-more-popover {
+    width: 100px;
+}
+.fc-view-month .fc-event, .fc-view-agendaWeek .fc-event, .fc-content {
+    font-size: 0;
+    overflow: hidden;
+    height: 2px;
+    
+}
+.fc-view-agendaWeek .fc-event-vert {
+    font-size: 0;
+    overflow: hidden;
+    width: 2px !important;
+}
+.fc-agenda-axis {
+    width: 20px !important;
+    font-size: .7em;
+}
+
+.fc-button-content {
+    padding: 0;
+}
+
+.fc-sun { 
+	color:blue;
+	height: 2px;
+	  }
+.fc-sat { 
+	 background: #EEEEEE;
+	color:red;  }
+	
+.fc-day{
+	height: 2px !important;
+}
+
+.fc-row{
+	min-height: auto !important;
+}
+
+.fc-today{
+	background: #FFCB75 !important;
+}
+
+/***********************************************************/
+
+
+/**************************LOGIN**************************/
+
+.form-login{
+	
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    
+}
+
+.form-login .absolute-center.is-responsive {
+	
+	height: 300px;
+	width: 100%;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	background: white;
+    border-radius: 5px;
+}
+
+.absolute-center {
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	
+}
+
+.absolute-center.is-responsive {
+	
+	width: 50%;
+	height: 50%;
+	min-width: 250px;
+	max-width: 465px;
+	padding: 40px;
+}
+
+
+
+.loginTexts {
+	
+	margin-top: 15px;
+	padding: 0px 50px;
+	color:red;
+}
+
+
+.loginBoton {
+	
+	text-align: center;
+	
+	
+}
+
+.loginTitulo {
+	
+	margin-top: 40px;
+	padding: 0px 25px;
+	font-size: 200% ;
+	
+}
+
+
+
+.loginLogo {
+	
+	
+	margin-bottom: 15px;
+	padding: 0px 5px;
+	width: 100px;
+    height: 100px;
+}
+
+/***************************************************************/
+
+

@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/cmpr_comprobantes_productos",
+items:[
+{foreignColumnName:"cmpr_comp_id",primaryDataProviderID:"cmpr_comp_id",typeid:23,uuid:"BB3B18C6-A819-445D-A73E-611FF7646EFE"}
+],
+joinType:1,
+name:"cmpr_comprobantes_to_cmpr_comprobantes_productos",
+primaryDataSource:"db:/gpp/cmpr_comprobantes",
+typeid:22,
+uuid:"1CAF3631-87AC-45CE-A810-02C07A4804CF"

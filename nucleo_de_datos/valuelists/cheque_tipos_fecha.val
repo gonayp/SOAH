@@ -1,0 +1,8 @@
+addEmptyValue:1,
+customValues:"Emisión|1\r\
+Vencimiento|2",
+displayValueType:12,
+name:"cheque_tipos_fecha",
+realValueType:4,
+typeid:34,
+uuid:"EC4468A9-0549-4C02-A6D6-A7F39D02A431"

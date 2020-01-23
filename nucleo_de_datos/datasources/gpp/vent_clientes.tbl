@@ -1,0 +1,12 @@
+dataSource:"db:/gpp/vent_clientes",
+items:[
+{
+dataProviderIDToAggregate:"cliente_id",
+name:"aggr_cantidad",
+typeid:40,
+uuid:"72EA6A15-64E6-4C31-8EE0-29DD2800966A"
+}
+],
+onUpdateMethodID:"D9FF24FD-45EC-4A68-9B12-35B014FC647E",
+typeid:39,
+uuid:"DAE461DA-799D-4B28-9C7C-504CB3858835"

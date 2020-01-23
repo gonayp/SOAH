@@ -1,0 +1,13 @@
+addEmptyValue:1,
+customValues:"Alquiler|1\r\
+Roto|2\r\
+Reparación|3\r\
+Extraviado|4\r\
+Robado|5\r\
+Disponible|6\r\
+Otros|7",
+displayValueType:12,
+name:"herr_equipos_historico_tipo",
+realValueType:4,
+typeid:34,
+uuid:"D3BA0029-E890-47C0-AF29-3F90D156F207"

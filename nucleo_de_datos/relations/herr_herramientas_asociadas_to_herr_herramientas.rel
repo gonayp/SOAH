@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/herr_herramientas",
+items:[
+{foreignColumnName:"herramienta_id",primaryDataProviderID:"herramienta_asociada_id",typeid:23,uuid:"E062E06D-F616-44A6-8FA6-F09B21C6CF8F"}
+],
+joinType:1,
+name:"herr_herramientas_asociadas_to_herr_herramientas",
+primaryDataSource:"db:/gpp/herr_herramientas_asociadas",
+typeid:22,
+uuid:"C3E721B7-1D4D-4DFE-912A-76B5AF5C539F"

@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/herr_equipo",
+items:[
+{foreignColumnName:"equipo_id",primaryDataProviderID:"equipo_id",typeid:23,uuid:"5131F4AD-81B8-42C7-B5F3-A04D8F77EDB1"}
+],
+joinType:1,
+name:"mem_vent_comprobante_equipos_to_herr_equipo",
+primaryDataSource:"mem:mem_vent_comprobante_equipos",
+typeid:22,
+uuid:"38519AF8-42CA-401C-9786-D64FF3381CEE"

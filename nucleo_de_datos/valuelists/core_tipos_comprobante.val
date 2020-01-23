@@ -1,0 +1,17 @@
+addEmptyValue:1,
+customValues:"Recibo Automatico|3\r\
+Recibo Manual|4\r\
+Factura A|5\r\
+Factura B|10\r\
+Factura C|15\r\
+Nota de Crédito A|20\r\
+Nota de Crédito B|25\r\
+Nota de Crédito C|30\r\
+Nota de Débito A|35\r\
+Nota de Débito B|40\r\
+Nota de Débito C|45",
+displayValueType:12,
+name:"core_tipos_comprobante",
+realValueType:4,
+typeid:34,
+uuid:"EFFD7044-4535-41C0-9D9C-EE46585B5DDB"

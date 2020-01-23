@@ -1,0 +1,13 @@
+addEmptyValue:1,
+customValues:"Responsable Inscripto|1\r\
+Consumidor Final|2\r\
+No Inscripto|3\r\
+Exento|4\r\
+Monotributo|5\r\
+Exento Internacional|6\r\
+Sujeto no Categorizado|7",
+displayValueType:12,
+name:"core_tipo_afip",
+realValueType:4,
+typeid:34,
+uuid:"D5F25AE1-1E95-4DCF-B07B-BC10B0091FEB"

@@ -1,0 +1,8 @@
+addEmptyValue:1,
+customValues:"Contado|1\r\
+Cuenta Corriente|2",
+displayValueType:12,
+name:"core_codiciones_pago",
+realValueType:4,
+typeid:34,
+uuid:"1333C6C3-267A-42A6-8977-7F11F19BB2BB"

@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/core",
+items:[
+{foreignColumnName:"core_id",primaryDataProviderID:"core_id",typeid:23,uuid:"AEEEB353-0A33-44D3-8A98-60B45EFF597E"}
+],
+joinType:1,
+name:"cmpr_proveedores_to_core",
+primaryDataSource:"db:/gpp/cmpr_proveedores",
+typeid:22,
+uuid:"82F33EC3-7791-45A9-A6DE-077E7ADE9592"

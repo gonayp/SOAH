@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/core_puntos_de_venta",
+items:[
+{foreignColumnName:"punto_venta_id",primaryDataProviderID:"comp_pv",typeid:23,uuid:"F8F61D16-078C-4BFD-B440-38C485B91421"}
+],
+joinType:1,
+name:"vent_comprobantes_to_core_puntos_de_venta",
+primaryDataSource:"db:/gpp/vent_comprobantes",
+typeid:22,
+uuid:"5FC2A488-6018-4ACD-BAB1-24F7D104E6A3"

@@ -1,0 +1,8 @@
+addEmptyValue:1,
+customValues:"Activo|1\r\
+Pasivo|2",
+displayValueType:12,
+name:"usuarios_estado",
+realValueType:4,
+typeid:34,
+uuid:"DE7906CC-4AE0-4A14-ADD2-1EA7AA0A9EBE"

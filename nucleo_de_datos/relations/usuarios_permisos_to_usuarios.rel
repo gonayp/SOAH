@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/usuarios",
+items:[
+{foreignColumnName:"usuario_id",primaryDataProviderID:"usuario_id",typeid:23,uuid:"33F94BB8-DE53-4A41-85E2-9D72E795D9DA"}
+],
+joinType:1,
+name:"usuarios_permisos_to_usuarios",
+primaryDataSource:"db:/gpp/usuarios_permisos",
+typeid:22,
+uuid:"F2CFC354-3BA9-4E61-B09C-53BB5CE2C1DB"

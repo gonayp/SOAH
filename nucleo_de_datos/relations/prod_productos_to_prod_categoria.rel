@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/prod_categoria",
+items:[
+{foreignColumnName:"categoria_prod_id",primaryDataProviderID:"categoria_prod_id",typeid:23,uuid:"65B826E6-82A7-4868-A4C5-8F37ED8774ED"}
+],
+joinType:1,
+name:"prod_productos_to_prod_categoria",
+primaryDataSource:"db:/gpp/prod_productos",
+typeid:22,
+uuid:"20A264F7-A6C6-42CF-9B62-3A6EEE165280"

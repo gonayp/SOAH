@@ -1,0 +1,8 @@
+addEmptyValue:1,
+customValues:"Activo|1\r\
+Inactivo|2",
+displayValueType:12,
+name:"vent_cliente_autorizado_estado",
+realValueType:4,
+typeid:34,
+uuid:"FDB4B142-BE0F-4A9B-A05C-4BC4AD5C52B1"

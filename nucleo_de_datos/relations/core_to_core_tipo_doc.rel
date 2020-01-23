@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/core_tipo_doc",
+items:[
+{foreignColumnName:"tipo_doc_id",primaryDataProviderID:"tipo_doc_id",typeid:23,uuid:"8FFEF8E8-C724-402A-AECE-EB5C94ED5AE4"}
+],
+joinType:1,
+name:"core_to_core_tipo_doc",
+primaryDataSource:"db:/gpp/core",
+typeid:22,
+uuid:"47E62491-AC7C-471C-8632-419DA4842330"

@@ -1,0 +1,14 @@
+addEmptyValue:1,
+customProperties:"lazyLoading:false",
+customValues:"Efectivo|1\r\
+Cheque|2\r\
+Transferencia|3\r\
+Ret. Gan.|4\r\
+Ret. IIBB|5\r\
+Otros|6\r\
+",
+displayValueType:12,
+name:"vent_formas_d_pago",
+realValueType:4,
+typeid:34,
+uuid:"58C10213-F215-4BA5-A422-4D5E7502D9C0"

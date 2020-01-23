@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/caja",
+items:[
+{foreignColumnName:"caja_id",primaryDataProviderID:"caja_id",typeid:23,uuid:"AB223A14-9A8E-4FD5-A583-2B91345988F8"}
+],
+joinType:1,
+name:"vent_comprobantes_to_caja",
+primaryDataSource:"db:/gpp/vent_comprobantes",
+typeid:22,
+uuid:"222AC673-51AB-44DB-A4C8-08253A2D9E3F"

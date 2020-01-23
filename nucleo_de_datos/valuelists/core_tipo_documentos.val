@@ -1,0 +1,13 @@
+addEmptyValue:1,
+customProperties:"lazyLoading:false",
+dataProviderID1:"tipo_doc_id",
+dataProviderID2:"tipo_doc_nombre",
+dataSource:"db:/gpp/core_tipo_doc",
+displayValueType:12,
+name:"core_tipo_documentos",
+realValueType:4,
+returnDataProviders:1,
+showDataProviders:2,
+typeid:34,
+uuid:"F5A3B31E-C5CB-4519-BD91-2001F3B32618",
+valueListType:1

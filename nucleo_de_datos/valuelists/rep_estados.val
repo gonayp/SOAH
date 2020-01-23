@@ -1,0 +1,12 @@
+addEmptyValue:1,
+customValues:"Solicitado|1\r\
+Impreso|2\r\
+Presupuestado|3\r\
+Enviado|4\r\
+Terminado|5\r\
+Cancelado|6",
+displayValueType:12,
+name:"rep_estados",
+realValueType:4,
+typeid:34,
+uuid:"0FC36445-4D7E-489E-B045-DCD40C21D79B"

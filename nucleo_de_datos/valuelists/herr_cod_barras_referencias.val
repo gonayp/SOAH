@@ -1,0 +1,12 @@
+addEmptyValue:1,
+customValues:"Herramienta|1\r\
+Categoría|2\r\
+Marca|3\r\
+Modelo|4\r\
+Equipo|5\r\
+Fijo|6",
+displayValueType:12,
+name:"herr_cod_barras_referencias",
+realValueType:4,
+typeid:34,
+uuid:"FA01E68E-6CD8-4E39-A754-E91EDB1470DF"

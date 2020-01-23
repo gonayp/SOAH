@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/core",
+items:[
+{foreignColumnName:"core_id",primaryDataProviderID:"core_id",typeid:23,uuid:"5A6E5927-DA5D-476D-B40F-F969ABE59060"}
+],
+joinType:1,
+name:"vent_autorizados_to_core",
+primaryDataSource:"db:/gpp/vent_autorizados",
+typeid:22,
+uuid:"468D6537-2640-4BAD-90D6-84B482248645"

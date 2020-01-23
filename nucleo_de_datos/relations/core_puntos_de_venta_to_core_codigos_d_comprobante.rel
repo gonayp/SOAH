@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/core_codigos_d_comprobante",
+items:[
+{foreignColumnName:"punto_venta_id",primaryDataProviderID:"punto_venta_id",typeid:23,uuid:"C5BF0F01-B6AC-4CF6-A581-55E18D31A3D8"}
+],
+joinType:1,
+name:"core_puntos_de_venta_to_core_codigos_d_comprobante",
+primaryDataSource:"db:/gpp/core_puntos_de_venta",
+typeid:22,
+uuid:"1F38AE0F-26D6-468D-9111-6C649D7A0C27"

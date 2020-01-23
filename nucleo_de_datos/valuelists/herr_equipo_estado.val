@@ -1,0 +1,14 @@
+addEmptyValue:1,
+customValues:"Disponible|1\r\
+Roto|2\r\
+Extraviado|3\r\
+En reparación|4\r\
+Robado|5\r\
+Bien de Uso|6\r\
+Alquilado|7\r\
+Baja|8",
+displayValueType:12,
+name:"herr_equipo_estado",
+realValueType:4,
+typeid:34,
+uuid:"DF787460-AF05-4DA4-A94A-6A37E23E1B1C"

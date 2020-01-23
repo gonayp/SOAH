@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/bancos",
+items:[
+{foreignColumnName:"banco_id",primaryDataProviderID:"banco_id",typeid:23,uuid:"9EF8EA66-BBCF-496D-8C54-E9D2B0AD77EB"}
+],
+joinType:1,
+name:"cheq_cheques_to_bancos",
+primaryDataSource:"db:/gpp/cheq_cheques",
+typeid:22,
+uuid:"34C33DEB-236C-44DA-AFB2-38A3E7E37D5C"

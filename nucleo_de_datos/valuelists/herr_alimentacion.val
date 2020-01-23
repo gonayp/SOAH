@@ -1,0 +1,12 @@
+customProperties:"lazyLoading:false",
+dataProviderID1:"alimentacion_id",
+dataProviderID2:"alimentacion_nombre",
+dataSource:"db:/gpp/herr_alimentacion",
+displayValueType:12,
+name:"herr_alimentacion",
+realValueType:4,
+returnDataProviders:1,
+showDataProviders:2,
+typeid:34,
+uuid:"DC2759E2-2C02-42DC-BA8A-7141AC76753F",
+valueListType:1

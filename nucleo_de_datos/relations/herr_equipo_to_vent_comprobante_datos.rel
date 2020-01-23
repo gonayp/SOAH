@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/vent_comprobante_datos",
+items:[
+{foreignColumnName:"comp_id",primaryDataProviderID:"comp_id",typeid:23,uuid:"66D3660F-391C-457D-90C9-9846492CC3C3"}
+],
+joinType:1,
+name:"herr_equipo_to_vent_comprobante_datos",
+primaryDataSource:"db:/gpp/herr_equipo",
+typeid:22,
+uuid:"AFE86B10-3EC0-495E-BF82-27ADC79671A4"

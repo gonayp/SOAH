@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/vent_obras",
+items:[
+{foreignColumnName:"obra_id",primaryDataProviderID:"obra_id",typeid:23,uuid:"024FA9E5-B11F-4C9E-B3C8-1585527612DC"}
+],
+joinType:1,
+name:"vent_comprobantes_to_vent_obras",
+primaryDataSource:"db:/gpp/vent_comprobantes",
+typeid:22,
+uuid:"0018C2DC-A698-4F5E-A8B4-1F5759982B6B"

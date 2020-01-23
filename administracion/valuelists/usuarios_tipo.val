@@ -1,0 +1,9 @@
+addEmptyValue:1,
+customValues:"Estandar|1\r\
+Administrador|2\r\
+Externo|3",
+displayValueType:12,
+name:"usuarios_tipo",
+realValueType:4,
+typeid:34,
+uuid:"907D3D0D-7A03-4596-8DDF-0B6ECA4A75AF"

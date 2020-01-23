@@ -1,0 +1,15 @@
+addEmptyValue:1,
+customValues:"Factura A|105\r\
+Factura B|110\r\
+Factura C|115\r\
+Nota de Crédito A|120\r\
+Nota de Crédito B|125\r\
+Nota de Crédito C|130\r\
+Nota de Débito A|135\r\
+Nota de Débito B|140\r\
+Nota de Débito C|145",
+displayValueType:12,
+name:"core_tipos_comprobante_prov",
+realValueType:4,
+typeid:34,
+uuid:"0D43119B-2610-4A55-B976-B8C7F84943E4"

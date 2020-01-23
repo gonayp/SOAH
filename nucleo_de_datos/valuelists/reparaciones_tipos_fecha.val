@@ -1,0 +1,9 @@
+addEmptyValue:1,
+customValues:"Inicial|1\r\
+Envio|2\r\
+Retorno|3",
+displayValueType:12,
+name:"reparaciones_tipos_fecha",
+realValueType:4,
+typeid:34,
+uuid:"9398FB61-F357-4666-B850-FEA4462578C6"

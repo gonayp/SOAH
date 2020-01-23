@@ -1,0 +1,13 @@
+addEmptyValue:1,
+customProperties:"lazyLoading:false",
+dataProviderID1:"punto_venta_id",
+dataProviderID2:"pv_numero",
+dataSource:"db:/gpp/core_puntos_de_venta",
+displayValueType:4,
+name:"puntos_de_venta",
+realValueType:4,
+returnDataProviders:1,
+showDataProviders:2,
+typeid:34,
+uuid:"9FEB7024-5746-401F-BECE-F2404FC96AEC",
+valueListType:1

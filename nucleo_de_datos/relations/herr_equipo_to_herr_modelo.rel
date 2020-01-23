@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/herr_modelo",
+items:[
+{foreignColumnName:"modelo_id",primaryDataProviderID:"modelo_id",typeid:23,uuid:"53F5B7DE-1325-4029-8D47-243E7537FF65"}
+],
+joinType:1,
+name:"herr_equipo_to_herr_modelo",
+primaryDataSource:"db:/gpp/herr_equipo",
+typeid:22,
+uuid:"75C42A94-249E-4920-AE65-A0A34B2C463C"

@@ -1,0 +1,14 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/herr_equipo_imagen_y_manual",
+items:[
+{foreignColumnName:"herramienta_id",primaryDataProviderID:"herramienta_id",typeid:23,uuid:"7F2EBA94-D134-4E80-B009-FBDCBBC2A2CF"},
+{foreignColumnName:"company_id",primaryDataProviderID:"company_id",typeid:23,uuid:"7FC50382-21A1-4471-B23F-4F5739615139"},
+{foreignColumnName:"marca_id",primaryDataProviderID:"marca_id",typeid:23,uuid:"9DD5BB6E-D38B-4D1F-8F3C-5D9CC3541E71"},
+{foreignColumnName:"modelo_id",primaryDataProviderID:"modelo_id",typeid:23,uuid:"E0F097B9-F6A9-46AB-A4F3-31C4117B6A70"},
+{foreignColumnName:"herr_img_ma_tipo",primaryDataProviderID:"LITERAL:2",typeid:23,uuid:"F039A88E-3996-4DBA-861D-40E53C1E6F3D"}
+],
+joinType:1,
+name:"herr_equipo_to_herr_equipo_manual",
+primaryDataSource:"db:/gpp/herr_equipo",
+typeid:22,
+uuid:"C94B2B1F-A5DC-4858-A2E4-736182C39A5F"

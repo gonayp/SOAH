@@ -1,0 +1,12 @@
+customProperties:"lazyLoading:false",
+dataProviderID1:"acuerdo_precios_id",
+dataProviderID2:"acuerdo_precios_nombre",
+dataSource:"db:/gpp/vent_acuerdos_d_precios",
+displayValueType:12,
+name:"vent_acuerdos_d_precios",
+realValueType:4,
+returnDataProviders:1,
+showDataProviders:2,
+typeid:34,
+uuid:"C7B707AE-BDF2-4B1C-AE8B-61A1FC2E6F67",
+valueListType:1

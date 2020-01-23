@@ -1,0 +1,14 @@
+addEmptyValue:1,
+customValues:"Acción|1\r\
+Llamada|2\r\
+Mail|3\r\
+Comprobante|4\r\
+Otros|5\r\
+Alquiler|6\r\
+Devolución|7\r\
+Cobranza|8",
+displayValueType:12,
+name:"vent_clientes_histo_tipo",
+realValueType:4,
+typeid:34,
+uuid:"50B954F6-3445-4B96-80DA-9F3E268EDA30"

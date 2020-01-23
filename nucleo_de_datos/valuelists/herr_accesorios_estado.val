@@ -1,0 +1,8 @@
+addEmptyValue:1,
+customValues:"Activo|1\r\
+Inactivo|2",
+displayValueType:12,
+name:"herr_accesorios_estado",
+realValueType:4,
+typeid:34,
+uuid:"E627753B-1D83-4299-8F60-07D84BF85AAF"

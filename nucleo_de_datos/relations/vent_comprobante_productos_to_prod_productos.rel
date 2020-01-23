@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/prod_productos",
+items:[
+{foreignColumnName:"producto_id",primaryDataProviderID:"comp_producto_id",typeid:23,uuid:"DD7D1852-464C-41DA-B488-EFAF0EC112B1"}
+],
+joinType:1,
+name:"vent_comprobante_productos_to_prod_productos",
+primaryDataSource:"db:/gpp/vent_comprobante_productos",
+typeid:22,
+uuid:"0CD82E82-4CEA-4C5A-840D-D67FE0762479"

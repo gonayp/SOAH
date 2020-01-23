@@ -1,0 +1,8 @@
+addEmptyValue:1,
+customValues:"Abierta|1\r\
+Cerrada|2",
+displayValueType:12,
+name:"cmpr_proveedor_histo_estado",
+realValueType:4,
+typeid:34,
+uuid:"28711521-F83E-4548-BB62-E917C2AE7621"

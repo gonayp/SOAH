@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/rep_fallas",
+items:[
+{foreignColumnName:"falla_id",primaryDataProviderID:"falla_id",typeid:23,uuid:"E7734FA6-4254-4245-A88D-03FD59D11DB4"}
+],
+joinType:1,
+name:"rep_fallas_reparacion_to_rep_fallas",
+primaryDataSource:"db:/gpp/rep_fallas_reparacion",
+typeid:22,
+uuid:"547DDF47-5794-4760-84DE-872931EA528F"

@@ -1,0 +1,8 @@
+addEmptyValue:1,
+customValues:"SSL|1\r\
+StartTLS|2",
+displayValueType:12,
+name:"core_tipo_conect_mail",
+realValueType:4,
+typeid:34,
+uuid:"17B89B5D-07C8-46E4-8AF9-6C7CB7E08C27"

@@ -1,0 +1,12 @@
+dataSource:"db:/gpp/cmpr_proveedores",
+items:[
+{
+dataProviderIDToAggregate:"proveedor_id",
+name:"agg_cantidad",
+typeid:40,
+uuid:"94174896-B48F-437D-9EF1-7A581C5C9370"
+}
+],
+onUpdateMethodID:"D9FF24FD-45EC-4A68-9B12-35B014FC647E",
+typeid:39,
+uuid:"1950EBF2-300A-4213-AF50-F475CEEA6C84"

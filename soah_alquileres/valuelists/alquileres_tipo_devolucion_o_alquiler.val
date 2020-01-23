@@ -1,0 +1,8 @@
+addEmptyValue:1,
+customValues:"Alquiler|1\r\
+Devolucion|2",
+displayValueType:12,
+name:"alquileres_tipo_devolucion_o_alquiler",
+realValueType:4,
+typeid:34,
+uuid:"1DEAEDB0-9A92-4A89-9D44-A648A19DD4D2"

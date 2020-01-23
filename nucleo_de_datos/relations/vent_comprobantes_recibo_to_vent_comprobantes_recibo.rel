@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/vent_comprobantes",
+items:[
+{foreignColumnName:"comp_id",primaryDataProviderID:"comp_recibo_id",typeid:23,uuid:"29F0281B-61FB-465A-93A2-95A5794C6866"}
+],
+joinType:1,
+name:"vent_comprobantes_recibo_to_vent_comprobantes_recibo",
+primaryDataSource:"db:/gpp/vent_comprobantes_recibo",
+typeid:22,
+uuid:"AA482551-E1E3-4BEF-B896-1F8599617D0F"

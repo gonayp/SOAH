@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/herr_cod_barra_cfg_renglon",
+items:[
+{foreignColumnName:"configuracion_id",primaryDataProviderID:"configuracion_id",typeid:23,uuid:"00A122D3-D746-468D-AF3A-8ACF394DEA50"}
+],
+joinType:1,
+name:"herr_cod_barra_configuraciones_to_herr_cod_barra_cfg_renglon",
+primaryDataSource:"db:/gpp/herr_cod_barra_configuraciones",
+typeid:22,
+uuid:"6E7B70D4-A342-44DE-8C63-BCA0BB248D98"

@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/vent_historicos_cliente",
+items:[
+{foreignColumnName:"cliente_id",primaryDataProviderID:"cliente_id",typeid:23,uuid:"AC65ED22-88EB-4615-AFEF-EE2D3A619108"}
+],
+joinType:1,
+name:"vent_clientes_to_vent_historicos_cliente",
+primaryDataSource:"db:/gpp/vent_clientes",
+typeid:22,
+uuid:"BFE03DA0-74CC-4FB1-A771-C1E8A069413A"

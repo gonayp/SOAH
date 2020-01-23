@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/vent_acuerdos_d_precios",
+items:[
+{foreignColumnName:"acuerdo_precios_id",primaryDataProviderID:"acuerdo_precios_id",typeid:23,uuid:"1D50AF71-0944-4EB3-A7BE-7AFA92F73F39"}
+],
+joinType:1,
+name:"vent_comprobantes_to_vent_acuerdos_d_precios",
+primaryDataSource:"db:/gpp/vent_comprobantes",
+typeid:22,
+uuid:"ACFC19BA-0AB4-40EC-B7C0-EF07A27DBCA0"

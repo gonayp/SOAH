@@ -1,0 +1,8 @@
+addEmptyValue:1,
+customValues:"Ingreso|1\r\
+Egreso|2",
+displayValueType:12,
+name:"caja_tipo_movimiento_manual",
+realValueType:4,
+typeid:34,
+uuid:"95E2ABBF-09BB-4722-A8FC-B305FFDE5541"

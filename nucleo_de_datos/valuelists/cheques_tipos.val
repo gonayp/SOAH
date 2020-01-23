@@ -1,0 +1,10 @@
+addEmptyValue:1,
+customValues:"Propio|1\r\
+Terceros|2\r\
+Endosado|3\r\
+Otros|4",
+displayValueType:12,
+name:"cheques_tipos",
+realValueType:4,
+typeid:34,
+uuid:"7B6185D1-2622-4489-9C7E-F73C7B8EC471"

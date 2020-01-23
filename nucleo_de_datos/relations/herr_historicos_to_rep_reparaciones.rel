@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/rep_reparaciones",
+items:[
+{foreignColumnName:"reparacion_id",primaryDataProviderID:"reparacion_id",typeid:23,uuid:"E56A1421-1398-4A60-BF3D-489C2CA3A107"}
+],
+joinType:1,
+name:"herr_historicos_to_rep_reparaciones",
+primaryDataSource:"db:/gpp/herr_historicos",
+typeid:22,
+uuid:"4E9B75EE-520D-4B96-998B-1D01726A10AF"

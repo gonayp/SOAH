@@ -1,0 +1,11 @@
+dataSource:"db:/gpp/herr_marca",
+items:[
+{
+dataProviderIDToAggregate:"marca_id",
+name:"aggr_cantidad",
+typeid:40,
+uuid:"9B2BFC9D-1207-467A-8177-EB1CCDBFD6AC"
+}
+],
+typeid:39,
+uuid:"2A836B6F-1B33-4606-94A2-5CCABB5A9A67"

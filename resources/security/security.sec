@@ -1,0 +1,10 @@
+groups:[
+"Administrators",
+"group"
+],
+usergroups:{
+
+},
+users:[
+{name:"admin",password_hash:"PBKDF2:5B595985EB20B083:9999:3E3DD69DDAD98E40E2D72C31373143124D42EE98",user_uid:"admin"}
+]

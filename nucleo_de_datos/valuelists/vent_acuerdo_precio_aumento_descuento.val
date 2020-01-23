@@ -1,0 +1,8 @@
+addEmptyValue:1,
+customValues:"Descuento|1\r\
+Aumento|2",
+displayValueType:12,
+name:"vent_acuerdo_precio_aumento_descuento",
+realValueType:4,
+typeid:34,
+uuid:"7DF3015F-7C82-4E05-9582-5C77DE926333"

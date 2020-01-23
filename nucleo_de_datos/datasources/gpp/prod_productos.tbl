@@ -1,0 +1,11 @@
+dataSource:"db:/gpp/prod_productos",
+items:[
+{
+dataProviderIDToAggregate:"producto_id",
+name:"aggr_cantidad",
+typeid:40,
+uuid:"1B7D5C3F-55BC-4BBD-9884-99A4D71D3896"
+}
+],
+typeid:39,
+uuid:"690560C7-8065-41D6-8A07-1DB35C00677F"

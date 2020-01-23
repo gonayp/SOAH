@@ -1,0 +1,13 @@
+addEmptyValue:1,
+customProperties:"lazyLoading:false",
+dataProviderID1:"medida_id",
+dataProviderID2:"medida_nombre",
+dataSource:"db:/gpp/prod_medidas",
+displayValueType:12,
+name:"prod_unidad_medida",
+realValueType:4,
+returnDataProviders:1,
+showDataProviders:2,
+typeid:34,
+uuid:"7D2F57B9-6702-468C-BC72-B13659B4A5B0",
+valueListType:1

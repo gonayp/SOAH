@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/core",
+items:[
+{foreignColumnName:"core_id",primaryDataProviderID:"core_id",typeid:23,uuid:"4C693FF5-E0CA-4BA1-9A4A-C66D1E8C9084"}
+],
+joinType:1,
+name:"core_company_to_core",
+primaryDataSource:"db:/gpp/core_company",
+typeid:22,
+uuid:"377AA3F0-EE44-416C-803F-B0C5B486E23E"

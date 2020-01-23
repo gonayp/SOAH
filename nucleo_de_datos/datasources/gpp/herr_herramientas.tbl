@@ -1,0 +1,12 @@
+dataSource:"db:/gpp/herr_herramientas",
+items:[
+{
+dataProviderIDToAggregate:"herramienta_id",
+name:"aggr_cantidad",
+typeid:40,
+uuid:"D51419FC-3926-4623-9F78-594E098CF532"
+}
+],
+onUpdateMethodID:"D9FF24FD-45EC-4A68-9B12-35B014FC647E",
+typeid:39,
+uuid:"9C868CD8-EFD4-4E75-BD3C-97CAF25B9037"

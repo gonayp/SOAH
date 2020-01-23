@@ -1,0 +1,15 @@
+addEmptyValue:1,
+customValues:"Registrado|1\r\
+En cartera|2\r\
+En Caución|3\r\
+Depositado|4\r\
+Endosado|5\r\
+Invalidado|6\r\
+Conciliado|7\r\
+Vendido|8\r\
+Rechazado|8",
+displayValueType:12,
+name:"cheque_estados",
+realValueType:4,
+typeid:34,
+uuid:"A51C0552-6820-4276-A15A-635553B543A5"

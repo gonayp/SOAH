@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/vent_comprobante_estados",
+items:[
+{foreignColumnName:"estado_id",primaryDataProviderID:"comp_estado_id",typeid:23,uuid:"CFE8EC5E-0609-4A05-841F-0F79AC736388"}
+],
+joinType:1,
+name:"vent_comprobantes_to_vent_comprobante_estados",
+primaryDataSource:"db:/gpp/vent_comprobantes",
+typeid:22,
+uuid:"623CCEA5-B8AB-4AE1-A1EB-A5757B3ED1E5"

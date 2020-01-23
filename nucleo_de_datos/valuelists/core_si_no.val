@@ -1,0 +1,8 @@
+addEmptyValue:1,
+customValues:"SI|1\r\
+NO|2",
+displayValueType:12,
+name:"core_si_no",
+realValueType:4,
+typeid:34,
+uuid:"7EA21DAB-0D26-40BF-A6EB-1143E31EED41"

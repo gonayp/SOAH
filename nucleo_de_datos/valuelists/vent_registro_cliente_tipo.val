@@ -1,0 +1,11 @@
+addEmptyValue:1,
+customValues:"Manual|1\r\
+Comprobante|2\r\
+Llamada|3\r\
+Mail|4\r\
+Otros|5",
+displayValueType:12,
+name:"vent_registro_cliente_tipo",
+realValueType:4,
+typeid:34,
+uuid:"8325ED45-A4BB-4680-BAA7-159C7EA47ADD"

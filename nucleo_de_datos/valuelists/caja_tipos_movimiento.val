@@ -1,0 +1,15 @@
+addEmptyValue:1,
+customValues:"Factura-Cliente|1\r\
+Factura-Proveedor|2\r\
+Movimiento Manual|3\r\
+Cheques|4\r\
+Transferencia|5\r\
+Ret IIBB|6\r\
+Ret Gan|7\r\
+\r\
+",
+displayValueType:12,
+name:"caja_tipos_movimiento",
+realValueType:4,
+typeid:34,
+uuid:"440B74D6-B5D7-4219-AB6F-65E90347E018"

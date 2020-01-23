@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/cmpr_proveedores",
+items:[
+{foreignColumnName:"proveedor_id",primaryDataProviderID:"proveedor_id",typeid:23,uuid:"3A649F41-4D3F-470A-BAF8-07EE86F8805D"}
+],
+joinType:1,
+name:"cmpr_comprobantes_to_cmpr_proveedores",
+primaryDataSource:"db:/gpp/cmpr_comprobantes",
+typeid:22,
+uuid:"0D95E5A5-AF49-4AD0-8D35-0054D79CDD85"

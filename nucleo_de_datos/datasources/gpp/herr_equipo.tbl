@@ -1,0 +1,12 @@
+dataSource:"db:/gpp/herr_equipo",
+items:[
+{
+dataProviderIDToAggregate:"equipo_id",
+name:"agg_cantidad",
+typeid:40,
+uuid:"75F889CB-01C2-4088-84AE-7EF3000C086B"
+}
+],
+onUpdateMethodID:"D9FF24FD-45EC-4A68-9B12-35B014FC647E",
+typeid:39,
+uuid:"EBB83D4B-97A2-4DF7-BF00-89801ED3015F"

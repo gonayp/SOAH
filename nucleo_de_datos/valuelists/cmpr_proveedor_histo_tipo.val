@@ -1,0 +1,12 @@
+addEmptyValue:1,
+customValues:"Acción|1\r\
+Llamada|2\r\
+Mail|3\r\
+Comprobante|4\r\
+Otros|5\r\
+Cobranza|8",
+displayValueType:12,
+name:"cmpr_proveedor_histo_tipo",
+realValueType:4,
+typeid:34,
+uuid:"03F15E27-715C-482A-B471-D9B175ABEB1B"

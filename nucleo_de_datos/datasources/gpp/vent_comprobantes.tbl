@@ -1,0 +1,13 @@
+dataSource:"db:/gpp/vent_comprobantes",
+items:[
+{
+dataProviderIDToAggregate:"comp_imp_total",
+name:"aggr_sum_total",
+type:4,
+typeid:40,
+uuid:"22C1B7B8-5C5F-4B15-9113-FAF30B442A36"
+}
+],
+onUpdateMethodID:"D9FF24FD-45EC-4A68-9B12-35B014FC647E",
+typeid:39,
+uuid:"89060A4D-FFC1-462D-9E7F-8E3A25F7C55D"

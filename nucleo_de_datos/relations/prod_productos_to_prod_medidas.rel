@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/prod_medidas",
+items:[
+{foreignColumnName:"medida_id",primaryDataProviderID:"medida_id",typeid:23,uuid:"7A30FB85-E8B0-477A-8EE2-DB677F579526"}
+],
+joinType:1,
+name:"prod_productos_to_prod_medidas",
+primaryDataSource:"db:/gpp/prod_productos",
+typeid:22,
+uuid:"98522C07-61FA-4135-A3D9-B6E973F8AF39"

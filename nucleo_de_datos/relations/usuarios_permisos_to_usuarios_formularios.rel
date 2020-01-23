@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/usuarios_formularios",
+items:[
+{foreignColumnName:"formulario_id",primaryDataProviderID:"formulario_id",typeid:23,uuid:"229D280D-EB26-4E7E-A02F-BC6CE695BFA7"}
+],
+joinType:1,
+name:"usuarios_permisos_to_usuarios_formularios",
+primaryDataSource:"db:/gpp/usuarios_permisos",
+typeid:22,
+uuid:"3ECA1595-BD47-4A28-887D-98993EA589D5"
