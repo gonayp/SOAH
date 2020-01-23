@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildpath>
+	<buildpathentry excluding=".stp/|medias/" kind="src" path=""/>
+	<buildpathentry exported="true" kind="prj" path="/administracion"/>
+	<buildpathentry exported="true" kind="prj" path="/bancos"/>
+	<buildpathentry exported="true" kind="prj" path="/cajas"/>
+	<buildpathentry exported="true" kind="prj" path="/cheques"/>
+	<buildpathentry exported="true" kind="prj" path="/cmpr_proveedores"/>
+	<buildpathentry exported="true" kind="prj" path="/deposito_stock"/>
+	<buildpathentry exported="true" kind="prj" path="/facturacion_modulos"/>
+	<buildpathentry exported="true" kind="prj" path="/herr_herramientas"/>
+	<buildpathentry exported="true" kind="prj" path="/login"/>
+	<buildpathentry exported="true" kind="prj" path="/nucleo_de_datos"/>
+	<buildpathentry exported="true" kind="prj" path="/prod_productos"/>
+	<buildpathentry exported="true" kind="prj" path="/rep_reparaciones"/>
+	<buildpathentry exported="true" kind="prj" path="/soah_alquileres"/>
+	<buildpathentry exported="true" kind="prj" path="/soah_facturacion"/>
+	<buildpathentry exported="true" kind="prj" path="/vent_clientes"/>
+	<buildpathentry exported="true" kind="prj" path="/web_packages"/>
+</buildpath>
