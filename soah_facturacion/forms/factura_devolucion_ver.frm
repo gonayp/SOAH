@@ -290,7 +290,7 @@ top:"120",
 width:"45"
 },
 formIndex:4,
-imageStyleClass:"fas fa-paper-plane",
+imageStyleClass:"fas fa-envelope",
 onActionMethodID:"4EF7CCFB-A95B-4074-B29E-BE4E5E3678C3",
 tabSeq:-2,
 toolTipText:"Enviar mail",

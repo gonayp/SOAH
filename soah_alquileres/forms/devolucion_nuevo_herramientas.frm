@@ -49,11 +49,17 @@ width:"150"
 {
 dataprovider:"comp_fecha_alquiler",
 format:"dd/MM/yy HH:mm",
-headerStyleClass:"cell_center_header",
+headerStyleClass:"cell_right",
 headerText:"Alquiler",
 styleClass:"cell_center",
 svyUUID:"0BA43E0F-EF75-4929-BB18-2AEEA21FEBA8",
 width:"150"
+},
+{
+dataprovider:"comp_num_alquiler",
+styleClass:"cell_left",
+svyUUID:"11BD814D-B854-4C6B-9141-BB2FC2590FE0",
+width:"100"
 },
 {
 dataprovider:"comp_dias_reales",

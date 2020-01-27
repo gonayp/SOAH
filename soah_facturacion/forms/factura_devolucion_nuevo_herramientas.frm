@@ -43,20 +43,32 @@ width:"150"
 {
 dataprovider:"comp_fecha_alquiler",
 format:"dd/MM/yy HH:mm",
-headerStyleClass:"cell_center_header",
+headerStyleClass:"cell_right_header",
 headerText:"Alquiler",
 styleClass:"cell_center",
 svyUUID:"4D93731D-FAC5-4E7F-9B89-B93A15AD69AA",
 width:"150"
 },
 {
+dataprovider:"comp_num_alquiler",
+styleClass:"cell_left",
+svyUUID:"5381993C-7E2D-42C0-8ECA-4CFAE73976A2",
+width:"100"
+},
+{
 dataprovider:"comp_fecha_devolucion",
 format:"dd/MM/yy HH:mm",
-headerStyleClass:"cell_center_header",
+headerStyleClass:"cell_right_header",
 headerText:"Devolución",
 styleClass:"cell_center",
 svyUUID:"4FF6D1D2-F372-4FF3-A896-F5069251A0F7",
 width:"150"
+},
+{
+dataprovider:"comp_num_devolucion",
+styleClass:"cell_left",
+svyUUID:"27746953-6CC2-4E74-BE0A-90334305B5E2",
+width:"100"
 },
 {
 dataprovider:"comp_dias_reales",

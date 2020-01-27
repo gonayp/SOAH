@@ -199,6 +199,7 @@ function addHerramienta() {
 		}
 		forms.devolucion_nuevo_herramientas.foundset.comp_orden				= foundset.vent_comprobante_herramientas_to_vent_comprobantes.comp_orden_compra
 		forms.devolucion_nuevo_herramientas.foundset.comp_id				= foundset.comp_id
+		forms.devolucion_nuevo_herramientas.foundset.comp_num_alquiler		= foundset.vent_comprobante_herramientas_to_vent_comprobantes.calc_num_compr_sin_codig
 		
 		
 		
@@ -297,6 +298,7 @@ function cargarHerramientasAsociadas(fs_equipos,p_comp_id){
 				}
 				forms.devolucion_nuevo_herramientas.foundset.comp_orden				= fs_comp_herr.vent_comprobante_herramientas_to_vent_comprobantes.comp_orden_compra
 				forms.devolucion_nuevo_herramientas.foundset.comp_id				= fs_comp_herr.comp_id
+				forms.devolucion_nuevo_herramientas.foundset.comp_num_alquiler		= fs_comp_herr.vent_comprobante_herramientas_to_vent_comprobantes.calc_num_compr_sin_codig
 				
 				databaseManager.saveData()
 				

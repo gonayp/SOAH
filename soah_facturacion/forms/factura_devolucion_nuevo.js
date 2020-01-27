@@ -672,7 +672,7 @@ function calculoDiasPrecio(){
 			vl_obra_anterior = myHerramienta.comp_obra
 		}
 		
-		var x = myHerramienta.comp_fecha_devolucion - myHerramienta.comp_fecha_alquiler //substracting two dates returns difference in milliseconds 
+		var x = vl_fecha - myHerramienta.comp_fecha_alquiler //substracting two dates returns difference in milliseconds 
 		var one_day=1000*60*60*24 //ms * sec * min * hrs in a day 
 	
 	
@@ -681,6 +681,11 @@ function calculoDiasPrecio(){
 		
 		myHerramienta.comp_dias_reales = diffRounded
 		
+		var vl_dias_a_cobrar = scopes.alquileres.calcularDiasParaCobrar(myHerramienta.comp_fecha_alquiler ,myHerramienta.comp_fecha_devolucion)
+		if(myHerramienta.comp_fec_ult_facturacion != null)
+			vl_dias_a_cobrar = scopes.alquileres.calcularDiasParaCobrar(vl_fecha,myHerramienta.comp_fecha_devolucion)
+		
+		myHerramienta.comp_dias_a_cobrar = vl_dias_a_cobrar
 		
 		myHerramienta.comp_precio_calculado = myHerramienta.comp_dias_a_cobrar * myHerramienta.comp_precio
 		

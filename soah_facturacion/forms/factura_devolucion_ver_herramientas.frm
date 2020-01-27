@@ -35,11 +35,17 @@ width:"150"
 {
 dataprovider:"vent_comprobante_herramientas_to_vent_comprobantes_alquiler.comp_fecha_emision",
 format:"dd/MM/yy HH:mm",
-headerStyleClass:"cell_center_header",
+headerStyleClass:"cell_right_header",
 headerText:"Alquiler",
 styleClass:"cell_center",
 svyUUID:"DDB4334E-7466-49DD-BBB9-B104C41894B7",
 width:"150"
+},
+{
+dataprovider:"vent_comprobante_herramientas_to_vent_comprobantes_alquiler.calc_num_compr_sin_codig",
+headerStyleClass:"cell_center_header",
+svyUUID:"DCA9495F-18EF-4A64-BCBC-CD2281F91A75",
+width:"100"
 },
 {
 dataprovider:"vent_comprobante_herramientas_to_vent_comprobantes_devolucion.comp_fecha_emision",
@@ -48,6 +54,12 @@ headerStyleClass:"cell_center_header",
 headerText:"Devolución",
 styleClass:"cell_center",
 svyUUID:"120AC2D1-2600-40DE-9891-D75F608FC441",
+width:"150"
+},
+{
+dataprovider:"vent_comprobante_herramientas_to_vent_comprobantes_devolucion.calc_num_compr_sin_codig",
+styleClass:"cell_center",
+svyUUID:"3806983C-2F73-4C7B-8D89-DC2EB6B43B53",
 width:"150"
 },
 {

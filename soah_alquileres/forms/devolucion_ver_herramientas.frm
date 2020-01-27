@@ -87,11 +87,17 @@ width:"150"
 {
 dataprovider:"vent_comprobante_herramientas_to_vent_comprobantes_alquiler.comp_fecha_emision",
 format:"dd/MM/yy HH:mm",
-headerStyleClass:"cell_center_header",
+headerStyleClass:"cell_right_header",
 headerText:"Alquiler",
 styleClass:"cell_center",
 svyUUID:"44800EDE-D20B-43B2-8244-72E85B917D6F",
 width:"150"
+},
+{
+dataprovider:"vent_comprobante_herramientas_to_vent_comprobantes_alquiler.calc_num_compr_sin_codig",
+styleClass:"cell_left",
+svyUUID:"787CFDF0-1991-4BA0-BE9F-26FF7CEA215F",
+width:"100"
 },
 {
 dataprovider:"calc_dias_reales",

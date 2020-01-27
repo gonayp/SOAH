@@ -228,6 +228,7 @@ function crearHerramientas(){
 						forms.factura_devolucion_nuevo_herramientas.foundset.equipo_num_serie			= myHerramienta.vent_comprobante_herramientas_to_herr_equipo.equipo_num_serie
 						forms.factura_devolucion_nuevo_herramientas.foundset.comp_comentario_entrega	= myHerramienta.comp_comentario_entrega
 						forms.factura_devolucion_nuevo_herramientas.foundset.comp_comentario_devolucion	= myHerramienta.comp_comentario_devol
+						forms.factura_devolucion_nuevo_herramientas.foundset.comp_num_devolucion		= myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes.calc_num_compr_sin_codig
 						databaseManager.saveData(forms.factura_devolucion_nuevo_herramientas.foundset)
 					}
 					else{//Alquiler
@@ -246,6 +247,7 @@ function crearHerramientas(){
 							forms.factura_devolucion_nuevo_herramientas.foundset.comp_tipo				= 2 //alquiler
 							forms.factura_devolucion_nuevo_herramientas.foundset.comp_id_devolucion		= myHerramienta.comp_devolucion
 							forms.factura_devolucion_nuevo_herramientas.foundset.comp_comentario_entrega= myHerramienta.comp_comentario_entrega
+							forms.factura_devolucion_nuevo_herramientas.foundset.comp_num_alquiler		= myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes.calc_num_compr_sin_codig
 							
 							myHerramienta.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_listas_precios.sort("lp_f_g desc")
 							if(myHerramienta.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_listas_precios.lp_precio > myHerramienta.comp_precio){
