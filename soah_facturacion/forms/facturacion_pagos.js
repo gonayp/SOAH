@@ -185,9 +185,17 @@ function filtrar() {
 			var myRecord = foundset.getRecord(index);
 			myRecord.calc_seleccionado = 1
 			databaseManager.saveData()
-			vl_subtotal += myRecord.comp_imp_total - myRecord.comp_imp_iva2
-			vl_total_iva += myRecord.comp_imp_iva2
-			vl_total += myRecord.comp_imp_total
+			if(myRecord.comp_estado_id == 6){//Pendiente
+				vl_subtotal += myRecord.comp_imp_total - myRecord.comp_imp_iva2
+				vl_total_iva += myRecord.comp_imp_iva2
+				vl_total += myRecord.comp_imp_total
+			}
+			else{//Parcial
+				var aux_total = calcularCobrosRealizados(myRecord)
+				vl_subtotal += aux_total - myRecord.comp_imp_iva2
+				vl_total_iva += myRecord.comp_imp_iva2
+				vl_total += aux_total
+			}
 			vl_cantidad ++
 			if(vl_obra_anterior != myRecord.obra_id){
 				misma_obra = 0
@@ -198,4 +206,24 @@ function filtrar() {
 		}
 	
 	}
+}
+
+
+/**@param {JSRecord<db:/gpp/vent_comprobantes>} comprobante
+ * @properties={typeid:24,uuid:"BEFE9D6A-FB05-4A8D-98A0-E46B4636BA3F"}
+ */
+function calcularCobrosRealizados(comprobante){
+	
+	var aux_total = 0
+	
+	var nRecordCount = 0
+	nRecordCount = databaseManager.getFoundSetCount(comprobante.vent_comprobantes_to_vent_comprobantes_recibo);
+	for (var index = 1; index <= nRecordCount; index++) {
+		var myRecibo = comprobante.vent_comprobantes_to_vent_comprobantes_recibo.getRecord(index);
+		aux_total += myRecibo.comp_importe
+		
+	}
+	
+	return aux_total
+	
 }

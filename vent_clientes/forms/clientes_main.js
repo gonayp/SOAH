@@ -88,6 +88,7 @@ function onShow(firstShow, event) {
  * @properties={typeid:24,uuid:"F8E6EA32-99F2-4A1C-9A39-92F89BE0D641"}
  */
 function onCellDoubleClick(foundsetindex, columnindex, record, event) {
+	forms.clientes_editar.vl_form_padre = controller.getName()
 	application.showForm(forms.clientes_editar)
 
 }

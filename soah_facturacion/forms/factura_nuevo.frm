@@ -39,7 +39,7 @@ cssPosition:"234,0,54,60,463,236",
 formIndex:14,
 items:[
 {
-containsFormID:"473754AD-C0F2-426E-A20B-6DC9840A5AD0",
+containsFormID:"F7C37643-50B0-4F0D-ADAB-B8AA2DCA5130",
 location:"170,40",
 text:"Formas de pago",
 typeid:15,
@@ -196,7 +196,7 @@ uuid:"92E6266E-66E4-4C61-9CB4-F34AD3971AD4",
 verticalAlignment:1
 },
 {
-cssPosition:"90,-1,-1,478,145,20",
+cssPosition:"90,-1,-1,478,267,20",
 formIndex:16,
 text:"Condición Pago",
 transparent:true,
@@ -237,7 +237,7 @@ typeid:19,
 uuid:"AAA19F8F-431F-499C-9BD5-06FA097FA2BA"
 },
 {
-cssPosition:"110,-1,-1,478,140,20",
+cssPosition:"110,-1,-1,478,262,20",
 dataProviderID:"vl_condicion_pago",
 displayType:2,
 editable:false,

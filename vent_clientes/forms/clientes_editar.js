@@ -1,9 +1,16 @@
 /**
+ * @type {String}
+ *
+ * @properties={typeid:35,uuid:"C88FFD32-DC24-4769-9C82-5D1DBDDC9E00"}
+ */
+var vl_form_padre = null;
+
+/**
  * @properties={typeid:24,uuid:"67085922-49C1-4CF8-B77F-70FA47F1ECC3"}
  */
 function onActionVolver() {
 	databaseManager.revertEditedRecords()
-	application.showForm(forms.clientes_main)
+	application.showForm(vl_form_padre)
 }
 
 /**
@@ -12,7 +19,7 @@ function onActionVolver() {
 function onActioGrabar() {
 	facturar_a_cliente_id = forms.clientes_editar_datos.vl_facturar_a_cliente_id
 	databaseManager.saveData()
-	application.showForm(forms.clientes_main)
+	application.showForm(vl_form_padre)
 }
 
 /**
@@ -30,7 +37,7 @@ function onActioBorrar() {
 		
 		foundset.deleteRecord()
 		databaseManager.saveData()
-		application.showForm(forms.clientes_main )
+		application.showForm(vl_form_padre)
 	}
 }
 

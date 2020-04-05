@@ -57,5 +57,6 @@ dataType:4,
 name:"concepto_id"
 }
 ],
+hiddenInDeveloper:true,
 name:"rep_conceptos",
 tableType:0

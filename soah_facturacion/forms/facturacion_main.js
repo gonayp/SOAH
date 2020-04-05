@@ -86,6 +86,7 @@ function filtrar() {
  * @properties={typeid:24,uuid:"D6842375-87CB-4DDB-ACCB-C19908D29C44"}
  */
 function onCellDoubleClick(foundsetindex, columnindex, record, event) {
+	forms.factura_devolucion_ver.vl_form_padre = controller.getName()
 	application.showForm(forms.factura_devolucion_ver)
 
 }

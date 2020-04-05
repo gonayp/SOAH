@@ -6,7 +6,8 @@ Comprobante|4\r\
 Otros|5\r\
 Alquiler|6\r\
 Devolución|7\r\
-Cobranza|8",
+Cobranza|8\r\
+Anticipo|9",
 displayValueType:12,
 name:"vent_clientes_histo_tipo",
 realValueType:4,

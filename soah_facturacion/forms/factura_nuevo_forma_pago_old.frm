@@ -105,7 +105,7 @@ typeid:7,
 uuid:"E03AFBD5-BBF2-4CF3-ACDE-D704B8117BC0"
 }
 ],
-name:"factura_nuevo_forma_pago",
+name:"factura_nuevo_forma_pago_old",
 navigatorID:"-1",
 onShowMethodID:"-1",
 showInMenu:true,

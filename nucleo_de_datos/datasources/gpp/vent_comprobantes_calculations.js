@@ -1,4 +1,52 @@
 /**
+ * @properties={type:12,typeid:36,uuid:"91859BAF-8711-4DEB-97A2-E0281EF11E35"}
+ */
+function calc_estilo_codigo()
+{
+	if(comp_codigo == 90 || (comp_codigo >= 25 && comp_codigo <40)){//Anticipos y notas de credito
+		return "verde"
+	}
+	else{
+		return "rosa"
+	}
+}
+
+/**
+ * @properties={type:12,typeid:36,uuid:"9AAEDB60-1A8F-4BE7-9984-40E526AD196A"}
+ */
+function calc_estilo_dias_vencidos()
+{
+	if(calc_dias_vencimiento == null){
+		return ""
+	}
+	if(calc_dias_vencimiento >= 0){
+		return "rosa"
+	}
+	if(calc_dias_vencimiento < 0){
+		return "verde"
+	}
+	return ""
+}
+
+/**
+ * @properties={type:4,typeid:36,uuid:"724F250F-1925-4E3B-80D6-4B11734987EB"}
+ */
+function calc_dias_vencimiento()
+{
+	if(comp_fecha_vencimiento != null ){
+		var x = application.getServerTimeStamp() - comp_fecha_vencimiento //substracting two dates returns difference in milliseconds 
+		var one_day=1000*60*60*24 //ms * sec * min * hrs in a day 
+	
+	
+		var diffExact = x / one_day //gets difference in days 
+		var diffRounded = Math.ceil(diffExact ) // rounds 2.343 to 3
+		return diffRounded ;
+	}
+	else
+		return null
+}
+
+/**
  * @properties={type:8,typeid:36,uuid:"8DEBF130-7B63-4797-80F4-FD86EE1E7934"}
  */
 function calc_iva()
@@ -65,6 +113,9 @@ function calc_num_comprobante()
 	case 4://Recibo manual
 		tipo = "Rec"
 		break;
+	case 90://Anticipo
+		tipo = "Anticipo"
+		break;
 	}
 	
 	return tipo+"-"+vent_comprobantes_to_core_puntos_de_venta.pv_numero+'-'+utils.numberFormat(comp_numero,"00000000");
@@ -78,4 +129,3 @@ function calc_num_comprobante_numerico()
 	
 	return vent_comprobantes_to_core_puntos_de_venta.pv_numero+'-'+utils.numberFormat(comp_codigo,"000")+'-'+utils.numberFormat(comp_numero,"00000000");
 }
-

@@ -58,6 +58,33 @@ uuid:"5F9772FC-2606-459D-9D30-6191F6CC5AAE",
 verticalAlignment:1
 },
 {
+cssPosition:"81,-1,-1,5,45,35",
+formIndex:1,
+json:{
+cssPosition:{
+bottom:"-1",
+height:"35",
+left:"5",
+right:"-1",
+top:"81",
+width:"45"
+},
+formIndex:1,
+imageStyleClass:"fas fa-pen",
+location:{
+x:10,
+y:10
+},
+onActionMethodID:"8ED34376-8FB4-47AF-8CF7-9316B9A235CA",
+toolTipText:"Editar Cliente"
+},
+location:"10,10",
+name:"btn_1c",
+typeName:"bootstrapcomponents-button",
+typeid:47,
+uuid:"71633F4A-DB82-4E6F-AA3D-36AA626B0AC0"
+},
+{
 cssPosition:"193,0,0,60,640,368",
 items:[
 {

@@ -119,6 +119,12 @@ name:"comp_fecha_emision"
 },
 {
 allowNull:true,
+creationOrderIndex:43,
+dataType:93,
+name:"comp_fecha_vencimiento"
+},
+{
+allowNull:true,
 creationOrderIndex:14,
 dataType:4,
 name:"comp_id_padre"

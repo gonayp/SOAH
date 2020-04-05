@@ -1,6 +1,7 @@
 addEmptyValue:1,
 customValues:"Contado|1\r\
-Cuenta Corriente|2",
+Cuenta Corriente 15 días|2\r\
+Cuenta Corriente 30 días|3",
 displayValueType:12,
 name:"core_codiciones_pago",
 realValueType:4,

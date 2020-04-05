@@ -146,6 +146,15 @@ svyUUID:"6D730B6F-551D-4E11-8618-3EA3D7D42AC5",
 width:"150"
 },
 {
+dataprovider:"comp_fecha_vencimiento",
+format:"dd/MM/yy",
+headerStyleClass:"cell_center_header",
+headerText:"Vencimiento",
+styleClass:"cell_center",
+svyUUID:"E968DCA0-6443-4B67-AE4E-A93CBD2DA98E",
+width:"150"
+},
+{
 dataprovider:"vent_comprobantes_to_vent_comprobante_estados.estado_nombre",
 headerStyleClass:"cell_left_header",
 headerText:"Estado",

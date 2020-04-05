@@ -157,7 +157,7 @@ function onActionGuardar(event) {
 	//Si es factura comprobamos forma de pago
 	if((vl_codigo >= 5 && vl_codigo <= 15) || (vl_codigo >= 35 && vl_codigo <= 45)){
 		//Contado
-		if(vl_condicion_pago == 1 && forms.factura_nuevo_forma_pago.vl_total != vl_total){
+		if(vl_condicion_pago == 1 && forms.factura_formas_de_pago.vl_total != vl_total){
 			plugins.webnotificationsToastr.error("El importe pagado no corresponde con el importe total a facturar.", "", globals.vg_toast_options)
 			return
 		}
@@ -269,6 +269,9 @@ function grabar(p_cae, p_vencimiento, p_consulta){
 		
 		/** @type {JSFoundSet<db:/gpp/vent_comprobante_productos>} */
 		var fs_comprobante_productos = databaseManager.getFoundSet('gpp', 'vent_comprobante_productos')	
+		
+		/** @type {JSFoundSet<db:/gpp/cheq_cheques>} */
+		var fs_cheques = databaseManager.getFoundSet('gpp', 'cheq_cheques')
 	
 	
 		//Generamos codigo de barras
@@ -293,16 +296,23 @@ function grabar(p_cae, p_vencimiento, p_consulta){
 	fs_comprobantes.comp_imp_iva2				= vl_total_iva
 	fs_comprobantes.comp_imp_total				= vl_total
 	fs_comprobantes.obra_id						= vl_obra 
-	fs_comprobantes.comp_condicion				= vl_condicion_pago
 	fs_comprobantes.comp_cae					= p_cae
 	fs_comprobantes.comp_cae_vencimiento		= p_vencimiento
 	fs_comprobantes.consulta_afip				= p_consulta
 	fs_comprobantes.comp_cod_barras				= vl_codigo_barras
+	
+	fs_comprobantes.comp_condicion				= vl_condicion_pago
 	if(vl_condicion_pago == 1 || (vl_codigo >=20 && vl_codigo <= 30)){//al contado o notas de credito
 		fs_comprobantes.comp_estado_id				= 7//Cerrado
+		fs_comprobantes.comp_fecha_vencimiento		= application.getServerTimeStamp()
 	}
 	else{
 		fs_comprobantes.comp_estado_id				= 6 //Pendiente
+		var aux_dia = vl_fecha.getDay()+30
+		if(vl_condicion_pago == 2){//15 dias
+			aux_dia = vl_fecha.getDay()+15
+		}
+		fs_comprobantes.comp_fecha_vencimiento		= new Date(vl_fecha.getFullYear(),vl_fecha.getMonth(), aux_dia) 
 	}
 	databaseManager.saveData(fs_comprobantes)
 	
@@ -364,58 +374,68 @@ function grabar(p_cae, p_vencimiento, p_consulta){
 		var fs_forma_pago = databaseManager.getFoundSet('gpp', 'vent_comp_forma_pago')
 		
 		//Efectivo
-		if(forms.factura_devolucion_nuevo_forma_pago.vl_efectivo > 0){
+		if(forms.factura_formas_de_pago.vl_efectivo > 0){
 			fs_forma_pago.newRecord()
 			fs_forma_pago.company_id						= scopes.usuario.vg_company_id
 			fs_forma_pago.cheque_id							= null
 			fs_forma_pago.comp_id							= fs_comprobantes.comp_id
 			fs_forma_pago.forma_pago_id						= 1 //Efectivo
-			fs_forma_pago.forma_pago_imp					= forms.factura_devolucion_nuevo_forma_pago.vl_efectivo 
+			fs_forma_pago.forma_pago_imp					= forms.factura_formas_de_pago.vl_efectivo 
 			databaseManager.saveData(fs_forma_pago)
 		}
 		
 		//Cheques
-		if(forms.factura_devolucion_nuevo_forma_pago.vl_cheques > 0){
-			//TODO Recorrer listado de cheques
-			fs_forma_pago.newRecord()
-			fs_forma_pago.company_id						= scopes.usuario.vg_company_id
-			fs_forma_pago.cheque_id							= 0
-			fs_forma_pago.comp_id							= fs_comprobantes.comp_id
-			fs_forma_pago.forma_pago_id						= 2 //Cheques
-			fs_forma_pago.forma_pago_imp					= forms.factura_devolucion_nuevo_forma_pago.vl_cheques 
-			databaseManager.saveData(fs_forma_pago)
+		if(forms.factura_formas_de_pago.vl_cheques > 0){
+			var n = 0
+			n= databaseManager.getFoundSetCount(forms.factura_formas_de_pago_detalle.foundset);
+			for (var j= 1; j <= n; j++) {
+				var myFormaDePago= forms.factura_formas_de_pago_detalle.foundset.getRecord(j);
+				if(myFormaDePago.fp_tipo == 2){
+					fs_forma_pago.newRecord()
+					fs_forma_pago.company_id						= scopes.usuario.vg_company_id
+					fs_forma_pago.cheque_id							= myFormaDePago.fp_cheque_id
+					fs_forma_pago.comp_id							= fs_comprobantes.comp_id
+					fs_forma_pago.forma_pago_id						= 2 //Cheques
+					fs_forma_pago.forma_pago_imp					= myFormaDePago.fp_importe 
+					databaseManager.saveData(fs_forma_pago)
+					
+					fs_cheques.loadRecords(myFormaDePago.fp_cheque_id)
+					fs_cheques.comp_id = fs_comprobantes.comp_id
+					databaseManager.saveData(fs_cheques)
+				}
+			}
 		}
 		//Transferencia
-		if(forms.factura_devolucion_nuevo_forma_pago.vl_transferencia > 0){
+		if(forms.factura_formas_de_pago.vl_transferencia > 0){
 			//TODO Recorrer listado de transoferencias
 			fs_forma_pago.newRecord()
 			fs_forma_pago.company_id						= scopes.usuario.vg_company_id
 			fs_forma_pago.cheque_id							= null
 			fs_forma_pago.comp_id							= fs_comprobantes.comp_id
 			fs_forma_pago.forma_pago_id						= 3 //Transferencia
-			fs_forma_pago.forma_pago_imp					= forms.factura_devolucion_nuevo_forma_pago.vl_transferencia 
+			fs_forma_pago.forma_pago_imp					= forms.factura_formas_de_pago.vl_transferencia 
 			databaseManager.saveData(fs_forma_pago)
 		}
 		//Retenciones IIBB
-		if(forms.factura_devolucion_nuevo_forma_pago.vl_ret_iibb > 0){
+		if(forms.factura_formas_de_pago.vl_ret_iibb > 0){
 			//TODO Recorrer listado de retenciones
 			fs_forma_pago.newRecord()
 			fs_forma_pago.company_id						= scopes.usuario.vg_company_id
 			fs_forma_pago.cheque_id							= null
 			fs_forma_pago.comp_id							= fs_comprobantes.comp_id
 			fs_forma_pago.forma_pago_id						= 4 // Ret IIBB
-			fs_forma_pago.forma_pago_imp					= forms.factura_devolucion_nuevo_forma_pago.vl_ret_iibb 
+			fs_forma_pago.forma_pago_imp					= forms.factura_formas_de_pago.vl_ret_iibb 
 			databaseManager.saveData(fs_forma_pago)
 		}
 		//Retenciones de ganancias
-		if(forms.factura_devolucion_nuevo_forma_pago.vl_ret_gan > 0){
+		if(forms.factura_formas_de_pago.vl_ret_gan > 0){
 			//TODO Recorrer listado de retenciones
 			fs_forma_pago.newRecord()
 			fs_forma_pago.company_id						= scopes.usuario.vg_company_id
 			fs_forma_pago.cheque_id							= null
 			fs_forma_pago.comp_id							= fs_comprobantes.comp_id
 			fs_forma_pago.forma_pago_id						= 5// Ret gan
-			fs_forma_pago.forma_pago_imp					= forms.factura_devolucion_nuevo_forma_pago.vl_ret_gan 
+			fs_forma_pago.forma_pago_imp					= forms.factura_formas_de_pago.vl_ret_gan 
 			databaseManager.saveData(fs_forma_pago)
 		}
 	}
@@ -517,6 +537,7 @@ function calculoTotales(){
 	vl_subtotal =  vl_total_ventas
 	vl_total_iva = vl_subtotal * 0.21
 	vl_total = vl_subtotal + vl_total_iva
+	forms.factura_formas_de_pago.vl_total_factura = vl_total
 }
 
 /**
@@ -555,12 +576,15 @@ function onDataChangeFecha() {
  * @SuppressWarnings(wrongparameters)
  */
 function onShow(firstShow, event) {
-	forms.factura_nuevo_forma_pago.vl_cheques = 0
-	forms.factura_nuevo_forma_pago.vl_efectivo = 0
-	forms.factura_nuevo_forma_pago.vl_transferencia = 0
-	forms.factura_nuevo_forma_pago.vl_ret_gan = 0
-	forms.factura_nuevo_forma_pago.vl_ret_iibb = 0
-	forms.factura_nuevo_forma_pago.vl_total = 0
+	forms.factura_formas_de_pago.vl_cheques = 0
+	forms.factura_formas_de_pago.vl_efectivo = 0
+	forms.factura_formas_de_pago.vl_transferencia = 0
+	forms.factura_formas_de_pago.vl_ret_gan = 0
+	forms.factura_formas_de_pago.vl_ret_iibb = 0
+	forms.factura_formas_de_pago.vl_anticipos = 0
+	forms.factura_formas_de_pago.vl_total = 0
+	
+	forms.factura_formas_de_pago_detalle.foundset.deleteAllRecords()
 	
 	vl_cliente 				= vl_cliente
 	vl_fecha				= application.getServerTimeStamp()

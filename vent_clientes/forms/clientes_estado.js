@@ -26,15 +26,22 @@ function onShow(firstShow, event) {
 	forms.clientes_estado_alquileres.foundset.search()
 	
 	//Actualizar pestaña de estado de cliente
-	forms.clientes_estado_facturacion.foundset.find()
-	forms.clientes_estado_facturacion.foundset.cliente_id		= cliente_id
-	forms.clientes_estado_facturacion.foundset.comp_codigo		= 2  //TODO Añadir comprobantes de factura
-	forms.clientes_estado_facturacion.foundset.comp_estado_id 	= 5 //pendiente de facturar
-	forms.clientes_estado_facturacion.foundset.search()
 	forms.clientes_estado_facturacion.inicializarTotales()
 	forms.clientes_estado_facturacion.calcularTotales()
 	
 	forms.clientes_autorizados_nuevo.vl_cliente = cliente_id
 	forms.clientes_hist_nuevo.vl_cliente = cliente_id
 	forms.clientes_obras_nuevo .vl_cliente = cliente_id
+}
+
+/**
+ * @param {JSEvent} event
+ *
+ * @properties={typeid:24,uuid:"8ED34376-8FB4-47AF-8CF7-9316B9A235CA"}
+ */
+function onActionEditar(event) {
+	forms.clientes_editar.vl_form_padre = controller.getName()
+	forms.clientes_editar.foundset.loadRecords(foundset.cliente_id)
+	application.showForm(forms.clientes_editar)
+
 }

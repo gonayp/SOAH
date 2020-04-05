@@ -1,9 +1,9 @@
 columns:[
 {
 allowNull:true,
-creationOrderIndex:10,
+creationOrderIndex:11,
 dataType:4,
-name:"caja_id"
+name:"anticipo_id"
 },
 {
 allowNull:false,
@@ -76,6 +76,12 @@ autoEnterType:1,
 creationOrderIndex:9,
 dataType:93,
 name:"forma_pago_f_m"
+},
+{
+allowNull:true,
+creationOrderIndex:10,
+dataType:4,
+name:"caja_id"
 }
 ],
 name:"vent_comp_forma_pago",

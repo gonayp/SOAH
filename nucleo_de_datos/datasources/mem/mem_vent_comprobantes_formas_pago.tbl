@@ -2,6 +2,12 @@ columns:{
 columns:[
 {
 allowNull:true,
+creationOrderIndex:7,
+dataType:4,
+name:"fp_anticipo_id"
+},
+{
+allowNull:true,
 creationOrderIndex:4,
 dataType:4,
 name:"fp_banco"
@@ -34,7 +40,7 @@ name:"fp_importe"
 {
 allowNull:true,
 creationOrderIndex:3,
-dataType:4,
+dataType:12,
 name:"fp_numero"
 },
 {

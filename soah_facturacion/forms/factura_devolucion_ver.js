@@ -1,3 +1,10 @@
+/**
+ * @type {String}
+ *
+ * @properties={typeid:35,uuid:"FDDFBE01-7099-454B-9072-90E4602FCF7E"}
+ */
+var vl_form_padre = null;
+
 
 
 
@@ -27,7 +34,13 @@ var vl_total = null;
  */
 function onActionVolver() {
 	databaseManager.revertEditedRecords()
-	application.showForm(forms.facturacion_main)
+	if(vl_form_padre == null){
+		application.showForm(forms.facturacion_main)
+	}
+	else{
+		application.showForm(vl_form_padre)
+		vl_form_padre = null
+	}
 }
 
 
