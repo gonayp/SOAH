@@ -547,8 +547,10 @@ function onActionNuevoCliente() {
  */
 function onActionNuevoEquipo() {
 	globals.asignarPermisos("herr_equipos_nuevo")
-	if (tienePermisos())
-	application.showForm(forms.herr_equipos_nuevo)
+	if (tienePermisos()){
+		forms.herr_equipos_nuevo.vl_form_padre = 'soah_main'
+		application.showForm(forms.herr_equipos_nuevo)
+	}
 
 }
 

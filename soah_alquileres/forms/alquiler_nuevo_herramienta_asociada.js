@@ -74,7 +74,7 @@ function addHerramienta() {
 			forms.alquiler_nuevo_herramientas.foundset.equipo_herramienta	= foundset.herr_equipo_to_herr_herramientas.herramienta_nombre
 			forms.alquiler_nuevo_herramientas.foundset.equipo_num_serie		= foundset.equipo_num_serie
 			forms.alquiler_nuevo_herramientas.foundset.comp_precio_ajustado	= scopes.facturacion.calcularAcuerdoPrecios(forms.alquiler_nuevo.vl_acuerdo_precios,foundset.equipo_precio_base)
-			forms.alquiler_nuevo_herramientas.foundset.comp_comentario_entrega = foundset.equipo_descripcion
+			forms.alquiler_nuevo_herramientas.foundset.comp_comentario_entrega = foundset.equipo_descripcion +" "+foundset.equipo_precio_base
 			
 			databaseManager.saveData()
 			
