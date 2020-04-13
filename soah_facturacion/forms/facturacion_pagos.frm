@@ -36,7 +36,7 @@ formIndex:1,
 json:{
 columns:[
 {
-headerStyleClass:"cell_center_header",
+headerStyleClass:"cell_center_header far fa-check-square cell-fontawesone",
 styleClass:"cell_center",
 styleClassDataprovider:"calc_estilo_seleccion",
 svyUUID:"0A3E0EE3-323D-4B63-931E-428EC525F6F1",
@@ -67,6 +67,24 @@ headerText:"Importe",
 styleClass:"cell_right",
 svyUUID:"D57CE9CF-1C21-470B-BC38-889B83929553",
 width:"100"
+},
+{
+dataprovider:"calc_saldo",
+format:"#,###.00",
+headerStyleClass:"cell_right_header",
+headerText:"Saldo",
+styleClass:"cell_right",
+svyUUID:"E92AD5C2-63CC-4EB1-B15C-7C9A66FE9A84",
+width:"150"
+},
+{
+dataprovider:"calc_pendiente",
+format:"#,###.00",
+headerStyleClass:"cell_right_header",
+headerText:"Pendiente",
+styleClass:"cell_right",
+svyUUID:"74E2DF37-3673-466F-8492-AE4CD2E2668E",
+width:"150"
 }
 ],
 cssPosition:{
@@ -84,12 +102,13 @@ x:10,
 y:10
 },
 onCellClick:"9E926895-6F85-40CC-9613-2AC0DD8F9669",
-onCellDoubleClick:null,
+onCellDoubleClick:"F54871B0-A4AE-4E49-A6EB-95A1EDDE0E8A",
+onHeaderClick:"2DC172D2-D488-4E31-BFB5-CA056E09F04E",
 pageSize:0,
 tabSeq:5
 },
 location:"10,10",
-name:"table_3",
+name:"table",
 typeName:"servoyextra-table",
 typeid:47,
 uuid:"3807ADDE-C4B8-4133-A510-7BE542A2763C"
@@ -101,7 +120,8 @@ tabSeq:-2,
 text:"Total IVA",
 transparent:true,
 typeid:7,
-uuid:"3F82244F-D8CE-4F4E-B39F-44F0A5F0CFF6"
+uuid:"3F82244F-D8CE-4F4E-B39F-44F0A5F0CFF6",
+visible:false
 },
 {
 cssPosition:"-1,0,0,0,642,53",
@@ -129,7 +149,8 @@ tabSeq:-2,
 text:"SubTotal",
 transparent:true,
 typeid:7,
-uuid:"4A14FAFC-35CD-4372-8142-875C993F600A"
+uuid:"4A14FAFC-35CD-4372-8142-875C993F600A",
+visible:false
 },
 {
 cssPosition:"65,-1,-1,485,43,35",
@@ -257,7 +278,8 @@ format:"#,###.00",
 horizontalAlignment:4,
 tabSeq:6,
 typeid:4,
-uuid:"D60ADA18-AF0C-4DFD-B0AA-F9B7C9F625C3"
+uuid:"D60ADA18-AF0C-4DFD-B0AA-F9B7C9F625C3",
+visible:false
 },
 {
 height:482,
@@ -274,7 +296,8 @@ format:"#,###.00",
 horizontalAlignment:4,
 tabSeq:7,
 typeid:4,
-uuid:"FDE5B2B6-5BA0-4E60-B2F9-808957635EC3"
+uuid:"FDE5B2B6-5BA0-4E60-B2F9-808957635EC3",
+visible:false
 }
 ],
 name:"facturacion_pagos",

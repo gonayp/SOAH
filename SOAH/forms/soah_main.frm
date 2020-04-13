@@ -498,7 +498,7 @@ width:"45"
 imageStyleClass:"fas fa-search",
 onActionMethodID:"ADEB3E03-BE72-4BED-B935-B70EB7A104A0",
 tabSeq:-2,
-toolTipText:"Consultas",
+toolTipText:"Menu de Consultas",
 visible:true
 },
 name:"btn_cobros",

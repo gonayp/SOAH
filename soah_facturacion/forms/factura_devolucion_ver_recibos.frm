@@ -1,7 +1,7 @@
 customProperties:"formComponent:false,\
 useCssPosition:true",
 dataSource:"db:/gpp/vent_comprobantes_recibo",
-encapsulation:44,
+encapsulation:4,
 items:[
 {
 height:482,
@@ -32,7 +32,7 @@ svyUUID:"7934F5D5-6138-418F-8CFF-DCAD8BD463D8",
 width:"150"
 },
 {
-dataprovider:"comp_importe",
+dataprovider:"vent_comprobantes_recibo_to_vent_comprobantes_recibo.comp_imp_total",
 format:"#,###.00",
 headerStyleClass:"cell_right_header",
 headerText:"Importe",
@@ -55,7 +55,7 @@ location:{
 x:10,
 y:10
 },
-onCellDoubleClick:"CDC20384-8352-42C8-839F-22FFA91A0F21",
+onCellDoubleClick:"9CFBECCC-95C9-40FA-995B-5ABE2EDD1E1E",
 pageSize:0
 },
 location:"10,10",
@@ -67,6 +67,7 @@ uuid:"FCEE3F9A-468D-49B1-9B82-DEC8E1F176FD"
 ],
 name:"factura_devolucion_ver_recibos",
 navigatorID:"-1",
+onShowMethodID:"-1",
 showInMenu:true,
 typeid:3,
 uuid:"9C019DB5-9FFE-4B88-AB06-CFB9D1BA9C44"

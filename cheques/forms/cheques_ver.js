@@ -69,3 +69,21 @@ function onShow(firstShow) {
 	
 }
 
+
+/**
+ * @param {JSEvent} event
+ *
+ * @properties={typeid:24,uuid:"C7CD8F83-791B-4BF5-9D01-994E274331FF"}
+ */
+function onActionDetalle(event) {
+	if(cheq_cheques_to_vent_comprobantes.comp_codigo == 3){//Recibo
+		forms['recibo_detalle'].foundset.loadRecords(foundset.comp_id)
+		var win = application.createWindow("Dialog", JSWindow.MODAL_DIALOG);
+			win.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
+			win.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
+			win.resizable = false
+			win.title= '';
+			win.show( 'recibo_detalle' );
+	}
+
+}

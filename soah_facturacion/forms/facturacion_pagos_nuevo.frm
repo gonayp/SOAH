@@ -205,9 +205,16 @@ cssPosition:"233,0,0,60,580,278",
 formIndex:16,
 items:[
 {
+containsFormID:"FACD0109-8E3E-41A7-826F-241492346520",
+location:"250,262",
+text:"Comprobantes",
+typeid:15,
+uuid:"00B53FD1-A7F3-4246-8615-CDC5F17F2E38"
+},
+{
 containsFormID:"F7C37643-50B0-4F0D-ADAB-B8AA2DCA5130",
 location:"60,263",
-text:"factura_formas_de_pago",
+text:"Formas de pago",
 typeid:15,
 uuid:"134067A6-0BC7-4CDD-8743-A0BBBBA14908"
 }

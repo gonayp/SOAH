@@ -1,4 +1,20 @@
 /**
+ * @properties={type:8,typeid:36,uuid:"A6EFC370-3A3C-4324-AEC6-48827737CDF0"}
+ */
+function calc_pendiente()
+{
+	return ;
+}
+
+/**
+ * @properties={type:8,typeid:36,uuid:"308AFA11-7878-487A-9BB1-C4A2DE998D5F"}
+ */
+function calc_saldo()
+{
+	return ;
+}
+
+/**
  * @properties={type:12,typeid:36,uuid:"91859BAF-8711-4DEB-97A2-E0281EF11E35"}
  */
 function calc_estilo_codigo()

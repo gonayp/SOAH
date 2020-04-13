@@ -3,7 +3,7 @@ columns:[
 {
 allowNull:true,
 creationOrderIndex:4,
-dataType:4,
+dataType:8,
 name:"producto_cantidad"
 },
 {

@@ -95,19 +95,20 @@ imageStyleClass:"fas fa-send",
 onActionMethodID:"8B557B49-BF22-4611-A963-C80B5184E004",
 tabSeq:-2,
 toolTipText:"Enviar por mail",
-visible:true
+visible:false
 },
 name:"btn_mail",
 typeName:"bootstrapcomponents-button",
 typeid:47,
-uuid:"53B2520B-E638-4381-8C18-D3288AE1D1EA"
+uuid:"53B2520B-E638-4381-8C18-D3288AE1D1EA",
+visible:false
 },
 {
 cssPosition:"234,0,54,60,463,236",
 formIndex:14,
 items:[
 {
-containsFormID:"5DA19948-4C68-48CE-9A68-2C27BF8E8F0D",
+containsFormID:"31B83BD6-CCF9-4E41-8259-1FC126215D60",
 location:"170,40",
 relationName:"vent_comprobantes_to_vent_comp_forma_pago",
 text:"Formas de pago",

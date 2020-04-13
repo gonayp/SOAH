@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/vent_comprobantes",
+items:[
+{foreignColumnName:"comp_id",primaryDataProviderID:"anticipo_id",typeid:23,uuid:"F86488DD-D98D-44C7-BC21-CF5F09130E89"}
+],
+joinType:1,
+name:"vent_comp_forma_pago_anticipo_to_vent_comprobantes",
+primaryDataSource:"db:/gpp/vent_comp_forma_pago",
+typeid:22,
+uuid:"63DBCA18-26D1-461C-8C02-A03BDB712C54"

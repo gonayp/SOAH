@@ -1,6 +1,13 @@
 /**
  * @type {Number}
  *
+ * @properties={typeid:35,uuid:"CE589358-40A1-41B8-81E4-5B00D85F2132",variableType:4}
+ */
+var vl_seleccionadas = null;
+
+/**
+ * @type {Number}
+ *
  * @properties={typeid:35,uuid:"1DFEB050-93DD-431B-914C-10D871EADCAA",variableType:4}
  */
 var vl_obra = null;
@@ -100,21 +107,46 @@ function onCellClick(foundsetindex, columnindex, record, event) {
 	if(columnindex == 0){
 		if(calc_seleccionado == 1){
 			calc_seleccionado = 0
-			vl_subtotal -= comp_imp_total - comp_imp_iva2
-			vl_total_iva -= comp_imp_iva2
-			vl_total -= comp_imp_total
+			if(comp_estado_id == 6){//Pendiente
+				vl_subtotal -= comp_imp_total - comp_imp_iva2
+				vl_total_iva -= comp_imp_iva2
+				vl_total -= comp_imp_total
+				
+			}
+			else{//Parcial
+				calc_saldo = scopes.facturacion.calcularSaldoComprobante(foundset.getSelectedRecord())
+				calc_pendiente = comp_imp_total - calc_saldo
+				databaseManager.saveData()
+				vl_subtotal -= calc_pendiente - comp_imp_iva2
+				vl_total_iva -= comp_imp_iva2
+				vl_total -= calc_pendiente
+			}
 			vl_cantidad -= 1
 		}
 		else{
 			calc_seleccionado = 1
-			vl_subtotal += comp_imp_total - comp_imp_iva2
-			vl_total_iva += comp_imp_iva2
-			vl_total += comp_imp_total
+			if(comp_estado_id == 6){//Pendiente
+				vl_subtotal += comp_imp_total - comp_imp_iva2
+				vl_total_iva += comp_imp_iva2
+				vl_total += comp_imp_total
+				
+			}
+			else{//Parcial
+				calc_saldo = scopes.facturacion.calcularSaldoComprobante(foundset.getSelectedRecord())
+				calc_pendiente = comp_imp_total - calc_saldo
+				databaseManager.saveData()
+				//var aux_total = calcularCobrosRealizados(myRecord)
+				vl_subtotal += calc_pendiente - comp_imp_iva2
+				vl_total_iva += comp_imp_iva2
+				vl_total += calc_pendiente
+			}
 			vl_cantidad += 1
 		}
 	}
 
 }
+
+
 
 /**
  * Callback method for when form is shown.
@@ -184,17 +216,22 @@ function filtrar() {
 		for (var index = 1; index <= nRecordCount; index++) {
 			var myRecord = foundset.getRecord(index);
 			myRecord.calc_seleccionado = 1
+			myRecord.calc_pendiente = myRecord.comp_imp_total
 			databaseManager.saveData()
 			if(myRecord.comp_estado_id == 6){//Pendiente
 				vl_subtotal += myRecord.comp_imp_total - myRecord.comp_imp_iva2
 				vl_total_iva += myRecord.comp_imp_iva2
 				vl_total += myRecord.comp_imp_total
+				
 			}
 			else{//Parcial
-				var aux_total = calcularCobrosRealizados(myRecord)
-				vl_subtotal += aux_total - myRecord.comp_imp_iva2
+				myRecord.calc_saldo = scopes.facturacion.calcularSaldoComprobante(myRecord)
+				myRecord.calc_pendiente = myRecord.comp_imp_total - myRecord.calc_saldo
+				databaseManager.saveData()
+				//var aux_total = calcularCobrosRealizados(myRecord)
+				vl_subtotal += myRecord.calc_pendiente - myRecord.comp_imp_iva2
 				vl_total_iva += myRecord.comp_imp_iva2
-				vl_total += aux_total
+				vl_total += myRecord.calc_pendiente
 			}
 			vl_cantidad ++
 			if(vl_obra_anterior != myRecord.obra_id){
@@ -226,4 +263,86 @@ function calcularCobrosRealizados(comprobante){
 	
 	return aux_total
 	
+}
+/**
+ * @param {Number} columnindex
+ * @param {string} sortdirection
+ * @param {JSEvent} [event]
+ *
+ *
+ * @properties={typeid:24,uuid:"2DC172D2-D488-4E31-BFB5-CA056E09F04E"}
+ */
+function onHeaderClick(columnindex, sortdirection, event) {
+	if(columnindex == 0){
+		
+		if(vl_seleccionadas == 0){
+			vl_seleccionadas = 1
+			elements.table.getColumn(0).headerStyleClass = 'cell_center_header far fa-check-square cell-fontawesone'
+			
+		}
+		else{
+			vl_seleccionadas = 0
+			elements.table.getColumn(0).headerStyleClass = 'cell_center_header far fa-square cell-fontawesone'
+		}
+		
+		
+		vl_subtotal = 0
+		vl_total_iva = 0
+		vl_total = 0
+		vl_cantidad = 0
+		
+		var nRecordCount = 0
+		nRecordCount = databaseManager.getFoundSetCount(foundset);
+		for (var index = 1; index <= nRecordCount; index++) {
+			var myRecord = foundset.getRecord(index);
+			myRecord.calc_seleccionado = vl_seleccionadas
+			if(myRecord.calc_seleccionado == 1){
+				
+				if(myRecord.comp_estado_id == 6){//Pendiente
+					vl_subtotal += myRecord.comp_imp_total - myRecord.comp_imp_iva2
+					vl_total_iva += myRecord.comp_imp_iva2
+					vl_total += myRecord.comp_imp_total
+					
+				}
+				else{//Parcial
+					myRecord.calc_saldo = scopes.facturacion.calcularSaldoComprobante(myRecord)
+					myRecord.calc_pendiente = myRecord.comp_imp_total - myRecord.calc_saldo
+					databaseManager.saveData()
+					//var aux_total = calcularCobrosRealizados(myRecord)
+					vl_subtotal += myRecord.calc_pendiente - myRecord.comp_imp_iva2
+					vl_total_iva += myRecord.comp_imp_iva2
+					vl_total += myRecord.calc_pendiente
+				}
+				vl_cantidad += 1
+			}
+			databaseManager.saveData()
+		}
+		
+	}
+
+	
+
+}
+
+
+
+
+/**
+ * Called when the mouse is double clicked on a row/cell (foundset and column indexes are given).
+ *
+ * @param {Number} foundsetindex
+ * @param {Number} [columnindex]
+ * @param {JSRecord} [record]
+ * @param {JSEvent} [event]
+ *
+ * @properties={typeid:24,uuid:"F54871B0-A4AE-4E49-A6EB-95A1EDDE0E8A"}
+ */
+function onCellDoubleClick(foundsetindex, columnindex, record, event) {
+	
+	forms.factura_devolucion_ver.vl_form_padre = controller.getName()
+	forms.factura_devolucion_ver.foundset.loadRecords(foundset.comp_id)
+	application.showForm(forms.factura_devolucion_ver)
+	
+	
+
 }

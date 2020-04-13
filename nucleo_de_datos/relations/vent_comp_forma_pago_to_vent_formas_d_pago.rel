@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/vent_formas_d_pago",
+items:[
+{foreignColumnName:"forma_pago_id",primaryDataProviderID:"forma_pago_id",typeid:23,uuid:"D01047B6-E549-4692-9258-A4D9849F651D"}
+],
+joinType:1,
+name:"vent_comp_forma_pago_to_vent_formas_d_pago",
+primaryDataSource:"db:/gpp/vent_comp_forma_pago",
+typeid:22,
+uuid:"5F097AEA-56A6-401B-9C02-20B6734CB8AD"

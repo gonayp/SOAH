@@ -1,4 +1,11 @@
 /**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"5D9C63AA-D7D0-4EAB-9453-DED7AB2C4188",variableType:8}
+ */
+var vl_saldo = null;
+
+/**
  * @type {String}
  *
  * @properties={typeid:35,uuid:"FDDFBE01-7099-454B-9072-90E4602FCF7E"}
@@ -50,6 +57,16 @@ function onActionVolver() {
  */
 function calculoTotales(){
 	vl_subtotal = comp_imp_alqu + comp_imp_ventas
+	
+	vl_saldo = scopes.facturacion.calcularSaldoComprobante(foundset.getSelectedRecord())
+	
+	elements.f_saldo.bgcolor = '#C0F0C3'
+	if(vl_saldo < foundset.comp_imp_total){
+		elements.f_saldo.bgcolor = '#FFC3C3'
+	}
+	else{
+		vl_saldo = foundset.comp_imp_total
+	}
 
 }
 

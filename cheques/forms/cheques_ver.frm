@@ -121,6 +121,36 @@ typeid:7,
 uuid:"79CED43F-4546-4DF1-9297-88FDE8015571"
 },
 {
+cssPosition:"166,-1,-1,533,45,20",
+formIndex:2,
+json:{
+cssPosition:{
+bottom:"-1",
+height:"20",
+left:"533",
+right:"-1",
+top:"166",
+width:"45"
+},
+formIndex:2,
+imageStyleClass:"fas fa-search",
+location:{
+x:10,
+y:10
+},
+onActionMethodID:"C7CD8F83-791B-4BF5-9D01-994E274331FF",
+styleClass:"btn btn-default btn-success",
+tabSeq:5,
+toolTipText:"Ver comprobante"
+},
+location:"10,10",
+name:"btn_cod_sugerido",
+styleClass:"btn btn-default btn-success",
+typeName:"bootstrapcomponents-button",
+typeid:47,
+uuid:"84E7BCCE-BF24-4692-BC4C-827EB3B341F5"
+},
+{
 cssPosition:"195,-1,-1,65,80,20",
 formIndex:9,
 text:"Cliente",

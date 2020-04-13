@@ -329,3 +329,22 @@ function GenerarCodigoBarrasAFIP(p_codigo,p_pv,p_cae,p_vencimiento){
 	return barcode + dig_verif
 
 }
+
+/**
+ * @param {JSRecord<db:/gpp/vent_comprobantes>} p_comprobante
+ * @return {Number}
+ * @properties={typeid:24,uuid:"2E2F3C7C-AA0E-4441-8695-0162BE4DCE40"}
+ */
+function calcularSaldoComprobante(p_comprobante) {
+	
+	var vl_saldo = 0
+	
+	var nRecordCount = 0
+	nRecordCount = databaseManager.getFoundSetCount(p_comprobante.vent_comprobantes_to_vent_comprobantes_recibo);
+	for (var index = 1; index <= nRecordCount; index++) {
+		var myRecord = p_comprobante.vent_comprobantes_to_vent_comprobantes_recibo.getRecord(index);
+		vl_saldo += myRecord.vent_comprobantes_recibo_to_vent_comprobantes_recibo.comp_imp_total
+	}
+	
+	return vl_saldo
+}

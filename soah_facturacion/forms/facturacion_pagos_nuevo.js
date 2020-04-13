@@ -399,6 +399,9 @@ function generarAnticipo(recibo_id){
  * @AllowToRunInFind
  */
 function onShow(firstShow, event) {
+	
+	forms.factura_formas_de_pago_detalle.foundset.deleteAllRecords()
+	
 	forms.factura_formas_de_pago.vl_total_factura = forms.facturacion_pagos.vl_total
 	forms.factura_formas_de_pago.vl_cheques = 0
 	forms.factura_formas_de_pago.vl_efectivo = 0
@@ -408,7 +411,7 @@ function onShow(firstShow, event) {
 	forms.factura_formas_de_pago.vl_anticipos = 0
 	forms.factura_formas_de_pago.vl_total = 0
 	
-	forms.factura_formas_de_pago.vl_diferencia = forms.factura_formas_de_pago.vl_total_factura
+	forms.factura_formas_de_pago.vl_diferencia = forms.facturacion_pagos.vl_total *(-1)
 	
 	vl_fecha = application.getServerTimeStamp()
 	vl_cliente = forms.facturacion_pagos.vl_cliente

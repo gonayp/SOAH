@@ -58,10 +58,10 @@ function calcularTotales(){
 	
 	
 	foundset.find()
-	foundset.comp_estado_id = "5 || 6" 
+	foundset.comp_estado_id = "5 || 6 || 9 || 11 || 12"  //devoluciones pendientes, facturas pendientes o parciales y anticipos activos
 	foundset.cliente_id = forms.clientes_estado.foundset.cliente_id 
 	foundset.newRecord()//AND
-	foundset.comp_codigo = "20 || 25 || 30 || 90" //Facturas y anticipos
+	foundset.comp_codigo = "20 || 25 || 30 " //Facturas 
 	foundset.cliente_id = forms.clientes_estado.foundset.cliente_id
 	foundset.search()
 	
@@ -69,30 +69,43 @@ function calcularTotales(){
 	nRecordCount = databaseManager.getFoundSetCount(foundset);
 	for (var index = 1; index <= nRecordCount; index++) {
 		var myRecord = foundset.getRecord(index);
+		myRecord.calc_pendiente = myRecord.comp_imp_total
 		
-		if(myRecord.comp_codigo == 2){//Devoluciones
+		switch (myRecord.comp_codigo) {
+		case 2://Devoluciones
 			vl_total_alquiler += myRecord.comp_imp_total
-			
-		}
-		else{
+			break;
+		case 90://Anticipos
+			vl_anticipos += myRecord.comp_imp_total
+			vl_total -= myRecord.comp_imp_total
+			break;
+		case 20://Notas de credito
+			vl_total_credito += myRecord.comp_imp_total
+			vl_total -= myRecord.comp_imp_total
+			break;
+		case 5://Facturas
 			if(myRecord.comp_estado_id == 6){//facturas pendientes
 				vl_total_fact += myRecord.comp_imp_total
 				vl_total += myRecord.comp_imp_total
 			}
-			else{
-				if(myRecord.comp_codigo == 90){//Anticipos
-					vl_anticipos += myRecord.comp_imp_total
-					vl_total -= myRecord.comp_imp_total
-				}	
-				else{
-					vl_total_credito += myRecord.comp_imp_total
-					vl_total -= myRecord.comp_imp_total
-				}
-				
+			else{//Facturas parciales
+				myRecord.calc_saldo = scopes.facturacion.calcularSaldoComprobante(myRecord)
+				myRecord.calc_pendiente = myRecord.comp_imp_total - myRecord.calc_saldo
+				databaseManager.saveData()
+				vl_total_fact += myRecord.calc_pendiente
+				vl_total += myRecord.calc_pendiente
 			}
+			break;
+		default:
+			vl_total_fact += myRecord.comp_imp_total
+			vl_total += myRecord.comp_imp_total	
+			break;
 		}
 		
+		
+		
 	}
+	
 	
 }
 
@@ -101,14 +114,24 @@ function calcularTotales(){
  *
  * @param {Number} foundsetindex
  * @param {Number} [columnindex]
- * @param {JSRecord} [record]
+ * @param {JSRecord<db:/gpp/vent_comprobantes>} record
  * @param {JSEvent} [event]
  *
  * @properties={typeid:24,uuid:"0048DE29-8994-4EFF-9B91-84B312A81675"}
  */
 function onCellDoubleClick(foundsetindex, columnindex, record, event) {
-	forms['factura_devolucion_ver'].vl_form_padre = 'clientes_estado'
-	forms['factura_devolucion_ver'].foundset.loadRecords(foundset.comp_id)
-	application.showForm('factura_devolucion_ver')
+	switch (record.comp_codigo) {
+	case 5://Facturas
+		forms['factura_devolucion_ver'].vl_form_padre = 'clientes_estado'
+		forms['factura_devolucion_ver'].foundset.loadRecords(foundset.comp_id)
+		application.showForm('factura_devolucion_ver')
+		break;
+	case 2://devoluciones
+	case 20://Notas de credito
+	case 90://Anticipos
+	default:
+		break;
+	}
+	
 
 }

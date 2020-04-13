@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/cheq_cheques",
+items:[
+{foreignColumnName:"cheque_id",primaryDataProviderID:"cheque_id",typeid:23,uuid:"D955A6FE-5AE1-4ACF-B873-A534A1352437"}
+],
+joinType:1,
+name:"vent_comp_forma_pago_to_cheq_cheques",
+primaryDataSource:"db:/gpp/vent_comp_forma_pago",
+typeid:22,
+uuid:"A76F24D2-EB82-4551-B428-AA6BF89014E1"
