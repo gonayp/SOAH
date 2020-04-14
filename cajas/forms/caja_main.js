@@ -256,14 +256,15 @@ function leerMovimientos(){
 	for (var k = 1; k <= nCompOCount; k++) {
 		var myFormaPago_ = fs_formas_d_pago.getRecord(k);
 		forms.caja_abierta_movimientos_otros.foundset.newRecord()
-		forms.caja_abierta_movimientos_otros.foundset.descripcion	= myFormaPago_.vent_comp_forma_pago_to_vent_comprobantes.calc_num_comprobante +" - "+ myFormaPago.vent_comp_forma_pago_to_vent_comprobantes.vent_comprobantes_to_vent_clientes.vent_clientes_to_core.core_nombre
-		forms.caja_abierta_movimientos_otros.foundset.fecha		= myFormaPago_.vent_comp_forma_pago_to_vent_comprobantes.comp_fecha_emision
+		forms.caja_abierta_movimientos_otros.foundset.descripcion	= myFormaPago_.vent_comp_forma_pago_to_vent_comprobantes.calc_num_comprobante +" - "+ myFormaPago_.vent_comp_forma_pago_to_vent_comprobantes.vent_comprobantes_to_vent_comprobante_datos.cliente_nombre
+		forms.caja_abierta_movimientos_otros.foundset.fecha			= myFormaPago_.vent_comp_forma_pago_to_vent_comprobantes.comp_fecha_emision
 		forms.caja_abierta_movimientos_otros.foundset.id			= myFormaPago_.comp_forma_pago_id
 		forms.caja_abierta_movimientos_otros.foundset.importe_ing	= myFormaPago_.forma_pago_imp
 		forms.caja_abierta_movimientos_otros.foundset.importe_egr	= 0
 		switch (myFormaPago_.forma_pago_id) {
 		case 2://Cheques
 			forms.caja_abierta_movimientos_otros.foundset.tipo		= 4 //Cheques
+			forms.caja_abierta_movimientos_otros.foundset.numero	= myFormaPago_.vent_comp_forma_pago_to_cheq_cheques.cheque_numero
 			break;
 		case 3://Transferencias
 			forms.caja_abierta_movimientos_otros.foundset.tipo		= 5

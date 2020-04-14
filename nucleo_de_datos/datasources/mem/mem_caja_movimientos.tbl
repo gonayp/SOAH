@@ -33,6 +33,12 @@ name:"importe_ing"
 },
 {
 allowNull:true,
+creationOrderIndex:6,
+dataType:8,
+name:"numero"
+},
+{
+allowNull:true,
 creationOrderIndex:2,
 dataType:4,
 name:"tipo"

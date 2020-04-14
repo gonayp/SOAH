@@ -28,7 +28,7 @@ headerStyleClass:"cell_left_header",
 headerText:"Descripción",
 styleClass:"cell_left",
 svyUUID:"B785E386-33DB-40D8-A97F-97FDD711AF0E",
-width:"300"
+width:"350"
 },
 {
 dataprovider:"fecha",

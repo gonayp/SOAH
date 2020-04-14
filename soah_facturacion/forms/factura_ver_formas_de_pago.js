@@ -139,8 +139,4 @@ function onShow(firstShow, event) {
 	fs_vent_comprobantes.comp_id_padre = '^='
 	fs_vent_comprobantes.search()
 	
-	elements.btn_anticipos.enabled = false
-	if(fs_vent_comprobantes.getSize() > 0){//Si el cliente tiene anticipos
-		elements.btn_anticipos.enabled = true
-	}
 }

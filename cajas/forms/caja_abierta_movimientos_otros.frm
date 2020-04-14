@@ -83,6 +83,15 @@ valuelist:"440B74D6-B5D7-4219-AB6F-65E90347E018",
 width:"200"
 },
 {
+dataprovider:"numero",
+format:"####",
+headerStyleClass:"cell_center_header",
+headerText:"Número",
+styleClass:"cell_center",
+svyUUID:"17511058-9EB6-4173-9FB2-4A3419A7F02A",
+width:"150"
+},
+{
 dataprovider:"descripcion",
 headerStyleClass:"cell_left_header",
 headerText:"Descripción",
