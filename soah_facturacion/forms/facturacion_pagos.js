@@ -104,42 +104,31 @@ function generarPago(){
  * @properties={typeid:24,uuid:"9E926895-6F85-40CC-9613-2AC0DD8F9669"}
  */
 function onCellClick(foundsetindex, columnindex, record, event) {
+	var aux = 0
 	if(columnindex == 0){
 		if(calc_seleccionado == 1){
 			calc_seleccionado = 0
-			if(comp_estado_id == 6){//Pendiente
-				vl_subtotal -= comp_imp_total - comp_imp_iva2
-				vl_total_iva -= comp_imp_iva2
-				vl_total -= comp_imp_total
-				
-			}
-			else{//Parcial
-				calc_saldo = scopes.facturacion.calcularSaldoComprobante(foundset.getSelectedRecord())
-				calc_pendiente = comp_imp_total - calc_saldo
-				databaseManager.saveData()
-				vl_subtotal -= calc_pendiente - comp_imp_iva2
-				vl_total_iva -= comp_imp_iva2
-				vl_total -= calc_pendiente
-			}
+			
+			aux = scopes.facturacion.calcularImporteYaPagadoComprobante(foundset.getSelectedRecord())
+			calc_saldo = comp_imp_total - aux
+			databaseManager.saveData()
+			vl_subtotal -= calc_saldo - comp_imp_iva2
+			vl_total_iva -= comp_imp_iva2
+			vl_total -= calc_saldo
+			
 			vl_cantidad -= 1
 		}
 		else{
 			calc_seleccionado = 1
-			if(comp_estado_id == 6){//Pendiente
-				vl_subtotal += comp_imp_total - comp_imp_iva2
-				vl_total_iva += comp_imp_iva2
-				vl_total += comp_imp_total
-				
-			}
-			else{//Parcial
-				calc_saldo = scopes.facturacion.calcularSaldoComprobante(foundset.getSelectedRecord())
-				calc_pendiente = comp_imp_total - calc_saldo
-				databaseManager.saveData()
-				//var aux_total = calcularCobrosRealizados(myRecord)
-				vl_subtotal += calc_pendiente - comp_imp_iva2
-				vl_total_iva += comp_imp_iva2
-				vl_total += calc_pendiente
-			}
+			
+			aux = scopes.facturacion.calcularImporteYaPagadoComprobante(foundset.getSelectedRecord())
+			calc_saldo = comp_imp_total - aux
+			databaseManager.saveData()
+			//var aux_total = calcularCobrosRealizados(myRecord)
+			vl_subtotal += calc_saldo - comp_imp_iva2
+			vl_total_iva += comp_imp_iva2
+			vl_total += calc_saldo
+			
 			vl_cantidad += 1
 		}
 	}
@@ -218,21 +207,15 @@ function filtrar() {
 			myRecord.calc_seleccionado = 1
 			myRecord.calc_pendiente = myRecord.comp_imp_total
 			databaseManager.saveData()
-			if(myRecord.comp_estado_id == 6){//Pendiente
-				vl_subtotal += myRecord.comp_imp_total - myRecord.comp_imp_iva2
-				vl_total_iva += myRecord.comp_imp_iva2
-				vl_total += myRecord.comp_imp_total
-				
-			}
-			else{//Parcial
-				myRecord.calc_saldo = scopes.facturacion.calcularSaldoComprobante(myRecord)
-				myRecord.calc_pendiente = myRecord.comp_imp_total - myRecord.calc_saldo
-				databaseManager.saveData()
-				//var aux_total = calcularCobrosRealizados(myRecord)
-				vl_subtotal += myRecord.calc_pendiente - myRecord.comp_imp_iva2
-				vl_total_iva += myRecord.comp_imp_iva2
-				vl_total += myRecord.calc_pendiente
-			}
+			
+			var aux = scopes.facturacion.calcularImporteYaPagadoComprobante(myRecord)
+			myRecord.calc_saldo = myRecord.comp_imp_total -aux
+			databaseManager.saveData()
+			//var aux_total = calcularCobrosRealizados(myRecord)
+			vl_subtotal += myRecord.calc_pendiente - myRecord.comp_imp_iva2
+			vl_total_iva += myRecord.comp_imp_iva2
+			vl_total += myRecord.calc_pendiente
+			
 			vl_cantidad ++
 			if(vl_obra_anterior != myRecord.obra_id){
 				misma_obra = 0
@@ -298,21 +281,14 @@ function onHeaderClick(columnindex, sortdirection, event) {
 			myRecord.calc_seleccionado = vl_seleccionadas
 			if(myRecord.calc_seleccionado == 1){
 				
-				if(myRecord.comp_estado_id == 6){//Pendiente
-					vl_subtotal += myRecord.comp_imp_total - myRecord.comp_imp_iva2
-					vl_total_iva += myRecord.comp_imp_iva2
-					vl_total += myRecord.comp_imp_total
-					
-				}
-				else{//Parcial
-					myRecord.calc_saldo = scopes.facturacion.calcularSaldoComprobante(myRecord)
-					myRecord.calc_pendiente = myRecord.comp_imp_total - myRecord.calc_saldo
-					databaseManager.saveData()
-					//var aux_total = calcularCobrosRealizados(myRecord)
-					vl_subtotal += myRecord.calc_pendiente - myRecord.comp_imp_iva2
-					vl_total_iva += myRecord.comp_imp_iva2
-					vl_total += myRecord.calc_pendiente
-				}
+				var aux = scopes.facturacion.calcularImporteYaPagadoComprobante(myRecord)
+				myRecord.calc_saldo = myRecord.comp_imp_total - aux
+				databaseManager.saveData()
+				//var aux_total = calcularCobrosRealizados(myRecord)
+				vl_subtotal += myRecord.calc_saldo - myRecord.comp_imp_iva2
+				vl_total_iva += myRecord.comp_imp_iva2
+				vl_total += myRecord.calc_saldo
+
 				vl_cantidad += 1
 			}
 			databaseManager.saveData()

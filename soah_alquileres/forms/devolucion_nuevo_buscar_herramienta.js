@@ -202,7 +202,7 @@ function addHerramienta() {
 		forms.devolucion_nuevo_herramientas.foundset.comp_num_alquiler		= foundset.vent_comprobante_herramientas_to_vent_comprobantes.calc_num_compr_sin_codig
 		
 		
-		
+		//Comprobar si es consumible
 		if(forms.devolucion_nuevo_herramientas.foundset.mem_vent_comprobante_equipos_to_herr_equipo.herr_equipo_to_herr_herramientas.herr_herramientas_to_herr_categoria.categoria_consumible == 1){//Si es consumible cargamos un item de ventas con el desgaste y consumo
 			forms.devolucion_nuevo_ventas.foundset.newRecord()
 			forms.devolucion_nuevo_ventas.foundset.producto_cantidad		= 1
@@ -210,6 +210,17 @@ function addHerramienta() {
 			forms.devolucion_nuevo_ventas.foundset.producto_precio			= foundset.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_herramientas.herramienta_precio_base
 			forms.devolucion_nuevo_ventas.foundset.producto_total			= foundset.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_herramientas.herramienta_precio_base
 			forms.devolucion_nuevo_ventas.foundset.producto_unidad			= ""
+			databaseManager.saveData()
+		}
+		
+		//Comprobar si por tipo de alimentacion tiene algun consumible (ejemplo nafta)
+		if(foundset.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_alimentacion.producto_id != null){
+			forms.devolucion_nuevo_ventas.foundset.newRecord()
+			forms.devolucion_nuevo_ventas.foundset.producto_cantidad		= 1
+			forms.devolucion_nuevo_ventas.foundset.producto_nombre			= foundset.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_alimentacion.herr_alimentacion_to_prod_productos.producto_nombre
+			forms.devolucion_nuevo_ventas.foundset.producto_precio			= foundset.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_alimentacion.herr_alimentacion_to_prod_productos.producto_precio_base
+			forms.devolucion_nuevo_ventas.foundset.producto_total			= foundset.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_alimentacion.herr_alimentacion_to_prod_productos.producto_precio_base
+			forms.devolucion_nuevo_ventas.foundset.producto_unidad			= foundset.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_alimentacion.herr_alimentacion_to_prod_productos.prod_productos_to_prod_medidas.medida_nombre
 			databaseManager.saveData()
 		}
 		

@@ -79,10 +79,10 @@ svyUUID:"7A48E8FA-52C5-4853-B333-289F69445A49",
 width:"150"
 },
 {
-dataprovider:"calc_pendiente",
+dataprovider:"calc_acumulado",
 format:"#,###.00",
 headerStyleClass:"cell_right_header",
-headerText:"Pendiente",
+headerText:"Acumulado",
 styleClass:"cell_right",
 svyUUID:"0F4033C1-92B0-473D-B15D-34D0DB678E92",
 width:"150"
@@ -137,6 +137,35 @@ typeid:4,
 uuid:"482CECAB-BA4F-4012-8C8C-68C531345A0E"
 },
 {
+cssPosition:"84,-1,-1,245,45,20",
+formIndex:2,
+json:{
+cssPosition:{
+bottom:"-1",
+height:"20",
+left:"245",
+right:"-1",
+top:"84",
+width:"45"
+},
+formIndex:2,
+imageStyleClass:"fas fa-eye",
+location:{
+x:10,
+y:10
+},
+onActionMethodID:"FF6AA061-7FF3-4B3C-BDFF-DBEDE0FBBE06",
+styleClass:"btn btn-default btn-success",
+tabSeq:5
+},
+location:"10,10",
+name:"btn_anticipos",
+styleClass:"btn btn-default btn-success",
+typeName:"bootstrapcomponents-button",
+typeid:47,
+uuid:"490F4A33-7F09-418E-B03B-82290FEF58D2"
+},
+{
 cssPosition:"59,-1,-1,141,99,20",
 dataProviderID:"vl_total_credito",
 editable:false,
@@ -162,6 +191,35 @@ typeid:4,
 uuid:"62C233A7-4760-4504-A9BA-534F022D7DB3"
 },
 {
+cssPosition:"34,-1,-1,245,45,20",
+formIndex:2,
+json:{
+cssPosition:{
+bottom:"-1",
+height:"20",
+left:"245",
+right:"-1",
+top:"34",
+width:"45"
+},
+formIndex:2,
+imageStyleClass:"fas fa-eye",
+location:{
+x:10,
+y:10
+},
+onActionMethodID:"FF6AA061-7FF3-4B3C-BDFF-DBEDE0FBBE06",
+styleClass:"btn btn-default btn-success",
+tabSeq:5
+},
+location:"10,10",
+name:"btn_facturas",
+styleClass:"btn btn-default btn-success",
+typeName:"bootstrapcomponents-button",
+typeid:47,
+uuid:"77D53F36-F3CD-4698-8C21-A073486FA60B"
+},
+{
 cssPosition:"117,-1,-1,141,99,20",
 dataProviderID:"vl_total",
 editable:false,
@@ -180,15 +238,73 @@ typeid:4,
 uuid:"BC157BD3-09E8-4436-93A2-D7EBD8881F98"
 },
 {
+cssPosition:"10,-1,-1,245,45,20",
+formIndex:2,
+json:{
+cssPosition:{
+bottom:"-1",
+height:"20",
+left:"245",
+right:"-1",
+top:"10",
+width:"45"
+},
+formIndex:2,
+imageStyleClass:"fas fa-eye",
+location:{
+x:10,
+y:10
+},
+onActionMethodID:"FF6AA061-7FF3-4B3C-BDFF-DBEDE0FBBE06",
+styleClass:"btn btn-default btn-success",
+tabSeq:5
+},
+location:"10,10",
+name:"btn_devoluciones",
+styleClass:"btn btn-default btn-success",
+typeName:"bootstrapcomponents-button",
+typeid:47,
+uuid:"E124537A-28E3-442F-8638-4524F2A99924"
+},
+{
 height:480,
 partType:5,
 typeid:19,
 uuid:"E37D887B-25D5-4C70-9296-F61773DDD938"
+},
+{
+cssPosition:"59,-1,-1,245,45,20",
+formIndex:2,
+json:{
+cssPosition:{
+bottom:"-1",
+height:"20",
+left:"245",
+right:"-1",
+top:"59",
+width:"45"
+},
+formIndex:2,
+imageStyleClass:"fas fa-eye",
+location:{
+x:10,
+y:10
+},
+onActionMethodID:"FF6AA061-7FF3-4B3C-BDFF-DBEDE0FBBE06",
+styleClass:"btn btn-default btn-success",
+tabSeq:5
+},
+location:"10,10",
+name:"btn_nc",
+styleClass:"btn btn-default btn-success",
+typeName:"bootstrapcomponents-button",
+typeid:47,
+uuid:"E51FF149-3280-4CC2-84C6-99F890143187"
 }
 ],
 name:"clientes_estado_facturacion",
 navigatorID:"-1",
-onShowMethodID:"-1",
+onShowMethodID:"60957936-B61C-4987-8DFE-A2FFDCDD2EDD",
 showInMenu:true,
 typeid:3,
 uuid:"6E3783B7-4564-4251-8208-692B694C3416"

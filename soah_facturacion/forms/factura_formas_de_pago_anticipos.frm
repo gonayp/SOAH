@@ -95,7 +95,7 @@ uuid:"64F6B67D-EBB5-4809-9A88-4F3ED502336F"
 cssPosition:"0,0,-1,0,642,40",
 location:"10,10",
 styleClass:"banner",
-text:"Seleccionar cheque",
+text:"Seleccionar Anticipo",
 typeid:7,
 uuid:"76F9CA11-D262-4B28-A2DE-C5D4BCD523E2",
 verticalAlignment:1

@@ -1,7 +1,15 @@
 /**
+ * @properties={type:8,typeid:36,uuid:"B515F27F-D3A5-4338-BA7B-1F9A9AFC9678"}
+ */
+function calc_a_pagar()
+{
+	return ;
+}
+
+/**
  * @properties={type:8,typeid:36,uuid:"A6EFC370-3A3C-4324-AEC6-48827737CDF0"}
  */
-function calc_pendiente()
+function calc_acumulado()
 {
 	return ;
 }

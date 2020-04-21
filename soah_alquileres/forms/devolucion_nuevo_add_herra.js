@@ -138,6 +138,19 @@ function cargarHerramienta(fs_equipos,fs_comp_herr){
 		databaseManager.saveData()
 	}
 	
+	
+	//Comprobar si por tipo de alimentacion tiene algun consumible (ejemplo nafta)
+	if(fs_comp_herr.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_alimentacion.producto_id != null){
+		forms.devolucion_nuevo_ventas.foundset.newRecord()
+		forms.devolucion_nuevo_ventas.foundset.producto_cantidad		= 1
+		forms.devolucion_nuevo_ventas.foundset.producto_nombre			= fs_comp_herr.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_alimentacion.herr_alimentacion_to_prod_productos.producto_nombre
+		forms.devolucion_nuevo_ventas.foundset.producto_precio			= fs_comp_herr.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_alimentacion.herr_alimentacion_to_prod_productos.producto_precio_base
+		forms.devolucion_nuevo_ventas.foundset.producto_total			= fs_comp_herr.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_alimentacion.herr_alimentacion_to_prod_productos.producto_precio_base
+		forms.devolucion_nuevo_ventas.foundset.producto_unidad			= fs_comp_herr.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_alimentacion.herr_alimentacion_to_prod_productos.prod_productos_to_prod_medidas.medida_nombre
+		databaseManager.saveData()
+	}
+	
+	
 	databaseManager.saveData()
 	
 	calcularTotalCobrar()

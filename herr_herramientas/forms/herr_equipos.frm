@@ -443,6 +443,14 @@ headerText:"Código Barras",
 styleClass:"cell_center",
 svyUUID:"D77EEFFA-BB00-443B-A648-1D49085D1105",
 width:"200"
+},
+{
+dataprovider:"herr_equipo_to_vent_comprobante_datos.cliente_nombre",
+headerStyleClass:"cell_left_header",
+headerText:"Cliente",
+styleClass:"cell_left",
+svyUUID:"A9F2D5C3-C1C9-4E83-BCBA-5C508CEF397B",
+width:"300"
 }
 ],
 cssPosition:{

@@ -106,6 +106,14 @@ svyUUID:"F54FC9A0-1FE6-492B-A676-833F2F733407",
 width:"200"
 },
 {
+dataprovider:"herr_alimentacion_to_prod_productos.producto_nombre",
+headerStyleClass:"cell_left_header",
+headerText:"Consumible",
+styleClass:"cell_left",
+svyUUID:"3DCD3A27-BCBA-497A-92AF-B5F5B0691BAB",
+width:"300"
+},
+{
 dataprovider:"alimentacion_observacion",
 headerStyleClass:"cell_left_header",
 headerText:"Observaciones",

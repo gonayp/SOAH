@@ -1,49 +1,49 @@
 /**
  * @type {Number}
  *
- * @properties={typeid:35,uuid:"E52ACD11-8C01-4D53-9E2B-6511F0159547",variableType:8}
+ * @properties={typeid:35,uuid:"EC3B1B40-7CB5-4189-97E2-C5964FAE83A2",variableType:8}
  */
 var vl_ret_iibb = null;
 
 /**
  * @type {Number}
  *
- * @properties={typeid:35,uuid:"C5D5C33D-FB2A-4268-8511-685EE0C84BB7",variableType:8}
+ * @properties={typeid:35,uuid:"3AB18EC7-F7D3-4F0C-A393-643B5FB4003B",variableType:8}
  */
 var vl_ret_gan = null;
 
 /**
  * @type {Number}
  *
- * @properties={typeid:35,uuid:"610CEADD-B218-46A4-ABC8-33047ECE151E",variableType:8}
+ * @properties={typeid:35,uuid:"39210422-E3A7-4181-98A2-0047A44A7E98",variableType:8}
  */
 var vl_total_factura = null;
 
 /**
  * @type {Number}
  *
- * @properties={typeid:35,uuid:"1876F482-59DA-4D7A-81D3-7BF47D160431",variableType:8}
+ * @properties={typeid:35,uuid:"71072100-4E43-4C8C-8E9F-315F49A02B31",variableType:8}
  */
 var vl_total = null;
 
 /**
  * @type {Number}
  *
- * @properties={typeid:35,uuid:"BE082DA7-8F3A-4E92-A8C6-826D9AA6CEC6",variableType:8}
+ * @properties={typeid:35,uuid:"62642C0F-8C7E-4BC5-BDB1-CEE5525795C8",variableType:8}
  */
 var vl_cheques = null;
 
 /**
  * @type {Number}
  *
- * @properties={typeid:35,uuid:"EDED21C1-A992-43B9-AB64-9EBEB1121B27",variableType:8}
+ * @properties={typeid:35,uuid:"4E88567A-14AA-41FA-9C5D-4CC3BDDE27FA",variableType:8}
  */
 var vl_transferencia = null;
 
 /**
  * @type {Number}
  *
- * @properties={typeid:35,uuid:"E1B99DF0-78C7-4F70-AB97-F0929BF44EBF",variableType:8}
+ * @properties={typeid:35,uuid:"2072717F-E120-49F6-A7CF-AC8DCDF589C5",variableType:8}
  */
 var vl_efectivo = null;
 
@@ -53,7 +53,7 @@ var vl_efectivo = null;
  * @param {Boolean} firstShow form is shown first time after load
  * @param {JSEvent} event the event that triggered the action
  *
- * @properties={typeid:24,uuid:"F1AEEC5D-8E0D-4C16-917E-8A94E83E3B78"}
+ * @properties={typeid:24,uuid:"F059CA84-DFBB-4368-AAE0-4FACCB8FAA94"}
  */
 function onShow(firstShow, event) {
 	

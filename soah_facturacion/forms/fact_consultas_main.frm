@@ -18,6 +18,28 @@ uuid:"1D86E11A-8B11-4288-A10C-BF32344BBDAF",
 verticalAlignment:1
 },
 {
+cssPosition:"115,-1,-1,251,176,65",
+formIndex:2,
+json:{
+cssPosition:{
+bottom:"-1",
+height:"65",
+left:"251",
+right:"-1",
+top:"115",
+width:"176"
+},
+formIndex:2,
+imageStyleClass:"fas fa-dollar",
+onActionMethodID:"765A4FC8-E82D-4803-A706-98B5B54E5293",
+text:"Anticipos"
+},
+name:"btn_anticipos",
+typeName:"bootstrapcomponents-button",
+typeid:47,
+uuid:"21C0CD5F-F8F6-4F64-A3BC-02022A07A793"
+},
+{
 cssPosition:"45,-1,-1,251,176,65",
 formIndex:2,
 json:{
@@ -34,7 +56,7 @@ imageStyleClass:"fas fa-book",
 onActionMethodID:"13192A4B-8AB1-4803-9CF0-91F7BC12B6D2",
 text:"Libro IVA Ventas"
 },
-name:"btn_marcas",
+name:"btn_libroIVA",
 typeName:"bootstrapcomponents-button",
 typeid:47,
 uuid:"433B13CE-E43F-45FA-8614-BB902661B2BD"
@@ -64,7 +86,7 @@ imageStyleClass:"fas fa-comments-dollar",
 onActionMethodID:"1DFB6A82-9093-462D-9F87-4F76E06B3077",
 text:"Recibos de cobro"
 },
-name:"btn_accesorios",
+name:"btn_recibos",
 typeName:"bootstrapcomponents-button",
 typeid:47,
 uuid:"71E1A697-5E0F-49AF-9BA3-400578F4F7DD"
@@ -113,7 +135,7 @@ imageStyleClass:"fas fa-percentage",
 onActionMethodID:"3B241E20-CB4C-4CC7-ABA8-9C92848BC027",
 text:"Facturas pendientes"
 },
-name:"btn_categorias",
+name:"btn_pendientes",
 typeName:"bootstrapcomponents-button",
 typeid:47,
 uuid:"F62AED70-CFAA-40BE-914B-4BB91C5F360E"

@@ -7,7 +7,7 @@ items:[
 height:232,
 partType:5,
 typeid:19,
-uuid:"1F6B818D-9F68-45C2-965B-D26A90C38458"
+uuid:"615FCEB2-DBE1-4B6E-AFF1-FF78ECAF6C14"
 },
 {
 cssPosition:"1,0,0,0,200,100",
@@ -18,7 +18,7 @@ dataprovider:"vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_h
 headerStyleClass:"cell_left_header",
 headerText:"Herramienta",
 styleClass:"cell_left",
-svyUUID:"31E5CE69-AA47-4968-A13A-F434343CAB36",
+svyUUID:"4F1AEC76-11B1-4FC1-9B5E-FD715045C8F9",
 width:"150"
 },
 {
@@ -26,7 +26,7 @@ dataprovider:"vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_m
 headerStyleClass:"cell_left_header",
 headerText:"Modelo",
 styleClass:"cell_left",
-svyUUID:"D24F2080-BDC7-48E8-9DAB-D68775CE6CB4",
+svyUUID:"015340FC-BE89-49D1-BD03-9CBEAB858D6C",
 width:"100"
 },
 {
@@ -36,7 +36,7 @@ format:"#,###.00",
 headerStyleClass:"cell_right_header",
 headerText:"Precio",
 styleClass:"cell_right",
-svyUUID:"56BE850D-F0F3-4819-A14E-F50E66D911AD",
+svyUUID:"C4DCA73F-5A50-4572-B23F-83721264DA8E",
 width:"80"
 },
 {
@@ -46,7 +46,7 @@ format:"dd/MM/yy HH:mm",
 headerStyleClass:"cell_center_header",
 headerText:"Alquiler",
 styleClass:"cell_center",
-svyUUID:"98708B6F-18FC-4E3E-825C-6B3209E4A5FA",
+svyUUID:"4A22B4D1-5CFC-4EED-AC46-C625053D2412",
 width:"120"
 },
 {
@@ -55,7 +55,7 @@ format:"dd/MM/yy HH:mm",
 headerStyleClass:"cell_center_header",
 headerText:"Devolución",
 styleClass:"cell_center",
-svyUUID:"B5708F8F-3CF2-4FCE-8054-CC02B7845094",
+svyUUID:"53DEFEF7-171C-4F02-94CE-A2EAADAE7F4A",
 width:"120"
 },
 {
@@ -64,7 +64,7 @@ format:"####",
 headerStyleClass:"cell_right_header",
 headerText:"Días Facturados",
 styleClass:"cell_right",
-svyUUID:"0E2100E4-47C8-405F-9C47-01CDDA783B75",
+svyUUID:"115121E3-7532-4C71-B444-63785AA88B18",
 width:"100"
 },
 {
@@ -73,7 +73,7 @@ format:"#,###.00",
 headerStyleClass:"cell_right_header",
 headerText:"Total",
 styleClass:"cell_right",
-svyUUID:"678151C3-B23A-4D00-B688-C00C43B78EBE",
+svyUUID:"C4D514AB-0061-45EB-A27A-493C0BABEE05",
 width:"150"
 }
 ],
@@ -93,13 +93,13 @@ tabSeq:-2
 name:"table_1",
 typeName:"servoyextra-table",
 typeid:47,
-uuid:"6AA1FBB4-D100-4466-8B6F-C482FF2E29C5"
+uuid:"AAB3F0D8-6A03-4DC4-98B0-B75F492911A4"
 }
 ],
 name:"factura_devolucion_detalle_herramientas",
 navigatorID:"-1",
-onShowMethodID:"0E346A9A-F557-4DC2-9385-30C95C65D334",
+onShowMethodID:"B288B4C0-EB35-476A-9BC8-8FAC6195919F",
 showInMenu:true,
 size:"459,232",
 typeid:3,
-uuid:"253B1075-B5A3-442D-8445-A6F3DB502A3D"
+uuid:"6A78467C-0687-47B2-B866-BF5DB9EDAA01"

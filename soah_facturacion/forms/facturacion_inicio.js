@@ -220,7 +220,7 @@ function crearHerramientas(){
 						forms.factura_devolucion_nuevo_herramientas.foundset.comp_fecha_alquiler		= myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes_alquiler.comp_fecha_emision
 						forms.factura_devolucion_nuevo_herramientas.foundset.comp_fecha_devolucion		= myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes.comp_fecha_emision
 						forms.factura_devolucion_nuevo_herramientas.foundset.comp_id					= myHerramienta.comp_id
-						forms.factura_devolucion_nuevo_herramientas.foundset.comp_id_devolucion			= myHerramienta.comp_devolucion
+						forms.factura_devolucion_nuevo_herramientas.foundset.comp_id_devolucion			= myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes.comp_id
 						forms.factura_devolucion_nuevo_herramientas.foundset.comp_precio				= myHerramienta.comp_precio
 						forms.factura_devolucion_nuevo_herramientas.foundset.equipo_cod_barras			= myHerramienta.vent_comprobante_herramientas_to_herr_equipo.equipo_cod_barras
 						forms.factura_devolucion_nuevo_herramientas.foundset.equipo_herramienta			= myHerramienta.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_herramientas.herramienta_nombre

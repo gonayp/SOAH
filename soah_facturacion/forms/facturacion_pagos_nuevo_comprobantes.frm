@@ -66,13 +66,13 @@ svyUUID:"10C626C3-4B28-402C-A21C-D880E3352CBF",
 width:"150"
 },
 {
-dataprovider:"calc_pendiente",
+dataprovider:"calc_a_pagar",
 format:"#,###.00",
 headerStyleClass:"cell_right_header",
-headerText:"Pendiente",
+headerText:"A pagar",
 styleClass:"cell_right",
-svyUUID:"5D0A5CFE-E4D5-426D-BB64-8E97AED23C53",
-width:"150"
+svyUUID:"286C1DB6-F268-473A-BD10-2043F8B57B3D",
+width:"200"
 }
 ],
 cssPosition:{

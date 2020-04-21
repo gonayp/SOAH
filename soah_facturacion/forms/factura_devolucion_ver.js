@@ -58,14 +58,15 @@ function onActionVolver() {
 function calculoTotales(){
 	vl_subtotal = comp_imp_alqu + comp_imp_ventas
 	
-	vl_saldo = scopes.facturacion.calcularSaldoComprobante(foundset.getSelectedRecord())
+	var aux = scopes.facturacion.calcularImporteYaPagadoComprobante(foundset.getSelectedRecord())
+	vl_saldo = foundset.comp_imp_total - aux
 	
 	elements.f_saldo.bgcolor = '#C0F0C3'
-	if(vl_saldo < foundset.comp_imp_total){
+	if(vl_saldo > 0){
 		elements.f_saldo.bgcolor = '#FFC3C3'
 	}
 	else{
-		vl_saldo = foundset.comp_imp_total
+		vl_saldo = 0
 	}
 
 }

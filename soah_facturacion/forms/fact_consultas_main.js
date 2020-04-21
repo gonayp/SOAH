@@ -30,3 +30,13 @@ function onActionLibroIva(event) {
 	application.showForm(forms.fact_libro_iva_ventas)
 
 }
+
+/**
+ * @param {JSEvent} event
+ *
+ * @properties={typeid:24,uuid:"765A4FC8-E82D-4803-A706-98B5B54E5293"}
+ */
+function onActionListadoAnticipos(event) {
+	application.showForm(forms.anticipos_main)
+
+}

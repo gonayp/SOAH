@@ -1,4 +1,11 @@
 /**
+ * @type {String}
+ *
+ * @properties={typeid:35,uuid:"9CC58786-6BB3-4765-BDD6-3C6FD0CC0EEC"}
+ */
+var vl_form_padre = null;
+
+/**
  * @type {Number}
  *
  * @properties={typeid:35,uuid:"E489732A-FF58-40BB-B343-ED9F653E63E3",variableType:8}
@@ -14,7 +21,13 @@ var vl_subtotal = null;
  * @properties={typeid:24,uuid:"070C8A78-EB23-4CEA-8321-CEE350A6FB30"}
  */
 function onActionVolver() {
-	application.showForm(forms.devoluciones_main)
+	
+	if(vl_form_padre == null)
+		application.showForm(forms.devoluciones_main)
+	else
+		application.showForm(vl_form_padre)
+	
+	vl_form_padre = null
 }
 
 /**

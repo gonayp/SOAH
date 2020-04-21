@@ -75,6 +75,8 @@ var vl_efectivo = null;
 function onDataChangePagos() {
 	vl_total = vl_efectivo + vl_transferencia + vl_cheques + vl_ret_gan + vl_ret_iibb + vl_anticipos
 	vl_diferencia = ((Math.round(vl_total_factura *100)/100) - (Math.round(vl_total*100)/100)) * (-1)
+	
+	forms.facturacion_pagos_nuevo_comprobantes.calcularImportesAPagar(vl_total)
 }
 
 /**
@@ -142,5 +144,6 @@ function onShow(firstShow, event) {
 	elements.btn_anticipos.enabled = false
 	if(fs_vent_comprobantes.getSize() > 0){//Si el cliente tiene anticipos
 		elements.btn_anticipos.enabled = true
+		plugins.webnotificationsToastr.info("Este cliente tiene anticipos disponibles")
 	}
 }

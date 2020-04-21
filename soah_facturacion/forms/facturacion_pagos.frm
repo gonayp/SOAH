@@ -76,15 +76,6 @@ headerText:"Saldo",
 styleClass:"cell_right",
 svyUUID:"E92AD5C2-63CC-4EB1-B15C-7C9A66FE9A84",
 width:"150"
-},
-{
-dataprovider:"calc_pendiente",
-format:"#,###.00",
-headerStyleClass:"cell_right_header",
-headerText:"Pendiente",
-styleClass:"cell_right",
-svyUUID:"74E2DF37-3673-466F-8492-AE4CD2E2668E",
-width:"150"
 }
 ],
 cssPosition:{

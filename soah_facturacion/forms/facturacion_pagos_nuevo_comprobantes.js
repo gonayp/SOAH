@@ -24,3 +24,35 @@ function onShow(firstShow, event) {
 	vl_total = forms.facturacion_pagos.vl_total
 }
 
+/**
+ * @param p_importe
+ *
+ * @properties={typeid:24,uuid:"0800EEE6-013D-44E9-A4B9-4D9B7C448EEB"}
+ */
+function calcularImportesAPagar(p_importe){
+	
+	var aux_aplicado = 0
+	var aux = 0
+	
+	var nRecordCount = 0
+	nRecordCount = databaseManager.getFoundSetCount(foundset);
+	for (var index = 1; index <= nRecordCount; index++) {
+		var myRecord = foundset.getRecord(index);
+		if(myRecord.calc_seleccionado == 1){
+			aux = p_importe - aux_aplicado
+			if(aux >= myRecord.calc_saldo ){
+				aux_aplicado += myRecord.calc_saldo
+				myRecord.calc_a_pagar = myRecord.calc_saldo
+				databaseManager.saveData()
+			}
+			else{
+				aux_aplicado += aux
+				myRecord.calc_a_pagar = aux
+			}
+		}
+		
+	}
+	
+	
+	
+}

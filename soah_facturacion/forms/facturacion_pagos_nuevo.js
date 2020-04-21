@@ -192,12 +192,12 @@ function grabarRecibo(){
 				fs_comprobante_recibo.newRecord()
 				fs_comprobante_recibo.company_id 				= scopes.usuario.vg_company_id
 				fs_comprobante_recibo.comp_factura_id			= myFactura.comp_id
-				fs_comprobante_recibo.comp_importe				= myFactura.comp_imp_total
+				fs_comprobante_recibo.comp_importe				= myFactura.calc_a_pagar
 				fs_comprobante_recibo.comp_recibo_id			= fs_comprobantes.comp_id
 				
 				databaseManager.saveData(fs_comprobante_recibo)
 				
-				if(forms.factura_formas_de_pago.vl_diferencia < 0){
+				if(myFactura.calc_a_pagar < myFactura.calc_saldo){
 					myFactura.comp_estado_id = 9 //Parcial
 				}
 				else{
@@ -356,6 +356,7 @@ function generarAnticipo(recibo_id){
 	fs_comprobantes.comp_observacion			= vl_observaciones
 	fs_comprobantes.comp_pv						= vl_pv
 	fs_comprobantes.comp_estado_id				= 11 //Anticipo nuevo
+	fs_comprobantes.comp_id_recibo				= recibo_id //id del recibo al que pertenece
 	databaseManager.saveData(fs_comprobantes)
 		
 
@@ -387,6 +388,9 @@ function generarAnticipo(recibo_id){
 	fs_historicos_cliente.hist_fecha				= vl_fecha
 	fs_historicos_cliente.hist_tipo					= 9 //Anticipo
 	databaseManager.saveData(fs_historicos_cliente)
+	
+	
+	scopes.facturacion.SetUltimoNumeroComprobante(vl_pv,90,aux_numero)
 }
 
 /**
@@ -415,6 +419,7 @@ function onShow(firstShow, event) {
 	
 	vl_fecha = application.getServerTimeStamp()
 	vl_cliente = forms.facturacion_pagos.vl_cliente
+	globals.vg_cliente = forms.facturacion_pagos.vl_cliente
 	
 	vl_tipo = 1 //Automatico
 	
