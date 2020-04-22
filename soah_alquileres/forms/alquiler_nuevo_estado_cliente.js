@@ -101,11 +101,11 @@ function onCellDoubleClick(foundsetindex, columnindex, record, event) {
 		win.show( forms.alquiler_detalle );
 	}
 	else{
-		forms.factura_devolucion_detalle.foundset.loadRecords(foundset.comp_id)
+		forms['factura_devolucion_detalle'].foundset.loadRecords(foundset.comp_id)
 		win.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
 		win.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
 		win.resizable = false
 		win.title= '';
-		win.show( forms.factura_devolucion_detalle );
+		win.show('factura_devolucion_detalle' );
 	}
 }

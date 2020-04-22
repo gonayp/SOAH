@@ -30,6 +30,8 @@ function onActioGrabar() {
 		return
 	}
 	
+	producto_total = producto_cantidad * producto_precio
+	
 	databaseManager.saveData()
 	
 	forms.devolucion_nuevo.calculoTotales()

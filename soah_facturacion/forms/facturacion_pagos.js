@@ -19,12 +19,7 @@ var vl_obra = null;
  */
 var vl_cantidad = null;
 
-/**
- * @type {Number}
- *
- * @properties={typeid:35,uuid:"5A76D149-BEDE-497B-89E1-413A48E800EA",variableType:8}
- */
-var vl_total_iva = null;
+
 
 /**
  * @type {Number}
@@ -33,12 +28,7 @@ var vl_total_iva = null;
  */
 var vl_total = null;
 
-/**
- * @type {Number}
- *
- * @properties={typeid:35,uuid:"B161B570-1FBF-46FF-A31F-07841B0D5A7B",variableType:8}
- */
-var vl_subtotal = null;
+
 
 /**
  * @type {Number}
@@ -112,8 +102,6 @@ function onCellClick(foundsetindex, columnindex, record, event) {
 			aux = scopes.facturacion.calcularImporteYaPagadoComprobante(foundset.getSelectedRecord())
 			calc_saldo = comp_imp_total - aux
 			databaseManager.saveData()
-			vl_subtotal -= calc_saldo - comp_imp_iva2
-			vl_total_iva -= comp_imp_iva2
 			vl_total -= calc_saldo
 			
 			vl_cantidad -= 1
@@ -124,9 +112,6 @@ function onCellClick(foundsetindex, columnindex, record, event) {
 			aux = scopes.facturacion.calcularImporteYaPagadoComprobante(foundset.getSelectedRecord())
 			calc_saldo = comp_imp_total - aux
 			databaseManager.saveData()
-			//var aux_total = calcularCobrosRealizados(myRecord)
-			vl_subtotal += calc_saldo - comp_imp_iva2
-			vl_total_iva += comp_imp_iva2
 			vl_total += calc_saldo
 			
 			vl_cantidad += 1
@@ -184,6 +169,7 @@ function filtrar() {
 	
 	if(vl_cliente == null){
 		foundset.clear()
+		vl_total = 0
 	}
 	else{
 	
@@ -193,8 +179,6 @@ function filtrar() {
 		foundset.search()
 		
 		vl_total = 0
-		vl_total_iva = 0
-		vl_subtotal = 0
 		vl_cantidad = 0
 		vl_obra = null
 		var vl_obra_anterior = foundset.obra_id
@@ -205,16 +189,10 @@ function filtrar() {
 		for (var index = 1; index <= nRecordCount; index++) {
 			var myRecord = foundset.getRecord(index);
 			myRecord.calc_seleccionado = 1
-			myRecord.calc_pendiente = myRecord.comp_imp_total
-			databaseManager.saveData()
-			
 			var aux = scopes.facturacion.calcularImporteYaPagadoComprobante(myRecord)
 			myRecord.calc_saldo = myRecord.comp_imp_total -aux
 			databaseManager.saveData()
-			//var aux_total = calcularCobrosRealizados(myRecord)
-			vl_subtotal += myRecord.calc_pendiente - myRecord.comp_imp_iva2
-			vl_total_iva += myRecord.comp_imp_iva2
-			vl_total += myRecord.calc_pendiente
+			vl_total += myRecord.calc_saldo
 			
 			vl_cantidad ++
 			if(vl_obra_anterior != myRecord.obra_id){
@@ -268,9 +246,6 @@ function onHeaderClick(columnindex, sortdirection, event) {
 			elements.table.getColumn(0).headerStyleClass = 'cell_center_header far fa-square cell-fontawesone'
 		}
 		
-		
-		vl_subtotal = 0
-		vl_total_iva = 0
 		vl_total = 0
 		vl_cantidad = 0
 		
@@ -284,9 +259,6 @@ function onHeaderClick(columnindex, sortdirection, event) {
 				var aux = scopes.facturacion.calcularImporteYaPagadoComprobante(myRecord)
 				myRecord.calc_saldo = myRecord.comp_imp_total - aux
 				databaseManager.saveData()
-				//var aux_total = calcularCobrosRealizados(myRecord)
-				vl_subtotal += myRecord.calc_saldo - myRecord.comp_imp_iva2
-				vl_total_iva += myRecord.comp_imp_iva2
 				vl_total += myRecord.calc_saldo
 
 				vl_cantidad += 1

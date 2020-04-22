@@ -185,6 +185,7 @@ function onCellDoubleClick(foundsetindex, columnindex, record, event) {
 		forms['devolucion_ver'].vl_form_padre = 'clientes_estado'
 		forms['devolucion_ver'].foundset.loadRecords(foundset.comp_id)
 		application.showForm('devolucion_ver')
+		break;
 	case 20://Notas de credito
 	case 90://Anticipos
 		forms['anticipos_detalle'].vl_form_padre = 'clientes_estado'
@@ -195,7 +196,7 @@ function onCellDoubleClick(foundsetindex, columnindex, record, event) {
 			win.resizable = false
 			win.title= '';
 			win.show( 'anticipos_detalle');
-		
+		break
 	default:
 		break;
 	}

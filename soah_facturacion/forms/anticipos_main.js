@@ -72,6 +72,8 @@ function filtrar() {
 	if(vl_cliente != null && vl_cliente != "") foundset.cliente_id = vl_cliente
 	foundset.comp_codigo	= "90"
 	foundset.search()
+	
+	foundset.sort('comp_fecha_emision desc')
 }
 
 /**

@@ -33,6 +33,15 @@ headerText:"Importe",
 styleClass:"cell_right",
 svyUUID:"54AEF57E-3E93-4503-B5C3-39D9E4E52DFA",
 width:"100"
+},
+{
+dataprovider:"comp_importe",
+format:"#,###.00",
+headerStyleClass:"cell_right_header",
+headerText:"Aplicado",
+styleClass:"cell_right",
+svyUUID:"B89FE683-8699-493E-99CE-0D621AB95C00",
+width:"150"
 }
 ],
 cssPosition:{
