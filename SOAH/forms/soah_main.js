@@ -299,7 +299,7 @@ function onActionEstadoCliente() {
 		win.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
 		win.resizable = false
 		win.title= '';
-		win.show( forms.clientes_estado_buscar );
+		win.show( forms.clientes_estado_search );
 
 }
 

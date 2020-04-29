@@ -38,6 +38,49 @@ function onActioCambiarPrecio() {
 		return
 	}
 	
+	if(vl_tipo == 0){//SI es importe
+		var diferentes = false
+		var aux_modelo = null
+		var aux_marca = null
+		var nCount = 0
+		nCount = databaseManager.getFoundSetCount(forms.herr_equipos_precios.foundset);
+		for (var i = 1; i <= nCount; i++) {
+			var myRecord = forms.herr_equipos_precios.foundset.getRecord(i);
+			if(aux_modelo == null && aux_marca == null){
+				aux_marca  = myRecord.marca_id
+				aux_modelo = myRecord.modelo_id
+			}
+			else{
+				if(aux_modelo != myRecord.modelo_id || aux_marca != myRecord.marca_id){//Si hay marcas o modelos diferentes
+					diferentes = true
+					i = nCount+1
+				}
+			}
+		}
+		if(diferentes){
+			var PressedButton = plugins.dialogs.showQuestionDialog('GPP', 'Hay equipos de marcas o modelos diferentes. ¿Seguro que quiere cambiar el precio a estos ' + forms.herr_equipos_precios.foundset.agg_cantidad + ' equipos?', 'Si', 'No')
+			if (PressedButton == 'Si') { //function
+				cambiarPrecio()
+			}
+			else{
+				onActionVolver()
+			}
+		}
+		else{
+			cambiarPrecio()
+		}
+	}
+	
+	
+	
+	
+}
+
+
+/**
+ * @properties={typeid:24,uuid:"522EEBD4-6D50-4579-8122-DF5ECFFC61B3"}
+ */
+function cambiarPrecio(){
 	var nRecordCount = 0
 	nRecordCount = databaseManager.getFoundSetCount(forms.herr_equipos_precios.foundset);
 	for (var index = 1; index <= nRecordCount; index++) {
@@ -57,7 +100,6 @@ function onActioCambiarPrecio() {
 	}
 	
 	onActionVolver()
-	
 }
 
 /**

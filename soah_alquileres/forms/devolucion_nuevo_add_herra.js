@@ -195,48 +195,51 @@ function cargarHerramientasAsociadas(fs_equipos,p_comp_id){
 		//fs_comp_herr.vent_comprobante_herramientas_to_vent_comprobantes.comp_codigo = 1
 		fs_comp_herr.search()
 		
-		if(fs_comp_herr.getSize() > 0){
+		var nCount = 0
+		nCount = databaseManager.getFoundSetCount(fs_comp_herr);
+		for (var i = 1; i <= nCount; i++) {
+			var myAsociadaAlquilada= fs_comp_herr.getRecord(i);
 			
-			var herramienta_consumible = fs_comp_herr.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_herramientas.herr_herramientas_to_herr_categoria.categoria_consumible //bandera para saber si esta herramienta se ocbra el desgaste sufrido
+			var herramienta_consumible = myAsociadaAlquilada.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_herramientas.herr_herramientas_to_herr_categoria.categoria_consumible //bandera para saber si esta herramienta se ocbra el desgaste sufrido
 			
 			forms.devolucion_nuevo_herramientas.foundset.find()
-			forms.devolucion_nuevo_herramientas.foundset.equipo_id = fs_comp_herr.equipo_id
+			forms.devolucion_nuevo_herramientas.foundset.equipo_id = myAsociadaAlquilada.equipo_id
 			forms.devolucion_nuevo_herramientas.foundset.search()
 			
 			if(forms.devolucion_nuevo_herramientas.foundset.getSize() == 0){
 			
 				forms.devolucion_nuevo_herramientas.foundset.newRecord()
-				forms.devolucion_nuevo_herramientas.foundset.comp_precio			= fs_comp_herr.vent_comprobante_herramientas_to_herr_equipo.equipo_precio_base
-				forms.devolucion_nuevo_herramientas.foundset.equipo_id				= fs_comp_herr.equipo_id
-				forms.devolucion_nuevo_herramientas.foundset.equipo_cod_barras		= fs_comp_herr.vent_comprobante_herramientas_to_herr_equipo.equipo_cod_barras
-				forms.devolucion_nuevo_herramientas.foundset.equipo_herramienta		= fs_comp_herr.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_herramientas.herramienta_nombre
-				forms.devolucion_nuevo_herramientas.foundset.equipo_modelo			= fs_comp_herr.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_modelo.modelo_nombre
-				forms.devolucion_nuevo_herramientas.foundset.equipo_num_serie		= fs_comp_herr.vent_comprobante_herramientas_to_herr_equipo.equipo_num_serie
-				forms.devolucion_nuevo_herramientas.foundset.comp_dias_facturados	= fs_comp_herr.comp_dias_facturados
-				forms.devolucion_nuevo_herramientas.foundset.comp_fec_ult_facturacion= fs_comp_herr.comp_fec_ult_facturacion
+				forms.devolucion_nuevo_herramientas.foundset.comp_precio			= myAsociadaAlquilada.vent_comprobante_herramientas_to_herr_equipo.equipo_precio_base
+				forms.devolucion_nuevo_herramientas.foundset.equipo_id				= myAsociadaAlquilada.equipo_id
+				forms.devolucion_nuevo_herramientas.foundset.equipo_cod_barras		= myAsociadaAlquilada.vent_comprobante_herramientas_to_herr_equipo.equipo_cod_barras
+				forms.devolucion_nuevo_herramientas.foundset.equipo_herramienta		= myAsociadaAlquilada.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_herramientas.herramienta_nombre
+				forms.devolucion_nuevo_herramientas.foundset.equipo_modelo			= myAsociadaAlquilada.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_modelo.modelo_nombre
+				forms.devolucion_nuevo_herramientas.foundset.equipo_num_serie		= myAsociadaAlquilada.vent_comprobante_herramientas_to_herr_equipo.equipo_num_serie
+				forms.devolucion_nuevo_herramientas.foundset.comp_dias_facturados	= myAsociadaAlquilada.comp_dias_facturados
+				forms.devolucion_nuevo_herramientas.foundset.comp_fec_ult_facturacion= myAsociadaAlquilada.comp_fec_ult_facturacion
 				if(herramienta_consumible == 1)
 					forms.devolucion_nuevo_herramientas.foundset.comp_precio_ajustado	= 0
 				else
-					forms.devolucion_nuevo_herramientas.foundset.comp_precio_ajustado	= fs_comp_herr.comp_precio
-				forms.devolucion_nuevo_herramientas.foundset.comp_fecha_alquiler	= fs_comp_herr.vent_comprobante_herramientas_to_vent_comprobantes.comp_fecha_emision
-				if(fs_comp_herr.vent_comprobante_herramientas_to_vent_comprobantes.acuerdo_precios_id != null)
-					forms.devolucion_nuevo_herramientas.foundset.comp_acuerdo		= fs_comp_herr.vent_comprobante_herramientas_to_vent_comprobantes.vent_comprobantes_to_vent_acuerdos_d_precios.acuerdo_precios_nombre
-				if(fs_comp_herr.vent_comprobante_herramientas_to_vent_comprobantes.obra_id != null){
-					forms.devolucion_nuevo_herramientas.foundset.comp_obra			= fs_comp_herr.vent_comprobante_herramientas_to_vent_comprobantes.vent_comprobantes_to_vent_obras.obra_nombre
-					forms.devolucion_nuevo_herramientas.foundset.obra_id			= fs_comp_herr.vent_comprobante_herramientas_to_vent_comprobantes.obra_id
+					forms.devolucion_nuevo_herramientas.foundset.comp_precio_ajustado	= myAsociadaAlquilada.comp_precio
+				forms.devolucion_nuevo_herramientas.foundset.comp_fecha_alquiler	= myAsociadaAlquilada.vent_comprobante_herramientas_to_vent_comprobantes.comp_fecha_emision
+				if(myAsociadaAlquilada.vent_comprobante_herramientas_to_vent_comprobantes.acuerdo_precios_id != null)
+					forms.devolucion_nuevo_herramientas.foundset.comp_acuerdo		= myAsociadaAlquilada.vent_comprobante_herramientas_to_vent_comprobantes.vent_comprobantes_to_vent_acuerdos_d_precios.acuerdo_precios_nombre
+				if(myAsociadaAlquilada.vent_comprobante_herramientas_to_vent_comprobantes.obra_id != null){
+					forms.devolucion_nuevo_herramientas.foundset.comp_obra			= myAsociadaAlquilada.vent_comprobante_herramientas_to_vent_comprobantes.vent_comprobantes_to_vent_obras.obra_nombre
+					forms.devolucion_nuevo_herramientas.foundset.obra_id			= myAsociadaAlquilada.vent_comprobante_herramientas_to_vent_comprobantes.obra_id
 				}
-				forms.devolucion_nuevo_herramientas.foundset.comp_orden				= fs_comp_herr.vent_comprobante_herramientas_to_vent_comprobantes.comp_orden_compra
-				forms.devolucion_nuevo_herramientas.foundset.comp_id				= fs_comp_herr.comp_id
-				forms.devolucion_nuevo_herramientas.foundset.comp_num_alquiler		= fs_comp_herr.vent_comprobante_herramientas_to_vent_comprobantes.calc_num_compr_sin_codig
+				forms.devolucion_nuevo_herramientas.foundset.comp_orden				= myAsociadaAlquilada.vent_comprobante_herramientas_to_vent_comprobantes.comp_orden_compra
+				forms.devolucion_nuevo_herramientas.foundset.comp_id				= myAsociadaAlquilada.comp_id
+				forms.devolucion_nuevo_herramientas.foundset.comp_num_alquiler		= myAsociadaAlquilada.vent_comprobante_herramientas_to_vent_comprobantes.calc_num_compr_sin_codig
 				
 				databaseManager.saveData()
 				
 				if(herramienta_consumible == 1){//Si es consumible cargamos un item de ventas con el desgaste y consumo
 					forms.devolucion_nuevo_ventas.foundset.newRecord()
 					forms.devolucion_nuevo_ventas.foundset.producto_cantidad		= 1
-					forms.devolucion_nuevo_ventas.foundset.producto_nombre			= fs_comp_herr.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_herramientas.herramienta_descripcion
-					forms.devolucion_nuevo_ventas.foundset.producto_precio			= fs_comp_herr.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_herramientas.herramienta_precio_base
-					forms.devolucion_nuevo_ventas.foundset.producto_total			= fs_comp_herr.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_herramientas.herramienta_precio_base
+					forms.devolucion_nuevo_ventas.foundset.producto_nombre			= myAsociadaAlquilada.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_herramientas.herramienta_descripcion
+					forms.devolucion_nuevo_ventas.foundset.producto_precio			= myAsociadaAlquilada.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_herramientas.herramienta_precio_base
+					forms.devolucion_nuevo_ventas.foundset.producto_total			= myAsociadaAlquilada.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_herramientas.herramienta_precio_base
 					forms.devolucion_nuevo_ventas.foundset.producto_unidad			= ""
 					databaseManager.saveData()
 				}
