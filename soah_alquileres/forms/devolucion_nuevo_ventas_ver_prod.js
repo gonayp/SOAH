@@ -1,4 +1,18 @@
 /**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"075C6E55-C1D9-4148-B9EF-5343969E7894",variableType:8}
+ */
+var vl_importe = null;
+
+/**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"FBA7B576-81D9-452A-B226-77B2AA13E9FE",variableType:8}
+ */
+var vl_cantidad = null;
+
+/**
  * @properties={typeid:24,uuid:"51AB8960-40BD-4D26-978E-E020BB837EFD"}
  */
 function onActionVolver() {
@@ -34,7 +48,7 @@ function onActioGrabar() {
 	
 	databaseManager.saveData()
 	
-	forms.devolucion_nuevo.calculoTotales()
+	forms.devolucion_nuevo.calculoTotalesSinRecalcularDias()
 	
 	application.getWindow('Dialog').hide()
 }
@@ -62,7 +76,7 @@ function onActioBorrar() {
 		
 			foundset.deleteRecord()
 			databaseManager.saveData()
-			forms.devolucion_nuevo.calculoTotales()
+			forms.devolucion_nuevo.calculoTotalesSinRecalcularDias()
 			application.getWindow('Dialog').hide()
 		}
 }

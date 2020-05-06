@@ -252,6 +252,7 @@ items:[
 {
 containsFormID:"EE5ABA4B-319B-4A99-85A1-8C76138A78A3",
 location:"90,40",
+relationName:"vent_comprobantes_alquiler_to_vent_comprobante_facturas_parciales",
 text:"Facturas Parciales",
 typeid:15,
 uuid:"0C1911B2-3424-4E70-96D5-6A09D2E6AA80"

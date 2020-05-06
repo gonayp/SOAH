@@ -34,7 +34,7 @@ function onActioGrabar() {
 	
 	databaseManager.saveData()
 	
-	forms.devolucion_nuevo.calculoTotales()
+	forms.devolucion_nuevo.calculoTotalesSinRecalcularDias()
 	
 	application.getWindow('Dialog').hide()
 }
@@ -62,7 +62,7 @@ function onActioBorrar() {
 		
 			foundset.deleteRecord()
 			databaseManager.saveData()
-			forms.devolucion_nuevo.calculoTotales()
+			forms.devolucion_nuevo.calculoTotalesSinRecalcularDias()
 			application.getWindow('Dialog').hide()
 		}
 }

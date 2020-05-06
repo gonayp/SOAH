@@ -154,7 +154,7 @@ function addProducto() {
 	databaseManager.saveData()
 	
 	
-	forms.devolucion_nuevo.calculoTotales()
+	forms.devolucion_nuevo.calculoTotalesSinRecalcularDias()
 	
 	onActionVolver()
 }

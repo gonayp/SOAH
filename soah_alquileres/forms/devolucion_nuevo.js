@@ -566,7 +566,7 @@ function calculoTotalesSinRecalcularDias(){
 	vl_subtotal = 0
 	vl_total = 0
 	
-	calculoAlquileres()
+	calculoAlquileres()//Alquileres sin calcular dias
 	calculoVentas()
 	
 	vl_subtotal = vl_total_alquiler + vl_total_ventas
@@ -631,7 +631,6 @@ function calculoDiasPrecio(){
 		myHerramienta.comp_dias_reales = diffRounded
 		
 		myHerramienta.comp_dias_a_cobrar = vl_dias_reales 
-		
 		
 		myHerramienta.comp_precio_calculado = myHerramienta.comp_dias_a_cobrar  * myHerramienta.comp_precio_ajustado
 		

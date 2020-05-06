@@ -210,13 +210,16 @@ function crearHerramientas(){
 		if(myComprobante.calc_seleccionado == 1){
 			if(databaseManager.hasRecords(myComprobante.vent_comprobantes_to_vent_comprobante_herramientas)){
 				var nRecordCount = 0
+				
+				myComprobante.vent_comprobantes_to_vent_comprobante_herramientas.sort('comp_herramienta_id asc')
 				nRecordCount = databaseManager.getFoundSetCount(myComprobante.vent_comprobantes_to_vent_comprobante_herramientas);
 				for (var index = 1; index <= nRecordCount; index++) {
 					var myHerramienta= myComprobante.vent_comprobantes_to_vent_comprobante_herramientas.getRecord(index);
-					if(myComprobante.comp_codigo == 2){
+					if(myComprobante.comp_codigo == 2){//devolucion
 						forms.factura_devolucion_nuevo_herramientas.foundset.newRecord()
 						forms.factura_devolucion_nuevo_herramientas.foundset.equipo_id					= myHerramienta.equipo_id
 						forms.factura_devolucion_nuevo_herramientas.foundset.comp_dias_a_cobrar			= myHerramienta.comp_dias_alquiler
+						forms.factura_devolucion_nuevo_herramientas.foundset.comp_dias_facturados		= myHerramienta.comp_dias_facturados
 						forms.factura_devolucion_nuevo_herramientas.foundset.comp_fecha_alquiler		= myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes_alquiler.comp_fecha_emision
 						forms.factura_devolucion_nuevo_herramientas.foundset.comp_fecha_devolucion		= myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes.comp_fecha_emision
 						forms.factura_devolucion_nuevo_herramientas.foundset.comp_id					= myHerramienta.comp_id
