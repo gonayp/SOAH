@@ -22,6 +22,20 @@ svyUUID:"D0F76CD1-4FE5-48F1-BD9C-A11C42621921",
 width:"150"
 },
 {
+dataprovider:"vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_marca.marca_nombre",
+headerText:"Marca",
+styleClass:"cell_left",
+svyUUID:"0295FBB9-CD03-4CAD-BCF5-CF542BB9305E",
+width:"150"
+},
+{
+dataprovider:"vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_modelo.modelo_nombre",
+headerText:"Modelo",
+styleClass:"cell_left",
+svyUUID:"BE89E49A-EAAE-4380-8325-A7453929088B",
+width:"150"
+},
+{
 dataprovider:"vent_comprobante_herramientas_to_herr_equipo.equipo_cod_barras",
 headerStyleClass:"cell_center_header",
 headerText:"Cod. Barras",
@@ -39,7 +53,25 @@ svyUUID:"8D562DE4-1C24-4B4F-A59F-9E888E3B9A6E",
 width:"150"
 },
 {
-svyUUID:"BE74F9F7-42B3-4DB2-84DC-8F7E4EB0D959"
+dataprovider:"vent_comprobante_herramientas_to_vent_comprobantes.vent_comprobantes_to_vent_obras.obra_nombre",
+headerText:"Obra",
+styleClass:"cell_left",
+svyUUID:"6FB22924-DF20-4B10-A058-321D377B90E5",
+width:"150"
+},
+{
+dataprovider:"comp_dias_alquiler",
+headerText:"Días",
+styleClass:"cell_center",
+svyUUID:"DEBDC926-1542-4866-A4A3-E43DA65FB7E1",
+width:"150"
+},
+{
+dataprovider:"calc_dias_reales",
+headerText:"A cobrar",
+styleClass:"cell_center",
+svyUUID:"BE74F9F7-42B3-4DB2-84DC-8F7E4EB0D959",
+width:"150"
 }
 ],
 cssPosition:{
@@ -63,7 +95,7 @@ uuid:"EC67DAED-1189-4639-9E4D-D56C7AA7C308"
 ],
 name:"clientes_estado_alquileres",
 navigatorID:"-1",
-onShowMethodID:"-1",
+onShowMethodID:"7D520BDE-B642-4FAC-9321-84ECAA5189FC",
 showInMenu:true,
 typeid:3,
 uuid:"AADB5AB7-6A9D-4596-A0B1-DF8E206DFB66"

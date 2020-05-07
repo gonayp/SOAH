@@ -4,7 +4,7 @@ dataSource:"db:/gpp/vent_comprobantes",
 encapsulation:4,
 items:[
 {
-cssPosition:"-1,-1,103,5,98,20",
+cssPosition:"-1,-1,380,63,98,20",
 dataProviderID:"comp_imp_alqu",
 editable:false,
 formIndex:2,
@@ -15,15 +15,7 @@ typeid:4,
 uuid:"0FC6E76B-1EC9-468E-8C46-ECF4454F671B"
 },
 {
-cssPosition:"535,0,-1,0,750,59",
-location:"10,10",
-styleClass:"banner",
-typeid:7,
-uuid:"1C2ECCB5-A9FF-4797-8A64-71325938EA59",
-verticalAlignment:1
-},
-{
-cssPosition:"45,-1,-1,130,80,20",
+cssPosition:"45,-1,-1,188,80,20",
 formIndex:4,
 tabSeq:-2,
 text:"Cliente",
@@ -32,7 +24,7 @@ typeid:7,
 uuid:"1DA4FBAF-36FF-46AD-B1CF-DA4278C7D2CB"
 },
 {
-cssPosition:"-1,-1,103,445,98,20",
+cssPosition:"-1,-1,380,503,98,20",
 dataProviderID:"comp_imp_total",
 editable:false,
 formIndex:2,
@@ -52,7 +44,7 @@ uuid:"22C3FA17-D9C9-4AE5-8154-C0929F6ED8F8",
 verticalAlignment:1
 },
 {
-cssPosition:"91,-1,-1,160,80,20",
+cssPosition:"91,-1,-1,218,80,20",
 formIndex:15,
 text:"Estado",
 transparent:true,
@@ -60,7 +52,7 @@ typeid:7,
 uuid:"2C72A958-08B4-41B7-BECA-6720DC8086C5"
 },
 {
-cssPosition:"-1,-1,123,225,98,20",
+cssPosition:"-1,-1,400,283,98,20",
 formIndex:12,
 text:"SubTotal",
 transparent:true,
@@ -68,7 +60,7 @@ typeid:7,
 uuid:"330FEBC2-EB40-428F-962E-7FFC62A65CEA"
 },
 {
-cssPosition:"-1,-1,103,335,98,20",
+cssPosition:"-1,-1,380,393,98,20",
 dataProviderID:"comp_imp_iva2",
 editable:false,
 formIndex:2,
@@ -78,12 +70,12 @@ typeid:4,
 uuid:"3E59CCA0-DC6B-4CEB-BE9E-3C583265B04C"
 },
 {
-cssPosition:"137,0,151,0,463,236",
+cssPosition:"188,0,0,60,463,236",
 formIndex:14,
 items:[
 {
 containsFormID:"1114AB3A-4D8C-45C2-89FB-282B6871F169",
-location:"-47,-57",
+location:"69,-5",
 relationName:"vent_comprobantes_to_vent_comprobante_herramientas",
 text:"Herramientas",
 typeid:15,
@@ -91,7 +83,7 @@ uuid:"53EF2F2B-99ED-4CEF-8906-F1FA9159FF6D"
 },
 {
 containsFormID:"9DBDDC0B-D83E-4277-A235-7CDCB25F6D6A",
-location:"39,-57",
+location:"269,-5",
 relationName:"vent_comprobantes_to_vent_comprobante_productos",
 text:"Ventas",
 typeid:15,
@@ -105,7 +97,7 @@ typeid:16,
 uuid:"46DB52A5-B85A-43CA-A993-6B8EBA8138A1"
 },
 {
-cssPosition:"45,-1,-1,5,80,20",
+cssPosition:"45,-1,-1,63,80,20",
 formIndex:3,
 tabSeq:-2,
 text:"Número",
@@ -114,7 +106,7 @@ typeid:7,
 uuid:"4ADE3058-46D6-4352-9C85-DEB7EDE604AD"
 },
 {
-cssPosition:"65,-1,-1,130,285,20",
+cssPosition:"65,-1,-1,188,285,20",
 dataProviderID:"cliente_id",
 displayType:10,
 editable:false,
@@ -126,14 +118,14 @@ uuid:"58AA85DD-8ED9-44BC-B8ED-11D76B4AA2A2",
 valuelistID:"AC2E1B90-8F1D-4F2F-8176-0F118C8B06F6"
 },
 {
-cssPosition:"110,-1,-1,305,110,20",
+cssPosition:"110,-1,-1,363,110,20",
 dataProviderID:"vent_comprobantes_devolucion_to_vent_comprobantes_factura.calc_num_comprobante",
 editable:false,
 typeid:4,
 uuid:"5AA7AFB0-5F43-497B-B820-377F52C4DD60"
 },
 {
-cssPosition:"70,-1,-1,837,55,20",
+cssPosition:"70,-1,-1,895,55,20",
 dataProviderID:"comp_id",
 editable:false,
 horizontalAlignment:4,
@@ -141,17 +133,7 @@ typeid:4,
 uuid:"68B65D40-786A-4B20-8B8E-8B7A92DCB207"
 },
 {
-cssPosition:"-1,0,96,0,642,53",
-formIndex:1,
-location:"10,10",
-styleClass:"banner-darck",
-tabSeq:-2,
-typeid:7,
-uuid:"6DEE861B-F09B-403C-A485-003BE86BEE7F",
-verticalAlignment:1
-},
-{
-cssPosition:"-1,-1,103,225,98,20",
+cssPosition:"-1,-1,380,283,98,20",
 dataProviderID:"vl_subtotal",
 editable:false,
 formIndex:2,
@@ -161,13 +143,21 @@ typeid:4,
 uuid:"6EADBAE1-50DE-4004-AEEE-D5166A3824F3"
 },
 {
-height:595,
+height:560,
 partType:5,
 typeid:19,
 uuid:"862C2811-6903-48DD-BFBC-8033DF6E473B"
 },
 {
-cssPosition:"-1,-1,103,115,98,20",
+cssPosition:"40,-1,0,0,60,60",
+location:"10,10",
+styleClass:"banner",
+typeid:7,
+uuid:"9FA4362E-A472-45EC-A64F-FE842C3427D3",
+verticalAlignment:1
+},
+{
+cssPosition:"-1,-1,380,173,98,20",
 dataProviderID:"comp_imp_ventas",
 editable:false,
 formIndex:2,
@@ -177,7 +167,7 @@ typeid:4,
 uuid:"A0B69436-104D-4E0D-86B5-FA9A5A020FE3"
 },
 {
-cssPosition:"50,-1,-1,837,55,20",
+cssPosition:"50,-1,-1,895,55,20",
 formIndex:16,
 text:"Id",
 transparent:true,
@@ -185,7 +175,7 @@ typeid:7,
 uuid:"A2749C2E-72D3-45A9-9ACF-CD1FF4E5252A"
 },
 {
-cssPosition:"-1,-1,123,445,98,20",
+cssPosition:"-1,-1,400,503,98,20",
 formIndex:12,
 text:"Total",
 transparent:true,
@@ -193,7 +183,7 @@ typeid:7,
 uuid:"A2CE7EB0-FA83-4547-A679-4EB1D8FDA9CE"
 },
 {
-cssPosition:"-1,-1,123,335,98,20",
+cssPosition:"-1,-1,400,393,98,20",
 formIndex:12,
 text:"Total IVA",
 transparent:true,
@@ -201,7 +191,7 @@ typeid:7,
 uuid:"B3A6F39E-3CDB-405A-91EF-4EB9E516437E"
 },
 {
-cssPosition:"90,-1,-1,305,80,20",
+cssPosition:"90,-1,-1,363,80,20",
 formIndex:17,
 text:"Factura",
 transparent:true,
@@ -209,7 +199,7 @@ typeid:7,
 uuid:"B63BD8D6-75DC-40BE-B413-D2C45F610A3D"
 },
 {
-cssPosition:"-1,-1,123,5,98,20",
+cssPosition:"-1,-1,400,63,98,20",
 formIndex:12,
 tabSeq:-2,
 text:"Total Alquileres",
@@ -218,7 +208,7 @@ typeid:7,
 uuid:"B6A84955-0959-42B0-B3F1-73BD08222BEC"
 },
 {
-cssPosition:"111,-1,-1,5,140,20",
+cssPosition:"111,-1,-1,63,140,20",
 dataProviderID:"comp_fecha_emision",
 editable:false,
 format:"dd/MM/yy HH:mm",
@@ -229,7 +219,7 @@ typeid:4,
 uuid:"BC928029-D91A-4D0A-9734-772179A6A227"
 },
 {
-cssPosition:"91,-1,-1,5,80,20",
+cssPosition:"91,-1,-1,63,80,20",
 formIndex:5,
 tabSeq:-2,
 text:"Fecha",
@@ -238,7 +228,7 @@ typeid:7,
 uuid:"BF8689CD-BA62-41DE-9D86-2F19ECD14096"
 },
 {
-cssPosition:"45,-1,-1,420,278,20",
+cssPosition:"45,-1,-1,478,278,20",
 formIndex:11,
 tabSeq:-2,
 text:"Observaciones",
@@ -247,7 +237,7 @@ typeid:7,
 uuid:"CA2EAEA7-D9DF-4F89-8988-8B16BFE14C60"
 },
 {
-cssPosition:"65,-1,-1,5,115,20",
+cssPosition:"65,-1,-1,63,115,20",
 dataProviderID:"calc_num_compr_sin_codig",
 editable:false,
 tabSeq:-2,
@@ -255,7 +245,7 @@ typeid:4,
 uuid:"D7BEAE57-BCA3-45F6-BD2C-FDA933681BC9"
 },
 {
-cssPosition:"-1,-1,123,115,98,20",
+cssPosition:"-1,-1,400,173,98,20",
 formIndex:12,
 text:"Total Ventas",
 transparent:true,
@@ -263,16 +253,16 @@ typeid:7,
 uuid:"DD08A820-51AC-47B6-AAD0-31554D4B89DB"
 },
 {
-cssPosition:"549,-1,-1,10,150,35",
+cssPosition:"45,-1,-1,5,45,35",
 formIndex:1,
 json:{
 cssPosition:{
 bottom:"-1",
 height:"35",
-left:"10",
+left:"5",
 right:"-1",
-top:"549",
-width:"150"
+top:"45",
+width:"45"
 },
 formIndex:1,
 imageStyleClass:"fas fa-undo-alt",
@@ -280,18 +270,17 @@ location:{
 x:10,
 y:10
 },
-onActionMethodID:"F8D90A04-1655-4379-9BC2-241B503CEA34",
-tabSeq:-2,
-text:"Volver"
+onActionMethodID:"95068C12-EBE2-4E2D-9E77-94830ABBA3EE",
+toolTipText:"Volver"
 },
 location:"10,10",
-name:"button_2",
+name:"btn_1",
 typeName:"bootstrapcomponents-button",
 typeid:47,
-uuid:"F4326791-BE6F-48B5-8AF0-2362416E0DA5"
+uuid:"E9E2D3CA-AA03-4DD5-B91C-7C3D4854A7FC"
 },
 {
-cssPosition:"63,-1,-1,420,410,68",
+cssPosition:"63,-1,-1,478,410,68",
 dataProviderID:"comp_observacion",
 displayType:1,
 editable:false,
@@ -301,7 +290,7 @@ typeid:4,
 uuid:"F8A8E9FA-13CB-46CD-B654-DE621CD73BB4"
 },
 {
-cssPosition:"111,-1,-1,160,140,20",
+cssPosition:"111,-1,-1,218,140,20",
 dataProviderID:"comp_estado_id",
 editable:false,
 typeid:4,
@@ -315,6 +304,6 @@ navigatorID:"-1",
 onShowMethodID:"AE87A22C-692A-4030-8032-46099FBD4110",
 scrollbars:36,
 showInMenu:true,
-size:"953,604",
+size:"1115,560",
 typeid:3,
 uuid:"D4509854-338B-42E8-84EE-68BE9C7B03A0"

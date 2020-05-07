@@ -61,8 +61,8 @@ function calculoTotales(){
 	calculoVentas()
 	
 	vl_subtotal = comp_imp_alqu + comp_imp_ventas
-	comp_imp_iva2 = vl_subtotal * 0.21
-	comp_imp_total = vl_subtotal + comp_imp_iva2
+	//comp_imp_iva2 = vl_subtotal * 0.21
+	//comp_imp_total = vl_subtotal + comp_imp_iva2
 }
 
 /**
@@ -78,7 +78,7 @@ function calculoVentas(){
 	for (var index = 1; index <= nRecordCount; index++) {
 		var myProducto= forms.devolucion_ver_ventas.foundset.getRecord(index);
 		myProducto.calc_total = myProducto.comp_cantidad * myProducto.comp_precio
-		comp_imp_ventas += myProducto.calc_total
+
 	}
 	
 }
@@ -89,11 +89,8 @@ function calculoVentas(){
  */
 function calculoDiasPrecio(){
 	
-	comp_imp_alqu = 0
 	
 	var vl_fecha_devolucion = comp_fecha_emision
-	var vl_obra_anterior = null
-	var obras_distintas = false
 	
 	forms.devolucion_ver_herramientas.foundset.loadAllRecords()
 	
@@ -102,14 +99,6 @@ function calculoDiasPrecio(){
 	for (var index = 1; index <= nRecordCount; index++) {
 		var myHerramienta = forms.devolucion_ver_herramientas.foundset.getRecord(index);
 		if(databaseManager.hasRecords(myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes_alquiler)){
-			//Comprobamos si tiene obras diferentes
-			if(vl_obra_anterior == null){
-				vl_obra_anterior = myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes_alquiler.obra_id
-			}
-			else{
-				if(vl_obra_anterior != myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes_alquiler.obra_id) obras_distintas = true
-				vl_obra_anterior = myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes_alquiler.obra_id
-			}
 			
 			var x = vl_fecha_devolucion - myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes_alquiler.comp_fecha_emision //substracting two dates returns difference in milliseconds 
 			var one_day=1000*60*60*24 //ms * sec * min * hrs in a day 
@@ -122,24 +111,9 @@ function calculoDiasPrecio(){
 			
 			myHerramienta.calc_total= myHerramienta.comp_dias_alquiler * myHerramienta.comp_precio
 			
-			databaseManager.saveData()
-			
-			
-			
-			
-			comp_imp_alqu += myHerramienta.calc_total
 		}
 	}
-	if(obras_distintas){
-		plugins.webnotificationsToastr.warning("Hay equipos de diferentes obras.","Atención",scopes.globals.vg_toast_options)
-		obra_id = null
-	}
-	else{
-		obra_id = null;
-		if(databaseManager.hasRecords(myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes_alquiler)){
-			obra_id = myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes_alquiler.obra_id
-		}
-	}
+
 	
 }
 

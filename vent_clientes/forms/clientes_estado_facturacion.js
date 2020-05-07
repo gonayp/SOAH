@@ -182,9 +182,14 @@ function onCellDoubleClick(foundsetindex, columnindex, record, event) {
 		application.showForm('factura_devolucion_ver')
 		break;
 	case 2://devoluciones
-		forms['devolucion_ver'].vl_form_padre = 'clientes_estado'
-		forms['devolucion_ver'].foundset.loadRecords(foundset.comp_id)
-		application.showForm('devolucion_ver')
+		forms['devolucion_detalle'].vl_form_padre = 'clientes_estado'
+		forms['devolucion_detalle'].foundset.loadRecords(foundset.comp_id)
+		var win = application.createWindow("Dialog", JSWindow.MODAL_DIALOG);
+			win.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
+			win.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
+			win.resizable = false
+			win.title= '';
+			win.show( 'devolucion_detalle');
 		break;
 	case 20://Notas de credito
 	case 90://Anticipos

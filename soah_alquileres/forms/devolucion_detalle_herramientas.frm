@@ -13,7 +13,7 @@ headerStyleClass:"cell_left_header",
 headerText:"Herramienta",
 styleClass:"cell_left",
 svyUUID:"55993364-A285-4384-9CF1-1C531A4603C2",
-width:"200"
+width:"150"
 },
 {
 dataprovider:"vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_modelo.modelo_nombre",
@@ -21,7 +21,7 @@ headerStyleClass:"cell_left_header",
 headerText:"Modelo",
 styleClass:"cell_left",
 svyUUID:"01B9D662-59C1-42D4-9B2B-69F000E0E916",
-width:"150"
+width:"120"
 },
 {
 dataprovider:"vent_comprobante_herramientas_to_herr_equipo.equipo_cod_barras",
@@ -29,7 +29,7 @@ headerStyleClass:"cell_left_header",
 headerText:"Cod. Barras",
 styleClass:"cell_left",
 svyUUID:"290A2DC7-11EC-405C-A55B-C167E3A094BF",
-width:"150"
+width:"100"
 },
 {
 dataprovider:"comp_precio",
@@ -38,7 +38,7 @@ headerStyleClass:"cell_right_header",
 headerText:"Precio",
 styleClass:"cell_right",
 svyUUID:"C02A001E-90FE-422D-818B-3693CA411E38",
-width:"150"
+width:"100"
 },
 {
 dataprovider:"vent_comprobante_herramientas_to_vent_comprobantes_alquiler.comp_fecha_emision",
@@ -47,7 +47,7 @@ headerStyleClass:"cell_center_header",
 headerText:"Alquiler",
 styleClass:"cell_center",
 svyUUID:"702EEC30-B42F-4929-B4AC-BE697BE78050",
-width:"150"
+width:"120"
 },
 {
 dataprovider:"calc_dias_reales",
@@ -56,25 +56,25 @@ headerStyleClass:"cell_right_header",
 headerText:"Días reales",
 styleClass:"cell_right",
 svyUUID:"7E41FEE4-5B69-40FD-BF08-38B0469E7514",
-width:"150"
+width:"100"
 },
 {
 dataprovider:"calc_dias_facturados",
 format:"####",
 headerStyleClass:"cell_right_header",
-headerText:"Días Facturados",
+headerText:"Facturados",
 styleClass:"cell_right",
 svyUUID:"18E83D74-7F5A-4815-9D03-3B91025D245A",
-width:"150"
+width:"100"
 },
 {
 dataprovider:"comp_dias_alquiler",
 format:"####",
 headerStyleClass:"cell_right_header",
-headerText:"Días a cobrar",
+headerText:"A cobrar",
 styleClass:"cell_right",
 svyUUID:"8E25187E-15E6-4947-918F-5155726A3136",
-width:"150"
+width:"100"
 },
 {
 dataprovider:"calc_total",
@@ -83,14 +83,6 @@ headerStyleClass:"cell_right_header",
 headerText:"Total",
 styleClass:"cell_right",
 svyUUID:"ED166A8A-97C3-45E9-A9A1-914C2898ACD6",
-width:"150"
-},
-{
-dataprovider:"vent_comprobante_herramientas_to_vent_comprobantes_alquiler.vent_comprobantes_to_vent_obras.obra_nombre",
-headerStyleClass:"cell_left_header",
-headerText:"Obra",
-styleClass:"cell_left",
-svyUUID:"4EAB7472-2C91-4C22-8555-F7DB1D5C794A",
 width:"100"
 }
 ],

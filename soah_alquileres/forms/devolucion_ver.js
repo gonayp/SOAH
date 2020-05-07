@@ -89,8 +89,8 @@ function limpiarVariables(){
 	
 	vl_subtotal = 0
 	
-	calculoTotales()
-	
+	//calculoTotales()
+	calculoTotalesSinModificar()
 	
 }
 
@@ -210,10 +210,21 @@ function calculoTotales(){
 }
 
 /**
+ * @properties={typeid:24,uuid:"CC9F5109-7E75-4B7B-8E64-EBBBCACDE965"}
+ */
+function calculoTotalesSinModificar(){
+	calculoDiasPrecioSinModificar()//Alquileres
+	calculoVentasSinModificar()
+	
+	vl_subtotal = comp_imp_alqu + comp_imp_ventas
+	//comp_imp_iva2 = vl_subtotal * 0.21
+	//comp_imp_total = vl_subtotal + comp_imp_iva2
+}
+
+/**
  * @properties={typeid:24,uuid:"9BD725AB-2764-40B4-9E26-D725A21952B1"}
  */
 function calculoVentas(){
-	
 	
 	comp_imp_ventas = 0	
 	
@@ -223,6 +234,23 @@ function calculoVentas(){
 		var myProducto= forms.devolucion_ver_ventas.foundset.getRecord(index);
 		myProducto.calc_total = myProducto.comp_cantidad * myProducto.comp_precio
 		comp_imp_ventas += myProducto.calc_total
+	}
+	
+}
+
+/**
+ * @properties={typeid:24,uuid:"B805953D-4157-4001-9A1D-DADAA970431E"}
+ */
+function calculoVentasSinModificar(){
+	
+	comp_imp_ventas = 0	
+	
+	var nRecordCount = 0
+	nRecordCount = databaseManager.getFoundSetCount(forms.devolucion_ver_ventas.foundset);
+	for (var index = 1; index <= nRecordCount; index++) {
+		var myProducto= forms.devolucion_ver_ventas.foundset.getRecord(index);
+		myProducto.calc_total = myProducto.comp_cantidad * myProducto.comp_precio
+		//comp_imp_ventas += myProducto.calc_total
 	}
 	
 }
@@ -264,10 +292,6 @@ function calculoDiasPrecio(){
 		
 		myHerramienta.calc_total= myHerramienta.comp_dias_alquiler * myHerramienta.comp_precio
 		
-		databaseManager.saveData()
-		
-		
-		
 		
 		comp_imp_alqu += myHerramienta.calc_total
 	}
@@ -280,6 +304,43 @@ function calculoDiasPrecio(){
 	}
 	
 }
+
+
+/**
+ * @properties={typeid:24,uuid:"A3EE759D-392D-43D8-B70C-42F70C1865D9"}
+ */
+function calculoDiasPrecioSinModificar(){
+	
+	
+	var vl_fecha_devolucion = comp_fecha_emision
+	
+	forms.devolucion_ver_herramientas.foundset.loadAllRecords()
+	
+	var nRecordCount = 0
+	nRecordCount = databaseManager.getFoundSetCount(forms.devolucion_ver_herramientas.foundset);
+	for (var index = 1; index <= nRecordCount; index++) {
+		var myHerramienta = forms.devolucion_ver_herramientas.foundset.getRecord(index);
+		
+		
+		
+		var x = vl_fecha_devolucion - myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes_alquiler.comp_fecha_emision //substracting two dates returns difference in milliseconds 
+		var one_day=1000*60*60*24 //ms * sec * min * hrs in a day 
+	
+	
+		var diffExact = x / one_day //gets difference in days 
+		var diffRounded = Math.ceil(diffExact ) // rounds 2.343 to 3
+		
+		myHerramienta.calc_dias_reales = diffRounded
+		
+		myHerramienta.calc_total= myHerramienta.comp_dias_alquiler * myHerramienta.comp_precio
+
+		
+		//comp_imp_alqu += myHerramienta.calc_total
+	}
+
+	
+}
+
 
 /**
  *

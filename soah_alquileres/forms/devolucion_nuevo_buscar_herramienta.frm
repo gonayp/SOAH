@@ -4,7 +4,7 @@ dataSource:"db:/gpp/vent_comprobante_herramientas",
 encapsulation:36,
 items:[
 {
-cssPosition:"129,-1,-1,549,192,20",
+cssPosition:"129,-1,-1,610,192,20",
 dataProviderID:"vl_num_serie",
 formIndex:4,
 onDataChangeMethodID:"9AFB8DE8-99FF-48CB-8A27-41A0B1E398C1",
@@ -12,14 +12,14 @@ typeid:4,
 uuid:"025DB5EA-3A9F-4987-875D-F3A5FD9D9836"
 },
 {
-cssPosition:"129,-1,-1,308,236,20",
+cssPosition:"129,-1,-1,369,236,20",
 dataProviderID:"vl_cod_barras",
 onDataChangeMethodID:"9AFB8DE8-99FF-48CB-8A27-41A0B1E398C1",
 typeid:4,
 uuid:"0C631BDA-314A-46E5-8546-3267901D8597"
 },
 {
-cssPosition:"60,-1,-1,365,140,20",
+cssPosition:"60,-1,-1,426,140,20",
 formIndex:4,
 location:"10,10",
 text:"Marca",
@@ -28,7 +28,7 @@ typeid:7,
 uuid:"1AC9D0F0-506A-4358-B727-CE8D880D4333"
 },
 {
-cssPosition:"60,-1,-1,12,140,20",
+cssPosition:"60,-1,-1,73,140,20",
 formIndex:4,
 location:"10,10",
 text:"Código Alternativo",
@@ -37,7 +37,7 @@ typeid:7,
 uuid:"1F5ED8F7-57E1-41AD-9E16-9D5D7C7B2BFA"
 },
 {
-cssPosition:"109,-1,-1,549,180,20",
+cssPosition:"109,-1,-1,610,180,20",
 formIndex:9,
 text:"Número de Serie",
 transparent:true,
@@ -45,7 +45,7 @@ typeid:7,
 uuid:"23CD2BF5-9E78-4726-B13B-183C57088423"
 },
 {
-cssPosition:"109,-1,-1,308,236,20",
+cssPosition:"109,-1,-1,369,236,20",
 formIndex:8,
 text:"Codígo de Barras",
 transparent:true,
@@ -53,7 +53,7 @@ typeid:7,
 uuid:"3B2D88CF-A50A-4C53-9A34-76E8D53E7785"
 },
 {
-cssPosition:"164,0,63,0,575,364",
+cssPosition:"164,0,0,60,575,364",
 json:{
 columns:[
 {
@@ -103,13 +103,12 @@ width:"200"
 }
 ],
 cssPosition:{
-bottom:"63px",
-left:"0px",
-min-height:"364px",
-min-width:"575px",
-position:"absolute",
-right:"0px",
-top:"164px"
+bottom:"0",
+height:"364",
+left:"60",
+right:"0",
+top:"164",
+width:"575"
 },
 enableColumnResize:true,
 formIndex:0,
@@ -127,7 +126,7 @@ typeid:47,
 uuid:"40F5C183-BFA3-41AC-AD7E-DD150B56419C"
 },
 {
-cssPosition:"129,-1,-1,163,140,20",
+cssPosition:"129,-1,-1,224,140,20",
 dataProviderID:"vl_estado",
 displayType:2,
 editable:false,
@@ -138,7 +137,7 @@ uuid:"54F5A960-BCDC-45E5-A236-796D7B14F499",
 valuelistID:"DF787460-AF05-4DA4-A94A-6A37E23E1B1C"
 },
 {
-cssPosition:"80,-1,-1,12,140,20",
+cssPosition:"80,-1,-1,73,140,20",
 dataProviderID:"vl_cod_alterna",
 formIndex:1,
 location:"10,10",
@@ -147,13 +146,13 @@ typeid:4,
 uuid:"64BCEF32-8113-4D80-8B09-D4C2CD50D7D9"
 },
 {
-cssPosition:"79,-1,-1,739,60,20",
+cssPosition:"79,-1,-1,800,60,20",
 formIndex:1,
 json:{
 cssPosition:{
 bottom:"-1",
 height:"20",
-left:"739",
+left:"800",
 right:"-1",
 top:"79",
 width:"60"
@@ -174,7 +173,7 @@ typeid:47,
 uuid:"72778EA5-62C3-4D2A-8034-08C088052143"
 },
 {
-cssPosition:"80,-1,-1,571,164,20",
+cssPosition:"80,-1,-1,632,164,20",
 dataProviderID:"vl_modelo",
 displayType:10,
 formIndex:7,
@@ -185,7 +184,7 @@ uuid:"784B7CE4-28A0-4493-BA80-3EAFD70C6220",
 valuelistID:"A1941DA9-AB5C-4C1A-8839-CA661BD429C1"
 },
 {
-cssPosition:"129,-1,-1,12,140,20",
+cssPosition:"129,-1,-1,73,140,20",
 dataProviderID:"vl_alimentacion",
 displayType:2,
 editable:false,
@@ -196,7 +195,7 @@ uuid:"7B328C25-03B4-4B03-A273-1653997F5F41",
 valuelistID:"DC2759E2-2C02-42DC-BA8A-7141AC76753F"
 },
 {
-cssPosition:"109,-1,-1,12,111,20",
+cssPosition:"109,-1,-1,73,111,20",
 formIndex:7,
 text:"Alimentación",
 transparent:true,
@@ -204,7 +203,7 @@ typeid:7,
 uuid:"AA838498-50B5-404E-800D-B664716163E1"
 },
 {
-cssPosition:"109,-1,-1,163,80,20",
+cssPosition:"109,-1,-1,224,80,20",
 formIndex:11,
 text:"Estado",
 transparent:true,
@@ -212,16 +211,16 @@ typeid:7,
 uuid:"B77089B5-EC4A-4C18-867E-5A3DCB2500F6"
 },
 {
-cssPosition:"491,-1,-1,10,150,35",
+cssPosition:"45,-1,-1,5,45,35",
 formIndex:1,
 json:{
 cssPosition:{
 bottom:"-1",
 height:"35",
-left:"10",
+left:"5",
 right:"-1",
-top:"491",
-width:"150"
+top:"45",
+width:"45"
 },
 formIndex:1,
 imageStyleClass:"fas fa-times",
@@ -230,7 +229,7 @@ x:10,
 y:10
 },
 onActionMethodID:"37F443E5-B69E-4536-BD54-4F26C913C7B4",
-text:"Cancelar"
+toolTipText:"Cancelar"
 },
 location:"10,10",
 name:"button_2",
@@ -239,7 +238,7 @@ typeid:47,
 uuid:"C7377E74-01EA-43CF-9EB5-2F0634D046DC"
 },
 {
-cssPosition:"80,-1,-1,163,196,20",
+cssPosition:"80,-1,-1,224,196,20",
 dataProviderID:"vl_herramienta",
 displayType:10,
 formIndex:1,
@@ -256,16 +255,16 @@ typeid:19,
 uuid:"D6B8E5F3-BE5C-4E36-B57A-367640C9DCF2"
 },
 {
-cssPosition:"491,-1,-1,168,150,35",
+cssPosition:"85,-1,-1,5,45,35",
 formIndex:2,
 json:{
 cssPosition:{
 bottom:"-1",
 height:"35",
-left:"168",
+left:"5",
 right:"-1",
-top:"491",
-width:"150"
+top:"85",
+width:"45"
 },
 formIndex:2,
 imageStyleClass:"fas fa-bolt",
@@ -274,7 +273,7 @@ x:10,
 y:10
 },
 onActionMethodID:"3FF17AFC-145F-48BC-BEA4-86198D12CDD3",
-text:"Añadir"
+toolTipText:"Añadir"
 },
 location:"10,10",
 name:"btn_0",
@@ -292,7 +291,7 @@ uuid:"EBF3EEBB-3D04-49A5-A8FF-C9FC7E3D388B",
 verticalAlignment:1
 },
 {
-cssPosition:"80,-1,-1,365,196,20",
+cssPosition:"80,-1,-1,426,196,20",
 dataProviderID:"vl_marca",
 displayType:10,
 formIndex:1,
@@ -304,7 +303,7 @@ valuelistID:"ACE19FE9-7C0F-403B-8EAD-6ED6484D62BB"
 },
 {
 borderType:"TitledBorder,Filtros,0,0,Segoe UI,0,12,#000000",
-cssPosition:"39,-1,-1,2,808,120",
+cssPosition:"39,-1,-1,63,808,120",
 lineSize:1,
 location:"10,10",
 name:"rec_filtros",
@@ -312,7 +311,7 @@ typeid:21,
 uuid:"ED277D52-EDB1-4876-A928-99DD885DC3FF"
 },
 {
-cssPosition:"60,-1,-1,163,140,20",
+cssPosition:"60,-1,-1,224,140,20",
 formIndex:4,
 location:"10,10",
 text:"Herramienta",
@@ -321,7 +320,7 @@ typeid:7,
 uuid:"EFE01511-B070-4966-B1E9-0B02269273F1"
 },
 {
-cssPosition:"476,0,-1,0,642,59",
+cssPosition:"40,-1,0,0,60,59",
 location:"10,10",
 styleClass:"banner",
 typeid:7,
@@ -329,7 +328,7 @@ uuid:"F340E0CD-CBD0-42B9-9F63-00D40BE57B9A",
 verticalAlignment:1
 },
 {
-cssPosition:"60,-1,-1,571,140,20",
+cssPosition:"60,-1,-1,632,140,20",
 formIndex:8,
 location:"10,10",
 text:"Modelo",
@@ -343,6 +342,6 @@ navigatorID:"-1",
 onShowMethodID:"67EC161A-416A-42D1-B0C4-658AB958B28E",
 scrollbars:36,
 showInMenu:true,
-size:"810,535",
+size:"975,535",
 typeid:3,
 uuid:"97862B6F-FB0A-4499-88E8-5A6412D078CC"
