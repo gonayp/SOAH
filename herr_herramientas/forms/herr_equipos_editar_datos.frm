@@ -4,6 +4,35 @@ dataSource:"db:/gpp/herr_equipo",
 encapsulation:44,
 items:[
 {
+cssPosition:"120,-1,-1,590,45,20",
+formIndex:2,
+json:{
+cssPosition:{
+bottom:"-1",
+height:"20",
+left:"590",
+right:"-1",
+top:"120",
+width:"45"
+},
+formIndex:2,
+imageStyleClass:"fas fa-search",
+location:{
+x:10,
+y:10
+},
+onActionMethodID:"F447BD72-E745-41F9-93AA-A3C885C7DEF0",
+tabSeq:14,
+toolTipText:"Ver reparación",
+visible:true
+},
+location:"10,10",
+name:"btn_reparacion",
+typeName:"bootstrapcomponents-button",
+typeid:47,
+uuid:"10C9F07D-E1C6-4DEE-895C-2C70E356360E"
+},
+{
 cssPosition:"270,-1,-1,307,307,112",
 dataProviderID:"equipo_caracteristicas",
 displayType:1,
@@ -50,7 +79,7 @@ typeid:4,
 uuid:"4FCDB1D8-AAC8-4099-967B-423AABD4AB10"
 },
 {
-cssPosition:"150,-1,-1,362,126,20",
+cssPosition:"150,-1,-1,270,127,20",
 formIndex:21,
 text:"Valor Asegurado",
 transparent:true,
@@ -162,6 +191,14 @@ typeid:4,
 uuid:"9B73499C-374F-4C8A-97EC-87E6C4F48C8F"
 },
 {
+cssPosition:"100,-1,-1,412,122,20",
+formIndex:19,
+text:"En reparación",
+transparent:true,
+typeid:7,
+uuid:"9E091FE3-6C70-41B4-B9AB-4B3D9C93429C"
+},
+{
 cssPosition:"5,-1,-1,388,115,20",
 formIndex:13,
 tabSeq:-2,
@@ -196,7 +233,7 @@ typeid:4,
 uuid:"B432259D-B6C0-4B9B-BDDB-8804DBC7F5F4"
 },
 {
-cssPosition:"170,-1,-1,362,126,20",
+cssPosition:"170,-1,-1,270,127,20",
 dataProviderID:"equipo_asegurado",
 format:"#,###.00",
 horizontalAlignment:4,
@@ -213,6 +250,13 @@ typeid:7,
 uuid:"B83ADCF7-68DE-44A3-A5B0-86E7FB4B5E67"
 },
 {
+cssPosition:"120,-1,-1,412,176,20",
+dataProviderID:"herr_equipo_to_rep_reparaciones.rep_reparaciones_to_rep_talleres.taller_nombre",
+editable:false,
+typeid:4,
+uuid:"BD2B1D5C-E49C-4CBF-9BC2-FA4946CAC788"
+},
+{
 cssPosition:"199,-1,-1,5,80,20",
 formIndex:20,
 text:"Advertencia",
@@ -221,7 +265,7 @@ typeid:7,
 uuid:"BDE8784D-75BB-4348-96F5-289E290172BA"
 },
 {
-cssPosition:"100,-1,-1,362,80,20",
+cssPosition:"100,-1,-1,270,80,20",
 formIndex:22,
 text:"Depósito",
 transparent:true,
@@ -265,14 +309,14 @@ uuid:"D2C118BA-8316-4D78-A9A2-79C3373C410E",
 valuelistID:"DC2759E2-2C02-42DC-BA8A-7141AC76753F"
 },
 {
-cssPosition:"120,-1,-1,5,262,20",
+cssPosition:"120,-1,-1,5,202,20",
 dataProviderID:"equipo_cod_barras",
 tabSeq:13,
 typeid:4,
 uuid:"E1B4066C-D524-491A-9855-96BC1340B22C"
 },
 {
-cssPosition:"120,-1,-1,362,140,20",
+cssPosition:"120,-1,-1,270,127,20",
 dataProviderID:"deposito_id",
 displayType:2,
 editable:false,
@@ -308,13 +352,13 @@ typeid:4,
 uuid:"FC9DD6EC-5933-4595-A6F5-BEE4A330AD2D"
 },
 {
-cssPosition:"120,-1,-1,277,45,20",
+cssPosition:"120,-1,-1,215,45,20",
 formIndex:2,
 json:{
 cssPosition:{
 bottom:"-1",
 height:"20",
-left:"277",
+left:"215",
 right:"-1",
 top:"120",
 width:"45"

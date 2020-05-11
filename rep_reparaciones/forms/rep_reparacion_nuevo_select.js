@@ -114,6 +114,7 @@ function onActionLimpiar() {
 	vl_herramienta = null;
 	vl_nombre = null;
 	vl_codigo = null;
+	globals.vg_herramienta_id = null
 	
 	filtrar()
 }

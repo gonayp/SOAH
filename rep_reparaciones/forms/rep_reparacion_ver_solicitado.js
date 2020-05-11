@@ -105,6 +105,8 @@ function cambioDeEstado(){
 		
 		
 		fs_herr_equipo.equipo_estado = vl_estado_equipo
+		if(vl_estado_equipo != 4)
+			fs_herr_historicos.reparacion_id = null
 		databaseManager.saveData()
 		
 		fs_herr_historicos.newRecord()

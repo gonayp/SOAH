@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/rep_talleres",
+items:[
+{foreignColumnName:"taller_id",primaryDataProviderID:"taller_id",typeid:23,uuid:"BA617165-5BF8-465D-BCB8-AA5C0CBB0BCF"}
+],
+joinType:1,
+name:"rep_reparaciones_to_rep_talleres",
+primaryDataSource:"db:/gpp/rep_reparaciones",
+typeid:22,
+uuid:"9D3DA1F7-C179-4B3D-989C-FCE88CD9D22A"

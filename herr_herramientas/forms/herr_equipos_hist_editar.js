@@ -12,6 +12,16 @@ function onShow(firstShow) {
 	if(scopes.usuario.vg_permiso_modificar == 0){
 		elements.btn_1.enabled = false
 	}
+	
+	elements.btn_alquiler.enabled = false
+	elements.btn_reparacion.enabled = false
+	if(comp_id != null){//Si esta alquilado
+		elements.btn_alquiler.enabled = true
+	}
+	if(reparacion_id != null){//Si esta en reparacion
+		elements.btn_reparacion.enabled = true
+	}
+	
 }
 
 /**
@@ -32,4 +42,34 @@ function onActioGrabar() {
 	
 	application.getWindow('Dialog').hide()
 	
+}
+
+/**
+ * @param {JSEvent} event
+ *
+ * @properties={typeid:24,uuid:"CB117A3E-BEF5-4983-A46D-CE62437CA32D"}
+ */
+function onActionVerAlquiler(event) {
+	var win = application.createWindow("Dialog", JSWindow.MODAL_DIALOG);
+	win.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
+	win.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
+	win.resizable = false
+	win.title= '';
+	win.show( forms.herr_equipos_editar_datos_alqu );
+
+}
+
+/**
+ * @param {JSEvent} event
+ *
+ * @properties={typeid:24,uuid:"307AC470-9686-43ED-B664-CF04D48BD9E3"}
+ */
+function onActionVerReparacion(event) {
+	var win = application.createWindow("Dialog", JSWindow.MODAL_DIALOG);
+	win.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
+	win.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
+	win.resizable = false
+	win.title= '';
+	win.show( 'rep_reparacion_detalle' );
+
 }

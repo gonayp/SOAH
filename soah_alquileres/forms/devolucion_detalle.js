@@ -71,12 +71,12 @@ function calculoTotales(){
 function calculoVentas(){
 	
 	
-	comp_imp_ventas = 0	
+	//comp_imp_ventas = 0	
 	
 	var nRecordCount = 0
-	nRecordCount = databaseManager.getFoundSetCount(forms.devolucion_ver_ventas.foundset);
+	nRecordCount = databaseManager.getFoundSetCount(forms.devolucion_detalle_ventas.foundset);
 	for (var index = 1; index <= nRecordCount; index++) {
-		var myProducto= forms.devolucion_ver_ventas.foundset.getRecord(index);
+		var myProducto= forms.devolucion_detalle_ventas.foundset.getRecord(index);
 		myProducto.calc_total = myProducto.comp_cantidad * myProducto.comp_precio
 
 	}

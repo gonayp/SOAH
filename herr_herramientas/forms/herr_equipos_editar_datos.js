@@ -86,7 +86,31 @@ function onActioVerAlquiler() {
  */
 function onShow(firstShow, event) {
 	elements.f_estado.enabled = true
+	elements.btn_alquiler.enabled = false
+	elements.btn_reparacion.enabled = false
 	if(comp_id != null){//Si esta alquilado
 		elements.f_estado.enabled = false
+		elements.btn_alquiler.enabled = true
 	}
+	if(reparacion_id != null){//Si esta en reparacion
+		elements.f_estado.enabled = false
+		elements.btn_reparacion.enabled = true
+	}
+	
+	
+}
+
+/**
+ * @param {JSEvent} event
+ *
+ * @properties={typeid:24,uuid:"F447BD72-E745-41F9-93AA-A3C885C7DEF0"}
+ */
+function onActionVerReparacion(event) {
+	var win = application.createWindow("Dialog", JSWindow.MODAL_DIALOG);
+	win.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
+	win.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
+	win.resizable = false
+	win.title= '';
+	win.show( 'rep_reparacion_detalle' );
+
 }

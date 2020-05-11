@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/deposito",
+items:[
+{foreignColumnName:"deposito_id",primaryDataProviderID:"deposito_id",typeid:23,uuid:"21225A61-5D51-4528-BA92-6F9C86CED818"}
+],
+joinType:1,
+name:"herr_equipo_to_deposito",
+primaryDataSource:"db:/gpp/herr_equipo",
+typeid:22,
+uuid:"2686DC9F-846F-4183-9817-35F1404E720D"

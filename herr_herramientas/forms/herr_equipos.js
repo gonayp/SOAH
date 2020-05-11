@@ -1,9 +1,51 @@
 /**
  * @type {Number}
  *
- * @properties={typeid:35,uuid:"EFB3E7BD-8BE7-4447-8A59-5C90D3D51571",variableType:4}
+ * @properties={typeid:35,uuid:"9D2203EC-9858-41FA-B898-699464234C7A",variableType:4}
  */
-var vl_avanzado = null;
+var vl_disponible = 1
+/**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"4E9ABD64-BAE9-4FC6-97C1-DECA1D8B1639",variableType:4}
+ */
+var vl_roto = 1
+/**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"250296B7-0AE9-4DB0-8341-7AE9DF955D9C",variableType:4}
+ */
+var vl_extraviado = 1
+/**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"910AD0A7-E7E3-48BC-B191-B16D01E80D7E",variableType:4}
+ */
+var vl_reparación = 1
+/**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"2708919F-8495-4AF3-BCBE-697B77F27236",variableType:4}
+ */
+var vl_robado = 1
+/**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"B91A7A0A-FD7C-4425-A67E-84176255CDE4",variableType:4}
+ */
+var vl_bien_uso = 1
+/**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"D38DC18D-9236-4BA4-989C-3C703BB9CE40",variableType:4}
+ */
+var vl_alquilado = 1
+/**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"FFB99C2B-46E0-49C2-89E9-E71C4928AC4E",variableType:4}
+ */
+var vl_baja = 1
 
 /**
  * @type {Number}
@@ -19,12 +61,6 @@ var vl_tipo = null;
  */
 var vl_num_serie = null;
 
-/**
- * @type {Number}
- *
- * @properties={typeid:35,uuid:"C844DB18-1AE6-4BAD-B8C1-0C8D13C9E8A2",variableType:4}
- */
-var vl_estado = null;
 
 /**
  * @type {Number}
@@ -96,10 +132,20 @@ function onActionVolver() {
  */
 function filtrar() {
 	
+	var aux_estado = " 99 "
+	if(vl_disponible == 1)	aux_estado += " || 1"
+	if(vl_roto == 1) 		aux_estado += " || 2"
+	if(vl_extraviado == 1) 	aux_estado += " || 3"
+	if(vl_reparación == 1) 	aux_estado += " || 4"
+	if(vl_robado == 1) 		aux_estado += " || 5"
+	if(vl_bien_uso == 1) 	aux_estado += " || 6"
+	if(vl_alquilado == 1) 	aux_estado += " || 7"
+	if(vl_baja == 1) 		aux_estado += " || 8"
+	
 	foundset.find()
 	if(vl_codigo != null) 			equipo_codigo 				= vl_codigo
 	if(vl_alimentacion != null)		alimentacion_id				= vl_alimentacion
-	if(vl_estado != null)			equipo_estado				= vl_estado
+	if(aux_estado != " 99 ")		equipo_estado				= aux_estado
 	if(vl_herramienta != null)		herramienta_id				= vl_herramienta
 	if(vl_marca != null)			marca_id					= vl_marca
 	if(vl_modelo != null)			modelo_id					= vl_modelo
@@ -119,7 +165,6 @@ function filtrar() {
 function onActionLimpiar() {
 	vl_tipo = null;
 	vl_num_serie = null;
-	vl_estado = null;
 	vl_alimentacion = null;
 	vl_cod_barras = null;
 	vl_cod_alterna = null;
@@ -128,43 +173,29 @@ function onActionLimpiar() {
 	vl_herramienta = null;
 	vl_nombre = null;
 	vl_codigo = null;
+	vl_disponible = 1
+	vl_roto = 1
+	vl_extraviado = 1
+	vl_reparación = 1
+	vl_robado = 1
+	vl_bien_uso = 1
+	vl_alquilado = 1
+	vl_baja = 1
+	elements.btn_alquilado.imageStyleClass = "fas fa-eye"
+	elements.btn_baja.imageStyleClass = "fas fa-eye"
+	elements.btn_bien_uso.imageStyleClass = "fas fa-eye"
+	elements.btn_disponible.imageStyleClass = "fas fa-eye"
+	elements.btn_extraviado.imageStyleClass = "fas fa-eye"
+	elements.btn_reparando.imageStyleClass = "fas fa-eye"
+	elements.btn_robado.imageStyleClass = "fas fa-eye"
+	elements.btn_roto.imageStyleClass = "fas fa-eye"
 	
 	filtrar()
 }
 
-/**
- * @properties={typeid:24,uuid:"343E9859-A686-454A-A556-0D21D9282C20"}
- */
-function onActionFiltroAvanzado() {
-	
-	if(vl_avanzado == 0) vl_avanzado = 1
-	else vl_avanzado = 0
-	
-	modificarVista()
-	
-	
-}
 
 
-/**
- * @properties={typeid:24,uuid:"86095303-4EB2-4690-B88A-9357979BBDD8"}
- */
-function modificarVista(){
-	
-	if(vl_avanzado == 0){
-		elements.table_equipos.removeStyleClass("tabla-filtro")
-		elements.rec_filtros.visible = true
-		elements.grp_filt_ava.visible = false
-		elements.btn_filtro.text = "Ѵ"
 
-	}
-	else{
-		elements.table_equipos.addStyleClass("tabla-filtro")
-		elements.rec_filtros.visible = false
-		elements.grp_filt_ava.visible = true
-		elements.btn_filtro.text = "Λ"
-	}
-}
 
 /**
  * Callback method for when form is shown.
@@ -191,11 +222,11 @@ function onShow(firstShow, event) {
 	
 	
 	if(firstShow){
-		vl_avanzado = 0
+		
 		filtrar()
 		
 	}
-	modificarVista()
+	
 	
 	
 }
@@ -532,4 +563,103 @@ function importarPrecios(){
 		}
 	plugins.svyBlockUI.stop()
 	plugins.webnotificationsToastr.info("El proceso finalizo correctamente.", "Información");
+}
+
+/**
+ * @param {JSEvent} event
+ *
+ * @properties={typeid:24,uuid:"E3C5915D-A427-44E0-90D2-E68235B30272"}
+ */
+function onActionVerEstado(event) {
+	if (event.getElementName() == "btn_disponible"){
+		if(vl_disponible == 1){
+			vl_disponible = 0
+			elements.btn_disponible.imageStyleClass = "fas fa-eye-slash"
+		}
+		else{
+			vl_disponible = 1
+			elements.btn_disponible.imageStyleClass = "fas fa-eye"
+		}
+		
+	}
+	if (event.getElementName() == "btn_roto"){
+		if(vl_roto == 1){
+			vl_roto = 0
+			elements.btn_roto.imageStyleClass = "fas fa-eye-slash"
+		}
+		else{
+			vl_roto = 1
+			elements.btn_roto.imageStyleClass = "fas fa-eye"
+		}
+		
+	}
+	if (event.getElementName() == "btn_extraviado"){
+		if(vl_extraviado == 1){
+			vl_extraviado = 0
+			elements.btn_extraviado.imageStyleClass = "fas fa-eye-slash"
+		}
+		else{
+			vl_extraviado = 1
+			elements.btn_extraviado.imageStyleClass = "fas fa-eye"
+		}
+		
+	}
+	if (event.getElementName() == "btn_reparando"){
+		if(vl_reparación == 1){
+			vl_reparación = 0
+			elements.btn_reparando.imageStyleClass = "fas fa-eye-slash"
+		}
+		else{
+			vl_reparación = 1
+			elements.btn_reparando.imageStyleClass = "fas fa-eye"
+		}
+		
+	}
+	if (event.getElementName() == "btn_robado"){
+		if(vl_robado == 1){
+			vl_robado = 0
+			elements.btn_robado.imageStyleClass = "fas fa-eye-slash"
+		}
+		else{
+			vl_robado = 1
+			elements.btn_robado.imageStyleClass = "fas fa-eye"
+		}
+		
+	}
+	if (event.getElementName() == "btn_alquilado"){
+		if(vl_alquilado == 1){
+			vl_alquilado = 0
+			elements.btn_alquilado.imageStyleClass = "fas fa-eye-slash"
+		}
+		else{
+			vl_alquilado = 1
+			elements.btn_alquilado.imageStyleClass = "fas fa-eye"
+		}
+		
+	}
+	if (event.getElementName() == "btn_baja"){
+		if(vl_baja == 1){
+			vl_baja = 0
+			elements.btn_baja.imageStyleClass = "fas fa-eye-slash"
+		}
+		else{
+			vl_baja = 1
+			elements.btn_baja.imageStyleClass = "fas fa-eye"
+		}
+		
+	}
+	if (event.getElementName() == "btn_bien_uso"){
+		if(vl_bien_uso == 1){
+			vl_bien_uso = 0
+			elements.btn_bien_uso.imageStyleClass = "fas fa-eye-slash"
+		}
+		else{
+			vl_bien_uso = 1
+			elements.btn_bien_uso.imageStyleClass = "fas fa-eye"
+		}
+		
+	}
+	
+	filtrar()
+
 }

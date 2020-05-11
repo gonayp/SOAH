@@ -109,7 +109,8 @@ function onActioGrabar() {
 	/** @type {JSFoundSet<db:/gpp/herr_equipo>} */
 	var fs_herr_equipo = databaseManager.getFoundSet('gpp', 'herr_equipo')
 	fs_herr_equipo.loadRecords(vl_equipo)
-	fs_herr_equipo.equipo_estado = 4//en reparacion
+	fs_herr_equipo.equipo_estado 	= 4//en reparacion
+	fs_herr_equipo.reparacion_id	= fs_rep_reparaciones.reparacion_id
 	databaseManager.saveData()
 	
 	//Grabar fallas
