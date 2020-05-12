@@ -175,6 +175,7 @@ function calcularTotales(){
  * @properties={typeid:24,uuid:"0048DE29-8994-4EFF-9B91-84B312A81675"}
  */
 function onCellDoubleClick(foundsetindex, columnindex, record, event) {
+	var win = application.createWindow("Dialog", JSWindow.MODAL_DIALOG);
 	switch (record.comp_codigo) {
 	case 5://Facturas
 		forms['factura_devolucion_ver'].vl_form_padre = 'clientes_estado'
@@ -184,7 +185,6 @@ function onCellDoubleClick(foundsetindex, columnindex, record, event) {
 	case 2://devoluciones
 		forms['devolucion_detalle'].vl_form_padre = 'clientes_estado'
 		forms['devolucion_detalle'].foundset.loadRecords(foundset.comp_id)
-		var win = application.createWindow("Dialog", JSWindow.MODAL_DIALOG);
 			win.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
 			win.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
 			win.resizable = false
@@ -195,7 +195,6 @@ function onCellDoubleClick(foundsetindex, columnindex, record, event) {
 	case 90://Anticipos
 		forms['anticipos_detalle'].vl_form_padre = 'clientes_estado'
 		forms['anticipos_detalle'].foundset.loadRecords(foundset.comp_id)
-		var win = application.createWindow("Dialog", JSWindow.MODAL_DIALOG);
 			win.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
 			win.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
 			win.resizable = false

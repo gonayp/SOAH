@@ -1,5 +1,6 @@
 addEmptyValue:1,
-customValues:"Solicitado|1\r\
+customValues:"Pendiente|0\r\
+Solicitado|1\r\
 Impreso|2\r\
 Presupuestado|3\r\
 Enviado|4\r\

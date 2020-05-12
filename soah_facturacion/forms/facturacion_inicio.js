@@ -236,14 +236,15 @@ function crearHerramientas(){
 					}
 					else{//Alquiler
 						if(myHerramienta.comp_devolucion == null){
-							var ahora = application.getServerTimeStamp()
+							//var ahora = application.getServerTimeStamp()
 							forms.factura_devolucion_nuevo_herramientas.foundset.newRecord()
 							forms.factura_devolucion_nuevo_herramientas.foundset.equipo_id 				= myHerramienta.equipo_id
-							forms.factura_devolucion_nuevo_herramientas.foundset.comp_fecha_alquiler	= myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes.comp_fecha_emision
-							forms.factura_devolucion_nuevo_herramientas.foundset.comp_fecha_devolucion	= new Date(ahora.getFullYear(),ahora.getMonth(),0)
-							var vl_dias_reales = scopes.alquileres.calcularDiasParaCobrar(myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes.comp_fecha_emision,forms.factura_devolucion_nuevo_herramientas.foundset.comp_fecha_devolucion)
-							if(myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes.comp_fec_ult_facturacion != null)
-								vl_dias_reales = scopes.alquileres.calcularDiasParaCobrar(myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes.comp_fec_ult_facturacion,forms.factura_devolucion_nuevo_herramientas.foundset.comp_fecha_devolucion)
+							forms.factura_devolucion_nuevo_herramientas.foundset.comp_fecha_alquiler	= myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes.comp_fecha_emision							
+							var vl_dias_reales = scopes.alquileres.calcularDiasParaCobrar(myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes.comp_fec_ult_facturacion,forms.factura_devolucion_nuevo.vl_fecha	)
+							//if(myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes.comp_fec_ult_facturacion != null){
+								//vl_dias_reales = scopes.alquileres.calcularDiasParaCobrar(myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes.comp_fec_ult_facturacion,forms.factura_devolucion_nuevo.vl_fecha	)
+							forms.factura_devolucion_nuevo_herramientas.foundset.comp_fecha_devolucion	= myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes.comp_fec_ult_facturacion//new Date(ahora.getFullYear(),ahora.getMonth(),0)
+							//}
 							forms.factura_devolucion_nuevo_herramientas.foundset.comp_dias_a_cobrar		= vl_dias_reales
 							forms.factura_devolucion_nuevo_herramientas.foundset.comp_dias_facturados	= myHerramienta.comp_dias_facturados
 							forms.factura_devolucion_nuevo_herramientas.foundset.comp_id				= myHerramienta.comp_id
@@ -478,9 +479,10 @@ function calcularTotalCobrar(p_alquiler,p_fecha_cierre){
 	nRecordCount = databaseManager.getFoundSetCount(p_alquiler.vent_comprobantes_to_vent_comprobante_herramientas);
 	for (var index = 1; index <= nRecordCount; index++) {
 		var myHerramienta = p_alquiler.vent_comprobantes_to_vent_comprobante_herramientas.getRecord(index);
-		var fecha_alquiler = myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes.comp_fecha_emision
+		var fecha_alquiler = myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes.comp_fec_ult_facturacion
 		
 		var vl_dias_reales = scopes.alquileres.calcularDiasParaCobrar(fecha_alquiler,vl_fecha_devolucion)
+
 		
 		vl_total_f += vl_dias_reales * myHerramienta.comp_precio
 	

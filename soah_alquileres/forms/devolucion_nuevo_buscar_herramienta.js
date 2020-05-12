@@ -214,14 +214,16 @@ function addHerramienta() {
 		}
 		
 		//Comprobar si por tipo de alimentacion tiene algun consumible (ejemplo nafta)
-		if(foundset.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_alimentacion.producto_id != null){
-			forms.devolucion_nuevo_ventas.foundset.newRecord()
-			forms.devolucion_nuevo_ventas.foundset.producto_cantidad		= 1
-			forms.devolucion_nuevo_ventas.foundset.producto_nombre			= foundset.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_alimentacion.herr_alimentacion_to_prod_productos.producto_nombre
-			forms.devolucion_nuevo_ventas.foundset.producto_precio			= foundset.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_alimentacion.herr_alimentacion_to_prod_productos.producto_precio_base
-			forms.devolucion_nuevo_ventas.foundset.producto_total			= foundset.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_alimentacion.herr_alimentacion_to_prod_productos.producto_precio_base
-			
-			databaseManager.saveData()
+		if(utils.hasRecords(foundset.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_alimentacion)){
+			if(foundset.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_alimentacion.producto_id != null){
+				forms.devolucion_nuevo_ventas.foundset.newRecord()
+				forms.devolucion_nuevo_ventas.foundset.producto_cantidad		= 1
+				forms.devolucion_nuevo_ventas.foundset.producto_nombre			= foundset.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_alimentacion.herr_alimentacion_to_prod_productos.producto_nombre
+				forms.devolucion_nuevo_ventas.foundset.producto_precio			= foundset.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_alimentacion.herr_alimentacion_to_prod_productos.producto_precio_base
+				forms.devolucion_nuevo_ventas.foundset.producto_total			= foundset.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_alimentacion.herr_alimentacion_to_prod_productos.producto_precio_base
+				
+				databaseManager.saveData()
+			}
 		}
 		
 		databaseManager.saveData()

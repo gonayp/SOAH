@@ -121,6 +121,13 @@ headerText:"Obra",
 styleClass:"cell_left",
 svyUUID:"4AC994F1-8A46-46DD-BF50-981801707A53",
 width:"100"
+},
+{
+headerText:"A reparar",
+styleClass:"cell_center",
+styleClassDataprovider:"calc_estilo_seleccionado",
+svyUUID:"FEFBF69A-B452-4CB6-8454-E960D77FDE35",
+width:"100"
 }
 ],
 cssPosition:{
@@ -132,6 +139,7 @@ top:"43",
 width:"200"
 },
 enableColumnResize:true,
+onCellClick:"4BA5703F-2B02-4526-9579-91529D9CEB03",
 onCellDoubleClick:"ADC37C1B-4DCE-4DF1-9696-6284C160CFE3",
 pageSize:0,
 tabSeq:-2

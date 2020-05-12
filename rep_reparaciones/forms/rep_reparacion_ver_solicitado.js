@@ -54,6 +54,11 @@ function onShow(firstShow) {
 	
 	vl_estado_anterior = foundset.reparacion_estado
 	
+
+	elements.btn_devolucion.enabled = false
+	if(devolucion_id != null){//Si viene de devolucion
+		elements.btn_devolucion.enabled = true
+	}
 	
 	//Adjuntos
 	globals.vg_adjunto_clave = "reparaciones"
@@ -140,4 +145,21 @@ function cambioDeEstado(){
 	}
 			
 	
+}
+
+/**
+ * @param {JSEvent} event
+ *
+ * @properties={typeid:24,uuid:"4C72E2AB-3584-4946-ABAE-0AEC2F8378CD"}
+ */
+function onActionVerDevolucion(event) {
+	
+	forms["devolucion_detalle"].foundset.loadRecords(devolucion_id)
+	var win = application.createWindow("Dialog", JSWindow.MODAL_DIALOG);
+		win.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
+		win.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
+		win.resizable = false
+		win.title= '';
+		win.show( "devolucion_detalle" );
+
 }

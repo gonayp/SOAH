@@ -61,3 +61,23 @@ function onCellDoubleClick(foundsetindex, columnindex, record, event) {
 	}
 }
 
+
+/**
+ * Called when the mouse is clicked on a row/cell (foundset and column indexes are given) or.
+ * when the ENTER key is used then only the selected foundset index is given
+ * Use the record to exactly match where the user clicked on
+ *
+ * @param {Number} foundsetindex
+ * @param {Number} [columnindex]
+ * @param {JSRecord} [record]
+ * @param {JSEvent} [event]
+ *
+ * @properties={typeid:24,uuid:"4BA5703F-2B02-4526-9579-91529D9CEB03"}
+ */
+function onCellClick(foundsetindex, columnindex, record, event) {
+	if(columnindex == 13){
+		if(calc_seleccionado == 1) calc_seleccionado = 0
+		else calc_seleccionado = 1
+	}
+
+}

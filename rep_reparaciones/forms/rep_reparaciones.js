@@ -1,6 +1,13 @@
 /**
  * @type {Number}
  *
+ * @properties={typeid:35,uuid:"9F394F0D-6DA9-44FE-B696-F4D0EDBE9906",variableType:4}
+ */
+var vl_estado_pendiente = null;
+
+/**
+ * @type {Number}
+ *
  * @properties={typeid:35,uuid:"5CC35458-14D0-4C15-8906-60CE6A8E201A",variableType:4}
  */
 var vl_estado_solicitado = null;
@@ -134,18 +141,20 @@ function onActionLimpiar() {
 	vl_marca = null
 	vl_modelo = null
 	vl_aviso = null
-	vl_estado_cancelado = 1
+	vl_estado_cancelado = 0
 	vl_estado_enviado = 1
-	vl_estado_impreso = 1
+	vl_estado_impreso = 0
 	vl_estado_presupuestado = 1
 	vl_estado_solicitado = 1
-	vl_estado_terminado = 1
-	elements.btn_cancelado.imageStyleClass = "fas fa-eye"
+	vl_estado_terminado = 0
+	vl_estado_pendiente = 1
+	elements.btn_cancelado.imageStyleClass = "fas fa-eye-slash"
 	elements.btn_enviado.imageStyleClass = "fas fa-eye"
-	elements.btn_impreso.imageStyleClass = "fas fa-eye"
+	elements.btn_impreso.imageStyleClass = "fas fa-eye-slash"
 	elements.btn_presupuesto.imageStyleClass = "fas fa-eye"
 	elements.btn_solicitado.imageStyleClass = "fas fa-eye"
-	elements.btn_terminado.imageStyleClass = "fas fa-eye"
+	elements.btn_terminado.imageStyleClass = "fas fa-eye-slash"
+	elements.btn_pendiente.imageStyleClass = "fas fa-eye"
 	
 	
 	filtrar()
@@ -166,6 +175,7 @@ function filtrar() {
 	if(vl_estado_presupuestado == 1)aux_estado += " || 3"
 	if(vl_estado_solicitado == 1) 	aux_estado += " || 1"
 	if(vl_estado_terminado == 1) 	aux_estado += " || 5"
+	if(vl_estado_pendiente == 1) 	aux_estado += " || 0"
 	
 	
 	foundset.find()
@@ -188,6 +198,8 @@ function filtrar() {
 	if(vl_marca != null)					 foundset.rep_reparaciones_to_herr_equipo.marca_id		 = vl_marca
 	if(vl_modelo != null)					 foundset.rep_reparaciones_to_herr_equipo.modelo_id		 = vl_modelo
 	foundset.search()
+	
+	foundset.sort("reparacion_estado,reparacion_fecha_inicio desc ")
 	
 }
 
@@ -309,6 +321,18 @@ function onActionVerEstado(event) {
 		else{
 			vl_estado_cancelado = 1
 			elements.btn_cancelado.imageStyleClass = "fas fa-eye"
+		}
+		
+	}
+	
+	if (event.getElementName() == "btn_pendiente"){
+		if(vl_estado_pendiente == 1){
+			vl_estado_pendiente = 0
+			elements.btn_pendiente.imageStyleClass = "fas fa-eye-slash"
+		}
+		else{
+			vl_estado_pendiente = 1
+			elements.btn_pendiente.imageStyleClass = "fas fa-eye"
 		}
 		
 	}

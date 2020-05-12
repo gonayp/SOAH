@@ -16,6 +16,12 @@ name:"company_id"
 },
 {
 allowNull:true,
+creationOrderIndex:16,
+dataType:4,
+name:"devolucion_id"
+},
+{
+allowNull:true,
 creationOrderIndex:2,
 dataType:93,
 name:"reparacion_fecha_inicio"

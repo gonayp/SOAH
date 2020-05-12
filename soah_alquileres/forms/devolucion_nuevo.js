@@ -308,6 +308,37 @@ function grabarDevolucion(p_tipo){
 		fs_historico_equipos.hist_tipo							= 6 //Disponible
 		databaseManager.saveData(fs_historico_equipos)
 		
+		//Si esta dañada la ponemos pendiente de reparacion
+		if(myHerramienta.calc_seleccionado == 1){
+		//Grabar reparacion
+			/** @type {JSFoundSet<db:/gpp/rep_reparaciones>} */
+			var fs_rep_reparaciones = databaseManager.getFoundSet('gpp', 'rep_reparaciones')
+			fs_rep_reparaciones.newRecord()
+			fs_rep_reparaciones.company_id							= scopes.usuario.vg_company_id
+			fs_rep_reparaciones.equipo_id							= myHerramienta.equipo_id
+			fs_rep_reparaciones.reparacion_estado					= 0 //Pendiente
+			fs_rep_reparaciones.foundset.reparacion_fecha_inicio	= vl_fecha
+			fs_rep_reparaciones.foundset.reparacion_num_pedido		= null
+			fs_rep_reparaciones.taller_id							= null
+			fs_rep_reparaciones.devolucion_id						= fs_comprobantes.comp_id
+			databaseManager.saveData(fs_rep_reparaciones)
+			
+			//Cambiar estado de equipo
+			fs_equipo.loadRecords(myHerramienta.equipo_id)
+			fs_equipo.equipo_estado 	= 4//en reparacion
+			fs_equipo.reparacion_id		= fs_rep_reparaciones.reparacion_id
+			databaseManager.saveData(fs_equipo)
+			
+			fs_historico_equipos.newRecord()
+			fs_historico_equipos.company_id			= scopes.usuario.vg_company_id
+			fs_historico_equipos.equipo_id			= myHerramienta.equipo_id
+			fs_historico_equipos.hist_fecha			= application.getServerTimeStamp()
+			fs_historico_equipos.hist_observacion	= "Cambio de estado desde una devolución al modulo de reparaciones"
+			fs_historico_equipos.reparacion_id		= fs_rep_reparaciones.reparacion_id
+			fs_historico_equipos.hist_tipo			= 3
+			databaseManager.saveData(fs_historico_equipos)
+		}
+		
 		//Marcamos herramienta con el id de la devolucion
 		fs_comprobante_herramientas_alq.find()
 		fs_comprobante_herramientas_alq.comp_id = myHerramienta.comp_id
@@ -670,7 +701,7 @@ function calculoAlquileres(){
 		//Comprobamos si tiene obras diferentes
 		if(vl_obra_anterior == null) vl_obra_anterior = myHerramienta.obra_id
 		else{
-			if(vl_obra_anterior != myHerramienta.comp_obra) obras_distintas = true
+			if(vl_obra_anterior != myHerramienta.obra_id) obras_distintas = true
 			vl_obra_anterior = myHerramienta.obra_id
 		}
 		
