@@ -144,9 +144,10 @@ function facturaAClienteRelacionado(){
  * @SuppressWarnings(wrongparameters)
  */
 function generarFactura(){
-	
+	var ahora = application.getServerTimeStamp()
 	forms.factura_devolucion_nuevo.vl_cliente 			= vl_cliente
-	forms.factura_devolucion_nuevo.vl_fecha				= application.getServerTimeStamp()
+	forms.factura_devolucion_nuevo.vl_fecha				= new Date(ahora.getFullYear(),ahora.getMonth(),1)
+	forms.factura_devolucion_nuevo.vl_fecha_emision		= application.getServerTimeStamp()
 	forms.factura_devolucion_nuevo.vl_numero			= null
 	forms.factura_devolucion_nuevo.vl_obra				= vl_obra_nueva
 	forms.factura_devolucion_nuevo.vl_observaciones		= null
@@ -240,10 +241,11 @@ function crearHerramientas(){
 							forms.factura_devolucion_nuevo_herramientas.foundset.newRecord()
 							forms.factura_devolucion_nuevo_herramientas.foundset.equipo_id 				= myHerramienta.equipo_id
 							forms.factura_devolucion_nuevo_herramientas.foundset.comp_fecha_alquiler	= myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes.comp_fecha_emision							
-							var vl_dias_reales = scopes.alquileres.calcularDiasParaCobrar(myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes.comp_fec_ult_facturacion,forms.factura_devolucion_nuevo.vl_fecha	)
+							
 							//if(myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes.comp_fec_ult_facturacion != null){
 								//vl_dias_reales = scopes.alquileres.calcularDiasParaCobrar(myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes.comp_fec_ult_facturacion,forms.factura_devolucion_nuevo.vl_fecha	)
 							forms.factura_devolucion_nuevo_herramientas.foundset.comp_fecha_devolucion	= myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes.comp_fec_ult_facturacion//new Date(ahora.getFullYear(),ahora.getMonth(),0)
+							var vl_dias_reales = scopes.alquileres.calcularDiasParaCobrar(myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes.comp_fec_ult_facturacion,forms.factura_devolucion_nuevo.vl_fecha	)
 							//}
 							forms.factura_devolucion_nuevo_herramientas.foundset.comp_dias_a_cobrar		= vl_dias_reales
 							forms.factura_devolucion_nuevo_herramientas.foundset.comp_dias_facturados	= myHerramienta.comp_dias_facturados

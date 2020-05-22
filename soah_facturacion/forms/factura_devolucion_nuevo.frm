@@ -26,7 +26,7 @@ typeid:47,
 uuid:"09D62FDD-CAAB-4FD0-A0B8-1B1EC3194B2F"
 },
 {
-cssPosition:"90,-1,-1,210,80,20",
+cssPosition:"91,-1,-1,212,80,20",
 formIndex:4,
 tabSeq:-2,
 text:"Cliente",
@@ -136,6 +136,14 @@ typeid:7,
 uuid:"59344468-FC4F-4F13-AD2D-26CB8EBB6141"
 },
 {
+cssPosition:"92,-1,-1,65,130,20",
+formIndex:5,
+text:"Fecha de emisión",
+transparent:true,
+typeid:7,
+uuid:"5EA6C02D-6340-44E7-92E4-ADF5609BA6F7"
+},
+{
 cssPosition:"142,-1,-1,65,278,20",
 formIndex:11,
 tabSeq:-2,
@@ -145,7 +153,7 @@ typeid:7,
 uuid:"5FA9CE4F-87DE-41AB-B11A-13D01A81BD9D"
 },
 {
-cssPosition:"110,-1,-1,478,259,20",
+cssPosition:"111,-1,-1,484,244,20",
 dataProviderID:"vl_condicion_pago",
 displayType:2,
 editable:false,
@@ -190,10 +198,11 @@ typeid:7,
 uuid:"8A0FB760-36ED-4932-ADF2-F1B3EE95E4E2"
 },
 {
-cssPosition:"111,-1,-1,65,140,20",
+cssPosition:"180,-1,-1,628,105,20",
 dataProviderID:"vl_fecha",
 editable:false,
-format:"dd/MM/yy HH:mm",
+format:"dd/MM/yy",
+horizontalAlignment:0,
 name:"f_fecha",
 onDataChangeMethodID:"9C272F4B-7060-4516-AB6E-051F1D959EF9",
 tabSeq:3,
@@ -311,7 +320,7 @@ typeid:4,
 uuid:"DF79244D-67DA-43FE-B2EA-723D3BFFFF05"
 },
 {
-cssPosition:"110,-1,-1,210,263,20",
+cssPosition:"111,-1,-1,212,263,20",
 dataProviderID:"vl_cliente",
 displayType:10,
 editable:false,
@@ -331,16 +340,27 @@ typeid:7,
 uuid:"EAFE47E9-A806-49FE-A659-97F41E57FDCB"
 },
 {
-cssPosition:"91,-1,-1,65,80,20",
+cssPosition:"112,-1,-1,65,140,20",
+dataProviderID:"vl_fecha_emision",
+editable:false,
+format:"dd/MM/yy HH:mm",
+name:"f_fechac",
+onDataChangeMethodID:"9C272F4B-7060-4516-AB6E-051F1D959EF9",
+typeid:4,
+uuid:"F09E8183-A458-4ADE-9B27-AFD9B2836E95"
+},
+{
+cssPosition:"160,-1,-1,628,130,20",
 formIndex:5,
 tabSeq:-2,
-text:"Fecha",
+text:"Fecha de cierre",
+toolTipText:"Solo para alquileres parciales",
 transparent:true,
 typeid:7,
 uuid:"F6A7FDD5-AEF1-471D-AFCA-D82895AA4AFF"
 },
 {
-cssPosition:"90,-1,-1,478,264,20",
+cssPosition:"91,-1,-1,484,249,20",
 formIndex:16,
 text:"Condición Pago",
 transparent:true,

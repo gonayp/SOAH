@@ -1,4 +1,11 @@
 /**
+ * @type {Date}
+ *
+ * @properties={typeid:35,uuid:"45E764D7-29D9-4861-B9C3-FF3192040714",variableType:93}
+ */
+var vl_fecha_emision = null;
+
+/**
  * @type {Number}
  *
  * @properties={typeid:35,uuid:"2E653EDA-6C70-4A46-8456-EC332C28443C",variableType:4}
@@ -692,9 +699,9 @@ function calculoDiasPrecio(){
 		
 		myHerramienta.comp_dias_reales = diffRounded
 		
-		var vl_dias_a_cobrar = scopes.alquileres.calcularDiasParaCobrar(myHerramienta.comp_fecha_alquiler ,myHerramienta.comp_fecha_devolucion)
-		if(myHerramienta.comp_fec_ult_facturacion != null)
-			vl_dias_a_cobrar = scopes.alquileres.calcularDiasParaCobrar(vl_fecha,myHerramienta.comp_fecha_devolucion)
+		var vl_dias_a_cobrar = scopes.alquileres.calcularDiasParaCobrar(myHerramienta.comp_fecha_devolucion,vl_fecha)//myHerramienta.comp_fecha_alquiler ,myHerramienta.comp_fecha_devolucion)
+		//if(myHerramienta.comp_fec_ult_facturacion != null)
+		//	vl_dias_a_cobrar = scopes.alquileres.calcularDiasParaCobrar(vl_fecha,myHerramienta.comp_fecha_devolucion)
 		
 		myHerramienta.comp_dias_a_cobrar = vl_dias_a_cobrar
 		
