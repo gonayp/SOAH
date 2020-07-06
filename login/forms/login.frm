@@ -23,7 +23,7 @@ y:11
 onActionMethodID:"6700FA0A-6BFF-4631-B8AF-6DB496451A12",
 size:{
 height:50,
-width:51
+width:50
 },
 styleClass:"btn btn-default btn-primary",
 tabSeq:3,
@@ -69,6 +69,7 @@ fontType:"Segoe UI,0,12",
 foreground:"#800000",
 horizontalAlignment:0,
 location:"10,71",
+name:"label_error",
 size:"288,37",
 transparent:true,
 typeid:7,

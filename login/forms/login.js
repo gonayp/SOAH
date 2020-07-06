@@ -29,32 +29,36 @@ var vl_usuario = null;
  */
 function login(){
 	//vl_error = 'Login Failed';
-	
-    vl_error = null;
- 
+	vl_error = null;
+	 
     if(!vl_usuario){
     	vl_error = 'Falta el nombre de usuario';
+    	elements.label_error.text = vl_error
     	return false;
     }
     if(!vl_contrasenia){
     	vl_error = 'Falta la contraseña';
+    	elements.label_error.text = vl_error
     	return false;
     }
  
-    var tenantID = security.authenticate("authenticator","getTenant",[vl_usuario]);//Revisa si el nombre existe
+    var tenantID = security.authenticate("Authenticator","getTenant",[vl_usuario]);//Revisa si el nombre existe
     if(tenantID > 0){
-    	var ok = security.authenticate("authenticator","login",[vl_usuario,vl_contrasenia])
+    	var ok = security.authenticate("Authenticator","login",[vl_usuario,vl_contrasenia])
         if(ok){
         	scopes.usuario.crearUsuario(vl_usuario,vl_contrasenia)
         	return true;
         } else {
         	vl_error = "Error de login";
+        	elements.label_error.text = vl_error
+			return false
         }
     }
     else{
     	vl_error = "Nombre de usuario incorrecto."
+    	elements.label_error.text = vl_error
+		return false
     }
-    return false
 }
 
 

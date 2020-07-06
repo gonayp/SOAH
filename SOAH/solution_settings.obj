@@ -1,5 +1,5 @@
 firstFormID:"FCCC4AAE-8328-4F5D-B08F-A6B390DA8D6B",
-modulesNames:"web_packages,nucleo_de_datos,login,soah_alquileres,vent_clientes,administracion,herr_herramientas,prod_productos,soah_facturacion,cheques,bancos,rep_reparaciones,cajas,cmpr_proveedores,facturacion_modulos,deposito_stock",
+modulesNames:"web_packages,nucleo_de_datos,soah_alquileres,vent_clientes,administracion,herr_herramientas,prod_productos,soah_facturacion,cheques,bancos,rep_reparaciones,cajas,cmpr_proveedores,facturacion_modulos,deposito_stock,login",
 onOpenMethodID:"96354A1B-940A-48AD-88D4-5326B3BD77B8",
 styleSheetID:"6E60DF01-4BD3-44F1-83B7-32EFB2BF1D1C",
 typeid:43,
