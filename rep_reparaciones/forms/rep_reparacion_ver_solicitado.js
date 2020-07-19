@@ -107,11 +107,13 @@ function cambioDeEstado(){
 		/** @type {JSFoundSet<db:/gpp/herr_historicos>} */
 		var fs_herr_historicos = databaseManager.getFoundSet('gpp', 'herr_historicos')
 		
-		
-		
+		//Cambiar estado de equipo
 		fs_herr_equipo.equipo_estado = vl_estado_equipo
-		if(vl_estado_equipo != 4)
-			fs_herr_historicos.reparacion_id = null
+		if(vl_estado_equipo == 1){
+			fs_herr_equipo.reparacion_id	= null
+			fs_herr_equipo.deposito_id		= 1
+		}
+		
 		databaseManager.saveData()
 		
 		fs_herr_historicos.newRecord()
@@ -119,8 +121,10 @@ function cambioDeEstado(){
 		fs_herr_historicos.equipo_id			= foundset.equipo_id
 		fs_herr_historicos.hist_fecha			= application.getServerTimeStamp()
 		fs_herr_historicos.hist_observacion		= "Cambio de estado desde modulo de reparaciones"
+			
 		fs_herr_historicos.reparacion_id		= foundset.reparacion_id
-		
+		if(vl_estado_equipo != 4)
+			fs_herr_historicos.reparacion_id = null
 		
 		switch (vl_estado_equipo) {
 		case 1://disponible
@@ -137,6 +141,10 @@ function cambioDeEstado(){
 			break;
 		
 		}
+		
+		databaseManager.saveData()
+		
+		
 		
 		
 	

@@ -375,3 +375,24 @@ function calcularTotalCobrar(){
 	databaseManager.saveData()
 	
 }
+
+/**
+ * @properties={typeid:24,uuid:"481A926C-4455-4BB3-B827-F326E202DCB5"}
+ */
+function onDataChangeHerramienta() {
+	globals.vg_herramienta_id = vl_herramienta
+	globals.vg_marca_id = null 
+	vl_marca = null
+	vl_modelo = null
+	filtrar()
+}
+
+/**
+ *
+ * @properties={typeid:24,uuid:"F54F628A-5678-4B83-AC8B-67DB495AE395"}
+ */
+function onDataChangeMarca() {
+	globals.vg_marca_id = vl_marca
+	vl_modelo = null
+	filtrar()
+}

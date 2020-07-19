@@ -193,10 +193,10 @@ dataProviderID:"vl_marca",
 displayType:10,
 formIndex:1,
 location:"10,10",
-onDataChangeMethodID:"CA757FBC-A833-413D-ACEF-49FC506030CF",
+onDataChangeMethodID:"717E16BA-D6AA-41B5-9CFA-E4A3CC6AAB03",
 typeid:4,
 uuid:"6C3CB37E-4B5C-4D25-877B-6F41839F6078",
-valuelistID:"ACE19FE9-7C0F-403B-8EAD-6ED6484D62BB"
+valuelistID:"1EF96E34-ADD0-456F-B844-3C9E7675166F"
 },
 {
 cssPosition:"85,-1,-1,5,45,35",
@@ -331,7 +331,7 @@ location:"10,10",
 onDataChangeMethodID:"CA757FBC-A833-413D-ACEF-49FC506030CF",
 typeid:4,
 uuid:"B77551E2-DE63-4400-820B-E450AB39B182",
-valuelistID:"A1941DA9-AB5C-4C1A-8839-CA661BD429C1"
+valuelistID:"C4E64E1F-4C47-4959-B6B3-3918FF5507AE"
 },
 {
 cssPosition:"80,-1,-1,226,196,20",
@@ -339,7 +339,7 @@ dataProviderID:"vl_herramienta",
 displayType:10,
 formIndex:1,
 location:"10,10",
-onDataChangeMethodID:"CA757FBC-A833-413D-ACEF-49FC506030CF",
+onDataChangeMethodID:"72F037A8-5B42-4581-B933-78B17311502D",
 typeid:4,
 uuid:"FFD9AC78-3012-4815-8A20-256C74F82341",
 valuelistID:"B3969C5F-97AB-4E17-A40B-AEED01B21300"

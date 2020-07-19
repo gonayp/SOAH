@@ -663,3 +663,25 @@ function onActionVerEstado(event) {
 	filtrar()
 
 }
+
+/**
+ *
+ * @properties={typeid:24,uuid:"E12EA0C7-3BF2-4FE5-8951-499F3EF81F53"}
+ */
+function onDataChangeHerramienta() {
+	globals.vg_herramienta_id = vl_herramienta
+	globals.vg_marca_id = null 
+	vl_marca = null
+	vl_modelo = null
+	filtrar()
+}
+
+/**
+ *
+ * @properties={typeid:24,uuid:"8F408A9D-42FA-4527-AA84-4F83B21F62C0"}
+ */
+function onDataChangeMarca() {
+	globals.vg_marca_id = vl_marca
+	vl_modelo = null
+	filtrar()
+}

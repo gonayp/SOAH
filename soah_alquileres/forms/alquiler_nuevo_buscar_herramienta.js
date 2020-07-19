@@ -210,3 +210,25 @@ function addHerramienta() {
 }
 
 
+
+/**
+ *
+ * @properties={typeid:24,uuid:"72F037A8-5B42-4581-B933-78B17311502D"}
+ */
+function onDataChangeHerramienta() {
+	globals.vg_herramienta_id = vl_herramienta
+	globals.vg_marca_id = null 
+	vl_marca = null
+	vl_modelo = null
+	filtrar()
+}
+
+/**
+ *
+ * @properties={typeid:24,uuid:"717E16BA-D6AA-41B5-9CFA-E4A3CC6AAB03"}
+ */
+function onDataChangeMarca() {
+	globals.vg_marca_id = vl_marca
+	vl_modelo = null
+	filtrar()
+}

@@ -181,7 +181,7 @@ location:"10,10",
 onDataChangeMethodID:"9AFB8DE8-99FF-48CB-8A27-41A0B1E398C1",
 typeid:4,
 uuid:"784B7CE4-28A0-4493-BA80-3EAFD70C6220",
-valuelistID:"A1941DA9-AB5C-4C1A-8839-CA661BD429C1"
+valuelistID:"C4E64E1F-4C47-4959-B6B3-3918FF5507AE"
 },
 {
 cssPosition:"129,-1,-1,73,140,20",
@@ -243,7 +243,7 @@ dataProviderID:"vl_herramienta",
 displayType:10,
 formIndex:1,
 location:"10,10",
-onDataChangeMethodID:"9AFB8DE8-99FF-48CB-8A27-41A0B1E398C1",
+onDataChangeMethodID:"481A926C-4455-4BB3-B827-F326E202DCB5",
 typeid:4,
 uuid:"C834ED8B-CCC7-48C7-AC94-10682B02B3E7",
 valuelistID:"B3969C5F-97AB-4E17-A40B-AEED01B21300"
@@ -296,10 +296,10 @@ dataProviderID:"vl_marca",
 displayType:10,
 formIndex:1,
 location:"10,10",
-onDataChangeMethodID:"9AFB8DE8-99FF-48CB-8A27-41A0B1E398C1",
+onDataChangeMethodID:"F54F628A-5678-4B83-AC8B-67DB495AE395",
 typeid:4,
 uuid:"ED07CA61-A008-4089-8872-4438FCBB9369",
-valuelistID:"ACE19FE9-7C0F-403B-8EAD-6ED6484D62BB"
+valuelistID:"1EF96E34-ADD0-456F-B844-3C9E7675166F"
 },
 {
 borderType:"TitledBorder,Filtros,0,0,Segoe UI,0,12,#000000",

@@ -196,14 +196,14 @@ function seleccionarMarca(displayValue, realValue, record, valueListName) {
 function seleccionarModelo(displayValue, realValue, record, valueListName) {
 	var args = null
 	if (displayValue == null && realValue == null) {
-		args = [scopes.usuario.vg_company_id,globals.vg_herramienta_id]
-		return databaseManager.getDataSetByQuery("gpp", "Select concat(m.modelo_codigo::varchar(255), '-', m.modelo_nombre), m.modelo_id from herr_modelo as m JoIN herr_equipo as e on e.modelo_id = m.modelo_id Where m.company_id = ? and e.herramienta_id = ? group by m.modelo_codigo,m.modelo_nombre,m.modelo_id", args, 100);
+		args = [scopes.usuario.vg_company_id,globals.vg_herramienta_id,globals.vg_marca_id]
+		return databaseManager.getDataSetByQuery("gpp", "Select concat(m.modelo_codigo::varchar(255), '-', m.modelo_nombre), m.modelo_id from herr_modelo as m JoIN herr_equipo as e on e.modelo_id = m.modelo_id Where m.company_id = ? and e.herramienta_id = ? and e.marca_id = ? group by m.modelo_codigo,m.modelo_nombre,m.modelo_id", args, 100);
 	} else if (displayValue != null) {
-		args = [scopes.usuario.vg_company_id,"%" + displayValue + "%", utils.stringToNumber(displayValue) ,globals.vg_herramienta_id]
-		return databaseManager.getDataSetByQuery("gpp", "Select concat(m.modelo_codigo::varchar(255), '-', m.modelo_nombre), m.modelo_id from herr_modelo as m JoIN herr_equipo as e on e.modelo_id = m.modelo_id Where m.company_id = ? and (m.modelo_nombre ilike ? OR m.modelo_codigo = ?) and e.herramienta_id = ? group by m.modelo_codigo,m.modelo_nombre,m.modelo_id ", args, 100);
+		args = [scopes.usuario.vg_company_id,"%" + displayValue + "%", utils.stringToNumber(displayValue) ,globals.vg_herramienta_id,globals.vg_marca_id]
+		return databaseManager.getDataSetByQuery("gpp", "Select concat(m.modelo_codigo::varchar(255), '-', m.modelo_nombre), m.modelo_id from herr_modelo as m JoIN herr_equipo as e on e.modelo_id = m.modelo_id Where m.company_id = ? and (m.modelo_nombre ilike ? OR m.modelo_codigo = ?) and e.herramienta_id = ? and e.marca_id = ? group by m.modelo_codigo,m.modelo_nombre,m.modelo_id ", args, 100);
 	} else if (realValue != null) {
-		args = [scopes.usuario.vg_company_id,realValue,globals.vg_herramienta_id];
-		return databaseManager.getDataSetByQuery("gpp", "Select concat(m.modelo_codigo::varchar(255), '-', m.modelo_nombre), m.modelo_id from herr_modelo as m JoIN herr_equipo as e on e.modelo_id = m.modelo_id Where m.company_id = ? and (m.modelo_nombre ilike ? OR m.modelo_codigo = ?) and m.modelo_id = ? and e.herramienta_id = ? group by m.modelo_codigo,m.modelo_nombre,m.modelo_id  ", args, 1);
+		args = [scopes.usuario.vg_company_id,realValue,globals.vg_herramienta_id,globals.vg_marca_id];
+		return databaseManager.getDataSetByQuery("gpp", "Select concat(m.modelo_codigo::varchar(255), '-', m.modelo_nombre), m.modelo_id from herr_modelo as m JoIN herr_equipo as e on e.modelo_id = m.modelo_id Where m.company_id = ? and (m.modelo_nombre ilike ? OR m.modelo_codigo = ?) and m.modelo_id = ? and e.herramienta_id = ? and e.marca_id = ? group by m.modelo_codigo,m.modelo_nombre,m.modelo_id  ", args, 1);
 	}
 	return null
 }

@@ -276,9 +276,10 @@ function onActionNuevoCambiarPrecio() {
  * @properties={typeid:24,uuid:"4DEEB56E-C39B-4F1B-A34E-A80DB03D424F"}
  */
 function onDataChangeHerramienta() {
+	globals.vg_herramienta_id = vl_herramienta
+	globals.vg_marca_id = null 
 	vl_marca = null
 	vl_modelo = null
-	globals.vg_herramienta_id = vl_herramienta
 	filtrar()
 }
 
@@ -379,4 +380,14 @@ function onActionVerEstado(event) {
 	
 	filtrar()
 
+}
+
+/**
+ *
+ * @properties={typeid:24,uuid:"AB9AF9C0-FAE4-4DD3-AAAC-A3C3DDE87336"}
+ */
+function onDataChangeMarca() {
+	globals.vg_marca_id = vl_marca
+	vl_modelo = null
+	filtrar()
 }

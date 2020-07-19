@@ -249,6 +249,9 @@ function onShow(firstShow) {
  */
 function onDataChangeHerramienta(oldValue, newValue, event) {
 	globals.vg_herramienta_id = vl_herramienta
+	globals.vg_marca_id = null 
+	vl_marca = null
+	vl_modelo = null
 	filtrar()
 }
 
@@ -339,4 +342,14 @@ function onActionVerEstado(event) {
 	
 	filtrar()
 
+}
+
+/**
+ *
+ * @properties={typeid:24,uuid:"75C63184-3504-43CB-94D7-5C0458DBC954"}
+ */
+function onDataChangeMarca() {
+	globals.vg_marca_id = vl_marca
+	vl_modelo = null
+	filtrar()
 }

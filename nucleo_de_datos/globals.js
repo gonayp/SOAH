@@ -1,6 +1,13 @@
 /**
  * @type {Number}
  *
+ * @properties={typeid:35,uuid:"FF3803FD-763B-4068-8FC6-26924DB98AC2",variableType:4}
+ */
+var vg_marca_id = null;
+
+/**
+ * @type {Number}
+ *
  * @properties={typeid:35,uuid:"277FE31A-8870-455D-8AD0-C67DAEE334CD",variableType:4}
  */
 var vg_producto = null;
