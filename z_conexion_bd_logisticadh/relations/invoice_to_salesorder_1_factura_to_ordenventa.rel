@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/logisticadh/salesorder",
+items:[
+{foreignColumnName:"sernr",primaryDataProviderID:"sonr",typeid:23,uuid:"B322FA92-A55C-481D-9C88-39DAA77E22AF"}
+],
+joinType:1,
+name:"invoice_to_salesorder_1_factura_to_ordenventa",
+primaryDataSource:"db:/logisticadh/invoice",
+typeid:22,
+uuid:"85E64FC1-032E-4DE3-A7DA-D5E12BCDD55A"

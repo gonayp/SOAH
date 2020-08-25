@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/logisticadh/attach",
+items:[
+{foreignColumnName:"originid",primaryDataProviderID:"code",typeid:23,uuid:"8A86EAFE-B2F3-434B-95A8-1010DD8754B6"}
+],
+joinType:1,
+name:"customer_to_attach_1_cliente_to_adjunto",
+primaryDataSource:"db:/logisticadh/customer",
+typeid:22,
+uuid:"DCD31EDF-06D2-44E4-AD2D-3130FE7C548B"

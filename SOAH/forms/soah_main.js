@@ -137,8 +137,9 @@ function cargarNombreUsuario(){
 				win.title= '';
 				win.show( forms.usuario_cambio_password );
 		}
-		if(fs_usuario.usuario_tipo != 2){//Adminostrador
+		if(fs_usuario.usuario_tipo != 2){//Administrador
 			elements.btn_administracion.visible = false
+			elements.btn_conexiones.visible = false
 		}
 	}
 	
@@ -625,3 +626,13 @@ function onActionNuevoProveedor() {
 
 
 
+
+/**
+ * @param {JSEvent} event
+ *
+ * @properties={typeid:24,uuid:"E69D271C-D008-4F83-807A-A60DD08B573A"}
+ */
+function onActionConexionesBDLogisticaDH(event) {
+	application.showForm(forms.main_menu)
+
+}

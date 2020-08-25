@@ -249,6 +249,29 @@ typeid:47,
 uuid:"2EDF92BE-2C53-42E7-BC67-DA4DEB1D7DC9"
 },
 {
+cssPosition:"4,88,-1,-1,45,30",
+json:{
+cssPosition:{
+bottom:"-1",
+height:"30",
+left:"-1",
+right:"88",
+top:"4",
+width:"45"
+},
+imageStyleClass:"fas fa-database",
+onActionMethodID:"E69D271C-D008-4F83-807A-A60DD08B573A",
+styleClass:"btn btn-default btn-success",
+tabSeq:-2,
+toolTipText:"Conexiones a BD anteriores"
+},
+name:"btn_conexiones",
+styleClass:"btn btn-default btn-success",
+typeName:"bootstrapcomponents-button",
+typeid:47,
+uuid:"34DB6890-F946-4B47-BD0F-45F56E6AF32F"
+},
+{
 cssPosition:"138,-1,-1,774,45,25",
 json:{
 cssPosition:{
@@ -299,13 +322,13 @@ typeid:7,
 uuid:"4910625A-70D6-4811-AC13-034D8A80D9A4"
 },
 {
-cssPosition:"4,84,-1,-1,45,30",
+cssPosition:"4,133,-1,-1,45,30",
 json:{
 cssPosition:{
 bottom:"-1",
 height:"30",
 left:"-1",
-right:"84",
+right:"133",
 top:"4",
 width:"45"
 },
@@ -667,13 +690,13 @@ typeid:47,
 uuid:"B599E547-BD76-4F26-AC6B-D1E92B149FEB"
 },
 {
-cssPosition:"4,42,-1,-1,45,30",
+cssPosition:"4,43,-1,-1,45,30",
 json:{
 cssPosition:{
 bottom:"-1",
 height:"30",
 left:"-1",
-right:"42",
+right:"43",
 top:"4",
 width:"45"
 },

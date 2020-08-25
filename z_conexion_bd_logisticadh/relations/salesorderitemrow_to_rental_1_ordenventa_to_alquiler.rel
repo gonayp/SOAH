@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/logisticadh/rental",
+items:[
+{foreignColumnName:"sernr",primaryDataProviderID:"originsernr",typeid:23,uuid:"AFB6CDD9-70BA-4A45-9783-63505B0ED96A"}
+],
+joinType:1,
+name:"salesorderitemrow_to_rental_1_ordenventa_to_alquiler",
+primaryDataSource:"db:/logisticadh/salesorderitemrow",
+typeid:22,
+uuid:"D5D41154-4655-4FD3-A741-98E3866FDF74"

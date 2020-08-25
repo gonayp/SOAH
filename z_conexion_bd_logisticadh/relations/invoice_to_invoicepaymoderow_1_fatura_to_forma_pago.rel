@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/logisticadh/invoicepaymoderow",
+items:[
+{foreignColumnName:"masterid",primaryDataProviderID:"internalid",typeid:23,uuid:"F77BDB3C-CDFC-4335-A1BB-7B98AB7BC423"}
+],
+joinType:1,
+name:"invoice_to_invoicepaymoderow_1_fatura_to_forma_pago",
+primaryDataSource:"db:/logisticadh/invoice",
+typeid:22,
+uuid:"A0C70B9B-1FB7-4EAF-AEC8-33472C41AB98"

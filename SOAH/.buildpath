@@ -17,4 +17,5 @@
 	<buildpathentry exported="true" kind="prj" path="/soah_facturacion"/>
 	<buildpathentry exported="true" kind="prj" path="/vent_clientes"/>
 	<buildpathentry exported="true" kind="prj" path="/web_packages"/>
+	<buildpathentry exported="true" kind="prj" path="/z_conexion_bd_logisticadh"/>
 </buildpath>

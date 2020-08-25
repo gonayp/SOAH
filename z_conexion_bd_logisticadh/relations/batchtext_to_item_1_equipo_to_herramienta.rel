@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/logisticadh/item",
+items:[
+{foreignColumnName:"code",primaryDataProviderID:"artcode",typeid:23,uuid:"A8B53BDE-57CC-4E85-85EF-89779E6EE09B"}
+],
+joinType:1,
+name:"batchtext_to_item_1_equipo_to_herramienta",
+primaryDataSource:"db:/logisticadh/batchtext",
+typeid:22,
+uuid:"BEEBF22B-5397-466D-917A-23AB2CB10A54"

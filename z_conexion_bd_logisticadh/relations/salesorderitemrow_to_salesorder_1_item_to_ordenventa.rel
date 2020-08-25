@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/logisticadh/salesorder",
+items:[
+{foreignColumnName:"internalid",primaryDataProviderID:"masterid",typeid:23,uuid:"5C24D07D-3AF8-4359-9D41-B9D6993981EE"}
+],
+joinType:1,
+name:"salesorderitemrow_to_salesorder_1_item_to_ordenventa",
+primaryDataSource:"db:/logisticadh/salesorderitemrow",
+typeid:22,
+uuid:"60778018-33BD-464C-9E77-404747E179B0"

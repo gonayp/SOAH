@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/logisticadh/rentalitemrow",
+items:[
+{foreignColumnName:"masterid",primaryDataProviderID:"internalid",typeid:23,uuid:"1A824925-4B95-4A7D-95AA-55C7A4755C97"}
+],
+joinType:1,
+name:"rental_to_rentalitemrow_1_alquiler_to_item",
+primaryDataSource:"db:/logisticadh/rental",
+typeid:22,
+uuid:"F16B23C2-9E93-4C99-A6E7-3D634B428B13"

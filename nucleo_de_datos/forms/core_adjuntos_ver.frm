@@ -121,7 +121,7 @@ cssPosition:"0,0,-1,0,642,40",
 location:"10,10",
 styleClass:"banner",
 tabSeq:-2,
-text:"Nuevo adjunto",
+text:"Adjunto",
 typeid:7,
 uuid:"CDFFB4D8-2D77-465A-A260-665C386014FE",
 verticalAlignment:1

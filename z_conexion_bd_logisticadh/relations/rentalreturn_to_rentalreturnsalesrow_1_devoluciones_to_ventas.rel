@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/logisticadh/rentalreturnsalesrow",
+items:[
+{foreignColumnName:"masterid",primaryDataProviderID:"internalid",typeid:23,uuid:"EB4539D4-65E4-4C10-88BE-71E26F0AB573"}
+],
+joinType:1,
+name:"rentalreturn_to_rentalreturnsalesrow_1_devoluciones_to_ventas",
+primaryDataSource:"db:/logisticadh/rentalreturn",
+typeid:22,
+uuid:"98002E2C-9CDC-4519-9322-0A3EBCB34A67"
