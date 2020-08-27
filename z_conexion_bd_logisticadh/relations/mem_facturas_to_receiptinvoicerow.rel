@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/logisticadh/receiptinvoicerow",
+items:[
+{foreignColumnName:"invoicenr",primaryDataProviderID:"sernr",typeid:23,uuid:"A09947AC-EA0B-49BB-A743-3DEF94E11AB8"}
+],
+joinType:1,
+name:"mem_facturas_to_receiptinvoicerow",
+primaryDataSource:"mem:mem_facturas",
+typeid:22,
+uuid:"BF439ACA-6CFD-47D4-B996-4CBF7FDDFD37"

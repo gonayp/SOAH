@@ -55,3 +55,13 @@ function onActionImportar(event) {
 	application.showForm(forms.administracion_importaciones)
 
 }
+
+/**
+ * @param {JSEvent} event
+ *
+ * @properties={typeid:24,uuid:"F9D7A47C-5305-47F5-A0CB-F0C868E09EE2"}
+ */
+function onActionEmpresa(event) {
+	application.showForm(forms.administracion_empresa)
+
+}

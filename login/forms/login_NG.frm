@@ -41,11 +41,20 @@ items:[
 json:{
 dataProviderID:"vl_logo",
 enabled:true,
+location:{
+x:1,
+y:1
+},
+size:{
+height:20,
+width:300
+},
 styleClass:"loginLogo",
 tabSeq:-2
 },
 location:"1,1",
 name:"imagemedia",
+size:"300,20",
 styleClass:"loginLogo",
 typeName:"bootstrapcomponents-imagemedia",
 typeid:47,
@@ -67,9 +76,17 @@ specname:\"column\"\
 items:[
 {
 json:{
-
+location:{
+x:2,
+y:2
 },
-location:"1,1",
+size:{
+height:100,
+width:200
+},
+visible:true
+},
+location:"2,2",
 name:"l_titulo",
 size:"200,100",
 typeName:"bootstrapcomponents-label",
@@ -127,6 +144,10 @@ json:{
 dataProviderID:"vl_usuario",
 faclass:"fa-user fa-fw",
 inputType:"text",
+location:{
+x:1,
+y:1
+},
 placeholderText:"Usuario",
 tabSeq:1
 },
@@ -144,6 +165,10 @@ json:{
 dataProviderID:"vl_contrasenia",
 faclass:"fa-unlock-alt fa-fw",
 inputType:"password",
+location:{
+x:2,
+y:2
+},
 onDataChangeMethodID:null,
 placeholderText:"Contraseña",
 tabSeq:2
@@ -239,7 +264,7 @@ y:2
 },
 onActionMethodID:"7FF8C37F-209E-442D-8491-16CA9B5FB321",
 size:{
-height:101,
+height:100,
 width:200
 },
 styleClass:"btn btn-default btn-success",
@@ -293,7 +318,14 @@ specname:\"column\"\
 items:[
 {
 json:{
-
+location:{
+x:1,
+y:1
+},
+size:{
+height:100,
+width:200
+}
 },
 location:"1,1",
 name:"label_error",
@@ -329,6 +361,6 @@ onLoadMethodID:"86A64A25-E55A-44C3-A693-DCA61A2EC8D9",
 onShowMethodID:"6C0E26CA-037C-40CF-AE5E-F33C3DAB7982",
 showInMenu:true,
 styleClass:"form-login",
-titleText:"Login Integra",
+titleText:"Login",
 typeid:3,
 uuid:"61F220D7-46CE-4255-A0CC-F8C7524066F4"

@@ -26,7 +26,6 @@ uuid:"47E130C4-BFC1-4273-B2D1-72EEE8A3A135"
 },
 {
 cssPosition:"57,-1,-1,75,176,65",
-enabled:false,
 formIndex:1,
 json:{
 cssPosition:{
@@ -37,12 +36,12 @@ right:"-1",
 top:"57",
 width:"176"
 },
-enabled:false,
 formIndex:1,
 imageStyleClass:"fas fa-dolly-flatbed",
-onActionMethodID:"03927C0E-CE05-470A-BC8B-FE8A94C896C6",
+onActionMethodID:"F9D7A47C-5305-47F5-A0CB-F0C868E09EE2",
 styleClass:"btn btn-default btn-secundary",
-text:"Empresa"
+text:"Empresa",
+visible:true
 },
 name:"btn_empresa",
 styleClass:"btn btn-default btn-secundary",

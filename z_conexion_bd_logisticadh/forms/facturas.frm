@@ -172,12 +172,6 @@ svyUUID:"ED236ED8-3347-4BBA-904D-200B1354A7D7",
 width:"150"
 },
 {
-dataprovider:"user",
-headerText:"user",
-svyUUID:"33793EB6-E391-4229-852E-72A21DA0A9D3",
-width:"100"
-},
-{
 dataprovider:"computer",
 headerText:"computer",
 svyUUID:"FF6C162C-6854-4827-A81C-886A1405C052",
@@ -244,7 +238,7 @@ width:"150"
 },
 {
 dataprovider:"officialsernr",
-headerText:"OfficialSerNro",
+headerText:"OfficialSerNr",
 svyUUID:"23825DC3-3D12-46BD-8B86-6EF55D98BB6A",
 width:"150"
 },

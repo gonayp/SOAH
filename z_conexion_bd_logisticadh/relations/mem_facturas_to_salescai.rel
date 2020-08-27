@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/logisticadh/salescai",
+items:[
+{foreignColumnName:"sernr",primaryDataProviderID:"sernr",typeid:23,uuid:"CD385AFC-D5E5-4C4F-A84A-2628358DA400"}
+],
+joinType:1,
+name:"mem_facturas_to_salescai",
+primaryDataSource:"mem:mem_facturas",
+typeid:22,
+uuid:"2B390418-AD52-4BA4-8A56-E7436C33B451"

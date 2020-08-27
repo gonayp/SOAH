@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/logisticadh/invoiceitemrow",
+items:[
+{foreignColumnName:"masterid",primaryDataProviderID:"internalid",typeid:23,uuid:"E3548DAB-8229-48E8-B737-2ED8FEDB1A31"}
+],
+joinType:1,
+name:"mem_facturas_to_invoiceitemrow_1_facturas_to_item",
+primaryDataSource:"mem:mem_facturas",
+typeid:22,
+uuid:"74DABA4F-8A86-4715-BCC5-EC7C2C524157"

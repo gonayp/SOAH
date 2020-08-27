@@ -79,3 +79,13 @@ function onActionOrdenVenta(event) {
 	application.showForm(forms.ordenes_venta)
 
 }
+
+/**
+ * @param {JSEvent} event
+ *
+ * @properties={typeid:24,uuid:"6C6383F4-3005-4FE7-826B-F1BA270F6CE2"}
+ */
+function onActionFacturasVer(event) {
+	application.showForm(forms.invoice)
+
+}

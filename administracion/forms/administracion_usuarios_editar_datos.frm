@@ -203,6 +203,15 @@ editable:false,
 typeid:4,
 uuid:"ECB5BA01-B6DB-48D3-A2B5-1E1CA8F94831",
 valuelistID:"F5A3B31E-C5CB-4519-BD91-2001F3B32618"
+},
+{
+cssPosition:"173,-1,-1,405,140,20",
+dataProviderID:"usuario_super",
+displayType:4,
+text:"Super Usuario",
+toolTipText:"Acceso a BD. Autorización NO recomendada",
+typeid:4,
+uuid:"F4DB4D9B-C6DC-4D51-9441-B975F54E2E74"
 }
 ],
 name:"administracion_usuarios_editar_datos",

@@ -11,9 +11,9 @@
 "LABEL_WIDTH":"",
 "MEDIA":"servoydefault-imagemedia",
 "NUMBER":"servoydefault-textfield",
-"PLACE_HORIZONTALLY":true,
-"PLACE_ON_TOP":true,
-"PLACE_WITH_LABELS":true,
+"PLACE_HORIZONTALLY":false,
+"PLACE_ON_TOP":false,
+"PLACE_WITH_LABELS":false,
 "TEXT":"servoydefault-textfield"
 }
 }

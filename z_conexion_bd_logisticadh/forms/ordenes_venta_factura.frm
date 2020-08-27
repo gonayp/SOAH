@@ -51,12 +51,6 @@ svyUUID:"C7A85609-8990-4F21-AE6C-C6C8435B2FCD",
 width:"150"
 },
 {
-dataprovider:"user",
-headerText:"user",
-svyUUID:"D3431130-53CF-4B16-9DF6-C4EE5B7549E7",
-width:"100"
-},
-{
 dataprovider:"computer",
 headerText:"computer",
 svyUUID:"1BE1643C-F964-48E2-A127-20E898D1E602",

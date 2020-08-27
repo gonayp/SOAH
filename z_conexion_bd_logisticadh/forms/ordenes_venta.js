@@ -1,4 +1,11 @@
 /**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"6166D595-8FE3-48FA-871C-6602A7CC5A08",variableType:4}
+ */
+var vl_origen = null;
+
+/**
  * @type {String}
  *
  * @properties={typeid:35,uuid:"2E80EC91-62DC-44A7-BD78-FABE15B14F6A"}
@@ -56,6 +63,9 @@ function filtrar() {
 		foundset.custcode  = '%'+vl_codigo+'%'
 	if(vl_nombre != null && vl_nombre != '')
 		foundset.custname = '%'+vl_nombre+'%'
+	if(vl_origen != null){
+		foundset.origintype	= vl_origen
+	}
 	//if(vl_pendiente == 1)
 		//foundset.status = 2
 	foundset.search()
@@ -75,6 +85,7 @@ function filtrar() {
 function onShow(firstShow, event) {
 	if(firstShow){
 		vl_pendiente = 1
+		vl_origen = null
 		vl_fecha_fin = application.getServerTimeStamp()
 		vl_fecha_ini = new Date(2019,1,1)
 		filtrar()

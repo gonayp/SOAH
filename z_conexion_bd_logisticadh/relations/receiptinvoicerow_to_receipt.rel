@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/logisticadh/receipt",
+items:[
+{foreignColumnName:"internalid",primaryDataProviderID:"masterid",typeid:23,uuid:"FCADCE89-4CF0-4792-BC1F-1BDC712C3E2F"}
+],
+joinType:1,
+name:"receiptinvoicerow_to_receipt",
+primaryDataSource:"db:/logisticadh/receiptinvoicerow",
+typeid:22,
+uuid:"0D9CF292-5051-4210-B3D3-CB337E45A2EF"

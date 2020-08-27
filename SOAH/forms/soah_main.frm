@@ -404,7 +404,7 @@ typeid:7,
 uuid:"5D45D2A4-ACEF-447D-88F7-FF7F49782D83"
 },
 {
-cssPosition:"0,-1,-1,0,122,97",
+cssPosition:"0,-1,-1,0,497,97",
 dataProviderID:"vl_logo_empresa",
 displayType:9,
 editable:false,
@@ -930,14 +930,6 @@ styleClass:"banner_fino",
 tabSeq:-2,
 typeid:7,
 uuid:"D5DBCBD2-B0B8-42F6-9DD3-4CF31625C46A"
-},
-{
-cssPosition:"7,-1,-1,131,373,79",
-dataProviderID:"vl_nombre_empresa",
-fontType:"0,0,31,Dialog",
-tabSeq:-2,
-typeid:7,
-uuid:"E2C834F2-62DF-47BC-844D-BE7F2E3F8412"
 },
 {
 cssPosition:"320,0,-1,0,640,10",
