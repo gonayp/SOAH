@@ -4,7 +4,7 @@ items:[
 {foreignColumnName:"sonr",primaryDataProviderID:"sernr",typeid:23,uuid:"E48F61D9-889F-496F-AF88-7D4D15FC0096"}
 ],
 joinType:1,
-name:"salesorder_to_invoice_ordenventa_to_factura",
+name:"salesorder_to_invoice_1_ordenventa_to_factura",
 primaryDataSource:"db:/logisticadh/salesorder",
 typeid:22,
 uuid:"BC80C951-9546-42FA-AA35-8FB8AC60EEDD"

@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/logisticadh/rental",
+items:[
+{foreignColumnName:"custcode",primaryDataProviderID:"code",typeid:23,uuid:"32EB9556-A51B-477F-AF10-3633D6B356C4"}
+],
+joinType:1,
+name:"customer_to_rental_1_cliente_to_alquiler",
+primaryDataSource:"db:/logisticadh/customer",
+typeid:22,
+uuid:"7CB2332F-40B1-4CA1-A8D0-499C85F2C74E"

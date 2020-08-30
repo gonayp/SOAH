@@ -1,4 +1,18 @@
 /**
+ * @type {String}
+ *
+ * @properties={typeid:35,uuid:"00E22B90-B60E-46B8-B32D-3557958A394D"}
+ */
+var vl_nombre = null;
+
+/**
+ * @type {String}
+ *
+ * @properties={typeid:35,uuid:"EBE875EA-AE1C-4724-BC60-4D37CE15CBD2"}
+ */
+var vl_codigo = null;
+
+/**
  * @type {Date}
  *
  * @properties={typeid:35,uuid:"7027B0E9-6A8A-4591-AC10-B17264457B29",variableType:93}
@@ -41,6 +55,10 @@ function filtrar() {
 	foundset.transdate = utils.dateFormat(vl_fecha_ini, 'yyyy-MM-dd') + ' 00:00:00...' + utils.dateFormat(vl_fecha_fin, 'yyyy-MM-dd') + ' 23:59:59|yyyy-MM-dd HH:mm:ss'
 	if(vl_pendiente == 1)
 		foundset.status = 2
+	if(vl_codigo != null && vl_codigo != '')
+		foundset.custcode  = '%'+vl_codigo+'%'
+	if(vl_nombre != null && vl_nombre != '')
+		foundset.custname = '%'+vl_nombre+'%'
 	foundset.search()
 	
 	foundset.sort("internalid desc")

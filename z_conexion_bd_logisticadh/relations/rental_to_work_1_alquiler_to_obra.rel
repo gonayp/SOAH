@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/logisticadh/work",
+items:[
+{foreignColumnName:"code",primaryDataProviderID:"work",typeid:23,uuid:"E45CED93-1AAA-4B41-86F0-874623E25985"}
+],
+joinType:1,
+name:"rental_to_work_1_alquiler_to_obra",
+primaryDataSource:"db:/logisticadh/rental",
+typeid:22,
+uuid:"6FC58850-BD0A-4323-997E-87F9006584E9"

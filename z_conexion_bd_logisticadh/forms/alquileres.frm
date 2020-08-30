@@ -4,7 +4,7 @@ dataSource:"db:/logisticadh/rental",
 encapsulation:108,
 items:[
 {
-cssPosition:"65,-1,-1,715,140,20",
+cssPosition:"35,-1,-1,715,140,20",
 dataProviderID:"vl_fecha_ini",
 displayType:5,
 formIndex:2,
@@ -12,6 +12,13 @@ format:"dd/MM/yy|mask",
 onDataChangeMethodID:"86B37E46-A4F0-4CDE-8CB0-AA9934C73F4A",
 typeid:4,
 uuid:"02830891-8B44-4E14-9EE4-AA46DB8F4FA2"
+},
+{
+cssPosition:"36,-1,-1,551,140,19",
+dataProviderID:"vl_nombre",
+onDataChangeMethodID:"86B37E46-A4F0-4CDE-8CB0-AA9934C73F4A",
+typeid:4,
+uuid:"1C2F4483-284D-45A2-884D-E556B78AEFCD"
 },
 {
 height:792,
@@ -46,7 +53,7 @@ typeid:16,
 uuid:"46E3077A-7973-4B07-BADA-D70F3971A82C"
 },
 {
-cssPosition:"45,-1,-1,715,119,20",
+cssPosition:"15,-1,-1,715,119,20",
 formIndex:3,
 text:"Fecha Inicial",
 transparent:true,
@@ -195,7 +202,30 @@ typeid:47,
 uuid:"92D3AC5F-4B87-4DD9-A4FD-6C2E99E0E035"
 },
 {
-cssPosition:"45,-1,-1,860,95,20",
+cssPosition:"16,-1,-1,551,80,19",
+formIndex:6,
+text:"Nombre",
+transparent:true,
+typeid:7,
+uuid:"96F4EC9B-18E4-48F0-B23F-24CD7D03AE81"
+},
+{
+cssPosition:"16,-1,-1,451,80,19",
+formIndex:5,
+text:"Codigo",
+transparent:true,
+typeid:7,
+uuid:"A257C894-4357-4551-AB5C-BE59982905A0"
+},
+{
+cssPosition:"36,-1,-1,451,80,19",
+dataProviderID:"vl_codigo",
+onDataChangeMethodID:"86B37E46-A4F0-4CDE-8CB0-AA9934C73F4A",
+typeid:4,
+uuid:"A270EDC7-4EE1-4966-A632-F02C22425A2A"
+},
+{
+cssPosition:"15,-1,-1,860,95,20",
 formIndex:4,
 text:"Fecha Final",
 transparent:true,
@@ -210,7 +240,7 @@ typeid:7,
 uuid:"CC1233BB-CC91-4F32-8F41-09A3A9CD04E6"
 },
 {
-cssPosition:"36,-1,-1,451,229,20",
+cssPosition:"68,-1,-1,451,229,20",
 dataProviderID:"vl_pendiente",
 displayType:4,
 onActionMethodID:"4785D5BE-1522-4F15-8EE2-3D3726FCF4D3",
@@ -220,7 +250,7 @@ typeid:4,
 uuid:"E31E55E0-A561-454E-BDBF-2AF57A47227B"
 },
 {
-cssPosition:"65,-1,-1,860,140,20",
+cssPosition:"35,-1,-1,860,140,20",
 dataProviderID:"vl_fecha_fin",
 displayType:5,
 formIndex:4,

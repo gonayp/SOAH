@@ -19,7 +19,7 @@ typeid:4,
 uuid:"35F2E617-1046-474A-902C-932E6BD77E94"
 },
 {
-cssPosition:"100,0,215,0,634,375",
+cssPosition:"100,0,278,0,634,300",
 json:{
 columns:[
 {
@@ -27,6 +27,12 @@ dataprovider:"internalid",
 headerText:"internalid",
 svyUUID:"F0CDAA00-F3F1-4472-949D-9768AAD2740E",
 width:"100"
+},
+{
+dataprovider:"code",
+headerText:"code",
+svyUUID:"CD85A741-75CE-498F-B531-3B1E89E95B85",
+width:"150"
 },
 {
 dataprovider:"fantasyname",
@@ -115,8 +121,8 @@ width:null
 }
 ],
 cssPosition:{
-bottom:"215",
-height:"375",
+bottom:"278",
+height:"300",
 left:"0",
 right:"0",
 top:"100",
@@ -179,11 +185,19 @@ typeid:47,
 uuid:"C422B5BA-B07C-4E86-8934-1F1C5BE9512B"
 },
 {
-cssPosition:"-1,0,0,0,640,210",
+cssPosition:"-1,0,10,0,640,268",
 items:[
 {
+containsFormID:"11341302-69D9-4800-8642-5C5FDAC9EBF3",
+location:"86,382",
+relationName:"customer_to_salesorder_1_cliente_to_ordenesventa",
+text:"Ordenes Venta",
+typeid:15,
+uuid:"5C38041B-5CA2-4072-B1A8-F2AD9DD8B2C8"
+},
+{
 containsFormID:"713C7B0A-00E7-4E13-A19B-8838ED655910",
-location:"1,392",
+location:"199,380",
 relationName:"customer_to_attach_1_cliente_to_adjunto",
 text:"adjuntos",
 typeid:15,

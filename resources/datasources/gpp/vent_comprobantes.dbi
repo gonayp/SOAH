@@ -300,6 +300,12 @@ allowNull:true,
 creationOrderIndex:44,
 dataType:4,
 name:"comp_id_recibo"
+},
+{
+allowNull:true,
+creationOrderIndex:45,
+dataType:4,
+name:"serialnumber"
 }
 ],
 name:"vent_comprobantes",

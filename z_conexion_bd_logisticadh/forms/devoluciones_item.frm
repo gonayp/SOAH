@@ -73,7 +73,7 @@ width:"100"
 dataprovider:"serialnr",
 headerText:"serialNr",
 svyUUID:"7609FEFB-1C61-488A-83FA-BADF7FA73747",
-width:"100"
+width:"150"
 },
 {
 dataprovider:"price",

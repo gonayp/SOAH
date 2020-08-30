@@ -89,3 +89,13 @@ function onActionFacturasVer(event) {
 	application.showForm(forms.invoice)
 
 }
+
+/**
+ * @param {JSEvent} event
+ *
+ * @properties={typeid:24,uuid:"E888161D-C21B-4893-89EF-AB0738CC04C6"}
+ */
+function onActionImportar(event) {
+	application.showForm(forms.administracion_importaciones)
+
+}

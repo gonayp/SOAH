@@ -1,0 +1,10 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/logisticadh/work",
+items:[
+{foreignColumnName:"custcode",primaryDataProviderID:"code",typeid:23,uuid:"AF67A92F-5E50-4C94-9ECC-92D961642617"}
+],
+joinType:1,
+name:"customer_to_work_1_cliente_to_obras",
+primaryDataSource:"db:/logisticadh/customer",
+typeid:22,
+uuid:"215F69BA-9E82-4FA9-9988-FD99F121E0F8"
