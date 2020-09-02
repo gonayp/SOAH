@@ -440,14 +440,11 @@ function onActionImportarEquipamentos(event) {
 	/** @type {JSFoundSet<db:/logisticadh/batchtext>} */
 	var fs_bacthtext = databaseManager.getFoundSet('logisticadh', 'batchtext')
 	
-	var spinner = 'Chasing dots'
-	var overlayOpacity = 0.7
-	plugins.svyBlockUI.overlayColor = "black"
-	plugins.svyBlockUI.overlayOpacity = overlayOpacity
-	plugins.svyBlockUI.spinner = spinner
-	plugins.svyBlockUI.spinnerBgColor = "yellow"
-	plugins.svyBlockUI.show("Cargando...")
+	elements.btn_e.enabled = false
+	elements.btn_t.enabled = false
+	elements.btn_v.enabled = false
 	
+	plugins.webnotificationsToastr.info("Comienza el proceso de importacion")
 	
 	fs_bacthtext.loadAllRecords()
 	var nRecordCount = 0
@@ -573,8 +570,11 @@ function onActionImportarEquipamentos(event) {
 		databaseManager.saveData()
 		
 	}
-	plugins.svyBlockUI.stop()
-
+	elements.btn_e.enabled = true
+	elements.btn_t.enabled = true
+	elements.btn_v.enabled = true
+	
+	plugins.webnotificationsToastr.info("Finaliza el proceso de importacion")
 }
 
 /**
@@ -585,8 +585,8 @@ function onActionImportarEquipamentos(event) {
  */
 function onActionTodo(event) {
 	
-	/** @type {JSFoundSet<db:/logisticadh/customer>} */
-	var fs_customer = databaseManager.getFoundSet('logisticadh', 'customer')
+	/** @type {JSFoundSet<db:/logisticadh/Customer>} */
+	var fs_customer = databaseManager.getFoundSet('logisticadh', 'Customer')
 	
 	/** @type {JSFoundSet<db:/gpp/vent_clientes>} */
 	var fs_vent_clientes = databaseManager.getFoundSet('gpp', 'vent_clientes')
@@ -638,7 +638,8 @@ function onActionTodo(event) {
 	for (var i = 1; i <= nCount; i++) {
 		var myCliente = fs_customer.getRecord(i);
 		
-		plugins.svyBlockUI.show("Cliente " + myCliente.name+ " \t "+i+"/"+nCount)
+		
+		plugins.svyBlockUI.show("Código de Cliente " + myCliente.code+ " - "+ Math.round((i*100)/nCount)+" %")
 		
 		//Creamos el core
 		fs_core.find()

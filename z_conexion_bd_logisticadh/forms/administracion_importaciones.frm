@@ -120,7 +120,7 @@ imageStyleClass:"fas fa-undo-alt",
 onActionMethodID:"DCAFEC87-A692-488C-A624-6377E5E4D2AB",
 toolTipText:"Volver"
 },
-name:"button_1",
+name:"btn_v",
 typeName:"bootstrapcomponents-button",
 typeid:47,
 uuid:"C42F2125-CFB8-4819-8D22-93E888007490"
@@ -223,7 +223,7 @@ imageStyleClass:"fas fa-users",
 onActionMethodID:"0A074E11-2C21-40BB-B1B5-BEBAE65FAF41",
 text:"Todo"
 },
-name:"btn_c",
+name:"btn_t",
 typeName:"bootstrapcomponents-button",
 typeid:47,
 uuid:"F91CEC01-C76A-471F-9BAE-0C10637470E9"

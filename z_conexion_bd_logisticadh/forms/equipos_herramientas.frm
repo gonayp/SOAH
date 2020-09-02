@@ -7,7 +7,7 @@ items:[
 background:"#808040",
 cssPosition:"0,0,-1,0,80,20",
 fontType:"1,1,12,Dialog",
-text:"Alquileres",
+text:"Herramienta",
 typeid:7,
 uuid:"14095DD8-8654-4A3B-9562-2E8DD8BCF6DE"
 },

@@ -46,15 +46,7 @@ function onActionControlLogin() {
 
 }
 
-/**
- * @param {JSEvent} event
- *
- * @properties={typeid:24,uuid:"09EF10E5-C07F-4E88-BE22-6A19348C8C4C"}
- */
-function onActionImportar(event) {
-	application.showForm(forms.administracion_importaciones)
 
-}
 
 /**
  * @param {JSEvent} event
