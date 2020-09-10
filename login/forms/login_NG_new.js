@@ -103,7 +103,7 @@ function onLoad() {
 	
 	vl_logo		= fs_company.company_logo
 	vl_titulo 	= fs_company.core_company_to_core.core_razon_social
-	elements.l_titulo.text = vl_titulo
+	//elements.l_titulo.text = vl_titulo
 	
 	
 }

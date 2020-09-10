@@ -137,20 +137,21 @@ function onShow(firstShow, event) {
 		
 	
 	//Actualizar pestaña de otros alquileres
-	forms.devolucion_nuevo_alquileres.foundset.find()
+	/*forms.devolucion_nuevo_alquileres.foundset.find()
 	forms.devolucion_nuevo_alquileres.foundset.vent_comprobante_herramientas_to_vent_comprobantes.cliente_id = cliente_id
 	forms.devolucion_nuevo_alquileres.foundset.comp_devolucion	= '^=' //Los equipos alquilados tienen este campo en null
 	forms.devolucion_nuevo_alquileres.foundset.vent_comprobante_herramientas_to_vent_comprobantes.comp_codigo = 1
-	forms.devolucion_nuevo_alquileres.foundset.search()
+	forms.devolucion_nuevo_alquileres.foundset.search()*/
 	
 	//Actualizar pestaña de estado de cliente
-	forms.devolucion_nuevo_estado_cliente.foundset.find()
+	/*forms.devolucion_nuevo_estado_cliente.foundset.find()
 	forms.devolucion_nuevo_estado_cliente.foundset.cliente_id		= cliente_id
 	forms.devolucion_nuevo_estado_cliente.foundset.comp_codigo		= 2  //TODO Añadir comprobantes de factura
 	forms.devolucion_nuevo_estado_cliente.foundset.comp_estado_id	= 5 //pendiente de facturar
 	forms.devolucion_nuevo_estado_cliente.foundset.search()
 	forms.devolucion_nuevo_estado_cliente.inicializarTotales()
-	forms.devolucion_nuevo_estado_cliente.calcularTotales()
+	forms.devolucion_nuevo_estado_cliente.calcularTotales()*/
+	
 	
 }
 
@@ -214,7 +215,7 @@ function calculoTotales(){
  */
 function calculoTotalesSinModificar(){
 	calculoDiasPrecioSinModificar()//Alquileres
-	calculoVentasSinModificar()
+	calculoVentasSinModificar()//Ventas
 	
 	vl_subtotal = comp_imp_alqu + comp_imp_ventas
 	//comp_imp_iva2 = vl_subtotal * 0.21
@@ -246,9 +247,9 @@ function calculoVentasSinModificar(){
 	comp_imp_ventas = 0	
 	
 	var nRecordCount = 0
-	nRecordCount = databaseManager.getFoundSetCount(forms.devolucion_ver_ventas.foundset);
+	nRecordCount = databaseManager.getFoundSetCount(foundset.vent_comprobantes_to_vent_comprobante_productos);
 	for (var index = 1; index <= nRecordCount; index++) {
-		var myProducto= forms.devolucion_ver_ventas.foundset.getRecord(index);
+		var myProducto= foundset.vent_comprobantes_to_vent_comprobante_productos.getRecord(index);
 		myProducto.calc_total = myProducto.comp_cantidad * myProducto.comp_precio
 		//comp_imp_ventas += myProducto.calc_total
 	}
@@ -314,16 +315,17 @@ function calculoDiasPrecioSinModificar(){
 	
 	var vl_fecha_devolucion = comp_fecha_emision
 	
-	forms.devolucion_ver_herramientas.foundset.loadAllRecords()
+	
 	
 	var nRecordCount = 0
-	nRecordCount = databaseManager.getFoundSetCount(forms.devolucion_ver_herramientas.foundset);
+	nRecordCount = databaseManager.getFoundSetCount(foundset.vent_comprobantes_to_vent_comprobante_herramientas);
 	for (var index = 1; index <= nRecordCount; index++) {
-		var myHerramienta = forms.devolucion_ver_herramientas.foundset.getRecord(index);
+		var myHerramienta = foundset.vent_comprobantes_to_vent_comprobante_herramientas.getRecord(index);
 		
-		
-		
-		var x = vl_fecha_devolucion - myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes_alquiler.comp_fecha_emision //substracting two dates returns difference in milliseconds 
+		var x = 0
+		if(utils.hasRecords(myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes_alquiler)){
+			x = vl_fecha_devolucion - myHerramienta.vent_comprobante_herramientas_to_vent_comprobantes_alquiler.comp_fecha_emision //substracting two dates returns difference in milliseconds
+		} 
 		var one_day=1000*60*60*24 //ms * sec * min * hrs in a day 
 	
 	

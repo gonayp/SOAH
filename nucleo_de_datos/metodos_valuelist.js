@@ -23,7 +23,7 @@ function seleccionarCliente(displayValue, realValue, record, valueListName) {
 		return databaseManager.getDataSetByQuery("gpp", "select concat(cl.cliente_codigo::varchar(255), '-', co.core_nombre), cl.cliente_id from vent_clientes as cl inner join core as co on cl.core_id = co.core_id where cl.company_id = ? and  cl.cliente_estado = 1 and (co.core_nombre ilike ? OR cl.cliente_codigo = ?)", args, 100);
 	} else if (realValue != null) {
 		args = [scopes.usuario.vg_company_id,realValue];
-		return databaseManager.getDataSetByQuery("gpp", "select concat(cl.cliente_codigo::varchar(255), '-', co.core_nombre), cl.cliente_id from vent_clientes as cl inner join core as co on cl.core_id = co.core_id where cl.company_id = ? and  cl.cliente_estado = 1 and cl.core_id = ?", args, 1);
+		return databaseManager.getDataSetByQuery("gpp", "select concat(cl.cliente_codigo::varchar(255), '-', co.core_nombre), cl.cliente_id from vent_clientes as cl inner join core as co on cl.core_id = co.core_id where cl.company_id = ? and  cl.cliente_estado = 1 and cl.cliente_id = ?", args, 1);
 	}
 	return null
 }

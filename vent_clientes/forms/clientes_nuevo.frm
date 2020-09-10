@@ -241,7 +241,7 @@ uuid:"CC274A6E-FFF0-414F-B133-F1A60D832EF4"
 },
 {
 cssPosition:"215,-1,-1,228,140,20",
-dataProviderID:"vl_telefono",
+dataProviderID:"vl_fax",
 tabSeq:7,
 typeid:4,
 uuid:"DC4DF9FB-99FD-468D-B5BD-28E16C89E012"

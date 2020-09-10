@@ -621,6 +621,12 @@ function onActionTodo(event) {
 	/** @type {JSFoundSet<db:/gpp/herr_equipo>} */
 	var fs_herr_equipos = databaseManager.getFoundSet('gpp', 'herr_equipo')
 	
+	/** @type {JSFoundSet<db:/gpp/vent_comprobante_herramientas>} */
+		var fs_comprobantes_herr = databaseManager.getFoundSet('gpp', 'vent_comprobante_herramientas')
+		
+	/** @type {JSFoundSet<db:/gpp/vent_comprobante_herramientas>} */
+	var fs_comprobantes_herr_dev = databaseManager.getFoundSet('gpp', 'vent_comprobante_herramientas')
+	
 	
 	fs_customer.loadAllRecords()
 	fs_customer.sort('internalid desc')
@@ -1155,6 +1161,7 @@ function onActionTodo(event) {
 							fs_comprobantes_aux.search()
 							if(fs_comprobantes_aux.getSize() >0 )
 								fs_comprobantes_herramientas_aux.vent_comprobante_herramientas_to_vent_comprobantes.comp_id_padre	= fs_comprobantes_aux.comp_id
+								fs_comprobantes_herramientas_aux.vent_comprobante_herramientas_to_vent_comprobantes.comp_estado_id	= 4
 								databaseManager.saveData(fs_comprobantes_herramientas_aux.vent_comprobante_herramientas_to_vent_comprobantes)
 						}
 					}
@@ -1162,6 +1169,31 @@ function onActionTodo(event) {
 			
 			
 				
+			}
+		}
+		
+		//Recorremos las herramientas de alquileres para asignarles las devoluciones
+		fs_comprobantes_herr.find()
+		fs_comprobantes_herr.comp_devolucion 																					='^='//Que no este devuelto
+		fs_comprobantes_herr.vent_comprobante_herramientas_to_vent_comprobantes.comp_codigo 									= 1
+		fs_comprobantes_herr.search()
+		
+		
+		var nRecordCount = 0
+		nRecordCount = databaseManager.getFoundSetCount(fs_comprobantes_herr);
+		for (var index = 1; index <= nRecordCount; index++) {
+			var myHerramAlqu = fs_comprobantes_herr.getRecord(index);
+			if(utils.hasRecords(myHerramAlqu.vent_comprobante_herramientas_to_herr_equipo)){
+				fs_comprobantes_herr_dev.find()
+				fs_comprobantes_herr_dev.vent_comprobante_herramientas_to_vent_comprobantes.comp_codigo = 2
+				fs_comprobantes_herr_dev.vent_comprobante_herramientas_to_vent_comprobantes.cliente_id	= myHerramAlqu.vent_comprobante_herramientas_to_vent_comprobantes.cliente_id
+				fs_comprobantes_herr_dev.vent_comprobante_herramientas_to_herr_equipo.equipo_cod_barras	= myHerramAlqu.vent_comprobante_herramientas_to_herr_equipo.equipo_cod_barras
+				fs_comprobantes_herr_dev.search()
+				fs_comprobantes_herr_dev.sort('comp_id asc')
+				if(fs_comprobantes_herr_dev.getSize() > 0){
+					myHerramAlqu.comp_devolucion	= fs_comprobantes_herr_dev.comp_id
+					databaseManager.saveData()
+				}
 			}
 		}
 		
@@ -1210,5 +1242,47 @@ function onActionTodo(event) {
 	}
 	
 	plugins.svyBlockUI.stop()
+
+}
+
+/**
+ * @param {JSEvent} event
+ *
+ * @properties={typeid:24,uuid:"4F9BC6AD-37DA-4A75-8A92-5C47E9461A11"}
+ * @AllowToRunInFind
+ */
+function onActionTEST(event) {
+	
+	/** @type {JSFoundSet<db:/gpp/vent_comprobante_herramientas>} */
+	var fs_comprobantes_herr = databaseManager.getFoundSet('gpp', 'vent_comprobante_herramientas')
+	
+	/** @type {JSFoundSet<db:/gpp/vent_comprobante_herramientas>} */
+	var fs_comprobantes_herr_dev = databaseManager.getFoundSet('gpp', 'vent_comprobante_herramientas')
+	
+	fs_comprobantes_herr.find()
+	//fs_comprobantes_herr.vent_comprobante_herramientas_to_vent_comprobantes.cliente_id										= forms.devolucion_nuevo.vl_cliente
+	fs_comprobantes_herr.comp_devolucion 																					='^='//Que no este devuelto
+	fs_comprobantes_herr.vent_comprobante_herramientas_to_vent_comprobantes.comp_codigo 									= 1
+	fs_comprobantes_herr.search()
+	
+	
+	var nRecordCount = 0
+	nRecordCount = databaseManager.getFoundSetCount(fs_comprobantes_herr);
+	for (var index = 1; index <= nRecordCount; index++) {
+		var myHerramAlqu = fs_comprobantes_herr.getRecord(index);
+		if(utils.hasRecords(myHerramAlqu.vent_comprobante_herramientas_to_herr_equipo)){
+			fs_comprobantes_herr_dev.find()
+			fs_comprobantes_herr_dev.vent_comprobante_herramientas_to_vent_comprobantes.comp_codigo = 2
+			fs_comprobantes_herr_dev.vent_comprobante_herramientas_to_vent_comprobantes.cliente_id	= myHerramAlqu.vent_comprobante_herramientas_to_vent_comprobantes.cliente_id
+			fs_comprobantes_herr_dev.vent_comprobante_herramientas_to_herr_equipo.equipo_cod_barras	= myHerramAlqu.vent_comprobante_herramientas_to_herr_equipo.equipo_cod_barras
+			fs_comprobantes_herr_dev.search()
+			fs_comprobantes_herr_dev.sort('comp_id asc')
+			if(fs_comprobantes_herr_dev.getSize() > 0){
+				myHerramAlqu.comp_devolucion	= fs_comprobantes_herr_dev.comp_id
+				databaseManager.saveData()
+			}
+		}
+	}
+	
 
 }
