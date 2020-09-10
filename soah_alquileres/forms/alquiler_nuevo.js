@@ -349,10 +349,9 @@ function onDataChangeCliente() {
 	fs_vent_clientes.loadRecords(vl_cliente)
 	if(fs_vent_clientes.getSize() > 0){
 		vl_acuerdo_precios = fs_vent_clientes.acuerdo_precio_id
-		vl_advertencia = fs_vent_clientes.cliente_advertencia
 		
-		elements.l_advertencia.visible = true
-		if(vl_advertencia == null) elements.l_advertencia.visible = false
+		cambiarAdvertencia(fs_vent_clientes.cliente_advertencia)
+		
 		
 		//Actualizar pestaña de otros alquileres
 		forms.alquiler_nuevo_alquileres.foundset.find()
@@ -383,6 +382,21 @@ function onDataChangeCliente() {
 	}
 }
 
+
+/**
+ * TODO generated, please specify type and doc for the params
+ * @param vl_advert
+ *
+ * @properties={typeid:24,uuid:"79CBB20C-18B1-40EB-8E3F-E7ABC7AF2A0E"}
+ */
+function cambiarAdvertencia(vl_advert){
+	
+	vl_advertencia = vl_advert
+	
+	elements.l_advertencia.visible = true
+	if(vl_advertencia == null) elements.l_advertencia.visible = false
+	
+}
 
 /**
  * @properties={typeid:24,uuid:"6C0A571F-CF7B-429B-90CA-8F80316C501B"}
@@ -434,3 +448,22 @@ function onActionNuevaObra() {
 }
 
 
+
+/**
+ * @param {JSEvent} event
+ *
+ * @properties={typeid:24,uuid:"7CB5F233-D7AB-4917-84C4-51C834418B2A"}
+ */
+function onActionEditarCliente(event) {
+	if(vl_cliente != null){
+		forms['clientes_ver'].vl_cliente_id = vl_cliente
+		forms['clientes_ver'].vl_form_padre = 'alquiler_nuevo'
+		var win = application.createWindow("Dialog", JSWindow.MODAL_DIALOG);
+			win.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
+			win.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
+			win.resizable = false
+			win.title= '';
+			win.show( forms['clientes_ver'] );
+	}
+
+}

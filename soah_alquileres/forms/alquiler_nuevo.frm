@@ -3,13 +3,43 @@ useCssPosition:true",
 encapsulation:4,
 items:[
 {
-cssPosition:"45,-1,-1,458,80,20",
+cssPosition:"45,-1,-1,553,80,20",
 formIndex:6,
 tabSeq:-2,
 text:"Obra",
 transparent:true,
 typeid:7,
 uuid:"01E9437C-1A04-402C-8855-96F14A2C2BEB"
+},
+{
+cssPosition:"65,-1,-1,460,45,20",
+formIndex:2,
+json:{
+cssPosition:{
+bottom:"-1",
+height:"20",
+left:"460",
+right:"-1",
+top:"65",
+width:"45"
+},
+formIndex:2,
+imageStyleClass:"fas fa-pen",
+location:{
+x:10,
+y:10
+},
+onActionMethodID:"7CB5F233-D7AB-4917-84C4-51C834418B2A",
+styleClass:"btn btn-default btn-success",
+tabSeq:14,
+toolTipText:"Editar cliente"
+},
+location:"10,10",
+name:"btn_editar_cliente",
+styleClass:"btn btn-default btn-success",
+typeName:"bootstrapcomponents-button",
+typeid:47,
+uuid:"031ACCDA-5DE9-4A9E-B1A5-684317B2A062"
 },
 {
 cssPosition:"65,-1,-1,65,115,20",
@@ -109,7 +139,7 @@ typeid:7,
 uuid:"69E3D203-74A7-442E-8929-551B1BA21977"
 },
 {
-cssPosition:"65,-1,-1,458,172,20",
+cssPosition:"65,-1,-1,553,172,20",
 dataProviderID:"vl_obra",
 displayType:10,
 tabSeq:2,
@@ -165,13 +195,13 @@ typeid:4,
 uuid:"A72752EA-ED68-4CAD-8BF7-5A469963206C"
 },
 {
-cssPosition:"65,-1,-1,635,45,20",
+cssPosition:"65,-1,-1,730,45,20",
 formIndex:2,
 json:{
 cssPosition:{
 bottom:"-1",
 height:"20",
-left:"635",
+left:"730",
 right:"-1",
 top:"65",
 width:"45"

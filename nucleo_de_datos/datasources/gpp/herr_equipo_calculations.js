@@ -12,7 +12,12 @@ function calc_ubicacion()
 		aux = herr_equipo_to_vent_comprobante_datos.cliente_nombre
 	}
 	if(reparacion_id != null){
-		aux = herr_equipo_to_rep_reparaciones.rep_reparaciones_to_rep_talleres.taller_nombre
+		if(utils.hasRecords(herr_equipo_to_rep_reparaciones.rep_reparaciones_to_rep_talleres)){
+			aux = herr_equipo_to_rep_reparaciones.rep_reparaciones_to_rep_talleres.taller_nombre
+		}
+		else{
+			aux = "taller"
+		}
 	}
 	
 	

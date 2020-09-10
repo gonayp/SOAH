@@ -128,6 +128,9 @@ function onActionLimpiar() {
 	vl_nombre = null;
 	vl_codigo = null;
 	
+	globals.vg_marca_id = vl_marca
+	globals.vg_herramienta_id = vl_herramienta
+	
 	filtrar()
 }
 

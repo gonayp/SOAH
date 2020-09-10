@@ -189,6 +189,9 @@ function onActionLimpiar() {
 	elements.btn_reparando.imageStyleClass = "fas fa-eye"
 	elements.btn_robado.imageStyleClass = "fas fa-eye"
 	elements.btn_roto.imageStyleClass = "fas fa-eye"
+		
+	globals.vg_marca_id = vl_marca
+	globals.vg_herramienta_id = vl_herramienta
 	
 	filtrar()
 }
