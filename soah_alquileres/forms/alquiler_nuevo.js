@@ -326,14 +326,29 @@ function limpiarVariables(){
  * @properties={typeid:24,uuid:"699F2692-CBED-487E-A70B-7580949F036A"}
  */
 function onShow(firstShow, event) {
+	application.setValueListItems('f_cliente',new Array('Item 1', 'Item 2', 'Item 3'),new Array(10000,10010,10456));
 	
+	//limpiarVariables()
 	
-	limpiarVariables()
-	
-	foundset.deleteAllRecords()
-	databaseManager.saveData()
+	//foundset.deleteAllRecords()
+	//databaseManager.saveData()
 		
-	controller.focusFirstField()
+	//controller.focusFirstField()
+	
+	//valuelistClientes()
+}
+
+/**
+ * @properties={typeid:24,uuid:"2CDF1B28-C5B8-4339-9CA5-DC0389A77438"}
+ */
+function valuelistClientes(){
+	//set display values and return values (which are stored in dataprovider)
+	//application.setValueListItems('my_en_types',new Array('Item 1', 'Item 2', 'Item 3'),new Array(10000,10010,10456));
+	application.setValueListItems('f_cliente',new Array('Item 1', 'Item 2', 'Item 3'),new Array(10000,10010,10456));
+	//do query and fill valuelist (see databaseManager for full details of queries/dataset)
+	//var query = 'select c1,c2 from test_table';
+	//var dataset = databaseManager.getDataSetByQuery(controller.getServerName(), query, null, 25);
+	//application.setValueListItems('my_en_types',dataset);
 }
 
 /**
