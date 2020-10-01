@@ -481,8 +481,8 @@ function onShow(firstShow, event) {
 	limpiarVariables()
 	
 	
-	foundset.deleteAllRecords()
-	databaseManager.saveData()
+	//foundset.deleteAllRecords()
+	//databaseManager.saveData()
 		
 	controller.focusFirstField()
 }

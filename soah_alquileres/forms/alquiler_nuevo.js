@@ -326,14 +326,14 @@ function limpiarVariables(){
  * @properties={typeid:24,uuid:"699F2692-CBED-487E-A70B-7580949F036A"}
  */
 function onShow(firstShow, event) {
-	application.setValueListItems('f_cliente',new Array('Item 1', 'Item 2', 'Item 3'),new Array(10000,10010,10456));
+	//application.setValueListItems('f_cliente',new Array('Item 1', 'Item 2', 'Item 3'),new Array(10000,10010,10456));
 	
-	//limpiarVariables()
+	limpiarVariables()
 	
 	//foundset.deleteAllRecords()
 	//databaseManager.saveData()
 		
-	//controller.focusFirstField()
+	controller.focusFirstField()
 	
 	//valuelistClientes()
 }

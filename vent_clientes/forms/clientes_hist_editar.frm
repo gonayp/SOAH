@@ -50,6 +50,29 @@ uuid:"50D76701-8776-42C0-B9A6-F57A2825B41A",
 valuelistID:"79D43923-31D5-4082-9674-43B9B2CF9D18"
 },
 {
+cssPosition:"110,-1,-1,313,45,20",
+json:{
+cssPosition:{
+bottom:"-1",
+height:"20",
+left:"313",
+right:"-1",
+top:"110",
+width:"45"
+},
+imageStyleClass:"fas fa-search fa-xs",
+onActionMethodID:"28A9D8FE-9A77-4B3A-81A0-DCB8A900A99A",
+styleClass:"btn btn-default btn-success",
+text:"",
+toolTipText:"Ver detalle de comprobante"
+},
+name:"btn_ver",
+styleClass:"btn btn-default btn-success",
+typeName:"bootstrapcomponents-button",
+typeid:47,
+uuid:"56D2E1B0-E4A4-4821-854F-5B2817A5AFB8"
+},
+{
 cssPosition:"215,-1,-1,10,150,35",
 formIndex:1,
 json:{

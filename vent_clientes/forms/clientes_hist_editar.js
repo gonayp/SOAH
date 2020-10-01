@@ -46,3 +46,40 @@ function onActioGrabar() {
 }
 
 
+
+/**
+ * @param {JSEvent} event
+ *
+ * @properties={typeid:24,uuid:"28A9D8FE-9A77-4B3A-81A0-DCB8A900A99A"}
+ */
+function onActionVer(event) {
+	var win = application.createWindow("Dialog", JSWindow.MODAL_DIALOG);
+	switch (hist_tipo) {
+	case 4://Facturas
+		forms['factura_devolucion_ver'].vl_form_padre = 'clientes_estado'
+		forms['factura_devolucion_ver'].foundset.loadRecords(foundset.comp_id)
+		application.showForm('factura_devolucion_ver')
+		break;
+	case 7://devoluciones
+		forms['devolucion_detalle'].vl_form_padre = 'clientes_estado'
+		forms['devolucion_detalle'].foundset.loadRecords(foundset.comp_id)
+			win.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
+			win.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
+			win.resizable = false
+			win.title= '';
+			win.show( 'devolucion_detalle');
+		break;
+	case 6://Alquiler
+		forms['alquiler_detalle'].vl_form_padre = 'clientes_estado'
+		forms['alquiler_detalle'].foundset.loadRecords(foundset.comp_id)
+			win.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
+			win.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
+			win.resizable = false
+			win.title= '';
+			win.show( 'alquiler_detalle');
+		break
+	default:
+		break;
+	}
+
+}
