@@ -1175,7 +1175,7 @@ function onActionTodo(event) {
 		//Recorremos las herramientas de alquileres para asignarles las devoluciones
 		fs_comprobantes_herr.find()
 		fs_comprobantes_herr.comp_devolucion 																					='^='//Que no este devuelto
-		fs_comprobantes_herr.vent_comprobante_herramientas_to_vent_comprobantes.comp_codigo 									= 1
+		fs_comprobantes_herr.vent_comprobante_herramientas_to_vent_comprobantes.comp_codigo 									= 3 //Alquileres cerrados
 		fs_comprobantes_herr.search()
 		
 		
@@ -1188,6 +1188,7 @@ function onActionTodo(event) {
 				fs_comprobantes_herr_dev.vent_comprobante_herramientas_to_vent_comprobantes.comp_codigo = 2
 				fs_comprobantes_herr_dev.vent_comprobante_herramientas_to_vent_comprobantes.cliente_id	= myHerramAlqu.vent_comprobante_herramientas_to_vent_comprobantes.cliente_id
 				fs_comprobantes_herr_dev.vent_comprobante_herramientas_to_herr_equipo.equipo_cod_barras	= myHerramAlqu.vent_comprobante_herramientas_to_herr_equipo.equipo_cod_barras
+				fs_comprobantes_herr_dev.vent_comprobante_herramientas_to_vent_comprobantes.comp_fecha_emision = '>'+ myHerramAlqu.vent_comprobante_herramientas_to_vent_comprobantes.comp_fecha_emision
 				fs_comprobantes_herr_dev.search()
 				fs_comprobantes_herr_dev.sort('comp_id asc')
 				if(fs_comprobantes_herr_dev.getSize() > 0){

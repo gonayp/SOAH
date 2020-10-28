@@ -1,6 +1,20 @@
 /**
  * @type {Date}
  *
+ * @properties={typeid:35,uuid:"649A02D1-5D7C-47BA-BDE2-F67771654F79",variableType:93}
+ */
+var vl_fecha_emision_inicial = null;
+
+/**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"2D141897-4BD0-486F-A468-2C4C8773B500",variableType:4}
+ */
+var vl_factura_parcial = null;
+
+/**
+ * @type {Date}
+ *
  * @properties={typeid:35,uuid:"45E764D7-29D9-4861-B9C3-FF3192040714",variableType:93}
  */
 var vl_fecha_emision = null;
@@ -144,7 +158,9 @@ function onActionVolver() {
  * @SuppressWarnings(wrongparameters)
  */
 function onActionGuardar(event) {
-
+	
+	
+	
 	if (vl_numero == null) {
 		plugins.webnotificationsToastr.error(globals.mensajeError(101), "", globals.vg_toast_options)
 		return
@@ -165,6 +181,14 @@ function onActionGuardar(event) {
 	if(vl_condicion_pago == 1 && forms.factura_formas_de_pago.vl_diferencia != 0){
 		plugins.webnotificationsToastr.error("El importe pagado no corresponde con el importe total a facturar.", "", globals.vg_toast_options)
 		return
+	}
+	
+	//Cambio de fecha de facturacion
+	if(vl_fecha_emision != vl_fecha_emision_inicial){
+		var PressedButton = plugins.dialogs.showQuestionDialog('GPP', 'La fecha de emisión es diferente al momento de facturación. ¿Seguro que quieres continuar?', 'Si', 'No')
+		if (PressedButton == 'No') { //function
+			return
+		}
 	}
 	
 
@@ -205,6 +229,12 @@ function grabarFactura(){
 	
 
 	fs_puntos_venta.loadRecords(vl_pv)
+	
+	var aux_fecha_emision 
+	if(vl_factura_parcial == 1)
+		aux_fecha_emision			= vl_fecha
+	else
+		aux_fecha_emision			= vl_fecha_emision
 
 
 	if(fs_puntos_venta.pv_afip == 1){//SI el punto de venta tiene activada la facturacion con afip
@@ -212,7 +242,7 @@ function grabarFactura(){
 		fs_clientes.loadRecords(vl_cliente)
 		var cliente_doc = utils.stringToNumber(fs_clientes.vent_clientes_to_core.core_num_doc)
 		var cliente_doc_tipo = fs_clientes.vent_clientes_to_core.tipo_doc_id
-		var respuesta = scopes.facturacion.comprobarAfip(fs_puntos_venta.pv_numero,vl_codigo,Math.round(vl_subtotal*100)/100,vl_fecha,Math.round(vl_total_iva*100)/100,vl_total,cliente_doc,cliente_doc_tipo)
+		var respuesta = scopes.facturacion.comprobarAfip(fs_puntos_venta.pv_numero,vl_codigo,Math.round(vl_subtotal*100)/100,aux_fecha_emision,Math.round(vl_total_iva*100)/100,vl_total,cliente_doc,cliente_doc_tipo)
 		
 		if(respuesta.comp_estado == 2){
 			vl_numero = respuesta.comp_num;
@@ -289,13 +319,18 @@ function grabar(p_cae, p_vencimiento, p_consulta){
 		vl_codigo_barras = scopes.facturacion.GenerarCodigoBarrasAFIP(vl_codigo,vl_pv,p_cae,p_vencimiento)
 	}
 	
+	var aux_fecha_emision 
+	if(vl_factura_parcial == 1)
+		aux_fecha_emision			= vl_fecha
+	else
+		aux_fecha_emision			= vl_fecha_emision
 	
 	//Guardamos el comprobante
 	fs_comprobantes.newRecord()
 	fs_comprobantes.company_id					= scopes.usuario.vg_company_id
 	fs_comprobantes.cliente_id					= vl_cliente
 	fs_comprobantes.comp_codigo					= vl_codigo
-	fs_comprobantes.comp_fecha_emision			= vl_fecha
+	fs_comprobantes.comp_fecha_emision			= aux_fecha_emision
 	fs_comprobantes.comp_imp_total				= vl_total
 	fs_comprobantes.comp_numero					= vl_numero
 	fs_comprobantes.comp_observacion			= vl_observaciones
@@ -317,11 +352,11 @@ function grabar(p_cae, p_vencimiento, p_consulta){
 	}
 	else{
 		fs_comprobantes.comp_estado_id				= 6 //Pendiente
-		var aux_dia = vl_fecha.getDate()+30
+		var aux_dia = aux_fecha_emision.getDate()+30
 		if(vl_condicion_pago == 2){//15 dias
-			aux_dia = vl_fecha.getDate()+15
+			aux_dia = aux_fecha_emision.getDate()+15
 		}
-		fs_comprobantes.comp_fecha_vencimiento		= new Date(vl_fecha.getFullYear(),vl_fecha.getMonth(), aux_dia) 
+		fs_comprobantes.comp_fecha_vencimiento		= new Date(aux_fecha_emision.getFullYear(),aux_fecha_emision.getMonth(), aux_dia) 
 	}
 	databaseManager.saveData(fs_comprobantes)
 	
@@ -400,8 +435,8 @@ function grabar(p_cae, p_vencimiento, p_consulta){
 					fs_comprobante_herramientas_ant.comp_dias_facturados += myHerramienta.comp_dias_a_cobrar
 				}
 				
-				fs_comprobante_herramientas_ant.comp_fec_ult_facturacion = new Date(vl_fecha.getFullYear(),vl_fecha.getMonth(),1)//Aqui va la fecha de primero de mes //Poner hora y minutos?
-				fs_comprobante_herramientas_ant.vent_comprobante_herramientas_to_vent_comprobantes.comp_fec_ult_facturacion =  new Date(vl_fecha.getFullYear(),vl_fecha.getMonth(),1)
+				fs_comprobante_herramientas_ant.comp_fec_ult_facturacion = new Date(aux_fecha_emision.getFullYear(),aux_fecha_emision.getMonth(),1)//Aqui va la fecha de primero de mes //Poner hora y minutos?
+				fs_comprobante_herramientas_ant.vent_comprobante_herramientas_to_vent_comprobantes.comp_fec_ult_facturacion =  new Date(aux_fecha_emision.getFullYear(),aux_fecha_emision.getMonth(),1)
 				databaseManager.saveData()
 			}
 			//Creamos relacion de factura parcial
@@ -669,6 +704,12 @@ function calculoVentas(){
  */
 function calculoDiasPrecio(){
 	
+	var aux_fecha_emision 
+	if(vl_factura_parcial == 1)
+		aux_fecha_emision			= vl_fecha
+	else
+		aux_fecha_emision			= vl_fecha_emision
+	
 	vl_total_alquiler = 0
 	
 	//var vl_fecha_hoy = vl_fecha
@@ -682,30 +723,34 @@ function calculoDiasPrecio(){
 	nRecordCount = databaseManager.getFoundSetCount(forms.factura_devolucion_nuevo_herramientas.foundset);
 	for (var index = 1; index <= nRecordCount; index++) {
 		myHerramienta = forms.factura_devolucion_nuevo_herramientas.foundset.getRecord(index);
-	
-		//Comprobamos si tiene obras diferentes
-		if(vl_obra_anterior == null) vl_obra_anterior = myHerramienta.comp_obra
-		else{
-			if(vl_obra_anterior != myHerramienta.comp_obra) obras_distintas = true
-			vl_obra_anterior = myHerramienta.comp_obra
+		if(myHerramienta.comp_id_devolucion == null){//si es una herramienta de un alquiler sin devolver
+			//Comprobamos si tiene obras diferentes
+			if(vl_obra_anterior == null) vl_obra_anterior = myHerramienta.comp_obra
+			else{
+				if(vl_obra_anterior != myHerramienta.comp_obra) obras_distintas = true
+				vl_obra_anterior = myHerramienta.comp_obra
+			}
+			
+			var x = aux_fecha_emision - myHerramienta.comp_fecha_alquiler //substracting two dates returns difference in milliseconds 
+			var one_day=1000*60*60*24 //ms * sec * min * hrs in a day 
+		
+		
+			var diffExact = x / one_day //gets difference in days 
+			var diffRounded = Math.ceil(diffExact ) // rounds 2.343 to 3
+			
+			myHerramienta.comp_dias_reales = diffRounded
+			
+			var vl_dias_a_cobrar = scopes.alquileres.calcularDiasParaCobrar(myHerramienta.comp_fecha_devolucion,aux_fecha_emision)//myHerramienta.comp_fecha_alquiler ,myHerramienta.comp_fecha_devolucion)
+			//if(myHerramienta.comp_fec_ult_facturacion != null)
+			//	vl_dias_a_cobrar = scopes.alquileres.calcularDiasParaCobrar(vl_fecha,myHerramienta.comp_fecha_devolucion)
+			
+			myHerramienta.comp_dias_a_cobrar = vl_dias_a_cobrar
+			
+			myHerramienta.comp_precio_calculado = myHerramienta.comp_dias_a_cobrar * myHerramienta.comp_precio
 		}
-		
-		var x = vl_fecha - myHerramienta.comp_fecha_alquiler //substracting two dates returns difference in milliseconds 
-		var one_day=1000*60*60*24 //ms * sec * min * hrs in a day 
-	
-	
-		var diffExact = x / one_day //gets difference in days 
-		var diffRounded = Math.ceil(diffExact ) // rounds 2.343 to 3
-		
-		myHerramienta.comp_dias_reales = diffRounded
-		
-		var vl_dias_a_cobrar = scopes.alquileres.calcularDiasParaCobrar(myHerramienta.comp_fecha_devolucion,vl_fecha)//myHerramienta.comp_fecha_alquiler ,myHerramienta.comp_fecha_devolucion)
-		//if(myHerramienta.comp_fec_ult_facturacion != null)
-		//	vl_dias_a_cobrar = scopes.alquileres.calcularDiasParaCobrar(vl_fecha,myHerramienta.comp_fecha_devolucion)
-		
-		myHerramienta.comp_dias_a_cobrar = vl_dias_a_cobrar
-		
-		myHerramienta.comp_precio_calculado = myHerramienta.comp_dias_a_cobrar * myHerramienta.comp_precio
+		else{
+			myHerramienta.comp_precio_calculado = myHerramienta.comp_dias_a_cobrar * myHerramienta.comp_precio
+		}
 		
 		vl_total_alquiler += myHerramienta.comp_precio_calculado
 	}
@@ -762,3 +807,63 @@ function onShow(firstShow, event) {
 function onDataChange() {
 	vl_numero = scopes.facturacion.GetProximoNumeroComprobante(vl_pv,vl_codigo)
 }
+
+/**
+ * @properties={typeid:24,uuid:"98910C7B-B0EB-4BD6-B8A4-3DEBEA7345ED"}
+ */
+function calculoTotalesSinModificaciones(){
+	calculoDiasPrecioSinModificaciones()//Alquileres
+	calculoVentasSinModificaciones()
+	
+	//vl_subtotal = vl_total_alquiler + vl_total_ventas
+	//vl_total_iva = vl_subtotal * 0.21
+	//vl_total = vl_subtotal + vl_total_iva
+	//forms.factura_formas_de_pago.vl_total_factura = vl_total
+}
+
+/**
+ * @properties={typeid:24,uuid:"0E464875-29F0-459A-8EB9-0D8A06D69995"}
+ */
+function calculoVentasSinModificaciones(){
+	
+	
+	vl_total_ventas = 0	
+	
+	var nRecordCount = 0
+	nRecordCount = databaseManager.getFoundSetCount(forms.factura_devolucion_nuevo_ventas.foundset);
+	for (var index = 1; index <= nRecordCount; index++) {
+		var myProducto= forms.factura_devolucion_nuevo_ventas.foundset.getRecord(index);
+		vl_total_ventas += myProducto.producto_total
+	}
+	
+}
+
+/**
+ * @SuppressWarnings(wrongparameters)
+ * @SuppressWarnings(wrongparameters)
+ *
+ * @properties={typeid:24,uuid:"3746962A-0AC7-4110-AE95-64E27204AA64"}
+ */
+function calculoDiasPrecioSinModificaciones(){
+	
+	vl_total_alquiler = 0
+	
+	var myHerramienta = null
+	
+	forms.factura_devolucion_nuevo_herramientas.foundset.loadAllRecords()
+	
+	var nRecordCount = 0
+	nRecordCount = databaseManager.getFoundSetCount(forms.factura_devolucion_nuevo_herramientas.foundset);
+	for (var index = 1; index <= nRecordCount; index++) {
+		myHerramienta = forms.factura_devolucion_nuevo_herramientas.foundset.getRecord(index);
+		
+		myHerramienta.comp_precio_calculado = myHerramienta.comp_dias_a_cobrar * myHerramienta.comp_precio
+		
+		vl_total_alquiler += myHerramienta.comp_precio_calculado
+	}
+	
+	
+
+	
+}
+

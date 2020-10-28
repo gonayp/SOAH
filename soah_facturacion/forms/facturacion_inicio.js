@@ -145,19 +145,21 @@ function facturaAClienteRelacionado(){
  */
 function generarFactura(){
 	var ahora = application.getServerTimeStamp()
-	forms.factura_devolucion_nuevo.vl_cliente 			= vl_cliente
-	forms.factura_devolucion_nuevo.vl_fecha				= new Date(ahora.getFullYear(),ahora.getMonth(),1)
-	forms.factura_devolucion_nuevo.vl_fecha_emision		= application.getServerTimeStamp()
-	forms.factura_devolucion_nuevo.vl_numero			= null
-	forms.factura_devolucion_nuevo.vl_obra				= vl_obra_nueva
-	forms.factura_devolucion_nuevo.vl_observaciones		= null
-	forms.factura_devolucion_nuevo.vl_subtotal			= vl_subtotal
-	forms.factura_devolucion_nuevo.vl_total				= vl_total
-	forms.factura_devolucion_nuevo.vl_total_iva			= vl_total_iva
-	forms.factura_devolucion_nuevo.vl_condicion_pago	= 1//contado
+	forms.factura_devolucion_nuevo.vl_cliente 				= vl_cliente
+	forms.factura_devolucion_nuevo.vl_fecha					= new Date(ahora.getFullYear(),ahora.getMonth(),1)
+	forms.factura_devolucion_nuevo.vl_fecha_emision			= application.getServerTimeStamp()
+	forms.factura_devolucion_nuevo.vl_fecha_emision_inicial	= forms.factura_devolucion_nuevo.vl_fecha_emision
+	forms.factura_devolucion_nuevo.vl_numero				= null
+	forms.factura_devolucion_nuevo.vl_obra					= vl_obra_nueva
+	forms.factura_devolucion_nuevo.vl_observaciones			= null
+	forms.factura_devolucion_nuevo.vl_subtotal				= vl_subtotal
+	forms.factura_devolucion_nuevo.vl_total					= vl_total
+	forms.factura_devolucion_nuevo.vl_total_iva				= vl_total_iva
+	forms.factura_devolucion_nuevo.vl_condicion_pago		= 1//contado
+	forms.factura_devolucion_nuevo.vl_factura_parcial		= 0//Factura parcial
 	
 	//Numero y codigo de la factura
-	forms.factura_devolucion_nuevo.vl_codigo			= 5 //Factura
+	forms.factura_devolucion_nuevo.vl_codigo				= 5 //Factura
 	forms.factura_devolucion_nuevo.vl_numero = null;
 	try{
 		forms.factura_devolucion_nuevo.vl_pv 		= scopes.usuario.vg_punto_venta
@@ -187,7 +189,7 @@ function generarFactura(){
 	crearHerramientas()
 	crearProductos()
 	
-	forms.factura_devolucion_nuevo.calculoTotales()
+	forms.factura_devolucion_nuevo.calculoTotalesSinModificaciones()
 	
 	
 	application.showForm(forms.factura_devolucion_nuevo)
@@ -327,18 +329,21 @@ function onCellClick(foundsetindex, columnindex, record, event) {
 	if(columnindex == 0){
 		if(calc_seleccionado == 1){
 			calc_seleccionado = 0
-			vl_subtotal -= comp_imp_total - comp_imp_iva2
-			vl_total_iva -= comp_imp_iva2
-			vl_total -= comp_imp_total
-			vl_cantidad -= 1
+			//vl_subtotal -= comp_imp_total - comp_imp_iva2
+			//vl_total_iva -= comp_imp_iva2
+			//vl_total -= comp_imp_total
+			//vl_cantidad -= 1
 		}
 		else{
 			calc_seleccionado = 1
-			vl_subtotal += comp_imp_total - comp_imp_iva2
-			vl_total_iva += comp_imp_iva2
-			vl_total += comp_imp_total
-			vl_cantidad += 1
+			//vl_subtotal += comp_imp_total - comp_imp_iva2
+			//vl_total_iva += comp_imp_iva2
+			//vl_total += comp_imp_total
+			//vl_cantidad += 1
 		}
+		var ahora = application.getServerTimeStamp()
+		var fecha_inicial = new Date(ahora.getFullYear(),ahora.getMonth(),1)
+		calculoTotales(fecha_inicial)
 	}
 
 }
@@ -425,19 +430,38 @@ function filtrar() {
 		}
 		foundset.search()
 		
-		vl_total = 0
-		vl_total_iva = 0
-		vl_subtotal = 0
-		vl_cantidad = 0
-		vl_obra_nueva = null
-		var vl_obra_anterior = foundset.obra_id
-		var misma_obra = 1
 		
 		var nRecordCount = 0
 		nRecordCount = databaseManager.getFoundSetCount(foundset);
 		for (var index = 1; index <= nRecordCount; index++) {
 			var myRecord = foundset.getRecord(index);
 			myRecord.calc_seleccionado = 1
+		}
+		
+	
+		calculoTotales(fecha_inicial)
+
+	}
+}
+
+
+/**
+ * @properties={typeid:24,uuid:"7CFA09E8-5B35-4584-9ED1-F4A425BE1FC4"}
+ */
+function calculoTotales(fecha_inicial){
+	vl_total = 0
+	vl_total_iva = 0
+	vl_subtotal = 0
+	vl_cantidad = 0
+	vl_obra_nueva = null
+	var vl_obra_anterior = foundset.obra_id
+	var misma_obra = 1
+	
+	var nRecordCount = 0
+	nRecordCount = databaseManager.getFoundSetCount(foundset);
+	for (var index = 1; index <= nRecordCount; index++) {
+		var myRecord = foundset.getRecord(index);
+		if(myRecord.calc_seleccionado == 1){
 			if(myRecord.comp_codigo == 2){//devolucion
 				myRecord.calc_total = myRecord.comp_imp_total
 				myRecord.calc_iva   = myRecord.comp_imp_iva2
@@ -456,12 +480,9 @@ function filtrar() {
 				misma_obra = 0
 			}
 		}
-		if(misma_obra){
-			vl_obra_nueva = vl_obra_anterior
-		}
-		
-		
-	
+	}
+	if(misma_obra){
+		vl_obra_nueva = vl_obra_anterior
 	}
 }
 

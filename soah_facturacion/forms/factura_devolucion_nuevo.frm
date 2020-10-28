@@ -153,6 +153,14 @@ typeid:7,
 uuid:"5FA9CE4F-87DE-41AB-B11A-13D01A81BD9D"
 },
 {
+cssPosition:"180,-1,-1,745,221,20",
+dataProviderID:"vl_factura_parcial",
+displayType:4,
+text:"Factura  con alquileres parciales",
+typeid:4,
+uuid:"5FB29526-617F-4467-A5C9-14D802049375"
+},
+{
 cssPosition:"111,-1,-1,484,244,20",
 dataProviderID:"vl_condicion_pago",
 displayType:2,
@@ -342,7 +350,7 @@ uuid:"EAFE47E9-A806-49FE-A659-97F41E57FDCB"
 {
 cssPosition:"112,-1,-1,65,140,20",
 dataProviderID:"vl_fecha_emision",
-editable:false,
+displayType:5,
 format:"dd/MM/yy HH:mm",
 name:"f_fechac",
 onDataChangeMethodID:"9C272F4B-7060-4516-AB6E-051F1D959EF9",
@@ -382,6 +390,6 @@ name:"factura_devolucion_nuevo",
 navigatorID:"-1",
 onShowMethodID:"9BB9A819-4553-4B73-A3A2-BB85F77BD10F",
 showInMenu:true,
-size:"890,550",
+size:"1022,604",
 typeid:3,
 uuid:"879EFA0D-DC37-4AE0-A6C9-F7D5E0D7AD17"
