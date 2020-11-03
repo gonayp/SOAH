@@ -52,7 +52,7 @@ function onShow(firstShow, event) {
 function filtrar() {
 	
 	foundset.find()
-	foundset.comp_estado_id = 6
+	foundset.comp_estado_id = '6 || 9'
 	if(vl_cliente != null) foundset.cliente_id = vl_cliente
 	foundset.search()
 	

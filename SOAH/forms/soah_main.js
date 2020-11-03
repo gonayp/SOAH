@@ -520,6 +520,19 @@ function onActionDatosUsuario(event) {
 
 
 
+/**
+ * @param {JSEvent} event
+ *
+ * @properties={typeid:24,uuid:"33FFFA1C-7BBA-436F-908C-DF9881038C6C"}
+ */
+function onActionFacturaPendientes(event) {
+	application.showForm(forms.pendiente_facturar)
+
+}
+
+
+
+
 
 /************************************************************************************************************/
 /** Funciones de Nuevo 																					   **/
@@ -636,3 +649,4 @@ function onActionConexionesBDLogisticaDH(event) {
 	application.showForm(forms.main_menu)
 
 }
+

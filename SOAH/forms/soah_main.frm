@@ -3,6 +3,31 @@ useCssPosition:true",
 encapsulation:44,
 items:[
 {
+cssPosition:"113,-1,-1,778,176,50",
+formIndex:2,
+json:{
+cssPosition:{
+bottom:"-1",
+height:"50",
+left:"778",
+right:"-1",
+top:"113",
+width:"176"
+},
+formIndex:2,
+imageStyleClass:"fas fa-list",
+onActionMethodID:"9E6DFEF5-992D-4012-BC73-6A8DC77D9B51",
+tabSeq:-2,
+text:"Devoluciones",
+toolTipText:"Listado de Devoluciones",
+visible:true
+},
+name:"btn_devoluciones",
+typeName:"bootstrapcomponents-button",
+typeid:47,
+uuid:"05003987-3FA1-408C-99E3-C7A365A1B480"
+},
+{
 cssPosition:"262,-1,-1,593,176,50",
 formIndex:3,
 json:{
@@ -49,6 +74,30 @@ typeid:47,
 uuid:"0BA499C4-BF2D-4EBD-BDD6-EFBC89220D41"
 },
 {
+cssPosition:"336,-1,-1,963,176,50",
+formIndex:2,
+json:{
+cssPosition:{
+bottom:"-1",
+height:"50",
+left:"963",
+right:"-1",
+top:"336",
+width:"176"
+},
+formIndex:2,
+imageStyleClass:"fas fa-dollar-sign",
+onActionMethodID:"0EF16204-71CA-42D8-97B2-209D77F98BD1",
+tabSeq:-2,
+text:"Acuerdos de precios",
+visible:true
+},
+name:"btn_eacuerdos_de_precios",
+typeName:"bootstrapcomponents-button",
+typeid:47,
+uuid:"0D565EF5-02C1-412C-91B6-C38B5E4FE3AD"
+},
+{
 cssPosition:"262,-1,-1,405,176,50",
 formIndex:1,
 json:{
@@ -72,28 +121,6 @@ typeid:47,
 uuid:"17FADD25-340B-4236-A8CF-BF271FBFEAE5"
 },
 {
-cssPosition:"411,-1,-1,774,45,25",
-json:{
-cssPosition:{
-bottom:"-1",
-height:"25",
-left:"774",
-right:"-1",
-top:"411",
-width:"45"
-},
-imageStyleClass:"fas fa-university",
-onActionMethodID:"5C403655-BACE-46DD-B4A7-DB2F82F53C44",
-tabSeq:-2,
-toolTipText:"Ver Bancos",
-visible:true
-},
-name:"btn_bancos",
-typeName:"bootstrapcomponents-button",
-typeid:47,
-uuid:"1C5D1B49-3319-467F-8F78-E11380303A78"
-},
-{
 cssPosition:"187,-1,-1,220,176,50",
 json:{
 cssPosition:{
@@ -115,13 +142,13 @@ typeid:47,
 uuid:"1FB0C0C3-D786-40E7-89C0-D92CF66F7076"
 },
 {
-cssPosition:"336,-1,-1,775,45,25",
+cssPosition:"336,-1,-1,1145,45,25",
 enabled:false,
 json:{
 cssPosition:{
 bottom:"-1",
 height:"25",
-left:"775",
+left:"1145",
 right:"-1",
 top:"336",
 width:"45"
@@ -215,12 +242,12 @@ right:"-1",
 top:"187",
 width:"176"
 },
-imageStyleClass:"fas fa-boxes",
-onActionMethodID:"0DCC3030-FB61-4BBF-9D99-95427F58C90C",
+imageStyleClass:"fas fa-ellipsis-h",
+onActionMethodID:"33FFFA1C-7BBA-436F-908C-DF9881038C6C",
 tabSeq:-2,
-text:"Depósito y stock"
+text:"Pendientes Facturar"
 },
-name:"btn_depositos",
+name:"btn_fct_pendientes",
 typeName:"bootstrapcomponents-button",
 typeid:47,
 uuid:"2E3A6588-702F-45E9-AD86-4DA4F77CF322"
@@ -249,16 +276,43 @@ typeid:47,
 uuid:"2EDF92BE-2C53-42E7-BC67-DA4DEB1D7DC9"
 },
 {
-cssPosition:"4,88,-1,-1,45,30",
+cssPosition:"187,-1,-1,963,176,50",
+formIndex:2,
+json:{
+cssPosition:{
+bottom:"-1",
+height:"50",
+left:"963",
+right:"-1",
+top:"187",
+width:"176"
+},
+formIndex:2,
+imageStyleClass:"fas fa-boxes",
+onActionMethodID:"0DCC3030-FB61-4BBF-9D99-95427F58C90C",
+tabSeq:-2,
+text:"Depósito y stock",
+toolTipText:"Depósito y stock",
+visible:true
+},
+name:"btn_depositos",
+typeName:"bootstrapcomponents-button",
+typeid:47,
+uuid:"34783991-1B5B-4E8E-91AD-F11930374E33"
+},
+{
+cssPosition:"4,133,-1,-1,45,30",
+enabled:false,
 json:{
 cssPosition:{
 bottom:"-1",
 height:"30",
 left:"-1",
-right:"88",
+right:"133",
 top:"4",
 width:"45"
 },
+enabled:false,
 imageStyleClass:"fas fa-database",
 onActionMethodID:"E69D271C-D008-4F83-807A-A60DD08B573A",
 styleClass:"btn btn-default btn-success",
@@ -270,28 +324,6 @@ styleClass:"btn btn-default btn-success",
 typeName:"bootstrapcomponents-button",
 typeid:47,
 uuid:"34DB6890-F946-4B47-BD0F-45F56E6AF32F"
-},
-{
-cssPosition:"138,-1,-1,774,45,25",
-json:{
-cssPosition:{
-bottom:"-1",
-height:"25",
-left:"774",
-right:"-1",
-top:"138",
-width:"45"
-},
-imageStyleClass:"fas fa-magnet",
-onActionMethodID:"31D81981-FF2F-44ED-96A9-1CD0E720EA41",
-tabSeq:-2,
-toolTipText:"Listado de equipos alquilados",
-visible:true
-},
-name:"btn_equipos_alquilados",
-typeName:"bootstrapcomponents-button",
-typeid:47,
-uuid:"3D545757-A1F1-4C79-AC06-BD12F1760C39"
 },
 {
 cssPosition:"486,-1,-1,405,176,50",
@@ -322,13 +354,13 @@ typeid:7,
 uuid:"4910625A-70D6-4811-AC13-034D8A80D9A4"
 },
 {
-cssPosition:"4,133,-1,-1,45,30",
+cssPosition:"4,88,-1,-1,45,30",
 json:{
 cssPosition:{
 bottom:"-1",
 height:"30",
 left:"-1",
-right:"133",
+right:"88",
 top:"4",
 width:"45"
 },
@@ -360,7 +392,8 @@ formIndex:2,
 imageStyleClass:"fas fa-ellipsis-h",
 onActionMethodID:"CC849804-5699-49F7-A326-4AA1777FCE54",
 tabSeq:-2,
-text:"Pendientes",
+text:"Alq. Pendientes",
+toolTipText:"Pendiente de devolucion",
 visible:true
 },
 name:"btn_pendientes",
@@ -390,6 +423,30 @@ typeid:47,
 uuid:"515E9B74-6B6C-4CBD-A9CA-9A9173C54720"
 },
 {
+cssPosition:"410,-1,-1,778,176,50",
+formIndex:2,
+json:{
+cssPosition:{
+bottom:"-1",
+height:"50",
+left:"778",
+right:"-1",
+top:"410",
+width:"176"
+},
+formIndex:2,
+imageStyleClass:"fas fa-university",
+onActionMethodID:"5C403655-BACE-46DD-B4A7-DB2F82F53C44",
+tabSeq:-2,
+text:"Ver Bancos",
+visible:true
+},
+name:"btn_bancos",
+typeName:"bootstrapcomponents-button",
+typeid:47,
+uuid:"53E81198-E3A8-4D2C-82B9-E433AC70358A"
+},
+{
 cssPosition:"170,0,-1,0,640,10",
 styleClass:"banner_fino",
 tabSeq:-2,
@@ -413,26 +470,29 @@ typeid:4,
 uuid:"64AEFC2D-341D-4714-A1D9-C9C20C65FB69"
 },
 {
-cssPosition:"336,-1,-1,825,45,25",
+cssPosition:"187,-1,-1,778,176,50",
+formIndex:2,
 json:{
 cssPosition:{
 bottom:"-1",
-height:"25",
-left:"825",
+height:"50",
+left:"778",
 right:"-1",
-top:"336",
-width:"45"
+top:"187",
+width:"176"
 },
-imageStyleClass:"fas fa-dollar-sign",
-onActionMethodID:"0EF16204-71CA-42D8-97B2-209D77F98BD1",
+formIndex:2,
+imageStyleClass:"fas fa-search",
+onActionMethodID:"ADEB3E03-BE72-4BED-B935-B70EB7A104A0",
 tabSeq:-2,
-toolTipText:"Acuerdos de precios",
+text:"Menu de Consultas",
+toolTipText:"Menu de Consultas",
 visible:true
 },
-name:"btn_eacuerdos_de_precios",
+name:"btn_consultas",
 typeName:"bootstrapcomponents-button",
 typeid:47,
-uuid:"6DA87A24-05EE-4D87-BB14-195DA3711A5E"
+uuid:"743FC3E6-01AF-45CA-A573-0DFD949B4DCE"
 },
 {
 cssPosition:"321,-1,-1,0,211,75",
@@ -508,49 +568,53 @@ typeid:47,
 uuid:"77064D4A-647F-4507-B972-86DD0B62516E"
 },
 {
-cssPosition:"212,-1,-1,775,45,25",
+cssPosition:"262,-1,-1,963,176,50",
+formIndex:2,
 json:{
 cssPosition:{
 bottom:"-1",
-height:"25",
-left:"775",
+height:"50",
+left:"963",
 right:"-1",
-top:"212",
-width:"45"
+top:"262",
+width:"176"
 },
-imageStyleClass:"fas fa-search",
-onActionMethodID:"ADEB3E03-BE72-4BED-B935-B70EB7A104A0",
+formIndex:2,
+imageStyleClass:"fas fa-hammer",
+onActionMethodID:"95FE4C8D-1408-43BC-8F9D-66B0B2BC7BBF",
 tabSeq:-2,
-toolTipText:"Menu de Consultas",
+text:"Nuevo equipo",
+toolTipText:"Nuevo equipo (Ctrl + b)",
 visible:true
 },
-name:"btn_cobros",
+name:"btn_nuevo_equipoc",
 typeName:"bootstrapcomponents-button",
 typeid:47,
-uuid:"80256419-77CD-4C36-8389-3172EB7DB482"
+uuid:"7B29B4D6-3E28-4D84-BBE1-A54D1E9E4710"
 },
 {
-cssPosition:"287,-1,-1,825,45,25",
+cssPosition:"336,-1,-1,778,176,50",
 formIndex:2,
 json:{
 cssPosition:{
 bottom:"-1",
-height:"25",
-left:"825",
+height:"50",
+left:"778",
 right:"-1",
-top:"287",
-width:"45"
+top:"336",
+width:"176"
 },
 formIndex:2,
-imageStyleClass:"fas fa-list",
-onActionMethodID:"1E299EB0-5BDC-4821-857A-799C1D1290FD",
+imageStyleClass:"far fa-building",
+onActionMethodID:"115A7A42-B331-4CF1-B65B-76059B325A59",
 tabSeq:-2,
-toolTipText:"Historico de Precios"
+text:"Ver Obras",
+visible:true
 },
-name:"btn_historico_cliente",
+name:"btn_ver_obras",
 typeName:"bootstrapcomponents-button",
 typeid:47,
-uuid:"8E8EC133-441D-41F3-AEE1-8B2B0E2D4E15"
+uuid:"7D9E0491-C77B-4649-BCBE-9EE9930F926A"
 },
 {
 cssPosition:"486,-1,-1,593,176,50",
@@ -609,28 +673,6 @@ uuid:"9BF16411-5897-437C-B1E7-D686F84EC580",
 valuelistID:"3E539AD9-8116-4C89-B42B-9A878F85CBA1"
 },
 {
-cssPosition:"113,-1,-1,774,45,25",
-json:{
-cssPosition:{
-bottom:"-1",
-height:"25",
-left:"774",
-right:"-1",
-top:"113",
-width:"45"
-},
-imageStyleClass:"fas fa-list",
-onActionMethodID:"9E6DFEF5-992D-4012-BC73-6A8DC77D9B51",
-tabSeq:-2,
-toolTipText:"Listado de Devoluciones",
-visible:true
-},
-name:"btn_administracionc",
-typeName:"bootstrapcomponents-button",
-typeid:47,
-uuid:"9FFCE543-A129-4D3B-BC6B-338DD4727AB7"
-},
-{
 cssPosition:"394,0,-1,0,640,10",
 styleClass:"banner_fino",
 tabSeq:-2,
@@ -643,51 +685,6 @@ styleClass:"banner_fino",
 tabSeq:-2,
 typeid:7,
 uuid:"A672A4AE-23CB-47A0-B07F-0D2B81310F5B"
-},
-{
-cssPosition:"361,-1,-1,775,45,25",
-json:{
-cssPosition:{
-bottom:"-1",
-height:"25",
-left:"775",
-right:"-1",
-top:"361",
-width:"45"
-},
-imageStyleClass:"far fa-building",
-onActionMethodID:"115A7A42-B331-4CF1-B65B-76059B325A59",
-tabSeq:-2,
-toolTipText:"Ver Obras",
-visible:true
-},
-name:"btn_ver_obras",
-typeName:"bootstrapcomponents-button",
-typeid:47,
-uuid:"A9D26267-FD94-4B97-A4A9-D74427061481"
-},
-{
-cssPosition:"262,-1,-1,825,45,25",
-formIndex:2,
-json:{
-cssPosition:{
-bottom:"-1",
-height:"25",
-left:"825",
-right:"-1",
-top:"262",
-width:"45"
-},
-formIndex:2,
-imageStyleClass:"fas fa-hammer",
-onActionMethodID:"95FE4C8D-1408-43BC-8F9D-66B0B2BC7BBF",
-tabSeq:-2,
-toolTipText:"Nuevo equipo (Ctrl + b)"
-},
-name:"btn_nuevo_equipoc",
-typeName:"bootstrapcomponents-button",
-typeid:47,
-uuid:"B599E547-BD76-4F26-AC6B-D1E92B149FEB"
 },
 {
 cssPosition:"4,43,-1,-1,45,30",
@@ -734,12 +731,12 @@ typeid:47,
 uuid:"BB2D24A1-B77A-406B-AFB5-74A008E5733D"
 },
 {
-cssPosition:"262,-1,-1,775,45,25",
+cssPosition:"262,-1,-1,1145,45,25",
 json:{
 cssPosition:{
 bottom:"-1",
 height:"25",
-left:"775",
+left:"1145",
 right:"-1",
 top:"262",
 width:"45"
@@ -764,12 +761,12 @@ typeid:7,
 uuid:"C6714E54-293F-4404-ABA3-20F39B0C7FAD"
 },
 {
-cssPosition:"287,-1,-1,775,45,25",
+cssPosition:"287,-1,-1,1145,45,25",
 json:{
 cssPosition:{
 bottom:"-1",
 height:"25",
-left:"775",
+left:"1145",
 right:"-1",
 top:"287",
 width:"45"
@@ -807,6 +804,31 @@ styleClass:"btn btn-default btn-success",
 typeName:"bootstrapcomponents-button",
 typeid:47,
 uuid:"CA9D90E8-2FB4-43D7-985A-C28AAF34591C"
+},
+{
+cssPosition:"486,-1,-1,778,176,50",
+formIndex:2,
+json:{
+cssPosition:{
+bottom:"-1",
+height:"50",
+left:"778",
+right:"-1",
+top:"486",
+width:"176"
+},
+formIndex:2,
+imageStyleClass:"fas fa-list",
+onActionMethodID:"BE1F255F-7FDD-454D-9FCF-983347281F89",
+tabSeq:-2,
+text:"Fct. de proveedor",
+toolTipText:"Listado de comprobantes de proveedor",
+visible:true
+},
+name:"btn_comprobantes_prov",
+typeName:"bootstrapcomponents-button",
+typeid:47,
+uuid:"CE3EE4BD-97EE-4742-A15B-C87CF6C8B536"
 },
 {
 cssPosition:"4,4,-1,-1,40,30",
@@ -855,12 +877,12 @@ typeid:47,
 uuid:"CFFAA4A5-4053-4177-918E-41F054D9B7FE"
 },
 {
-cssPosition:"187,-1,-1,775,45,25",
+cssPosition:"187,-1,-1,1145,45,25",
 json:{
 cssPosition:{
 bottom:"-1",
 height:"25",
-left:"775",
+left:"1145",
 right:"-1",
 top:"187",
 width:"45"
@@ -945,26 +967,29 @@ typeid:19,
 uuid:"E767BEF3-1DB1-4476-A18E-C0A6428C5243"
 },
 {
-cssPosition:"486,-1,-1,774,45,25",
+cssPosition:"113,-1,-1,963,176,50",
+formIndex:2,
 json:{
 cssPosition:{
 bottom:"-1",
-height:"25",
-left:"774",
+height:"50",
+left:"963",
 right:"-1",
-top:"486",
-width:"45"
+top:"113",
+width:"176"
 },
-imageStyleClass:"fas fa-list",
-onActionMethodID:"BE1F255F-7FDD-454D-9FCF-983347281F89",
+formIndex:2,
+imageStyleClass:"fas fa-magnet",
+onActionMethodID:"31D81981-FF2F-44ED-96A9-1CD0E720EA41",
 tabSeq:-2,
-toolTipText:"Listado de comprobantes de proveedor",
+text:"Equipos alquilados",
+toolTipText:"Listado de equipos alquilados",
 visible:true
 },
-name:"btn_comprobantes_prov",
+name:"btn_equipos_alquilados",
 typeName:"bootstrapcomponents-button",
 typeid:47,
-uuid:"EA72895A-156A-423B-A0B6-A9C5660DFC36"
+uuid:"EA3BA1EA-05BC-4CF8-95C1-C599AF8868D3"
 },
 {
 cssPosition:"113,-1,-1,220,176,50",
@@ -1037,12 +1062,37 @@ name:"btn_hist_caja",
 typeName:"bootstrapcomponents-button",
 typeid:47,
 uuid:"F81555A9-7EAC-454D-B2D0-3EB8CD4FB5C5"
+},
+{
+cssPosition:"262,-1,-1,778,176,50",
+formIndex:2,
+json:{
+cssPosition:{
+bottom:"-1",
+height:"50",
+left:"778",
+right:"-1",
+top:"262",
+width:"176"
+},
+formIndex:2,
+imageStyleClass:"fas fa-list",
+onActionMethodID:"1E299EB0-5BDC-4821-857A-799C1D1290FD",
+tabSeq:-2,
+text:"Historico de Precios",
+toolTipText:"Historico de Precios",
+visible:true
+},
+name:"btn_historico_cliente",
+typeName:"bootstrapcomponents-button",
+typeid:47,
+uuid:"F86D375F-DEE1-4A71-89E8-41B7EDEBA857"
 }
 ],
 name:"soah_main",
 navigatorID:"-1",
 onShowMethodID:"8DB27ED0-27A7-484F-BF90-119A7AAF3F8E",
 showInMenu:true,
-size:"878,606",
+size:"1200,606",
 typeid:3,
 uuid:"FCCC4AAE-8328-4F5D-B08F-A6B390DA8D6B"

@@ -18,13 +18,12 @@ function onActionVolver() {
  */
 function onActioGrabar() {
 	
-	if(vl_precio_inicial != comp_precio_ajustado){
-		forms.devolucion_nuevo.vl_total_alquiler -= vl_precio_inicial
-		forms.devolucion_nuevo.vl_total_alquiler += comp_precio_calculado
-		forms.devolucion_nuevo.calculoTotalesSinRecalcularDias()
-	}
-	
 	databaseManager.saveData()
+	
+	forms.devolucion_nuevo.calculoTotalesSinRecalcularDias()
+	
+	
+	
 	application.getWindow('Dialog').hide()
 }
 

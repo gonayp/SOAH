@@ -39,8 +39,11 @@ function onShow(firstShow, event) {
 	
 	
 	
-	if(firstShow)
+	if(firstShow){
+		vl_tipo =1
 		filtrar()
+	}
+		
 }
 
 

@@ -87,6 +87,7 @@ json:{
 columns:[
 {
 dataprovider:"cliente_codigo",
+format:"####",
 headerStyleClass:"cell_center_header",
 headerText:"Codigo",
 styleClass:"cell_center",

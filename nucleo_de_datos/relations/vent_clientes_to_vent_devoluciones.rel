@@ -1,0 +1,11 @@
+allowCreationRelatedRecords:true,
+foreignDataSource:"db:/gpp/vent_comprobantes",
+items:[
+{foreignColumnName:"comp_codigo",primaryDataProviderID:"LITERAL:2",typeid:23,uuid:"5E63B8A9-DD84-468E-8C55-1C9F21F336E5"},
+{foreignColumnName:"cliente_id",primaryDataProviderID:"cliente_id",typeid:23,uuid:"9C6B143C-2F86-4748-ACE1-5240D716BEAD"}
+],
+joinType:1,
+name:"vent_clientes_to_vent_devoluciones",
+primaryDataSource:"db:/gpp/vent_clientes",
+typeid:22,
+uuid:"AFA7B44E-036F-4A89-B47B-B57761D4835E"

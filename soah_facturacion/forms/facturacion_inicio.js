@@ -372,8 +372,8 @@ function onShow(firstShow, event) {
 	
 	vl_seleccionadas = 1
 	
-	if(firstShow)
-		onActionLimpiar()
+	//if(firstShow)
+		//onActionLimpiar()
 		
 	if(vl_form_padre != null){
 		filtrar()
