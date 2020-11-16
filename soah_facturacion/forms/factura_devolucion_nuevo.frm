@@ -156,6 +156,7 @@ uuid:"5FA9CE4F-87DE-41AB-B11A-13D01A81BD9D"
 cssPosition:"180,-1,-1,745,221,20",
 dataProviderID:"vl_factura_parcial",
 displayType:4,
+enabled:false,
 text:"Factura  con alquileres parciales",
 typeid:4,
 uuid:"5FB29526-617F-4467-A5C9-14D802049375"

@@ -156,7 +156,7 @@ function generarFactura(){
 	forms.factura_devolucion_nuevo.vl_total					= vl_total
 	forms.factura_devolucion_nuevo.vl_total_iva				= vl_total_iva
 	forms.factura_devolucion_nuevo.vl_condicion_pago		= 1//contado
-	forms.factura_devolucion_nuevo.vl_factura_parcial		= 0//Factura parcial
+	forms.factura_devolucion_nuevo.vl_factura_parcial		= vl_facturacion_parcial//Factura parcial
 	
 	//Numero y codigo de la factura
 	forms.factura_devolucion_nuevo.vl_codigo				= 5 //Factura
@@ -189,7 +189,7 @@ function generarFactura(){
 	crearHerramientas()
 	crearProductos()
 	
-	forms.factura_devolucion_nuevo.calculoTotalesSinModificaciones()
+	forms.factura_devolucion_nuevo.calculoTotales()
 	
 	
 	application.showForm(forms.factura_devolucion_nuevo)

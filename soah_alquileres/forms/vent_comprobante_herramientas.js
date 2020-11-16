@@ -43,6 +43,9 @@ function onActionLimpiar() {
 	vl_marca = null
 	vl_modelo = null
 	
+	globals.vg_marca_id = vl_marca
+	globals.vg_herramienta_id = vl_herramienta
+	
 	filtrar()
 }
 
@@ -68,9 +71,11 @@ function filtrar() {
  * @properties={typeid:24,uuid:"9D321FA2-9786-4520-BD1F-9FE77776B649"}
  */
 function onDataChangeHerramienta() {
+	
+	globals.vg_herramienta_id = vl_herramienta
+	globals.vg_marca_id = null 
 	vl_marca = null
 	vl_modelo = null
-	globals.vg_herramienta_id = vl_herramienta
 	filtrar()
 }
 
@@ -90,4 +95,14 @@ function onShow(firstShow, event) {
 	}
 	
 
+}
+
+/**
+ *
+ * @properties={typeid:24,uuid:"60DB60FB-B61C-4B07-91A7-CAC2B2CA30A2"}
+ */
+function onDataChangeMarca() {
+	globals.vg_marca_id = vl_marca
+	vl_modelo = null
+	filtrar()
 }

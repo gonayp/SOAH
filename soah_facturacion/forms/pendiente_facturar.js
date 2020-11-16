@@ -135,8 +135,10 @@ function calcularTotales(){
 		nRecordCount = databaseManager.getFoundSetCount(myCliente.vent_clientes_to_vent_devoluciones);
 		for (var k = 1; k <= nRecordCount; k++) {
 			var myDevolucion = myCliente.vent_clientes_to_vent_devoluciones.getRecord(k);
-			myCliente.calc_pendiente_devoluciones += myDevolucion.comp_imp_total
-			myCliente.calc_pendiente += myDevolucion.comp_imp_total
+			if(myDevolucion.comp_estado_id == 5){
+				myCliente.calc_pendiente_devoluciones += myDevolucion.comp_imp_total
+				myCliente.calc_pendiente += myDevolucion.comp_imp_total
+			}
 		}
 		
 		if(vl_incluir_alquileres == 1){
