@@ -41,11 +41,12 @@ cssPosition:"120,-1,-1,5,45,35",
 formIndex:3,
 json:{
 cssPosition:{
-height:"35px",
-left:"5px",
-position:"absolute",
-top:"120px",
-width:"45px"
+bottom:"-1",
+height:"35",
+left:"5",
+right:"-1",
+top:"120",
+width:"45"
 },
 formIndex:3,
 imageStyleClass:"fas fa-dollar-sign",
@@ -99,11 +100,12 @@ cssPosition:"40,-1,-1,5,45,35",
 formIndex:4,
 json:{
 cssPosition:{
-height:"35px",
-left:"5px",
-position:"absolute",
-top:"40px",
-width:"45px"
+bottom:"-1",
+height:"35",
+left:"5",
+right:"-1",
+top:"40",
+width:"45"
 },
 formIndex:4,
 imageStyleClass:"fas fa-times",
@@ -132,11 +134,12 @@ cssPosition:"80,-1,-1,5,45,35",
 formIndex:3,
 json:{
 cssPosition:{
-height:"35px",
-left:"5px",
-position:"absolute",
-top:"80px",
-width:"45px"
+bottom:"-1",
+height:"35",
+left:"5",
+right:"-1",
+top:"80",
+width:"45"
 },
 formIndex:3,
 imageStyleClass:"fas fa-save",
@@ -153,9 +156,11 @@ uuid:"70C72629-D7D8-4D11-AEC2-2C3B5C6FB3EC"
 cssPosition:"111,-1,-1,65,140,20",
 dataProviderID:"vl_fecha",
 displayType:5,
+editable:false,
 format:"dd/MM/yy HH:mm",
 name:"f_fecha",
 onDataChangeMethodID:"086E0FE2-CBC7-473C-A30C-BDA4EDD19B81",
+onFocusGainedMethodID:"F28418DF-802E-4BE7-9607-8B7D0457819E",
 tabSeq:3,
 typeid:4,
 uuid:"719B50DD-9CD2-43FA-B1E8-05C2E83DA2B8"

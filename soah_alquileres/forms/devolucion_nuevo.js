@@ -732,3 +732,14 @@ function onDataChangeFecha() {
 }
 
 
+
+/**
+ * Handle focus gained event of the element.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"F28418DF-802E-4BE7-9607-8B7D0457819E"}
+ */
+function onFocusGained(event) {
+	globals.ventanaPickFecha(controller.getName(),vl_fecha)
+}

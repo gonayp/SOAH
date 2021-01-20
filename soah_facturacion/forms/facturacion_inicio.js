@@ -147,8 +147,8 @@ function generarFactura(){
 	var ahora = application.getServerTimeStamp()
 	forms.factura_devolucion_nuevo.vl_cliente 				= vl_cliente
 	forms.factura_devolucion_nuevo.vl_fecha					= new Date(ahora.getFullYear(),ahora.getMonth(),1)
-	forms.factura_devolucion_nuevo.vl_fecha_emision			= application.getServerTimeStamp()
-	forms.factura_devolucion_nuevo.vl_fecha_emision_inicial	= forms.factura_devolucion_nuevo.vl_fecha_emision
+	forms.factura_devolucion_nuevo.vl_fecha_aux			= application.getServerTimeStamp()
+	forms.factura_devolucion_nuevo.vl_fecha_emision_inicial	= forms.factura_devolucion_nuevo.vl_fecha_aux
 	forms.factura_devolucion_nuevo.vl_numero				= null
 	forms.factura_devolucion_nuevo.vl_obra					= vl_obra_nueva
 	forms.factura_devolucion_nuevo.vl_observaciones			= null

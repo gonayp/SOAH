@@ -1,4 +1,25 @@
 /**
+ * @type {Date}
+ *
+ * @properties={typeid:35,uuid:"D5E585A6-AE0C-472D-A833-A003715F661A",variableType:93}
+ */
+var vg_fecha_final = null;
+
+/**
+ * @type {Date}
+ *
+ * @properties={typeid:35,uuid:"5A9E059E-5DC9-4CA2-A068-EFCAF589E29D",variableType:93}
+ */
+var vg_fecha_inicial = null;
+
+/**
+ * @type {String}
+ *
+ * @properties={typeid:35,uuid:"0DE32D97-1643-4BE1-B5C0-8F70B833D991"}
+ */
+var vg_fecha_rango = null;
+
+/**
  * @type {Number}
  *
  * @properties={typeid:35,uuid:"FF3803FD-763B-4068-8FC6-26924DB98AC2",variableType:4}
@@ -549,4 +570,58 @@ function enviarMail( p_destinatario, p_remitente, p_titulo, p_cuerpo,p_adjuntos)
 function onSolutionOpen(arg, queryParams) {
 	application.putClientProperty(APP_UI_PROPERTY.CALENDAR_NG_SHOW_ISO_WEEK_NUMBER, false)
 	
+}
+
+
+
+
+
+/**
+ * @properties={typeid:24,uuid:"500F47D8-C024-4B7C-AEE1-F4634A9D0513"}
+ */
+function inicializarFechasGlobales(p){
+	var fecha = application.getServerTimeStamp()
+	globals.vg_fecha_final = new Date(fecha.getFullYear(),fecha.getMonth(),fecha.getDate(),23,59,59)
+	if(p=='mes'){
+		globals.vg_fecha_inicial = new Date(globals.vg_fecha_final.getFullYear(),globals.vg_fecha_final.getMonth()-1,globals.vg_fecha_final.getDate(),0,0,0)
+	}
+	if(p=='dia'){
+		globals.vg_fecha_inicial = new Date(globals.vg_fecha_final.getFullYear(),globals.vg_fecha_final.getMonth(),globals.vg_fecha_final.getDate(),0,0,0)
+	}
+	globals.vg_fecha_rango = utils.dateFormat(globals.vg_fecha_inicial, 'dd/MM/yy') + ' - ' + utils.dateFormat(globals.vg_fecha_final, 'dd/MM/yy')
+}
+
+/**
+ *
+ * @param formulario
+ *
+ * @properties={typeid:24,uuid:"C79EAD91-3CD0-4AE4-9526-BDAEE2A4340D"}
+ */
+function ventanaFechas(formulario){
+	forms.core_rango_fechas.vl_formulario = formulario
+	var win = application.createWindow("Dialog", JSWindow.MODAL_DIALOG);
+	win.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
+	win.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
+	win.resizable = false
+	win.title= '';
+	win.show( forms.core_rango_fechas );
+}
+
+
+/**
+ * TODO generated, please specify type and doc for the params
+ * @param formulario
+ * @param vl_fecha
+ *
+ * @properties={typeid:24,uuid:"3DCADCBA-3F21-411D-9133-2A06363F6883"}
+ */
+function ventanaPickFecha(formulario,vl_fecha){
+	forms.core_pick_fecha.vl_formulario = formulario
+	forms.core_pick_fecha.vl_fecha_aux = vl_fecha
+	var win = application.createWindow("Dialog", JSWindow.MODAL_DIALOG);
+	win.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
+	win.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
+	win.resizable = false
+	win.title= '';
+	win.show( forms.core_pick_fecha );
 }

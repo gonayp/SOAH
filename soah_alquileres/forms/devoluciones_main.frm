@@ -31,14 +31,6 @@ typeid:47,
 uuid:"263F352A-1E67-4169-9F4B-CF07E3DA2FE7"
 },
 {
-cssPosition:"60,-1,-1,224,95,20",
-formIndex:4,
-text:"Fecha Final",
-transparent:true,
-typeid:7,
-uuid:"4C42EC6F-F5E9-4C2B-8E2D-5003E5B0234C"
-},
-{
 cssPosition:"39,-1,0,0,60,443",
 location:"10,10",
 styleClass:"banner",
@@ -64,17 +56,6 @@ text:"Cliente",
 transparent:true,
 typeid:7,
 uuid:"6FB93669-22AB-46DC-B25F-6FA50A762F36"
-},
-{
-cssPosition:"80,-1,-1,224,140,20",
-dataProviderID:"vl_fecha_fin",
-displayType:5,
-formIndex:4,
-format:"dd/MM/yy|mask",
-horizontalAlignment:0,
-onDataChangeMethodID:"82B3BEDD-C457-4F4C-BBAB-2BB15C9BA303",
-typeid:4,
-uuid:"72B0C125-7CFA-4F1A-8BDC-0D9D60790862"
 },
 {
 cssPosition:"115,0,0,60,575,364",
@@ -222,12 +203,11 @@ uuid:"A43A05AD-D8B5-49F3-9450-3B848DE60135"
 },
 {
 cssPosition:"80,-1,-1,79,140,20",
-dataProviderID:"vl_fecha_ini",
-displayType:5,
+dataProviderID:"scopes.globals.vg_fecha_rango",
 formIndex:2,
-format:"dd/MM/yy|mask",
 horizontalAlignment:0,
-onDataChangeMethodID:"82B3BEDD-C457-4F4C-BBAB-2BB15C9BA303",
+onDataChangeMethodID:"-1",
+onFocusGainedMethodID:"5257D91A-31AB-4113-B2FA-DC3944FC0DD6",
 typeid:4,
 uuid:"C4AC8AEE-B0EF-4AEF-B922-86929C2DD6E7"
 },
@@ -242,7 +222,7 @@ uuid:"C7BC5FF5-99BE-497B-B290-085E219A191D"
 {
 cssPosition:"60,-1,-1,79,119,20",
 formIndex:3,
-text:"Fecha Inicial",
+text:"Rango de fechas",
 transparent:true,
 typeid:7,
 uuid:"D07D12F0-A069-40C0-9270-E8D043EB9C8C"

@@ -73,7 +73,7 @@ var vl_obra = null;
  *
  * @properties={typeid:35,uuid:"DA8FA843-B536-4AD2-A7FE-CF5666B2AEAD",variableType:93}
  */
-var vl_fecha = null;
+var vl_fecha_aux = null;
 
 /**
  * @type {Number}
@@ -129,7 +129,7 @@ function onActionGuardar(event) {
 		controller.focusField("f_cliente",true)
 		return
 	}
-	if (vl_fecha == null) {
+	if (vl_fecha_aux == null) {
 		plugins.webnotificationsToastr.error("Falta completar el campo de fecha.", "", globals.vg_toast_options)
 		controller.focusField("f_fecha", true)
 		return
@@ -187,8 +187,8 @@ function grabar(){
 	fs_comprobantes.comp_codigo					= vl_codigo
 	fs_comprobantes.comp_estado_id				= 1
 	fs_comprobantes.comp_etiqueta				= vl_etiqueta
-	fs_comprobantes.comp_fecha_emision			= vl_fecha
-	fs_comprobantes.comp_fec_ult_facturacion	= vl_fecha
+	fs_comprobantes.comp_fecha_emision			= vl_fecha_aux
+	fs_comprobantes.comp_fec_ult_facturacion	= vl_fecha_aux
 	fs_comprobantes.comp_imp_total				= vl_total
 	fs_comprobantes.comp_numero					= vl_numero
 	fs_comprobantes.comp_observacion			= vl_observaciones
@@ -243,7 +243,7 @@ function grabar(){
 		fs_historico_equipos.company_id							= scopes.usuario.vg_company_id
 		fs_historico_equipos.comp_id							= fs_comprobantes.comp_id
 		fs_historico_equipos.equipo_id							= myHerramienta.equipo_id
-		fs_historico_equipos.hist_fecha							= vl_fecha
+		fs_historico_equipos.hist_fecha							= vl_fecha_aux
 		fs_historico_equipos.hist_tipo							= 1 //Alquiler
 		databaseManager.saveData(fs_historico_equipos)
 		
@@ -256,7 +256,7 @@ function grabar(){
 	fs_historicos_cliente.cliente_id				= vl_cliente
 	fs_historicos_cliente.comp_id					= fs_comprobantes.comp_id
 	fs_historicos_cliente.hist_estado				= 2//cerrada
-	fs_historicos_cliente.hist_fecha				= vl_fecha
+	fs_historicos_cliente.hist_fecha				= vl_fecha_aux
 	fs_historicos_cliente.hist_tipo					= 6 //Alquiler
 	databaseManager.saveData(fs_historicos_cliente)
 	
@@ -288,7 +288,7 @@ function limpiarVariables(){
 	vl_transporte = null;
 	vl_etiqueta = null;
 	vl_obra = null;
-	vl_fecha = application.getServerTimeStamp();
+	vl_fecha_aux = application.getServerTimeStamp();
 	vl_cliente = null;
 	
 	vl_codigo = 1 //Alquiler
@@ -481,4 +481,31 @@ function onActionEditarCliente(event) {
 			win.show( forms['clientes_ver'] );
 	}
 
+}
+
+/**
+ * Handle focus gained event of the element.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"1293006A-429E-4509-B250-4DC598966742"}
+ */
+function onFocusGained(event) {
+	globals.ventanaPickFecha(controller.getName(),vl_fecha_aux)
+}
+
+/**
+ * Handle changed data, return false if the value should not be accepted. In NGClient you can return also a (i18n) string, instead of false, which will be shown as a tooltip.
+ *
+ * @param {Date} oldValue old value
+ * @param {Date} newValue new value
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @return {Boolean}
+ *
+ * @properties={typeid:24,uuid:"7009BA93-76E0-4C11-9156-0A3E46DCD350"}
+ */
+function onDataChangeFecha(oldValue, newValue, event) {
+	// TODO Auto-generated method stub
+	return true
 }

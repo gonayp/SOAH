@@ -137,6 +137,8 @@
     overflow-y: hidden !important;
 
 }
+
+
 .fc-toolbar {
     font-size: .9em;
 }
@@ -148,6 +150,7 @@
 
 .fc-more-popover {
     width: 100px;
+    
 }
 .fc-view-month .fc-event, .fc-view-agendaWeek .fc-event, .fc-content {
     font-size: 0;
@@ -159,14 +162,17 @@
     font-size: 0;
     overflow: hidden;
     width: 2px !important;
+    
 }
 .fc-agenda-axis {
     width: 20px !important;
     font-size: .7em;
+    
 }
 
 .fc-button-content {
     padding: 0;
+    
 }
 
 .fc-sun { 
@@ -188,6 +194,12 @@
 .fc-today{
 	background: #FFCB75 !important;
 }
+
+.fc-highlight {
+  background: green !important;
+}
+
+
 
 /***********************************************************/
 

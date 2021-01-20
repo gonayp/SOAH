@@ -40,7 +40,7 @@ typeid:7,
 uuid:"1483393B-75B5-4917-B4E8-C513E67DED0B"
 },
 {
-cssPosition:"61,-1,-1,701,140,20",
+cssPosition:"61,-1,-1,571,139,20",
 formIndex:12,
 location:"10,10",
 text:"Marca",
@@ -75,7 +75,7 @@ typeid:7,
 uuid:"36419F14-B7AC-4CD2-8012-5E1AF83AEA10"
 },
 {
-cssPosition:"81,-1,-1,701,196,20",
+cssPosition:"81,-1,-1,571,195,20",
 dataProviderID:"vl_marca",
 displayType:10,
 formIndex:9,
@@ -84,14 +84,6 @@ onDataChangeMethodID:"75C63184-3504-43CB-94D7-5C0458DBC954",
 typeid:4,
 uuid:"376E8405-CD37-412B-B3CF-7051C11FF3F6",
 valuelistID:"1EF96E34-ADD0-456F-B844-3C9E7675166F"
-},
-{
-cssPosition:"60,-1,-1,351,95,20",
-formIndex:4,
-text:"Fecha Final",
-transparent:true,
-typeid:7,
-uuid:"390EC659-9EC5-4400-9101-77C304F148DC"
 },
 {
 cssPosition:"80,-1,-1,80,119,20",
@@ -180,12 +172,11 @@ typeid:7,
 uuid:"64FD740A-9772-45A4-A3BA-472CAAC8507F"
 },
 {
-cssPosition:"80,-1,-1,206,140,20",
-dataProviderID:"vl_fecha_inicial",
-displayType:5,
+cssPosition:"80,-1,-1,206,136,20",
+dataProviderID:"scopes.globals.vg_fecha_rango",
 formIndex:2,
-format:"dd/MM/yy|mask",
-onDataChangeMethodID:"811F7C6A-C568-4CF3-863F-BA7CA46CFDE2",
+onDataChangeMethodID:"-1",
+onFocusGainedMethodID:"78892464-61C0-4A4B-83D1-B9427358CE34",
 typeid:4,
 uuid:"655811CA-BE67-4356-8AC5-E584B3C1FE7C"
 },
@@ -320,7 +311,7 @@ typeid:47,
 uuid:"7E9779C2-B009-4664-8B62-86EADC824BC0"
 },
 {
-cssPosition:"61,-1,-1,499,140,20",
+cssPosition:"61,-1,-1,369,139,20",
 formIndex:10,
 location:"10,10",
 text:"Herramienta",
@@ -329,7 +320,7 @@ typeid:7,
 uuid:"801AAC13-0584-4141-A262-3D796DCB00B1"
 },
 {
-cssPosition:"81,-1,-1,907,164,20",
+cssPosition:"81,-1,-1,777,163,20",
 dataProviderID:"vl_modelo",
 displayType:10,
 formIndex:28,
@@ -469,19 +460,9 @@ typeid:7,
 uuid:"B0946C3A-9441-4951-A967-03B70F4F2572"
 },
 {
-cssPosition:"80,-1,-1,351,140,20",
-dataProviderID:"vl_fecha_final",
-displayType:5,
-formIndex:4,
-format:"dd/MM/yy|mask",
-onDataChangeMethodID:"811F7C6A-C568-4CF3-863F-BA7CA46CFDE2",
-typeid:4,
-uuid:"B2ABE5A4-6A5C-4281-B073-8077D38A73B5"
-},
-{
-cssPosition:"60,-1,-1,206,119,20",
+cssPosition:"60,-1,-1,206,158,20",
 formIndex:3,
-text:"Fecha Inicial",
+text:"Rango de Fechas",
 transparent:true,
 typeid:7,
 uuid:"B62A9572-AA9B-4EED-999C-889F9145B79F"
@@ -532,7 +513,7 @@ typeid:7,
 uuid:"BDBF837B-9D9D-4B5E-9619-5F5C525898C0"
 },
 {
-cssPosition:"81,-1,-1,499,196,20",
+cssPosition:"81,-1,-1,369,195,20",
 dataProviderID:"vl_herramienta",
 displayType:10,
 formIndex:31,
@@ -544,7 +525,7 @@ uuid:"D5DFA02B-F922-4D06-BEB2-2DA4473F5DBD",
 valuelistID:"B3969C5F-97AB-4E17-A40B-AEED01B21300"
 },
 {
-cssPosition:"61,-1,-1,907,140,20",
+cssPosition:"61,-1,-1,777,139,20",
 formIndex:29,
 location:"10,10",
 text:"Modelo",

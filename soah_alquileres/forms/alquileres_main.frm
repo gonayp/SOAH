@@ -4,10 +4,10 @@ dataSource:"db:/gpp/vent_comprobantes",
 encapsulation:44,
 items:[
 {
-cssPosition:"80,-1,-1,369,186,20",
+cssPosition:"80,-1,-1,239,186,20",
 dataProviderID:"vl_cliente",
 displayType:10,
-formIndex:3,
+formIndex:6,
 onDataChangeMethodID:"61C11FE6-2C7A-42E4-843C-B13DC57B8997",
 typeid:4,
 uuid:"1225B462-D8FF-4D53-B269-A4E211806FEB",
@@ -15,7 +15,7 @@ valuelistID:"AC2E1B90-8F1D-4F2F-8176-0F118C8B06F6"
 },
 {
 cssPosition:"80,-1,-1,5,45,35",
-formIndex:2,
+formIndex:3,
 json:{
 cssPosition:{
 bottom:"-1",
@@ -25,7 +25,7 @@ right:"-1",
 top:"80",
 width:"45"
 },
-formIndex:2,
+formIndex:3,
 imageStyleClass:"fas fa-plus",
 location:{
 x:10,
@@ -42,7 +42,7 @@ uuid:"140B5945-FA2A-4837-832A-BDC9DAD00787"
 },
 {
 cssPosition:"40,-1,-1,5,45,35",
-formIndex:2,
+formIndex:4,
 json:{
 cssPosition:{
 bottom:"-1",
@@ -52,7 +52,7 @@ right:"-1",
 top:"40",
 width:"45"
 },
-formIndex:2,
+formIndex:4,
 imageStyleClass:"fas fa-undo-alt",
 location:{
 x:10,
@@ -68,6 +68,17 @@ typeid:47,
 uuid:"187AACED-B8AB-42B9-AB16-D5B5368FC17D"
 },
 {
+cssPosition:"82,-1,-1,79,136,20",
+dataProviderID:"scopes.globals.vg_fecha_rango",
+formIndex:14,
+horizontalAlignment:0,
+name:"rango_fechas",
+onActionMethodID:"-1",
+onFocusGainedMethodID:"50E1471A-D489-44D2-9417-07FEAABAA078",
+typeid:4,
+uuid:"290194A2-3E07-4DAF-91B7-DE6BEB4E9F9F"
+},
+{
 cssPosition:"39,-1,0,0,60,443",
 location:"10,10",
 styleClass:"banner",
@@ -76,16 +87,16 @@ uuid:"52083818-BF6F-4991-83F4-4F5F2D5B0EFA",
 verticalAlignment:1
 },
 {
-cssPosition:"60,-1,-1,565,80,20",
-formIndex:5,
+cssPosition:"60,-1,-1,435,80,20",
+formIndex:12,
 text:"Estado",
 transparent:true,
 typeid:7,
 uuid:"6DE228C1-7CA7-4914-B628-9A0FBBF72053"
 },
 {
-cssPosition:"60,-1,-1,369,80,20",
-formIndex:5,
+cssPosition:"60,-1,-1,239,80,20",
+formIndex:11,
 text:"Cliente",
 transparent:true,
 typeid:7,
@@ -93,7 +104,7 @@ uuid:"762C3536-812C-4B94-A019-CF0211EA6D9A"
 },
 {
 cssPosition:"0,0,-1,0,642,40",
-formIndex:5,
+formIndex:13,
 location:"10,10",
 styleClass:"banner",
 text:"Alquileres",
@@ -102,11 +113,11 @@ uuid:"838A004F-E50F-433F-8A1C-D5938F12DB54",
 verticalAlignment:1
 },
 {
-cssPosition:"80,-1,-1,565,186,20",
+cssPosition:"80,-1,-1,435,186,20",
 dataProviderID:"vl_estado",
 displayType:2,
 editable:false,
-formIndex:3,
+formIndex:7,
 onDataChangeMethodID:"61C11FE6-2C7A-42E4-843C-B13DC57B8997",
 typeid:4,
 uuid:"8D6E6166-5A80-4D19-B606-ADFED9C0403F",
@@ -199,36 +210,8 @@ typeid:47,
 uuid:"BAF6C2F2-BCC6-4ABF-9104-0EF4F8FBC667"
 },
 {
-cssPosition:"80,-1,-1,224,140,20",
-dataProviderID:"vl_fecha_fin",
-displayType:5,
-formIndex:4,
-format:"dd/MM/yy|mask",
-onDataChangeMethodID:"61C11FE6-2C7A-42E4-843C-B13DC57B8997",
-typeid:4,
-uuid:"C2472D04-BBE8-44B0-9902-1D60B2EA6DE9"
-},
-{
-cssPosition:"80,-1,-1,79,140,20",
-dataProviderID:"vl_fecha_ini",
-displayType:5,
-formIndex:2,
-format:"dd/MM/yy|mask",
-onDataChangeMethodID:"61C11FE6-2C7A-42E4-843C-B13DC57B8997",
-typeid:4,
-uuid:"C7FDE186-6983-4BF9-B19F-FB4E11846E92"
-},
-{
-cssPosition:"60,-1,-1,224,95,20",
-formIndex:4,
-text:"Fecha Final",
-transparent:true,
-typeid:7,
-uuid:"D6F1CB3A-6043-4427-9A09-1742C635F062"
-},
-{
 cssPosition:"65,-1,-1,785,43,35",
-formIndex:3,
+formIndex:8,
 json:{
 cssPosition:{
 bottom:"-1",
@@ -238,7 +221,7 @@ right:"-1",
 top:"65",
 width:"43"
 },
-formIndex:3,
+formIndex:8,
 imageStyleClass:"fas fa-sync",
 location:{
 x:10,
@@ -254,9 +237,9 @@ typeid:47,
 uuid:"DE708E9B-A149-4D09-87A1-49AC7BE62077"
 },
 {
-cssPosition:"60,-1,-1,79,119,20",
-formIndex:3,
-text:"Fecha Inicial",
+cssPosition:"60,-1,-1,79,157,20",
+formIndex:5,
+text:"Rango de fechas",
 transparent:true,
 typeid:7,
 uuid:"FDA76BBF-9942-4E9B-AACE-56F15B6597FF"

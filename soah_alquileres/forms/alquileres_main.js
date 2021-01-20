@@ -12,19 +12,7 @@ var vl_estado = null;
  */
 var vl_cliente = null;
 
-/**
- * @type {Date}
- *
- * @properties={typeid:35,uuid:"E145BDC3-EF6B-4D12-8518-3E2B4175A14D",variableType:93}
- */
-var vl_fecha_fin = null;
 
-/**
- * @type {Date}
- *
- * @properties={typeid:35,uuid:"72C70BBF-B0D2-42AA-8020-53D75383E3AF",variableType:93}
- */
-var vl_fecha_ini = null;
 
 
 /**
@@ -54,8 +42,7 @@ function onShow(firstShow, event) {
 	scopes.globals.vg_tipo_comprobante = 1 //alquileres
 
 	if(firstShow){
-		vl_fecha_fin = application.getServerTimeStamp()
-		vl_fecha_ini = new Date(vl_fecha_fin.getFullYear(),vl_fecha_fin.getMonth()-1,vl_fecha_fin.getDate())
+		globals.inicializarFechasGlobales('mes')
 		vl_cliente = null
 		filtrar()
 	}
@@ -86,7 +73,7 @@ function filtrar() {
 	
 	foundset.find()
 	foundset.comp_codigo = 1
-	foundset.comp_fecha_emision = utils.dateFormat(vl_fecha_ini, 'yyyy-MM-dd') + ' 00:00:00...' + utils.dateFormat(vl_fecha_fin, 'yyyy-MM-dd') + ' 23:59:59|yyyy-MM-dd HH:mm:ss'
+	foundset.comp_fecha_emision = utils.dateFormat(globals.vg_fecha_inicial, 'yyyy-MM-dd') + ' 00:00:00...' + utils.dateFormat(globals.vg_fecha_final, 'yyyy-MM-dd') + ' 23:59:59|yyyy-MM-dd HH:mm:ss'
 	if(vl_cliente != null) foundset.cliente_id = vl_cliente
 	if(vl_estado != null) foundset.comp_estado_id = vl_estado
 	foundset.search()
@@ -116,4 +103,15 @@ function onActionLimpiar() {
 function onCellDoubleClick(foundsetindex, columnindex, record, event) {
 	application.showForm(forms.alquiler_ver)
 
+}
+
+/**
+ * Perform the element onclick action.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"50E1471A-D489-44D2-9417-07FEAABAA078"}
+ */
+function onClickFecha(event) {
+	globals.ventanaFechas(controller.getName())
 }

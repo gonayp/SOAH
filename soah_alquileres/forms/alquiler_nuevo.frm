@@ -91,10 +91,13 @@ valuelistID:"AC2E1B90-8F1D-4F2F-8176-0F118C8B06F6"
 },
 {
 cssPosition:"115,-1,-1,65,140,20",
-dataProviderID:"vl_fecha",
+dataProviderID:"vl_fecha_aux",
 displayType:5,
+editable:false,
 format:"dd/MM/yy HH:mm",
 name:"f_fecha",
+onDataChangeMethodID:"7009BA93-76E0-4C11-9156-0A3E46DCD350",
+onFocusGainedMethodID:"1293006A-429E-4509-B250-4DC598966742",
 tabSeq:3,
 typeid:4,
 uuid:"3680A748-CF18-4C9A-8645-1472111DF5D9"

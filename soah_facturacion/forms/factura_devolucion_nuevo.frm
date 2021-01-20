@@ -351,10 +351,11 @@ uuid:"EAFE47E9-A806-49FE-A659-97F41E57FDCB"
 {
 cssPosition:"112,-1,-1,65,140,20",
 dataProviderID:"vl_fecha_emision",
-displayType:5,
+editable:false,
 format:"dd/MM/yy HH:mm",
 name:"f_fechac",
 onDataChangeMethodID:"9C272F4B-7060-4516-AB6E-051F1D959EF9",
+onFocusGainedMethodID:"-1",
 typeid:4,
 uuid:"F09E8183-A458-4ADE-9B27-AFD9B2836E95"
 },

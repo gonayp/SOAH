@@ -74,19 +74,7 @@ var vl_taller = null;
  */
 var vl_tipo_fecha = null;
 
-/**
- * @type {Date}
- *
- * @properties={typeid:35,uuid:"50CDA8DA-52C0-45F1-B738-94E462B36694",variableType:93}
- */
-var vl_fecha_final = null;
 
-/**
- * @type {Date}
- *
- * @properties={typeid:35,uuid:"7475B110-1D6A-4194-B384-3B94F491DE77",variableType:93}
- */
-var vl_fecha_inicial = null;
 
 
 /**
@@ -181,13 +169,13 @@ function filtrar() {
 	foundset.find()
 	switch (vl_tipo_fecha) {
 	case 1://inicio
-		foundset.reparacion_fecha_inicio = utils.dateFormat(vl_fecha_inicial, 'yyyy-MM-dd') + ' 00:00:00...' + utils.dateFormat(vl_fecha_final, 'yyyy-MM-dd') + ' 23:59:59|yyyy-MM-dd HH:mm:ss'
+		foundset.reparacion_fecha_inicio = utils.dateFormat(globals.vg_fecha_inicial, 'yyyy-MM-dd') + ' 00:00:00...' + utils.dateFormat(globals.vg_fecha_final, 'yyyy-MM-dd') + ' 23:59:59|yyyy-MM-dd HH:mm:ss'
 		break;
 	case 2://envio
-		foundset.reparacion_fecha_envio = utils.dateFormat(vl_fecha_inicial, 'yyyy-MM-dd') + ' 00:00:00...' + utils.dateFormat(vl_fecha_final, 'yyyy-MM-dd') + ' 23:59:59|yyyy-MM-dd HH:mm:ss'
+		foundset.reparacion_fecha_envio = utils.dateFormat(globals.vg_fecha_inicial, 'yyyy-MM-dd') + ' 00:00:00...' + utils.dateFormat(globals.vg_fecha_final, 'yyyy-MM-dd') + ' 23:59:59|yyyy-MM-dd HH:mm:ss'
 		break;
 	case 3://devolucion
-		foundset.reparacion_fecha_fin = utils.dateFormat(vl_fecha_inicial, 'yyyy-MM-dd') + ' 00:00:00...' + utils.dateFormat(vl_fecha_final, 'yyyy-MM-dd') + ' 23:59:59|yyyy-MM-dd HH:mm:ss'
+		foundset.reparacion_fecha_fin = utils.dateFormat(globals.vg_fecha_inicial, 'yyyy-MM-dd') + ' 00:00:00...' + utils.dateFormat(globals.vg_fecha_final, 'yyyy-MM-dd') + ' 23:59:59|yyyy-MM-dd HH:mm:ss'
 		break;
 	}
 	if(vl_nombre != "" && vl_nombre != null) foundset.reparacion_num_pedido = "#%"+vl_nombre+"%"
@@ -227,8 +215,7 @@ function onShow(firstShow) {
 	
 	if(firstShow){
 		vl_tipo_fecha = 1
-		vl_fecha_final = application.getServerTimeStamp()
-		vl_fecha_inicial = new Date(vl_fecha_final.getFullYear(),vl_fecha_final.getMonth()-1,1)
+		globals.inicializarFechasGlobales('mes')
 		onActionLimpiar()
 		
 	}
@@ -352,4 +339,15 @@ function onDataChangeMarca() {
 	globals.vg_marca_id = vl_marca
 	vl_modelo = null
 	filtrar()
+}
+
+/**
+ * Handle focus gained event of the element.
+ *
+ * @param {JSEvent} event the event that triggered the action
+ *
+ * @properties={typeid:24,uuid:"78892464-61C0-4A4B-83D1-B9427358CE34"}
+ */
+function onFocusGained(event) {
+	globals.ventanaFechas(controller.getName())
 }
