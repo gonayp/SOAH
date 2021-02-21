@@ -4,7 +4,7 @@ dataSource:"db:/gpp/vent_comprobantes",
 encapsulation:4,
 items:[
 {
-cssPosition:"-1,-1,380,63,98,20",
+cssPosition:"-1,-1,378,636,98,20",
 dataProviderID:"comp_imp_alqu",
 editable:false,
 formIndex:2,
@@ -12,7 +12,8 @@ format:"#,###.00",
 horizontalAlignment:4,
 tabSeq:-2,
 typeid:4,
-uuid:"0FC6E76B-1EC9-468E-8C46-ECF4454F671B"
+uuid:"0FC6E76B-1EC9-468E-8C46-ECF4454F671B",
+visible:false
 },
 {
 cssPosition:"45,-1,-1,188,80,20",
@@ -24,7 +25,7 @@ typeid:7,
 uuid:"1DA4FBAF-36FF-46AD-B1CF-DA4278C7D2CB"
 },
 {
-cssPosition:"-1,-1,380,503,98,20",
+cssPosition:"-1,-1,381,172,98,20",
 dataProviderID:"comp_imp_total",
 editable:false,
 formIndex:2,
@@ -52,15 +53,16 @@ typeid:7,
 uuid:"2C72A958-08B4-41B7-BECA-6720DC8086C5"
 },
 {
-cssPosition:"-1,-1,400,283,98,20",
+cssPosition:"-1,-1,398,856,98,20",
 formIndex:12,
 text:"SubTotal",
 transparent:true,
 typeid:7,
-uuid:"330FEBC2-EB40-428F-962E-7FFC62A65CEA"
+uuid:"330FEBC2-EB40-428F-962E-7FFC62A65CEA",
+visible:false
 },
 {
-cssPosition:"-1,-1,380,393,98,20",
+cssPosition:"-1,-1,381,62,98,20",
 dataProviderID:"comp_imp_iva2",
 editable:false,
 formIndex:2,
@@ -133,14 +135,15 @@ typeid:4,
 uuid:"68B65D40-786A-4B20-8B8E-8B7A92DCB207"
 },
 {
-cssPosition:"-1,-1,380,283,98,20",
+cssPosition:"-1,-1,378,856,98,20",
 dataProviderID:"vl_subtotal",
 editable:false,
 formIndex:2,
 format:"#,###.00",
 horizontalAlignment:4,
 typeid:4,
-uuid:"6EADBAE1-50DE-4004-AEEE-D5166A3824F3"
+uuid:"6EADBAE1-50DE-4004-AEEE-D5166A3824F3",
+visible:false
 },
 {
 height:560,
@@ -157,14 +160,15 @@ uuid:"9FA4362E-A472-45EC-A64F-FE842C3427D3",
 verticalAlignment:1
 },
 {
-cssPosition:"-1,-1,380,173,98,20",
+cssPosition:"-1,-1,378,746,98,20",
 dataProviderID:"comp_imp_ventas",
 editable:false,
 formIndex:2,
 format:"#,###.00",
 horizontalAlignment:4,
 typeid:4,
-uuid:"A0B69436-104D-4E0D-86B5-FA9A5A020FE3"
+uuid:"A0B69436-104D-4E0D-86B5-FA9A5A020FE3",
+visible:false
 },
 {
 cssPosition:"50,-1,-1,895,55,20",
@@ -175,7 +179,7 @@ typeid:7,
 uuid:"A2749C2E-72D3-45A9-9ACF-CD1FF4E5252A"
 },
 {
-cssPosition:"-1,-1,400,503,98,20",
+cssPosition:"-1,-1,401,172,98,20",
 formIndex:12,
 text:"Total",
 transparent:true,
@@ -183,7 +187,7 @@ typeid:7,
 uuid:"A2CE7EB0-FA83-4547-A679-4EB1D8FDA9CE"
 },
 {
-cssPosition:"-1,-1,400,393,98,20",
+cssPosition:"-1,-1,401,62,98,20",
 formIndex:12,
 text:"Total IVA",
 transparent:true,
@@ -199,13 +203,14 @@ typeid:7,
 uuid:"B63BD8D6-75DC-40BE-B413-D2C45F610A3D"
 },
 {
-cssPosition:"-1,-1,400,63,98,20",
+cssPosition:"-1,-1,398,636,98,20",
 formIndex:12,
 tabSeq:-2,
 text:"Total Alquileres",
 transparent:true,
 typeid:7,
-uuid:"B6A84955-0959-42B0-B3F1-73BD08222BEC"
+uuid:"B6A84955-0959-42B0-B3F1-73BD08222BEC",
+visible:false
 },
 {
 cssPosition:"111,-1,-1,63,140,20",
@@ -245,12 +250,13 @@ typeid:4,
 uuid:"D7BEAE57-BCA3-45F6-BD2C-FDA933681BC9"
 },
 {
-cssPosition:"-1,-1,400,173,98,20",
+cssPosition:"-1,-1,398,746,98,20",
 formIndex:12,
 text:"Total Ventas",
 transparent:true,
 typeid:7,
-uuid:"DD08A820-51AC-47B6-AAD0-31554D4B89DB"
+uuid:"DD08A820-51AC-47B6-AAD0-31554D4B89DB",
+visible:false
 },
 {
 cssPosition:"45,-1,-1,5,45,35",

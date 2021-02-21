@@ -525,7 +525,7 @@ function onDataChangeCliente() {
 				databaseManager.saveData(fs_vent_clientes)
 			}
 		}
-		controller.focusField('f_fecha',true)
+		//controller.focusField('f_fecha',true)
 		
 	}
 }

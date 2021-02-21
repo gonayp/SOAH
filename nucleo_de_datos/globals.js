@@ -609,7 +609,6 @@ function ventanaFechas(formulario){
 
 
 /**
- * TODO generated, please specify type and doc for the params
  * @param formulario
  * @param vl_fecha
  *

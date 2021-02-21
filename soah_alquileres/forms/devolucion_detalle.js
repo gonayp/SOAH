@@ -28,9 +28,9 @@ function limpiarVariables(){
 	scopes.globals.vg_tipo_comprobante = 2
 	scopes.globals.vg_cliente = cliente_id
 	
-	vl_subtotal = 0
+	//vl_subtotal = 0
 	
-	calculoTotales()
+	//calculoTotales()
 	
 	
 }
