@@ -82,6 +82,31 @@ function calcularDiasReales(p_fecha_alquiler, p_fecha_devolucion){
 	
 }
 
+
+
+/**
+ * TODO generated, please specify type and doc for the params
+ * @param p_fecha_alquiler
+ * @param p_fecha_devolucion
+ *
+ * @properties={typeid:24,uuid:"36D8C579-1A33-46AC-BA25-B0FF2CC03700"}
+ */
+function calcularDiasNaturales(p_fecha_alquiler, p_fecha_devolucion){
+	
+	p_fecha_alquiler.setHours(p_fecha_alquiler.getHours()+2)//margen de dos horas en la devolucion
+	
+	var x = p_fecha_devolucion - p_fecha_alquiler//substracting two dates returns difference in milliseconds 
+	var one_day=1000*60*60*24 //ms * sec * min * hrs in a day 
+
+	var diffExact = x / one_day //gets difference in days 
+	var diffRounded = Math.ceil(diffExact ) // rounds 2.343 to 3
+	
+	
+	var vl_dias_reales = diffRounded //dias naturales
+	
+	return vl_dias_reales;
+}
+
 /**
  * Metodo para calcular dias acobrar, quitando fin de semana y aplicando paquetes de dias<br>
  * Si son 7 dias reales, se cobran 5<br>

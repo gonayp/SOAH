@@ -155,7 +155,8 @@ function cargarHerramienta(fs_equipos,fs_comp_herr){
 	
 	databaseManager.saveData()
 	
-	calcularTotalCobrar()
+	if(fs_equipos.herr_equipo_to_herr_herramientas.herr_herramientas_to_herr_categoria.categoria_consumible != 1)//Solo calcula total a cobrar si no es un consumible
+		calcularTotalCobrar()
 	
 	if(databaseManager.hasRecords(fs_equipos.herr_equipo_to_herr_herramientas.herr_herramientas_to_herr_herramientas_asociadas)){
 		cargarHerramientasAsociadas(fs_equipos,fs_comp_herr.comp_id)
@@ -245,8 +246,9 @@ function cargarHerramientasAsociadas(fs_equipos,p_comp_id){
 					forms.devolucion_nuevo_ventas.foundset.producto_unidad			= ""
 					databaseManager.saveData()
 				}
-				
-				calcularTotalCobrar()
+				else{
+					calcularTotalCobrar()
+				}
 				
 				plugins.webnotificationsToastr.info("Se añadio la herramienta asiciada: "+forms.devolucion_nuevo_herramientas.foundset.equipo_herramienta	,"",globals.vg_toast_options)
 			}

@@ -799,6 +799,9 @@ function onShow(firstShow, event) {
 	forms.factura_formas_de_pago_detalle.foundset.deleteAllRecords()
 	
 	globals.vg_cliente = vl_cliente
+	
+	
+	inicializarCalendarios()	
 }
 
 /**
@@ -866,4 +869,48 @@ function calculoDiasPrecioSinModificaciones(){
 
 	
 }
+
+
+/**
+ * @properties={typeid:24,uuid:"A6DC89A7-A75C-4FF1-AF6C-40470086CEEC"}
+ */
+function inicializarCalendarios(){
+	
+	var fecha_hoy = application.getServerTimeStamp()
+	var fecha_mes_ant = new Date(fecha_hoy.getFullYear(), fecha_hoy.getMonth()-1, fecha_hoy.getDate())
+
+		
+	/** @type {svy-fullcalendar.FullCalendarOptions} */
+	var options = {
+		fixedWeekCount: false,
+			defaultDate: fecha_mes_ant ,
+			monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+			monthNamesShort: ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'],
+			dayNames: ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'],
+		    dayNamesShort: ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'],
+			header: {
+			    left:   'title',
+			    center: '',
+			    right:  ''
+			}
+	}
+	elements.fullcalendar_anterior.fullCalendar(options);
+	
+	
+	
+	options = {
+		fixedWeekCount: false,
+		monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+		monthNamesShort: ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'],
+		dayNames: ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'],
+	    dayNamesShort: ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'],
+		header: {
+		    left:   'title',
+		    center: '',
+		    right:  ''
+		}
+	}
+	elements.fullcalendar.fullCalendar(options);
+}
+
 

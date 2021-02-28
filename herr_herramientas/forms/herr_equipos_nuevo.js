@@ -436,3 +436,23 @@ function codigoSugerido() {
 	}
 	
 }
+
+/**
+ * @properties={typeid:24,uuid:"9020B9C2-E14A-4B75-AB7A-E8CB1D48398B"}
+ */
+function onDataChangeHerramienta() {
+	globals.vg_herramienta_id = vl_herramienta
+	globals.vg_marca_id = null 
+	vl_marca = null
+	vl_modelo = null
+}
+
+/**
+ * @properties={typeid:24,uuid:"626EB0F8-783B-4B07-B78B-FB60AED5A623"}
+ */
+function onDataChangeMarca() {
+	globals.vg_marca_id = vl_marca
+	vl_modelo = null
+}
+
+

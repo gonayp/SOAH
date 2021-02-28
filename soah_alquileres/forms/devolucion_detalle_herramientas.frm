@@ -59,7 +59,7 @@ svyUUID:"7E41FEE4-5B69-40FD-BF08-38B0469E7514",
 width:"100"
 },
 {
-dataprovider:"calc_dias_facturados",
+dataprovider:"comp_dias_facturados",
 format:"####",
 headerStyleClass:"cell_right_header",
 headerText:"Facturados",
