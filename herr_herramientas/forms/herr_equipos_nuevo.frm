@@ -186,7 +186,7 @@ cssPosition:"65,-1,-1,65,177,20",
 dataProviderID:"vl_herramienta",
 displayType:10,
 name:"f_herramienta",
-onDataChangeMethodID:"9020B9C2-E14A-4B75-AB7A-E8CB1D48398B",
+onDataChangeMethodID:"-1",
 tabSeq:1,
 typeid:4,
 uuid:"9D50D8BA-E87E-4348-9CAD-1F694D66CB2A",
@@ -200,7 +200,7 @@ name:"f_modelo",
 tabSeq:3,
 typeid:4,
 uuid:"AB67A709-3B3F-4E02-9E59-3381A0312F1E",
-valuelistID:"C4E64E1F-4C47-4959-B6B3-3918FF5507AE"
+valuelistID:"A1941DA9-AB5C-4C1A-8839-CA661BD429C1"
 },
 {
 cssPosition:"40,-1,0,0,60,59",
@@ -255,11 +255,11 @@ cssPosition:"65,-1,-1,250,177,20",
 dataProviderID:"vl_marca",
 displayType:10,
 name:"f_marca",
-onDataChangeMethodID:"626EB0F8-783B-4B07-B78B-FB60AED5A623",
+onDataChangeMethodID:"-1",
 tabSeq:2,
 typeid:4,
 uuid:"BC5B5470-9015-4137-8E8B-34846677626D",
-valuelistID:"1EF96E34-ADD0-456F-B844-3C9E7675166F"
+valuelistID:"ACE19FE9-7C0F-403B-8EAD-6ED6484D62BB"
 },
 {
 cssPosition:"322,-1,-1,337,259,112",
