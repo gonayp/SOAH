@@ -302,7 +302,6 @@ uuid:"34783991-1B5B-4E8E-91AD-F11930374E33"
 },
 {
 cssPosition:"4,133,-1,-1,45,30",
-enabled:false,
 json:{
 cssPosition:{
 bottom:"-1",
@@ -312,7 +311,6 @@ right:"133",
 top:"4",
 width:"45"
 },
-enabled:false,
 imageStyleClass:"fas fa-database",
 onActionMethodID:"E69D271C-D008-4F83-807A-A60DD08B573A",
 styleClass:"btn btn-default btn-success",

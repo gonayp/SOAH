@@ -5,7 +5,7 @@ autoEnterSubType:2,
 autoEnterType:2,
 creationOrderIndex:87,
 dataType:4,
-flags:1,
+flags:2,
 name:"internalid"
 },
 {
@@ -133,6 +133,13 @@ name:"country"
 },
 {
 allowNull:true,
+creationOrderIndex:141,
+dataType:12,
+length:300,
+name:"creditappliestoinvoices"
+},
+{
+allowNull:true,
 creationOrderIndex:48,
 dataType:12,
 length:3,
@@ -177,6 +184,13 @@ allowNull:true,
 creationOrderIndex:129,
 dataType:-5,
 name:"dbappliestoinvoicenr"
+},
+{
+allowNull:true,
+creationOrderIndex:140,
+dataType:12,
+length:300,
+name:"debitappliestoinvoicenr"
 },
 {
 allowNull:true,

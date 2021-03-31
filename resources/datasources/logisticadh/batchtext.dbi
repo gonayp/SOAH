@@ -5,7 +5,7 @@ autoEnterSubType:2,
 autoEnterType:2,
 creationOrderIndex:2,
 dataType:4,
-flags:1,
+flags:2,
 name:"internalid"
 },
 {

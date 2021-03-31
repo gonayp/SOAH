@@ -5,7 +5,7 @@ autoEnterSubType:2,
 autoEnterType:2,
 creationOrderIndex:9,
 dataType:4,
-flags:1,
+flags:2,
 name:"internalid"
 },
 {
@@ -826,6 +826,19 @@ name:"syncversion"
 },
 {
 allowNull:true,
+creationOrderIndex:134,
+dataType:8,
+length:22,
+name:"taxaliclua"
+},
+{
+allowNull:true,
+creationOrderIndex:135,
+dataType:-7,
+name:"taxalicluafrompadron"
+},
+{
+allowNull:true,
 creationOrderIndex:102,
 dataType:12,
 length:5,
@@ -842,7 +855,7 @@ name:"taxcatagip"
 allowNull:true,
 creationOrderIndex:101,
 dataType:12,
-length:20,
+length:265,
 name:"taxreg2province"
 },
 {
