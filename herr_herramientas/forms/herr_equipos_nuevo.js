@@ -257,8 +257,6 @@ function grabar(){
 	forms.herr_equipos_editar.foundset.alimentacion_id				= vl_alimentacion
 	forms.herr_equipos_editar.foundset.equipo_caracteristicas		= vl_caracteristicas
 	forms.herr_equipos_editar.foundset.equipo_cod_alternativo		= vl_cod_alterna
-	forms.herr_equipos_editar.foundset.equipo_cod_barras			= vl_cod_barras
-	forms.herr_equipos_editar.foundset.equipo_codigo				= vl_codigo
 	forms.herr_equipos_editar.foundset.equipo_descripcion			= vl_descripcion
 	forms.herr_equipos_editar.foundset.equipo_estado				= 1
 	forms.herr_equipos_editar.foundset.equipo_fecha_alta			= vl_fecha_compra
@@ -271,6 +269,8 @@ function grabar(){
 	forms.herr_equipos_editar.foundset.herramienta_id				= vl_herramienta
 	forms.herr_equipos_editar.foundset.marca_id						= vl_marca
 	forms.herr_equipos_editar.foundset.modelo_id					= vl_modelo
+	forms.herr_equipos_editar.foundset.equipo_cod_barras			= vl_cod_barras
+	forms.herr_equipos_editar.foundset.equipo_codigo				= vl_codigo
 	
 	
 	databaseManager.saveData()

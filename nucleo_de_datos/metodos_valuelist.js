@@ -194,16 +194,57 @@ function seleccionarMarca(displayValue, realValue, record, valueListName) {
  * @properties={typeid:24,uuid:"8272D640-11BA-4075-BAD9-49CFD1A2C071"}
  */
 function seleccionarModelo(displayValue, realValue, record, valueListName) {
+	
+	var clausula = " and e.herramienta_id = ? and e.marca_id = ? "
+	if(globals.vg_herramienta_id == null){
+		clausula = " "
+	}
+	else{
+		if(globals.vg_marca_id == null){
+			clausula = " and e.herramienta_id = ? "
+		}
+	}
+	
 	var args = null
 	if (displayValue == null && realValue == null) {
-		args = [scopes.usuario.vg_company_id,globals.vg_herramienta_id,globals.vg_marca_id]
-		return databaseManager.getDataSetByQuery("gpp", "Select concat(m.modelo_codigo::varchar(255), '-', m.modelo_nombre), m.modelo_id from herr_modelo as m JoIN herr_equipo as e on e.modelo_id = m.modelo_id Where m.company_id = ? and e.herramienta_id = ? and e.marca_id = ? group by m.modelo_codigo,m.modelo_nombre,m.modelo_id", args, 100);
+		
+		if(globals.vg_herramienta_id == null){
+			args = [scopes.usuario.vg_company_id]
+		}else{
+			if(globals.vg_marca_id == null){
+				args = [scopes.usuario.vg_company_id,globals.vg_herramienta_id]
+			}
+			else{
+				args = [scopes.usuario.vg_company_id,globals.vg_herramienta_id,globals.vg_marca_id]
+			}
+		}
+		return databaseManager.getDataSetByQuery("gpp", "Select concat(m.modelo_codigo::varchar(255), '-', m.modelo_nombre), m.modelo_id from herr_modelo as m JoIN herr_equipo as e on e.modelo_id = m.modelo_id Where m.company_id = ? "+ clausula +" group by m.modelo_codigo,m.modelo_nombre,m.modelo_id", args, 100);
 	} else if (displayValue != null) {
-		args = [scopes.usuario.vg_company_id,"%" + displayValue + "%", utils.stringToNumber(displayValue) ,globals.vg_herramienta_id,globals.vg_marca_id]
-		return databaseManager.getDataSetByQuery("gpp", "Select concat(m.modelo_codigo::varchar(255), '-', m.modelo_nombre), m.modelo_id from herr_modelo as m JoIN herr_equipo as e on e.modelo_id = m.modelo_id Where m.company_id = ? and (m.modelo_nombre ilike ? OR m.modelo_codigo = ?) and e.herramienta_id = ? and e.marca_id = ? group by m.modelo_codigo,m.modelo_nombre,m.modelo_id ", args, 100);
+		if(globals.vg_herramienta_id == null){
+			args = [scopes.usuario.vg_company_id,"%" + displayValue + "%", utils.stringToNumber(displayValue) ]
+		}else{
+			if(globals.vg_marca_id == null){
+				args = [scopes.usuario.vg_company_id,"%" + displayValue + "%", utils.stringToNumber(displayValue) ,globals.vg_herramienta_id]
+			}
+			else{
+				args = [scopes.usuario.vg_company_id,"%" + displayValue + "%", utils.stringToNumber(displayValue) ,globals.vg_herramienta_id,globals.vg_marca_id]
+			}
+		}
+		
+		return databaseManager.getDataSetByQuery("gpp", "Select concat(m.modelo_codigo::varchar(255), '-', m.modelo_nombre), m.modelo_id from herr_modelo as m JoIN herr_equipo as e on e.modelo_id = m.modelo_id Where m.company_id = ? and (m.modelo_nombre ilike ? OR m.modelo_codigo = ?) "+ clausula +" group by m.modelo_codigo,m.modelo_nombre,m.modelo_id ", args, 100);
 	} else if (realValue != null) {
-		args = [scopes.usuario.vg_company_id,realValue,globals.vg_herramienta_id,globals.vg_marca_id];
-		return databaseManager.getDataSetByQuery("gpp", "Select concat(m.modelo_codigo::varchar(255), '-', m.modelo_nombre), m.modelo_id from herr_modelo as m JoIN herr_equipo as e on e.modelo_id = m.modelo_id Where m.company_id = ? and (m.modelo_nombre ilike ? OR m.modelo_codigo = ?) and m.modelo_id = ? and e.herramienta_id = ? and e.marca_id = ? group by m.modelo_codigo,m.modelo_nombre,m.modelo_id  ", args, 1);
+		if(globals.vg_herramienta_id == null){
+			args = [scopes.usuario.vg_company_id,realValue];
+		}else{
+			if(globals.vg_marca_id == null){
+				args = [scopes.usuario.vg_company_id,realValue,globals.vg_herramienta_id];
+			}
+			else{
+				args = [scopes.usuario.vg_company_id,realValue,globals.vg_herramienta_id,globals.vg_marca_id];
+			}
+		}
+		
+		return databaseManager.getDataSetByQuery("gpp", "Select concat(m.modelo_codigo::varchar(255), '-', m.modelo_nombre), m.modelo_id from herr_modelo as m JoIN herr_equipo as e on e.modelo_id = m.modelo_id Where m.company_id = ?  and m.modelo_id = ? "+ clausula +" group by m.modelo_codigo,m.modelo_nombre,m.modelo_id  ", args, 1);
 	}
 	return null
 }

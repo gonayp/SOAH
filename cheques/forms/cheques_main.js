@@ -1,6 +1,27 @@
 /**
  * @type {Number}
  *
+ * @properties={typeid:35,uuid:"74388026-F9E1-44AE-A7D6-1B1C93FDBCBB",variableType:8}
+ */
+var vl_importe = null;
+
+/**
+ * @type {String}
+ *
+ * @properties={typeid:35,uuid:"7A4C32CC-B685-4794-A7B6-E18CE3518C9A"}
+ */
+var vl_num_cheque = null;
+
+/**
+ * @type {Number}
+ *
+ * @properties={typeid:35,uuid:"526AA959-8F18-45AA-A66C-EBAE62AC9769",variableType:4}
+ */
+var vl_cliente = null;
+
+/**
+ * @type {Number}
+ *
  * @properties={typeid:35,uuid:"F8F6B879-298E-4095-9DF4-0E33D6F6A968",variableType:4}
  */
 var vl_tipo_fecha = null;
@@ -18,7 +39,6 @@ var vl_fecha_final = null;
  * @properties={typeid:35,uuid:"1CC34371-47E1-453F-A904-EB394FA7AB7C",variableType:93}
  */
 var vl_fecha_inicial = null;
-
 
 /**
  *
@@ -62,6 +82,9 @@ function onCellDoubleClick(foundsetindex, columnindex, record, event) {
 function filtrar() {
 	
 	foundset.find()
+	if(vl_cliente != null)		foundset.cliente_id = vl_cliente
+	if(vl_num_cheque != null) 	foundset.cheque_numero = vl_num_cheque
+	if(vl_importe != null) 		foundset.cheque_importe = vl_importe
 	switch (vl_tipo_fecha) {
 	case 1://emision
 		foundset.cheque_fecha_emision = utils.dateFormat(vl_fecha_inicial, 'yyyy-MM-dd') + ' 00:00:00...' + utils.dateFormat(vl_fecha_final, 'yyyy-MM-dd') + ' 23:59:59|yyyy-MM-dd HH:mm:ss'
@@ -80,6 +103,10 @@ function filtrar() {
  * @properties={typeid:24,uuid:"E9FECCE3-0A33-4E85-9BF0-B7D18F983ED4"}
  */
 function onActionLimpiar(event) {
+	
+	vl_cliente = null
+	vl_importe = null
+	vl_num_cheque = null
 	
 	filtrar()
 
@@ -110,6 +137,8 @@ function onShow(firstShow) {
 	if (scopes.usuario.vg_permiso_crear == 0) {
 		elements.btn_nuevo.enabled = false
 	}
+	
+	filtrar()
 	
 
 }
