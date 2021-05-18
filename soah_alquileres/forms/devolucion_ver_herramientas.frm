@@ -142,6 +142,12 @@ headerText:"Obra",
 styleClass:"cell_left",
 svyUUID:"7C1F0F73-83FA-42CE-AE89-095343935FBA",
 width:"100"
+},
+{
+headerText:"Facturas",
+styleClass:"fa fa-search cell_center",
+svyUUID:"0BD17C10-3DC0-4A92-A39F-6C159B11528B",
+width:"80"
 }
 ],
 cssPosition:{
@@ -153,6 +159,7 @@ top:"43",
 width:"200"
 },
 enableColumnResize:true,
+onCellClick:"F3A31C7D-4A5B-482B-9D35-78A304547F90",
 onCellDoubleClick:"DCAD1579-58D0-4407-8A02-FE0A94B7F8D7",
 pageSize:0,
 tabSeq:-2

@@ -67,7 +67,7 @@ uuid:"FF7E601E-810E-4271-A5F9-F47592502AEE"
 ],
 name:"alquiler_ver_ver_herramienta_facturas",
 navigatorID:"-1",
-onShowMethodID:"5DBE37A8-9B50-4D4F-ACD2-128ABF81DB04",
+onShowMethodID:"-1",
 scrollbars:36,
 showInMenu:true,
 size:"432,246",

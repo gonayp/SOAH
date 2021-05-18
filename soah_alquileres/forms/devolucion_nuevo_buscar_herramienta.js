@@ -303,6 +303,7 @@ function cargarHerramientasAsociadas(fs_equipos,p_comp_id){
 				forms.devolucion_nuevo_herramientas.foundset.newRecord()
 				forms.devolucion_nuevo_herramientas.foundset.comp_precio			= myAsociadaAlquilada.vent_comprobante_herramientas_to_herr_equipo.equipo_precio_base
 				forms.devolucion_nuevo_herramientas.foundset.equipo_id				= myAsociadaAlquilada.equipo_id
+				forms.devolucion_nuevo_herramientas.foundset.comp_comentario_entrega= myAsociadaAlquilada.comp_comentario_entrega
 				forms.devolucion_nuevo_herramientas.foundset.equipo_cod_barras		= myAsociadaAlquilada.vent_comprobante_herramientas_to_herr_equipo.equipo_cod_barras
 				forms.devolucion_nuevo_herramientas.foundset.equipo_herramienta		= myAsociadaAlquilada.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_herramientas.herramienta_nombre
 				forms.devolucion_nuevo_herramientas.foundset.equipo_modelo			= myAsociadaAlquilada.vent_comprobante_herramientas_to_herr_equipo.herr_equipo_to_herr_modelo.modelo_nombre

@@ -8,11 +8,12 @@ cssPosition:"40,-1,-1,5,45,35",
 formIndex:4,
 json:{
 cssPosition:{
-height:"35px",
-left:"5px",
-position:"absolute",
-top:"40px",
-width:"45px"
+bottom:"-1",
+height:"35",
+left:"5",
+right:"-1",
+top:"40",
+width:"45"
 },
 formIndex:4,
 imageStyleClass:"fas fa-times",
@@ -74,11 +75,12 @@ cssPosition:"120,-1,-1,5,45,35",
 formIndex:4,
 json:{
 cssPosition:{
-height:"35px",
-left:"5px",
-position:"absolute",
-top:"120px",
-width:"45px"
+bottom:"-1",
+height:"35",
+left:"5",
+right:"-1",
+top:"120",
+width:"45"
 },
 formIndex:4,
 imageStyleClass:"fas fa-print",
@@ -181,11 +183,12 @@ cssPosition:"80,-1,-1,5,45,35",
 formIndex:2,
 json:{
 cssPosition:{
-height:"35px",
-left:"5px",
-position:"absolute",
-top:"80px",
-width:"45px"
+bottom:"-1",
+height:"35",
+left:"5",
+right:"-1",
+top:"80",
+width:"45"
 },
 formIndex:2,
 imageStyleClass:"fas fa-save",

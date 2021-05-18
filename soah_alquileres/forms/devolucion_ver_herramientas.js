@@ -51,3 +51,28 @@ function onCellDoubleClick(foundsetindex, columnindex, record, event) {
 	}
 
 }
+
+/**
+ * Called when the mouse is clicked on a row/cell (foundset and column indexes are given) or.
+ * when the ENTER key is used then only the selected foundset index is given
+ * Use the record to exactly match where the user clicked on
+ *
+ * @param {Number} foundsetindex
+ * @param {Number} [columnindex]
+ * @param {JSRecord} [record]
+ * @param {JSEvent} [event]
+ *
+ * @properties={typeid:24,uuid:"F3A31C7D-4A5B-482B-9D35-78A304547F90"}
+ */
+function onCellClick(foundsetindex, columnindex, record, event) {
+	if(columnindex == 11){
+		forms.devolucion_ver_ver_herramienta_facturas.vl_comp_id = foundset.comp_id_padre
+		var win = application.createWindow("Dialog", JSWindow.MODAL_DIALOG);
+		win.setInitialBounds(JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT, JSWindow.DEFAULT);
+		win.setSize(JSWindow.DEFAULT,JSWindow.DEFAULT)
+		win.resizable = false
+		win.title= '';
+		win.show( forms.devolucion_ver_ver_herramienta_facturas );
+	}
+
+}
